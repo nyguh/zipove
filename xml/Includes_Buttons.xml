@@ -438,12 +438,12 @@
         <texturefocus border="5" colordiffuse="AltPosterBack">common/box.png</texturefocus>
         <texturenofocus />
         <textoffsetx>64</textoffsetx>
-        <textoffsety>12</textoffsety>
+        <textoffsety>18</textoffsety>
         <radioposx>-26</radioposx>
         <radiowidth>110</radiowidth>
         <radioheight>66</radioheight>
         <textwidth>130</textwidth>
-        <font>font13</font>
+        <font>font_tiny_match</font>
         <textureradioonfocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonfocus>
         <textureradioonnofocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonnofocus>
         <textureradioofffocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioofffocus>
@@ -470,12 +470,12 @@
         <texturefocus border="5" colordiffuse="AltPosterBack">common/box.png</texturefocus>
         <texturenofocus />
         <textoffsetx>64</textoffsetx>
-        <textoffsety>12</textoffsety>
+        <textoffsety>18</textoffsety>
         <radioposx>-26</radioposx>
         <radiowidth>110</radiowidth>
         <radioheight>66</radioheight>
         <textwidth>130</textwidth>
-        <font>font13</font>
+        <font>font_tiny_match</font>
         <textureradioonfocus colordiffuse="D0FFFFFF">$PARAM[icon_on]</textureradioonfocus>
         <textureradioonnofocus colordiffuse="D0FFFFFF">$PARAM[icon_on]</textureradioonnofocus>
         <textureradioofffocus colordiffuse="D0FFFFFF">$PARAM[icon_off]</textureradioofffocus>
