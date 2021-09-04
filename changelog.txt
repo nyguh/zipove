@@ -1,3 +1,7 @@
+1.0.44
+    Fixed: Skinsettings IDs
+    Fixed: Fonts in buttons in DialogAddonInfo
+    Added: Option to manually start trailers
 1.0.43
     Added: Option to disable clearlogo
     Fixed: Posters border may disappear with Flixed scrolling
