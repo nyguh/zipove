@@ -1784,3 +1784,13 @@ msgstr "Włącz scrollowanie Flixed"
 msgctxt "#31402"
 msgid "Disable clearlogo"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31403"
+msgid "Do not hide Showcase"
+msgstr "Nie ukrywaj informacji o filmie"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31404"
+msgid "Disable notification about no trailer"
+msgstr "Wyłącz powiadomienie o braku zwiastuna"

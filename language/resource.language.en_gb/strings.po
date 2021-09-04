@@ -1960,3 +1960,13 @@ msgstr ""
 msgctxt "#31402"
 msgid "Disable clearlogo"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31403"
+msgid "Do not hide Showcase"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31404"
+msgid "Disable notification about no trailer"
+msgstr ""

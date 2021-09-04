@@ -413,7 +413,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <!-- Square aspect ratio -->
@@ -452,7 +452,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <!-- Landscape aspect ratio -->
@@ -495,7 +495,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <!-- Fanart aspect ratio -->
@@ -538,7 +538,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <include content="Object_Widget_Content_Path">
@@ -598,7 +598,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <!-- Square aspect ratio -->
@@ -614,7 +614,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <!-- Landscape aspect ratio -->
@@ -634,7 +634,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <!-- Fanart aspect ratio -->
@@ -654,7 +654,7 @@
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
             <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
-            <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
+            <onfocus condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onfocus>
           </control>
         </focusedlayout>
         <include content="Object_Widget_Content_Path">
@@ -857,7 +857,7 @@
             <label>$PARAM[title]</label>
             <font>font_title_bold</font>
             <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
-            <animation type="Conditional" condition="Player.HasVideo + Skin.HasSetting(AnimateClearLogo)" reversible="false">
+            <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(AnimateClearLogo) + !Skin.HasSetting(DontHideShowcase)" reversible="false">
               <effect type="fade" start="100" end="0" time="300"/>
               <effect type="slide" start="0" end="-1400,0" time="600"/>
             </animation>
@@ -869,7 +869,7 @@
             <aspectratio>keep</aspectratio>
             <texture background="true">$VAR[Image_ClearLogo]</texture>
             <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
-            <animation type="Conditional" condition="Player.HasVideo + Skin.HasSetting(AnimateClearLogo)" reversible="false">
+            <animation type="Conditional" condition="Player.HasVideo + Skin.HasSetting(AnimateClearLogo) + !Skin.HasSetting(DontHideShowcase)" reversible="false">
               <effect type="slide" start="0" end="0,140" time="350" delay="300"/>
               <effect type="slide" start="0" end="40,0" time="350" delay="600"/>
               <effect type="rotate" end="30" center="300,228" time="350" delay="600"/>
@@ -885,7 +885,7 @@
           <top>$PARAM[info_line_top]</top>
           <left>150</left>
           <include>Object_Info_Line</include>
-          <animation type="Conditional" condition="Player.HasVideo" reversible="false">
+          <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
             <effect type="fade" start="100" end="0" time="300"/>
             <effect type="slide" start="0" end="-1400,0" time="600"/>
           </animation>
@@ -903,7 +903,7 @@
             <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
             <visible>!Skin.HasSetting(HidePlot)</visible>
           </control>
-          <animation type="Conditional" condition="Player.HasVideo" reversible="false">
+          <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
             <effect type="fade" start="100" end="0" time="300"/>
             <effect type="slide" start="0" end="-1400,0" time="600"/>
           </animation>
@@ -922,7 +922,7 @@
       <left>150</left>
       <visible>ControlGroup(3000).HasFocus</visible>
       <visible>Skin.HasSetting(Vertical_Main)</visible>
-      <animation type="Conditional" condition="Player.HasVideo" reversible="false">
+      <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
         <effect type="fade" start="100" end="0" time="300"/>
         <effect type="slide" start="0" end="-1400,0" time="600"/>
       </animation>
@@ -1116,7 +1116,7 @@
         <align>$PARAM[align]</align>
         <itemgap>6</itemgap>
         <usecontrolcoords>true</usecontrolcoords>
-        <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
+        <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)">Conditional</animation>
         <control type="image">
           <top>4</top>
           <width>32</width>
