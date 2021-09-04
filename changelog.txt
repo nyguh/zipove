@@ -1,3 +1,11 @@
+1.0.43
+    Added: Option to disable clearlogo
+    Fixed: Posters border may disappear with Flixed scrolling
+    Fixed: Colored overlay in Vertical layout
+    Updated: Greek translation
+    Changed: Scrolltime in FileBrowser
+    Fixed: Posters aspect ratio in some view types
+    Added: Option to dont hide showcase and to disable notifications about no trailer when trailers play
 1.0.42
     Added: Early version of Flixed scrolling
     Updated: Greek translation
