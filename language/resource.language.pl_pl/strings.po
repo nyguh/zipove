@@ -1794,3 +1794,8 @@ msgstr "Nie ukrywaj informacji o filmie"
 msgctxt "#31404"
 msgid "Disable notification about no trailer"
 msgstr "Wyłącz powiadomienie o braku zwiastuna"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31405"
+msgid "Manually start trailer"
+msgstr "Rozpocznij odtwarzanie zwiastuna ręcznie"

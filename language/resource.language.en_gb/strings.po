@@ -1970,3 +1970,8 @@ msgstr ""
 msgctxt "#31404"
 msgid "Disable notification about no trailer"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31405"
+msgid "Manually start trailer"
+msgstr ""
