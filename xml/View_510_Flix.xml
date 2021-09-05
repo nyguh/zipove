@@ -36,6 +36,7 @@
           <param name="plot_height" value="200"/>
           <param name="info_line_top" value="180"/>
           <param name="plot_top" value="300"/>
+          <param name="visible_infoline" value="Control.HasFocus(510)" />
         </include>
         <include content="Object_Ratings_Content">
           <param name="top" value="240"/>
@@ -95,7 +96,7 @@
           <param name="pad_bottom_t" value="-4"/>
           <param name="pad_left_t" value="17"/>
           <param name="pad_right_t" value="-32"/>
-          <param name="visible_posters" value="true"/>
+          <param name="visible_posters" value="Control.HasFocus(510)"/>
           <param name="visible_squares" value="false"/>
           <param name="visible_landscapes" value="false"/>
           <param name="focusbounce" value="false" />
