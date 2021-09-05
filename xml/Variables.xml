@@ -171,6 +171,17 @@
     <value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
     <value>$INFO[ListItem.Icon]</value>
   </variable>
+  <variable name="Label_OverlayCritics">
+    <value condition="!String.IsEmpty(Window.Property(Critics))">$INFO[Window.Property(Critics)]</value>
+    <value condition="!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.rottentomatoes_consensus)) | !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.awards))">[CR][CR][B]Critics Consensus[/B][CR]$INFO[Window(Home).Property(TMDBHelper.ListItem.rottentomatoes_consensus),, ]$INFO[Window(Home).Property(TMDBHelper.ListItem.rottentomatoes_reviewsfresh),Liked by , out of ]$INFO[Window(Home).Property(TMDBHelper.ListItem.rottentomatoes_reviewstotal),, critics. ]$INFO[Window(Home).Property(TMDBHelper.ListItem.awards)]</value>
+  </variable>
+  <variable name="Label_OverlayPlot">
+    <value condition="!String.IsEmpty(Window.Property(Plot))">$INFO[Window.Property(Plot)]</value>
+    <value condition="!String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(ListItem.AddonDisclaimer) | !String.IsEmpty(ListItem.AddonNews)">$INFO[ListItem.AddonDisclaimer,[B]$LOCALIZE[24052][/B][CR],[CR][CR]]$INFO[ListItem.AddonDescription,[B]$LOCALIZE[21821][/B][CR],[CR][CR]]$INFO[ListItem.AddonNews,[B]$LOCALIZE[31303][/B][CR],[CR][CR]]</value>
+    <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Plot]</value>
+    <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Tagline),[B],[/B][CR]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Artist),[B],[/B][CR]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Plot)]</value>
+    <value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$VAR[Label_Plot]</value>
+  </variable>
   <variable name="Label_Title">
     <value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
     <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>

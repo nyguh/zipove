@@ -77,6 +77,9 @@
           <height>142</height>
           <ondown>100</ondown>
           <orientation>horizontal</orientation>
+          <onup>SetProperty(Plot,"$VAR[Label_OverlayPlot]",1130)</onup>
+          <onup>SetProperty(Critics,"$VAR[Label_OverlayCritics]",1130)</onup>
+          <onup>ActivateWindow(1130)</onup>
           <include content="InfoButton">
             <param name="id" value="8"/>
             <param name="groupid" value="8008"/>
