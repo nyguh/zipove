@@ -1230,6 +1230,7 @@
             <animation effect="fade" time="200" end="100" condition="String.IsEqual(Skin.String(AlphaValue),0)">Conditional</animation>
             <visible>Skin.HasSetting(TMDbHelper.EnableColors) + Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
+            <visible>!$EXP[infodialog_active]</visible>
           </control>
           <control type="image">
             <left>-3</left>
