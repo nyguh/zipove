@@ -417,8 +417,6 @@
         <textoffsetx>10</textoffsetx>
         <textcolor>main_fg_70</textcolor>
         <focusedcolor>panel_bg</focusedcolor>
-        <onup>$PARAM[onup]</onup>
-        <ondown>$PARAM[ondown]</ondown>
         <onclick condition="$PARAM[onclick_1_condition]">$PARAM[onclick_1]</onclick>
         <onclick condition="$PARAM[onclick_2_condition]">$PARAM[onclick_2]</onclick>
         <onclick condition="$PARAM[onclick_3_condition]">$PARAM[onclick_3]</onclick>
