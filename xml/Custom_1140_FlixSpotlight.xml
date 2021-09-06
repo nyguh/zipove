@@ -26,6 +26,15 @@
             <texture>flags/colorful/ratings/imdbtop250.png</texture>
             <visible>!String.IsEmpty(Window.Property(spotlight_250))</visible>
           </control>
+          <control type="image">
+            <top>120</top>
+            <left>134</left>
+            <width>92</width>
+            <height>auto</height>
+            <aspectratio>keep</aspectratio>
+            <texture>special://skin/extras/icons/userrating.png</texture>
+            <visible>String.IsEmpty(Window.Property(spotlight_250))</visible>
+          </control>
           <control type="label">
             <textcolor>dialog_fg_100</textcolor>
             <top>170</top>
@@ -34,7 +43,7 @@
             <height>42</height>
             <font>font30_title</font>
             <label>$VAR[Label_Spotlight_Top250]</label>
-            <visible>!String.IsEmpty(Window.Property(spotlight_250))</visible>
+            <!-- <visible>!String.IsEmpty(Window.Property(spotlight_250))</visible> -->
           </control>
         </control>
         <include content="Object_Item_Showcase">

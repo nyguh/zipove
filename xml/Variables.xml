@@ -176,7 +176,8 @@
     <value>$INFO[Window(1140).Property(spotlight_Title),$LOCALIZE[208] ]</value>
   </variable>
   <variable name="Label_Spotlight_Top250">
-    <value>$INFO[Window(1140).Property(spotlight_250),No. , on IMDb / ]$INFO[Window(1140).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
+    <value condition="!String.IsEmpty(Window(1140).Property(spotlight_250))">$INFO[Window(1140).Property(spotlight_250),No. , on IMDb / ]$INFO[Window(1140).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
+    <value>$INFO[Window(1140).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
   </variable>
   <variable name="Label_OverlayCritics">
     <value condition="!String.IsEmpty(Window.Property(Critics))">$INFO[Window.Property(Critics)]</value>
