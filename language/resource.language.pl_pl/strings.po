@@ -1809,3 +1809,28 @@ msgstr "Więcej informacji..."
 msgctxt "#31407"
 msgid "Enable Flix Spotlight"
 msgstr "Włącz Flix Spotlight"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31408"
+msgid "Add to watchlist"
+msgstr "Dodaj to listy obserwowanych"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31409"
+msgid "More Episodes"
+msgstr "Więcej odcinków"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31410"
+msgid "Play Trailer"
+msgstr "Odtwórz zwiastun"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31411"
+msgid "More Similar"
+msgstr "Więcej podobnych"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31412"
+msgid "Rate this Title"
+msgstr "Oceń ten tytuł"

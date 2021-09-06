@@ -1985,3 +1985,28 @@ msgstr ""
 msgctxt "#31407"
 msgid "Enable Flix Spotlight"
 msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31408"
+msgid "Add to watchlist"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31409"
+msgid "More Episodes"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31410"
+msgid "Play Trailer"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31411"
+msgid "More Similar"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31412"
+msgid "Rate this Title"
+msgstr ""
