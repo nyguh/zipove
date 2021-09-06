@@ -1804,3 +1804,8 @@ msgstr "Rozpocznij odtwarzanie zwiastuna ręcznie"
 msgctxt "#31406"
 msgid "More Information..."
 msgstr "Więcej informacji..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#31407"
+msgid "Enable Flix Spotlight"
+msgstr "Włącz Flix Spotlight"

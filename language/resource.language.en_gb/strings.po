@@ -1980,3 +1980,8 @@ msgstr ""
 msgctxt "#31406"
 msgid "More Information..."
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31407"
+msgid "Enable Flix Spotlight"
+msgstr ""

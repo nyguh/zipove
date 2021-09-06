@@ -105,35 +105,42 @@
             <onclick>SetProperty(Context.3.BuiltIn,Skin.SetString(MenuStyle,Text))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
           </control>
-          <control type="radiobutton" id="604" description="Hide submenu in horizontal">
+          <control type="radiobutton" id="604" description="Enable Flix Spotlight">
+            <label>$LOCALIZE[31407]</label>
+            <include>DefaultSettingButton</include>
+            <visible>Skin.HasSetting(Vertical_Main)</visible>
+            <selected>Skin.HasSetting(EnableFlixSpotlight)</selected>
+            <onclick>Skin.ToggleSetting(EnableFlixSpotlight)</onclick>
+          </control>
+          <control type="radiobutton" id="605" description="Hide submenu in horizontal">
             <label>$LOCALIZE[31343]</label>
             <include>DefaultSettingButton</include>
             <visible>Skin.HasSetting(Horizontal_Main)</visible>
             <selected>Skin.HasSetting(DisableSubmenuInHorizontal)</selected>
             <onclick>Skin.ToggleSetting(DisableSubmenuInHorizontal)</onclick>
           </control>
-          <control type="radiobutton" id="605" description="Show weather in horizontal">
+          <control type="radiobutton" id="606" description="Show weather in horizontal">
             <label>$LOCALIZE[31344]</label>
             <include>DefaultSettingButton</include>
             <visible>Skin.HasSetting(Horizontal_Main)</visible>
             <selected>Skin.HasSetting(EnableWeatherInHorizontalTopbar)</selected>
             <onclick>Skin.ToggleSetting(EnableWeatherInHorizontalTopbar)</onclick>
           </control>
-          <control type="radiobutton" id="606" description="Hide Profile Info in vertical">
+          <control type="radiobutton" id="607" description="Hide Profile Info in vertical">
             <label>$LOCALIZE[31189]</label>
             <include>DefaultSettingButton</include>
             <visible>Skin.HasSetting(Vertical_Main)</visible>
             <selected>Skin.HasSetting(DisabledProfileInfo)</selected>
             <onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
           </control>
-          <control type="button" id="607" description="Widgets scrolling type">
+          <control type="button" id="608" description="Widgets scrolling type">
             <label>$LOCALIZE[31348]</label>
             <label2>$VAR[widgetScrollingType]</label2>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(DisableFixedScrolling)</onclick>
             <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
           </control>
-          <control type="button" id="608" description="Flixed scrolling">
+          <control type="button" id="609" description="Flixed scrolling">
             <label>$LOCALIZE[31401]</label>
             <label2>$INFO[Skin.String(FlixedScrolling)]</label2>
             <include>DefaultSettingButton</include>
@@ -141,7 +148,7 @@
             <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
             <onclick condition="String.IsEmpty(Skin.String(FlixedScrolling))">Skin.SetString(FlixedScrolling,Flix It!)</onclick>
           </control>
-          <control type="button" id="609" description="Set Fallback Image">
+          <control type="button" id="610" description="Set Fallback Image">
             <include>DefaultSettingButton</include>
             <label>$LOCALIZE[31340]</label>
             <label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
@@ -153,13 +160,13 @@
             <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31340])</onclick>
           </control>
-          <control type="radiobutton" id="610" description="Disable clock">
+          <control type="radiobutton" id="611" description="Disable clock">
             <label>$LOCALIZE[31388]</label>
             <include>DefaultSettingButton</include>
             <selected>Skin.HasSetting(DisableClock)</selected>
             <onclick>Skin.ToggleSetting(DisableClock)</onclick>
           </control>
-          <control type="label" id="611">
+          <control type="label" id="612">
             <textoffsetx>30</textoffsetx>
             <width>470</width>
             <height>80</height>
@@ -168,7 +175,7 @@
             <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
-          <control type="button" id="612" description="Customize shutdown menu">
+          <control type="button" id="613" description="Customize shutdown menu">
             <label>$LOCALIZE[31180]</label>
             <include>DefaultSettingButton</include>
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>
