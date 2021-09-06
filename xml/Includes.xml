@@ -1192,6 +1192,8 @@
           <control type="multiimage" id="32111">
             <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | ![Skin.HasSetting(Vertical_Main) | Window.IsVisible(home)]" />
             <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
+            <animation effect="zoom" end="150" center="200" time="400" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,0" time="400" condition="Window.IsActive(1140)">Conditional</animation>
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
@@ -1207,6 +1209,8 @@
           <control type="group">
             <include>TrailerWindowDimensions</include>
             <include>ColoredBackgroundImages</include>
+            <animation effect="zoom" end="300" center="400" time="400" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,100" time="400" reversible="true" condition="Window.IsActive(1140)">Conditional</animation>
             <animation effect="fade" time="200" end="0" condition="String.IsEqual(Skin.String(AlphaValue),100)">Conditional</animation>
             <animation effect="fade" time="200" end="5" condition="String.IsEqual(Skin.String(AlphaValue),95)">Conditional</animation>
             <animation effect="fade" time="200" end="10" condition="String.IsEqual(Skin.String(AlphaValue),90)">Conditional</animation>
@@ -1248,6 +1252,7 @@
             <include>FullScreenDimensions</include>
             <aspectratio aligny="center">scale</aspectratio>
             <animation effect="fade" time="100" delay="600">Hidden</animation>
+            <animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(1140)">Conditional</animation>
             <texture background="true">common/vignette-vert-main.png</texture>
             <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main) + !Control.HasFocus(510)</visible>
@@ -1258,6 +1263,7 @@
           <include>FullScreenDimensions</include>
           <aspectratio aligny="center">scale</aspectratio>
           <animation effect="fade" time="100">VisibleChange</animation>
+          <animation effect="fade" start="600" end="0" time="400" condition="Window.IsActive(1140)">Conditional</animation>
           <texture background="true">common/vignette-vert-main.png</texture>
           <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
         </control>
@@ -2445,5 +2451,32 @@
   </include>
   <include name="WatchedOverlay_Focus_bs0">
     <bordersize>0</bordersize>
+  </include>
+  <include name="Flix_Spotlight_Properties">
+    <onback>SetProperty(spotlight_Fanart,"$VAR[MediaFanartVar]",1140)</onback>
+    <onback>SetProperty(spotlight_ClearLogo,"$VAR[Image_ClearLogo]",1140)</onback>
+    <onback>SetProperty(spotlight_250,"$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250)]",1140)</onback>
+    <onback>SetProperty(spotlight_Match,"$VAR[PercentageRating]",1140)</onback>
+    <onback>SetProperty(spotlight_DBType1140,"$INFO[ListItem.DBType]",1140)</onback>
+    <onback>SetProperty(spotlight_Title,"$VAR[Label_Title]",1140)</onback>
+    <onback>SetProperty(spotlight_Season,"$INFO[ListItem.Season]",1140)</onback>
+    <onback>SetProperty(spotlight_Episode,"$INFO[ListItem.Episode]",1140)</onback>
+    <onback>SetProperty(spotlight_Plot,"$VAR[Label_OverlayPlot]",1140)</onback>
+    <onback>SetProperty(spotlight_Path,"$ESCINFO[ListItem.FileNameAndPath]",1140)</onback>
+    <onback>SetProperty(spotlight_TMDBid,"$INFO[ListItem.Property(TMDB_ID)]",1141)</onback>
+    <onback>SetProperty(spotlight_TMDBid2,"$INFO[Window(home).Property(TMDbHelper.ListItem.TMDB_ID)]",1141)</onback>
+    <onback>SetProperty(spotlight_TMDBTYPE,"$VAR[TMDB_TYPE]",1141)</onback>
+    <onback condition="ListItem.IsFolder">SetProperty(spotlight_isFolder,true,1141)</onback>
+    <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1141)</onback>
+    <onback>SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",1141)</onback>
+    <onback>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",1145)</onback>
+    <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onback>
+    <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onback>
+    <onback>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",1145)</onback>
+    <onback>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1146)</onback>
+    <onback>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1146)</onback>
+    <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1146)</onback>
+    <onback>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1146)</onback>
+    <onback>ActivateWindow(1140)</onback>
   </include>
 </includes>

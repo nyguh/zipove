@@ -569,12 +569,13 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
+        <include>Flix_Spotlight_Properties</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
-        <onback>9000</onback>
+        <!-- <onback>9000</onback> -->
         <height>460</height>
         <focusposition>1</focusposition>
         <scrolltime tween="linear" easing="inout">400</scrolltime>
@@ -848,6 +849,7 @@
     <param name="info_line_top" default="185"/>
     <param name="plot_top" default="235"/>
     <param name="plot_height" default="120"/>
+    <param name="title_visible" default="true" />
     <definition>
       <control type="group">
         <top>$PARAM[top]</top>
@@ -863,6 +865,7 @@
             <label>$PARAM[title]</label>
             <font>font_title_bold</font>
             <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
+            <visible>$PARAM[title_visible]</visible>
             <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
               <effect type="fade" start="100" end="0" time="300"/>
               <effect type="slide" start="0" end="-1400,0" time="600"/>

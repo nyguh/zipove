@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1145">
+  <defaultcontrol>10045</defaultcontrol>
+  <controls>
+    <include>DefaultBackground</include>
+    <control type="group">
+      <include>OpenClose_Right</include>
+      <left>100</left>
+      <top>0</top>
+      <include>Visible_Right</include>
+      <control type="panel" id="10045">
+        <left>15</left>
+        <top>0</top>
+        <right>15</right>
+        <height>100%</height>
+        <viewtype>icon</viewtype>
+        <preloaditems>2</preloaditems>
+        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <itemlayout height="445" width="320">
+          <control type="group">
+            <left>30</left>
+            <top>120</top>
+            <include content="InfoWallSimilarLayout">
+              <param name="focused" value="false"/>
+            </include>
+          </control>
+        </itemlayout>
+        <focusedlayout height="445" width="320">
+          <control type="group">
+            <depth>DepthContentPopout</depth>
+            <left>30</left>
+            <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+            <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+            <top>120</top>
+            <include content="InfoWallSimilarLayout">
+              <param name="focused" value="true"/>
+            </include>
+          </control>
+        </focusedlayout>
+        <content limit="50" target="videos">plugin://plugin.video.themoviedb.helper/?info=similar&amp;type=$INFO[Window.Property(spotlight_SimilarTYPE)]&amp;$INFO[Window.Property(spotlight_SimilarQUERY)]&amp;nextpage=false</content>
+      </control>
+    </control>
+  </controls>
+</window>

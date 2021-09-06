@@ -676,6 +676,52 @@
       </control>
     </definition>
   </include>
+  <include name="InfoWallSimilarLayout">
+    <param name="fallback_image">DefaultTVShows.png</param>
+    <param name="focused">false</param>
+    <definition>
+      <control type="group">
+        <top>25</top>
+        <left>15</left>
+        <width>285</width>
+        <height>370</height>
+        <control type="image">
+          <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
+        </control>
+        <control type="image">
+          <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
+        </control>
+        <bordersize>20</bordersize>
+        <visible>$PARAM[focused]</visible>
+      </control>
+      <control type="image">
+        <left>0</left>
+        <top>10</top>
+        <width>316</width>
+        <height>400</height>
+        <texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
+        <aspectratio>scale</aspectratio>
+        <bordersize>20</bordersize>
+      </control>
+      <control type="image">
+        <left>20</left>
+        <top>250</top>
+        <width>276</width>
+        <height>140</height>
+        <texture>overlays/overlayfade.png</texture>
+      </control>
+      <control type="textbox">
+        <left>28</left>
+        <top>300</top>
+        <width>262</width>
+        <height>80</height>
+        <font>font13</font>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+      </control>
+    </definition>
+  </include>
   <include name="View_54_InfoWall">
     <control type="group">
       <include>OpenClose_Right</include>

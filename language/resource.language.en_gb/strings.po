@@ -1975,3 +1975,8 @@ msgstr ""
 msgctxt "#31405"
 msgid "Manually start trailer"
 msgstr ""
+
+#: /xml/Custom_1140_FlixHub.xml
+msgctxt "#31406"
+msgid "More Information..."
+msgstr ""

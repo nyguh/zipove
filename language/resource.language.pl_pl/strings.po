@@ -1799,3 +1799,8 @@ msgstr "Wyłącz powiadomienie o braku zwiastuna"
 msgctxt "#31405"
 msgid "Manually start trailer"
 msgstr "Rozpocznij odtwarzanie zwiastuna ręcznie"
+
+#: /xml/Custom_1140_FlixHub.xml
+msgctxt "#31406"
+msgid "More Information..."
+msgstr "Więcej informacji..."

@@ -76,6 +76,7 @@
           <left>620</left>
           <height>142</height>
           <ondown>100</ondown>
+          <onback>RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onback>
           <orientation>horizontal</orientation>
           <onup>SetProperty(Plot,"$VAR[Label_OverlayPlot]",1130)</onup>
           <onup>SetProperty(Critics,"$VAR[Label_OverlayCritics]",1130)</onup>
@@ -467,6 +468,7 @@
             <onleft>Control.SetFocus(8898)</onleft>
             <onright>Control.SetFocus(8898)</onright>
             <ondown>Control.SetFocus(8898)</ondown>
+            <onback>Control.SetFocus(8)</onback>
             <height max="780">auto</height>
             <usecontrolcoords>true</usecontrolcoords>
             <control type="button" id="6">
