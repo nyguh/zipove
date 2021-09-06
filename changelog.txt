@@ -1,3 +1,16 @@
+1.0.45
+    Fixed: Dont hide showcase option
+    Added: Plot overlay from Info Dialog
+    Changed: Custom_1102_TextViewer appearance
+    Fixed: Flix view info line and selection box visibility
+    Fixed: Colored overlay in Vertical layout
+    Added: Early version of Flix Spotlight
+    Added: Show match percentage even when no IMDb rating
+    Changed: Match info tag badge colour with highlight colour
+    Added: Option to Enable/Disable Flix Spotlight
+    Fixed: Dont enable Flix Spotlight in layouts other than Vertical
+    Fixed: Broken Info Dialog
+    Added: Language strings
 1.0.44
     Fixed: Skinsettings IDs
     Fixed: Fonts in buttons in DialogAddonInfo
