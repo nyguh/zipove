@@ -944,7 +944,7 @@
           <top>61</top>
           <width>64</width>
           <height>64</height>
-          <texture background="true" colordiffuse="ffa90007">common/circle.png</texture>
+          <texture background="true" colordiffuse="$VAR[ColorHighlight]">common/circle.png</texture>
           <visible>!String.IsEmpty(ListItem.Studio) | !String.IsEmpty(ListItem.Genre)</visible>
         </control>
         <control type="image">
@@ -976,7 +976,7 @@
           <top>61</top>
           <width>64</width>
           <height>64</height>
-          <texture background="true" colordiffuse="ffa90007">common/circle.png</texture>
+          <texture background="true" colordiffuse="$VAR[ColorHighlight]">common/circle.png</texture>
           <visible>!String.IsEmpty(ListItem.Studio) | !String.IsEmpty(ListItem.Genre)</visible>
         </control>
         <control type="image">
@@ -1008,7 +1008,7 @@
           <top>61</top>
           <width>64</width>
           <height>64</height>
-          <texture background="true" colordiffuse="ffa90007">common/circle.png</texture>
+          <texture background="true" colordiffuse="$VAR[ColorHighlight]">common/circle.png</texture>
           <visible>!String.IsEmpty(ListItem.Studio) | !String.IsEmpty(ListItem.Genre) | !String.IsEmpty(ListItem.Cast)</visible>
         </control>
         <control type="image">
