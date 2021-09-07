@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1145">
   <defaultcontrol>10045</defaultcontrol>
+  <onunload>ClearProperty(spotlight_SimilarLabel,1145)</onunload>
+  <onunload>ClearProperty(spotlight_SimilarLabel2,1145)</onunload>
+  <onunload>ClearProperty(spotlight_SimilarTYPE,1145)</onunload>
+  <onunload>ClearProperty(spotlight_SimilarQUERY,1145)</onunload>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">

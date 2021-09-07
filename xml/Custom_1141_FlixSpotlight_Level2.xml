@@ -2,6 +2,12 @@
 <window type="dialog" id="1141">
   <animation effect="fade" start="0" end="100" time="400" delay="300" tween="quadratic" condition="Window.IsActive(1141)">WindowOpen</animation>
   <defaultcontrol>6000</defaultcontrol>
+  <onunload>ClearProperty(spotlight_TMDBid,1141)</onunload>
+  <onunload>ClearProperty(spotlight_TMDBid2,1141)</onunload>
+  <onunload>ClearProperty(spotlight_TMDBTYPE,1141)</onunload>
+  <onunload>ClearProperty(spotlight_isFolder,1141)</onunload>
+  <onunload>ClearProperty(spotlight_DBID,1141)</onunload>
+  <onunload>ClearProperty(spotlight_Trailer,1141)</onunload>
   <controls>
     <control type="group">
       <top>300</top>
