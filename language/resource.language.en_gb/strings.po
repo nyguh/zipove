@@ -1993,7 +1993,7 @@ msgstr ""
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31409"
-msgid "More Episodes"
+msgid "More episodes"
 msgstr ""
 
 #: /xml/Custom_1141_FlixHub.xml
@@ -2003,10 +2003,25 @@ msgstr ""
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31411"
-msgid "More Similar"
+msgid "More similar"
 msgstr ""
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31412"
-msgid "Rate this Title"
+msgid "Rate this title"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31413"
+msgid "Search recommended"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31414"
+msgid "Search Cast"
+msgstr ""
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31415"
+msgid "Search Crew"
 msgstr ""

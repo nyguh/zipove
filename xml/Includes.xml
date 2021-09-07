@@ -2478,6 +2478,7 @@
     <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onback>
     <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onback>
     <onback>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",1145)</onback>
+    <onback>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",1145)</onback>
     <onback>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1146)</onback>
     <onback>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1146)</onback>
     <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1146)</onback>

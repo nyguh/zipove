@@ -1817,20 +1817,35 @@ msgstr "Dodaj to listy obserwowanych"
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31409"
-msgid "More Episodes"
+msgid "More episodes"
 msgstr "Więcej odcinków"
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31410"
 msgid "Play Trailer"
-msgstr "Odtwórz zwiastun"
+msgstr "Odtwarzaj zwiastun"
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31411"
-msgid "More Similar"
+msgid "More similar"
 msgstr "Więcej podobnych"
 
 #: /xml/Custom_1141_FlixHub.xml
 msgctxt "#31412"
-msgid "Rate this Title"
+msgid "Rate this title"
 msgstr "Oceń ten tytuł"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31413"
+msgid "Search recommended"
+msgstr "Przeszukaj rekomendowane"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31414"
+msgid "Search Cast"
+msgstr "Przejrzyj obsadę"
+
+#: /xml/Custom_1141_FlixHub.xml
+msgctxt "#31415"
+msgid "Search Crew"
+msgstr "Przeszukaj ekipę"

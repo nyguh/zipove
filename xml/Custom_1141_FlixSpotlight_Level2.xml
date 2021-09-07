@@ -23,7 +23,7 @@
         <height>200</height>
         <control type="grouplist" id="5999">
           <include content="SpotlightButton">
-            <param name="id" value="6000"/>
+            <param name="id" value="6001"/>
             <param name="icon" value="special://skin/extras/icons/watchlist.png"/>
             <param name="label" value="$LOCALIZE[31408]"/>
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_EnableWatchlist),true)" />
@@ -31,12 +31,6 @@
             <param name="onclick_1" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[Window.Property(spotlight_TMDBid)],type=$INFO[Window.Property(spotlight_TMDBTYPE)],cache_refresh)"/>
             <param name="onclick_2_condition" value="String.IsEmpty(Window.Property(spotlight_TMDBid))"/>
             <param name="onclick_2" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[Window.Property(spotlight_TMDBid2)],type=$INFO[Window.Property(spotlight_TMDBTYPE)],cache_refresh)"/>
-          </include>
-          <include content="SpotlightButton">
-            <param name="id" value="6001"/>
-            <param name="icon" value="special://skin/extras/icons/play3.png"/>
-            <param name="label" value="$VAR[Flix_Spotlight_Title]"/>
-            <param name="onclick_1" value="RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[Window(1140).Property(spotlight_Path)]')" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6002"/>
@@ -59,12 +53,36 @@
             <param name="icon" value="special://skin/extras/icons/dependencies.png"/>
             <param name="label" value="$LOCALIZE[31411]"/>
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_FindSimilar),true)" />
-            <param name="onclick_1" value="Dialog.Close(1141,true)" />
-            <param name="onclick_2" value="Dialog.Close(1140,true)" />
+            <param name="onclick_1" value="SetProperty(spotlight.similar_titles,true,1145)" />
+            <param name="onclick_2" value="Dialog.Close(all,true)" />
             <param name="onclick_3" value="ActivateWindow(1145)" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6005"/>
+            <param name="icon" value="special://skin/extras/icons/ribbon.png"/>
+            <param name="label" value="$LOCALIZE[31413]"/>
+            <param name="onclick_1" value="SetProperty(spotlight.recommended_titles,true,1145)" />
+            <param name="onclick_2" value="Dialog.Close(all,true)" />
+            <param name="onclick_3" value="ActivateWindow(1145)" />
+          </include>
+          <include content="SpotlightButton">
+            <param name="id" value="6006"/>
+            <param name="icon" value="special://skin/extras/icons/actor.png"/>
+            <param name="label" value="$LOCALIZE[31414]"/>
+            <param name="onclick_1" value="SetProperty(spotlight.cast_of_title,true,1145)" />
+            <param name="onclick_2" value="Dialog.Close(all,true)" />
+            <param name="onclick_3" value="ActivateWindow(1145)" />
+          </include>
+          <include content="SpotlightButton">
+            <param name="id" value="6007"/>
+            <param name="icon" value="special://skin/extras/icons/director.png"/>
+            <param name="label" value="$LOCALIZE[31415]"/>
+            <param name="onclick_1" value="SetProperty(spotlight.crew_of_title,true,1145)" />
+            <param name="onclick_2" value="Dialog.Close(all,true)" />
+            <param name="onclick_3" value="ActivateWindow(1145)" />
+          </include>
+          <include content="SpotlightButton">
+            <param name="id" value="6008"/>
             <param name="icon" value="special://skin/extras/icons/thumb-up.png"/>
             <param name="label" value="$LOCALIZE[31412]"/>
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_EnableRating),true)" />
