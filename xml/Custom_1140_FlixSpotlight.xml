@@ -13,6 +13,7 @@
   <onunload>ClearProperty(spotlight_Episode,1140)</onunload>
   <onunload>ClearProperty(spotlight_Plot,1140)</onunload>
   <onunload>ClearProperty(spotlight_Path,1140)</onunload>
+  <onunload>ClearProperty(spotlight_FolderPath1140,1140)</onunload>
   <controls>
     <control type="group">
       <top>300</top>
@@ -53,7 +54,6 @@
             <height>42</height>
             <font>font30_title</font>
             <label>$VAR[Label_Spotlight_Top250]</label>
-            <!-- <visible>!String.IsEmpty(Window.Property(spotlight_250))</visible> -->
           </control>
         </control>
         <include content="Object_Item_Showcase">
@@ -77,7 +77,11 @@
             <param name="icon" value="special://skin/extras/icons/play3.png"/>
             <param name="label" value="$LOCALIZE[208]"/>
             <param name="visible" value="Control.IsVisible(6000)"/>
-            <param name="onclick_1" value="RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[Window.Property(spotlight_Path)]')" />
+            <param name="onclick_1" value="Dialog.Close(all,true)" />
+            <param name="onclick_2_condition" value="String.IsEmpty(Window.Property(spotlight_FolderPath1140)) | [String.IsEqual(Window.Property(spotlight_DBType1140),video) | String.IsEqual(Window.Property(spotlight_DBType1140),movie) | String.IsEqual(Window.Property(spotlight_DBType1140),episode)]" />
+            <param name="onclick_2" value="RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')" />
+            <param name="onclick_3_condition" value="!String.IsEmpty(Window.Property(spotlight_FolderPath1140))" />
+            <param name="onclick_3" value="RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.FolderPath])" />
           </include>
           <include content="InfoButton">
             <param name="id" value="6001"/>
