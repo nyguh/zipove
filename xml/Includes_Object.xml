@@ -369,13 +369,14 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
+        <include condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
+        <include condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties_OnClick</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
-        <onback condition="!Skin.HasSetting(EnableFlixSpotlight)">9000</onback>
+        <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
         <height>460</height>
         <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer],1)</onclick>
@@ -570,13 +571,14 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
+        <include condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
+        <include condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties_OnClick</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
-        <onback condition="!Skin.HasSetting(EnableFlixSpotlight)">9000</onback>
+        <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
         <height>460</height>
         <focusposition>1</focusposition>
         <scrolltime tween="linear" easing="inout">400</scrolltime>

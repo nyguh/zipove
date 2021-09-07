@@ -2025,3 +2025,8 @@ msgstr ""
 msgctxt "#31415"
 msgid "Search Crew"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31416"
+msgid "Trigger Flix Spotlight on select"
+msgstr ""
