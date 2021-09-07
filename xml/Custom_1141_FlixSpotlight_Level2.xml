@@ -45,7 +45,7 @@
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_isFolder),true)" />
             <param name="onclick_1" value="Dialog.Close(1141,true)" />
             <param name="onclick_2" value="Dialog.Close(1140,true)" />
-            <param name="onclick_3" value="AlarmClock(movetotvshow,RunScript(script.embuary.helper,action=jumptoshow_by_episode,dbid=$INFO[ListItem.DBID]),00:01,silent)" />
+            <param name="onclick_3" value="AlarmClock(movetotvshow,Action(Select),00:03,silent)" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6003"/>
