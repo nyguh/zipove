@@ -171,7 +171,7 @@
         <align>center</align>
         <aligny>top</aligny>
         <label>$VAR[SeekLabel]</label>
-        <font>WeatherTemp</font>
+        <font>font_clock</font>
         <shadowcolor>black</shadowcolor>
       </control>
       <control type="group">
