@@ -369,7 +369,7 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(Vertical_Main)">Flix_Spotlight_Properties</include>
+        <include condition="Skin.HasSetting(EnableFlixSpotlight) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
@@ -570,7 +570,7 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(Vertical_Main)">Flix_Spotlight_Properties</include>
+        <include condition="Skin.HasSetting(EnableFlixSpotlight) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>

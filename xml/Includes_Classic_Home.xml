@@ -27,6 +27,7 @@
         <param name="plot_top" value="300"/>
       </include>
       <visible>!$EXP[infodialog_active]</visible>
+      <animation effect="fade" start="100" end="0" time="600" condition="Window.IsActive(1140)">Conditional</animation>
     </control>
     <control type="group" id="2999">
       <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
@@ -91,6 +92,7 @@
           <effect type="slide" end="0,20" time="180" tween="sine" delay="80"/>
         </animation>
         <include>OpenClose_Right</include>
+        <animation effect="slide" start="0" end="0,280" time="1000" tween="quadratic" condition="Window.IsActive(1140)">Conditional</animation>
         <left>430</left>
         <control type="group">
           <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
@@ -130,16 +132,17 @@
           <visible>!String.IsEmpty(Skin.String(FlixedScrolling))</visible>
         </control>
         <control type="group">
-          <top>0</top>
+          <top>-1080</top>
           <left>-430</left>
           <width>135</width>
-          <height>1080</height>
+          <height>3000</height>
           <control type="image">
             <texture colordiffuse="$VAR[ColorsOverlay]">common/overlay.png</texture>
           </control>
-          <visible>[ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))] + !String.IsEqual(Skin.String(MenuStyle),Text)</visible>
+          <visible>!Window.IsVisible(1140) + [ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))] + !String.IsEqual(Skin.String(MenuStyle),Text)</visible>
           <animation effect="slide" start="0,0" end="-860,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
           <animation effect="fade" start="100" end="0" time="350" reversible="true" tween="cubic" easing="inout" condition="!ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
+          <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
         </control>
         <control type="group">
           <top>595</top>

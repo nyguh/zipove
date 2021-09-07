@@ -1192,8 +1192,8 @@
           <control type="multiimage" id="32111">
             <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | ![Skin.HasSetting(Vertical_Main) | Window.IsVisible(home)]" />
             <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
-            <animation effect="zoom" end="150" center="200" time="400" condition="Window.IsActive(1140)">Conditional</animation>
-            <animation effect="slide" start="0" end="-554,0" time="400" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="zoom" end="150" center="200" time="400" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,0" time="400" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
