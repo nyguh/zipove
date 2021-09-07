@@ -2463,12 +2463,16 @@
     <onback>SetProperty(spotlight_Episode,"$INFO[ListItem.Episode]",1140)</onback>
     <onback>SetProperty(spotlight_Plot,"$VAR[Label_OverlayPlot]",1140)</onback>
     <onback>SetProperty(spotlight_Path,"$ESCINFO[ListItem.FileNameAndPath]",1140)</onback>
+    <onback condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">SetProperty(spotlight_EnableWatchlist,true,1141)</onback>
     <onback>SetProperty(spotlight_TMDBid,"$INFO[ListItem.Property(TMDB_ID)]",1141)</onback>
     <onback>SetProperty(spotlight_TMDBid2,"$INFO[Window(home).Property(TMDbHelper.ListItem.TMDB_ID)]",1141)</onback>
     <onback>SetProperty(spotlight_TMDBTYPE,"$VAR[TMDB_TYPE]",1141)</onback>
     <onback condition="ListItem.IsFolder">SetProperty(spotlight_isFolder,true,1141)</onback>
     <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1141)</onback>
+    <onback condition="!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">SetProperty(spotlight_isTrailer,true,1141)</onback>
     <onback>SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",1141)</onback>
+    <onback condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onback>
+    <onback condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onback>
     <onback>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",1145)</onback>
     <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onback>
     <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onback>
