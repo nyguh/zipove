@@ -1,3 +1,16 @@
+1.0.46
+    Added: Flix Spotlight for Classic layout
+    Fixed: Position of icons in main menu in Classic layout
+    Changed: Custom_1145_Similar layout to Flix view
+    Fixed: Clear properties
+    Fixed: Font size in PVR OSD clock
+    Fixed: Font size in Seeklabel
+    Improved: Buttons in Flix Spotlight
+    Fixed: Play and more episodes buttons in Flix Spotlight
+    Changed: Label of play button in first level of Flix Spotlight
+    Improved: Flix Spotlight
+    Added: Option to Trigger Flix Spotlight on select
+    Fixed: Temporary fix for manually starting trailer
 1.0.45
     Fixed: Dont hide showcase option
     Added: Plot overlay from Info Dialog
