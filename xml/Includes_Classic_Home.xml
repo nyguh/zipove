@@ -32,13 +32,15 @@
     <control type="group" id="2999">
       <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
       <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
-      <include content="Object_Ratings_Content">
-        <param name="top" value="235"/>
-        <param name="left" value="450"/>
-        <param name="align" value="left"/>
-        <param name="directory" value="$INFO[Skin.String(Icons)]"/>
-        <visible>!Control.HasFocus(9000)</visible>
-      </include>
+      <control type="group">
+        <include content="Object_Ratings_Content">
+          <param name="top" value="235"/>
+          <param name="left" value="450"/>
+          <param name="align" value="left"/>
+          <param name="directory" value="$INFO[Skin.String(Icons)]"/>
+        </include>
+        <visible>!Window.IsActive(1140) + !Window.IsActive(1141)</visible>
+      </control>
       <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
       <control type="group">
         <top>250</top>
