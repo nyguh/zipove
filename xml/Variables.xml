@@ -138,7 +138,7 @@
     <!-- <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) + !Skin.HasSetting(TMDbHelper.EnableColors)">$VAR[AlphaPercentage]</value> -->
   </variable>
   <variable name="ColorsOverlay">
-    <value condition="Skin.HasSetting(TMDbHelper.EnableColors)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
+    <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Colors.Main))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
     <value>$VAR[ColorHighlight]</value>
   </variable>
   <variable name="HighlightOverlay">
