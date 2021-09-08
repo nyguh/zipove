@@ -1,3 +1,13 @@
+1.0.47
+    Fixed: Background trailers with Flix Spotlight triggered by select
+    Fixed: Background trailers when Flix Spotlight is disabled
+    Fixed: ColorsOverlay variable
+    Fixed: Stop video when exiting 1140 window
+    Fixed: Buttons in Flix Spotlight
+    Fixed: Enabled access to hidden menu in PVR Guide
+    Added: Action button to PVR widget in Flix Spotlight
+    Improved: Play button in Flix Spotlight
+    Added: Activate TV Channels and TV Guide buttons to Flix Spotlight in PVR widgets
 1.0.46
     Added: Flix Spotlight for Classic layout
     Fixed: Position of icons in main menu in Classic layout
