@@ -61,6 +61,7 @@
             <param name="id" value="6005"/>
             <param name="icon" value="special://skin/extras/icons/ribbon.png"/>
             <param name="label" value="$LOCALIZE[31413]"/>
+            <param name="visible" value="String.IsEqual(Window(1140).Property(spotlight_DBType1140),movie) | String.IsEqual(Window(1140).Property(spotlight_DBType1140),tvshow)" />
             <param name="onclick_1" value="SetProperty(spotlight.recommended_titles,true,1145)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
             <param name="onclick_3" value="ActivateWindow(1145)" />
@@ -69,6 +70,7 @@
             <param name="id" value="6006"/>
             <param name="icon" value="special://skin/extras/icons/actor.png"/>
             <param name="label" value="$LOCALIZE[31414]"/>
+            <param name="visible" value="String.IsEqual(Window(1140).Property(spotlight_DBType1140),movie) | String.IsEqual(Window(1140).Property(spotlight_DBType1140),tvshow)" />
             <param name="onclick_1" value="SetProperty(spotlight.cast_of_title,true,1145)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
             <param name="onclick_3" value="ActivateWindow(1145)" />
@@ -77,6 +79,7 @@
             <param name="id" value="6007"/>
             <param name="icon" value="special://skin/extras/icons/director.png"/>
             <param name="label" value="$LOCALIZE[31415]"/>
+            <param name="visible" value="String.IsEqual(Window(1140).Property(spotlight_DBType1140),movie) | String.IsEqual(Window(1140).Property(spotlight_DBType1140),tvshow)" />
             <param name="onclick_1" value="SetProperty(spotlight.crew_of_title,true,1145)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
             <param name="onclick_3" value="ActivateWindow(1145)" />
