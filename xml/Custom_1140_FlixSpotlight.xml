@@ -14,6 +14,7 @@
   <onunload>ClearProperty(spotlight_Plot,1140)</onunload>
   <onunload>ClearProperty(spotlight_Path,1140)</onunload>
   <onunload>ClearProperty(spotlight_FolderPath1140,1140)</onunload>
+  <onunload>PlayerControl(Stop)</onunload>
   <controls>
     <control type="group">
       <top>300</top>
