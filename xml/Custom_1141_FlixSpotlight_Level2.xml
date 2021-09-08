@@ -96,6 +96,22 @@
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6009"/>
+            <param name="icon" value="special://skin/extras/icons/livetv.png"/>
+            <param name="label" value="$LOCALIZE[10700]"/>
+            <param name="visible" value="String.IsEqual(Window.Property(spotlight_isPVR),true)" />
+            <param name="onclick_1" value="Dialog.Close(all,true)" />
+            <param name="onclick_2" value="ActivateWindow(tvchannels)" />
+          </include>
+          <include content="SpotlightButton">
+            <param name="id" value="6010"/>
+            <param name="icon" value="special://skin/extras/icons/playlist.png"/>
+            <param name="label" value="$LOCALIZE[10702]"/>
+            <param name="visible" value="String.IsEqual(Window.Property(spotlight_isPVR),true)" />
+            <param name="onclick_1" value="Dialog.Close(all,true)" />
+            <param name="onclick_2" value="ActivateWindow(tvguide)" />
+          </include>
+          <include content="SpotlightButton">
+            <param name="id" value="6011"/>
             <param name="icon" value="special://skin/extras/icons/info.png"/>
             <param name="label" value="$LOCALIZE[22081]"/>
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_isPVR),true)" />
