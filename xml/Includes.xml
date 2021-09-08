@@ -2474,6 +2474,7 @@
     <onback>SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",1141)</onback>
     <onback condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onback>
     <onback condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onback>
+    <onback condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,1141)</onback>
     <onback>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",1145)</onback>
     <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onback>
     <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onback>
@@ -2507,6 +2508,7 @@
     <onclick>SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",1141)</onclick>
     <onclick condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onclick>
     <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onclick>
+    <onclick condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,1141)</onclick>
     <onclick>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",1145)</onclick>
     <onclick>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onclick>
     <onclick>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onclick>
