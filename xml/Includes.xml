@@ -1167,7 +1167,7 @@
       <control type="videowindow">
         <!-- <depth>DepthBackground</depth> -->
         <include>TrailerWindowDimensions</include>
-        <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) + [Window.IsActive(1140) | Window.IsAtive(1141)]</visible>
+        <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) | [Window.IsActive(1140) | Window.IsAtive(1141)]</visible>
         <visible>!Slideshow.IsActive</visible>
       </control>
       <control type="visualisation">
@@ -1265,7 +1265,7 @@
           <animation effect="fade" time="100">VisibleChange</animation>
           <animation effect="fade" start="600" end="0" time="400" condition="!Player.HasVideo + Window.IsActive(1140)">Conditional</animation>
           <texture background="true">common/vignette-vert-main.png</texture>
-          <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) + [Window.IsActive(1140) | Window.IsAtive(1141)]</visible>
+          <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) | [Window.IsActive(1140) | Window.IsAtive(1141)]</visible>
         </control>
       </control>
     </definition>
