@@ -73,6 +73,7 @@
         <animation effect="fade" start="100" end="0" time="400" tween="quadratic" condition="Window.IsActive(1141)">Conditional</animation>
         <control type="grouplist">
           <orientation>horizontal</orientation>
+          <ondown>Dialog.Close(all,true)</ondown>
           <include content="InfoButton">
             <param name="id" value="6000"/>
             <param name="groupid" value="7000"/>
