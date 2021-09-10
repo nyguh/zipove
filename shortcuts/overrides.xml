@@ -289,6 +289,7 @@
     <shortcut label="Music Video Artists" type="571" icon="special://skin/extras/icons/musicvideo.png">DefaultSearch-MusicVideoArtists</shortcut>
     <shortcut label="Add-ons" type="571" icon="special://skin/extras/icons/addons.png">DefaultSearch-Addons</shortcut>
     <shortcut label="Youtube" type="571" icon="special://skin/extras/icons/youtube.png">DefaultSearch-Youtube</shortcut>
+    <shortcut label="Netflix" type="571" icon="special://skin/extras/icons/netflix.png">DefaultSearch-Netflix</shortcut>
     <shortcut label="TMDb Movies" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-TMDBMovies</shortcut>
     <shortcut label="TMDb Shows" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-TMDBShows</shortcut>
     <shortcut label="TMDb People" type="571" icon="special://skin/extras/icons/person3.png">DefaultSearch-TMDBPeople</shortcut>
