@@ -1,3 +1,7 @@
+1.0.48
+    Fixed: Close Flix Spotlight ondown action
+    Added: Netflix default entry to searchlist feature
+    Changed: Default font to Glory, removed Inter and ARIALUNI
 1.0.47
     Fixed: Background trailers with Flix Spotlight triggered by select
     Fixed: Background trailers when Flix Spotlight is disabled
