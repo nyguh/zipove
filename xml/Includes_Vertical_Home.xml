@@ -74,7 +74,8 @@
           <effect type="slide" end="0,-20" time="60" tween="sine"/>
           <effect type="slide" end="0,20" time="180" tween="sine" delay="80"/>
         </animation>
-        <animation effect="slide" start="0" end="0,280" time="400" tween="quadratic" condition="Window.IsActive(1140)">Conditional</animation>
+        <animation effect="slide" start="0" end="0,280" time="400" tween="quadratic" condition="Window.IsActive(1140) + !Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
+        <animation effect="slide" start="0" end="0,560" time="400" tween="quadratic" condition="Window.IsActive(1140) + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
         <include>OpenClose_Right</include>
         <left>122</left>
         <control type="group">
