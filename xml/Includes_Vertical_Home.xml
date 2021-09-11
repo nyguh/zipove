@@ -85,7 +85,7 @@
         <control type="grouplist" id="3000">
           <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
           <top>595</top>
-          <height>9999</height>
+          <height>999999</height>
           <usecontrolcoords>false</usecontrolcoords>
           <include content="Animation_Widget_Slide">
             <param name="container" value="3000" />
@@ -97,7 +97,7 @@
           <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
           <top>595</top>
           <left>-215</left>
-          <height>9999</height>
+          <height>999999</height>
           <width>2300</width>
           <usecontrolcoords>false</usecontrolcoords>
           <include content="Animation_Widget_Slide">
