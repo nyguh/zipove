@@ -1854,3 +1854,8 @@ msgstr "Przeszukaj ekipę"
 msgctxt "#31416"
 msgid "Trigger Flix Spotlight on select"
 msgstr "Rozwiń Flix Spotlight po nacisnięciu OK"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31417"
+msgid "Play trailers FullScreen"
+msgstr "Odtwarzaj zwiastuny w pełnym oknie"
