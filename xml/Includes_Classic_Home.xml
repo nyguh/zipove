@@ -27,7 +27,7 @@
         <param name="plot_top" value="300"/>
       </include>
       <visible>!$EXP[infodialog_active]</visible>
-      <animation effect="fade" start="100" end="0" time="600" condition="Window.IsActive(1140)">Conditional</animation>
+      <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(1140)">Conditional</animation>
     </control>
     <control type="group" id="2999">
       <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
@@ -94,7 +94,7 @@
           <effect type="slide" end="0,20" time="180" tween="sine" delay="80"/>
         </animation>
         <include>OpenClose_Right</include>
-        <animation effect="slide" start="0" end="0,280" time="1000" tween="quadratic" condition="Window.IsActive(1140)">Conditional</animation>
+        <animation effect="slide" start="0" end="0,280" time="400" tween="quadratic" condition="Window.IsActive(1140)">Conditional</animation>
         <left>430</left>
         <control type="group">
           <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>

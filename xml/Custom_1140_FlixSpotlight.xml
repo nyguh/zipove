@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1140">
-  <animation effect="slide" start="0,-1000" end="0" time="1000" tween="quadratic" condition="Window.IsActive(1140)">WindowOpen</animation>
-  <animation effect="fade" start="0" end="100" time="100" delay="500" condition="Window.IsActive(1140)">WindowOpen</animation>
+  <animation effect="slide" start="0,-1000" end="0" time="400" tween="quadratic" condition="Window.IsActive(1140)">WindowOpen</animation>
+  <animation effect="fade" start="0" end="100" time="100" delay="100" condition="Window.IsActive(1140)">WindowOpen</animation>
   <defaultcontrol>6000</defaultcontrol>
   <onunload>ClearProperty(spotlight_Fanart,1140)</onunload>
   <onunload>ClearProperty(spotlight_ClearLogo,1140)</onunload>

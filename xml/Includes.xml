@@ -1192,8 +1192,8 @@
           <control type="multiimage" id="32111">
             <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | ![Skin.HasSetting(Vertical_Main) | Window.IsVisible(home)]" />
             <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
-            <animation effect="zoom" end="150" center="200" time="400" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
-            <animation effect="slide" start="0" end="-554,0" time="400" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
+            <animation effect="zoom" end="150" center="200" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
@@ -1209,8 +1209,8 @@
           <control type="group">
             <include>TrailerWindowDimensions</include>
             <include>ColoredBackgroundImages</include>
-            <animation effect="zoom" end="300" center="400" time="400" condition="Window.IsActive(1140)">Conditional</animation>
-            <animation effect="slide" start="0" end="-554,100" time="400" reversible="true" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="zoom" end="300" center="400" time="200" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,100" time="200" reversible="true" condition="Window.IsActive(1140)">Conditional</animation>
             <animation effect="fade" time="200" end="0" condition="String.IsEqual(Skin.String(AlphaValue),100)">Conditional</animation>
             <animation effect="fade" time="200" end="5" condition="String.IsEqual(Skin.String(AlphaValue),95)">Conditional</animation>
             <animation effect="fade" time="200" end="10" condition="String.IsEqual(Skin.String(AlphaValue),90)">Conditional</animation>
@@ -1252,7 +1252,7 @@
             <include>FullScreenDimensions</include>
             <aspectratio aligny="center">scale</aspectratio>
             <animation effect="fade" time="100" delay="600">Hidden</animation>
-            <animation effect="fade" start="100" end="0" time="400" condition="!Player.HasVideo + Window.IsActive(1140)">Conditional</animation>
+            <animation effect="fade" start="100" end="0" time="200" condition="!Player.HasVideo + Window.IsActive(1140)">Conditional</animation>
             <texture background="true">common/vignette-vert-main.png</texture>
             <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main) + !Control.HasFocus(510)</visible>
@@ -1263,7 +1263,7 @@
           <include>FullScreenDimensions</include>
           <aspectratio aligny="center">scale</aspectratio>
           <animation effect="fade" time="100">VisibleChange</animation>
-          <animation effect="fade" start="600" end="0" time="400" condition="!Player.HasVideo + Window.IsActive(1140)">Conditional</animation>
+          <animation effect="fade" start="600" end="0" time="200" condition="!Player.HasVideo + Window.IsActive(1140)">Conditional</animation>
           <texture background="true">common/vignette-vert-main.png</texture>
           <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) | [Window.IsActive(1140) | Window.IsAtive(1141)]</visible>
         </control>
