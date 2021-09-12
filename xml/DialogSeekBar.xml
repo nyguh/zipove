@@ -422,14 +422,13 @@
     </control>
     <!-- LiveTV start -->
     <control type="group">
-      <visible>!Window.IsVisible(playerprocessinfo)</visible>
+      <visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videoosd)</visible>
       <visible>[Player.ShowInfo | Window.IsActive(fullscreeninfo)] + VideoPlayer.Content(LiveTV)</visible>
       <visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | !Player.Seeking | !Player.DisplayAfterSeek | !Player.Forwarding | !Player.Rewinding | !Player.Paused</visible>
-      <include>Animation_DialogPopupOpenClose</include>
+      <include>Animation_BottomSlide</include>
       <width>1920</width>
       <control type="group">
         <bottom>0</bottom>
-        <include>Animation_BottomSlide</include>
         <visible>VideoPlayer.Content(livetv)</visible>
         <control type="image">
           <left>0</left>
@@ -539,7 +538,6 @@
       </control>
       <control type="group">
         <bottom>0</bottom>
-        <include>Animation_BottomSlide</include>
         <visible>VideoPlayer.Content(livetv)</visible>
         <control type="label">
           <top>640</top>

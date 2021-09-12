@@ -576,6 +576,7 @@
               <param name="texture" value="osd/fullscreen/buttons/information.png"/>
             </include>
             <onclick>Info</onclick>
+            <onclick>Dialog.Close(videoosd)</onclick>
             <visible>ControlGroup(201).HasFocus</visible>
             <include>OSD_Button_OnFocus</include>
           </control>
