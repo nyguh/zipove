@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1145">
-  <defaultcontrol>11045</defaultcontrol>
+<window type="dialog" id="1142">
+  <defaultcontrol always="true">11042</defaultcontrol>
   <onunload>ClearProperty(spotlight_SimilarLabel,home)</onunload>
   <onunload>ClearProperty(spotlight_SimilarLabel2,home)</onunload>
   <onunload>ClearProperty(spotlight_SimilarTYPE,home)</onunload>
   <onunload>ClearProperty(spotlight_SimilarQUERY,home)</onunload>
-  <onunload>ClearProperty(spotlight.crew_of_title,1145)</onunload>
+  <onunload>ClearProperty(spotlight.similar_titles,1142)</onunload>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
@@ -35,13 +35,13 @@
           <param name="plot_height" value="200"/>
           <param name="info_line_top" value="180"/>
           <param name="plot_top" value="260"/>
-          <param name="visible_infoline" value="!Container(10045).IsUpdating" />
+          <param name="visible_infoline" value="!Container(11042).IsUpdating" />
         </include>
         <visible>!Control.HasFocus(511)</visible>
       </control>
-      <control type="group" id="10045">
-        <!-- crew -->
-        <control type="fixedlist" id="11045">
+      <control type="group" id="11045">
+        <!-- similar movies -->
+        <control type="fixedlist" id="11042">
           <top>610</top>
           <left>-120</left>
           <width>2400</width>
@@ -53,7 +53,7 @@
           <focusposition>1</focusposition>
           <animation effect="slide" time="0" start="0" end="-100,0" condition="true">Conditional</animation>
           <viewtype>icon</viewtype>
-          <visible>String.IsEqual(Window.Property(spotlight.crew_of_title),true)</visible>
+          <visible>String.IsEqual(Window.Property(spotlight.similar_titles),true)</visible>
           <focusedlayout height="382.5" width="270">
             <control type="group">
               <include content="View_56_Posters_Layout">
@@ -68,7 +68,7 @@
               </include>
             </control>
           </itemlayout>
-          <content limit="50" target="videos">plugin://plugin.video.themoviedb.helper?info=crew&amp;type=movie&amp;imdb_id=$INFO[Window(home).Property(spotlight_SimilarIMDB)]</content>
+          <content limit="50" target="videos">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=movie&amp;imdb_id=$INFO[Window(home).Property(spotlight_SimilarIMDB)]</content>
         </control>
       </control>
       <control type="group">
@@ -85,7 +85,7 @@
           <param name="pad_bottom_t" value="-4"/>
           <param name="pad_left_t" value="17"/>
           <param name="pad_right_t" value="-32"/>
-          <param name="visible_posters" value="!Container(10045).IsUpdating"/>
+          <param name="visible_posters" value="!Container(11042).IsUpdating"/>
           <param name="visible_squares" value="false"/>
           <param name="visible_landscapes" value="false"/>
           <param name="focusbounce" value="false" />
@@ -105,7 +105,7 @@
           <texture colordiffuse="BFFFFFFF">colors/black.png</texture>
         </control>
         <animation effect="fade" time="400">VisibleChange</animation>
-        <visible>Integer.IsGreater(Container(10045).CurrentItem,1)</visible>
+        <visible>Integer.IsGreater(Container(11042).CurrentItem,1)</visible>
       </control>
       <control type="scrollbar" id="511">
         <onup>11045</onup>
@@ -125,7 +125,7 @@
         <animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
       </control>
       <include>DialogBusy</include>
-      <visible>Container(11045).IsUpdating</visible>
+      <visible>Container(11042).IsUpdating</visible>
     </control>
   </controls>
 </window>

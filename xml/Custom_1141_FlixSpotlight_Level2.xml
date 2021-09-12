@@ -54,27 +54,27 @@
             <param name="icon" value="special://skin/extras/icons/dependencies.png"/>
             <param name="label" value="$LOCALIZE[31411]"/>
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_FindSimilar),true)" />
-            <param name="onclick_1" value="SetProperty(spotlight.similar_titles,true,1145)" />
+            <param name="onclick_1" value="SetProperty(spotlight.similar_titles,true,1142)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
-            <param name="onclick_3" value="ActivateWindow(1145)" />
+            <param name="onclick_3" value="ActivateWindow(1142)" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6005"/>
             <param name="icon" value="special://skin/extras/icons/ribbon.png"/>
             <param name="label" value="$LOCALIZE[31413]"/>
             <param name="visible" value="String.IsEqual(Window(1140).Property(spotlight_DBType1140),movie) | String.IsEqual(Window(1140).Property(spotlight_DBType1140),tvshow)" />
-            <param name="onclick_1" value="SetProperty(spotlight.recommended_titles,true,1145)" />
+            <param name="onclick_1" value="SetProperty(spotlight.recommended_titles,true,1143)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
-            <param name="onclick_3" value="ActivateWindow(1145)" />
+            <param name="onclick_3" value="ActivateWindow(1143)" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6006"/>
             <param name="icon" value="special://skin/extras/icons/actor.png"/>
             <param name="label" value="$LOCALIZE[31414]"/>
             <param name="visible" value="String.IsEqual(Window(1140).Property(spotlight_DBType1140),movie) | String.IsEqual(Window(1140).Property(spotlight_DBType1140),tvshow)" />
-            <param name="onclick_1" value="SetProperty(spotlight.cast_of_title,true,1145)" />
+            <param name="onclick_1" value="SetProperty(spotlight.cast_of_title,true,1144)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
-            <param name="onclick_3" value="ActivateWindow(1145)" />
+            <param name="onclick_3" value="ActivateWindow(1144)" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6007"/>
@@ -92,7 +92,7 @@
             <param name="visible" value="String.IsEqual(Window.Property(spotlight_EnableRating),true)" />
             <param name="onclick_1" value="SetProperty(spotlight.user_rating,true,home)" />
             <param name="onclick_2" value="Dialog.Close(all,true)" />
-            <param name="onclick_3" value="ActivateWindow(1146)" />
+            <param name="onclick_3" value="ActivateWindow(1149)" />
           </include>
           <include content="SpotlightButton">
             <param name="id" value="6009"/>

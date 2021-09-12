@@ -2714,15 +2714,15 @@
     <onback condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onback>
     <onback condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onback>
     <onback condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,1141)</onback>
-    <onback>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",1145)</onback>
-    <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onback>
-    <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onback>
-    <onback>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",1145)</onback>
-    <onback>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",1145)</onback>
-    <onback>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1146)</onback>
-    <onback>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1146)</onback>
-    <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1146)</onback>
-    <onback>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1146)</onback>
+    <onback>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",home)</onback>
+    <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",home)</onback>
+    <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",home)</onback>
+    <onback>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",home)</onback>
+    <onback>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",home)</onback>
+    <onback>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1149)</onback>
+    <onback>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1149)</onback>
+    <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1149)</onback>
+    <onback>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1149)</onback>
     <onback>ActivateWindow(1140)</onback>
   </include>
   <include name="Flix_Spotlight_Properties_OnClick">
@@ -2748,15 +2748,15 @@
     <onclick condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onclick>
     <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onclick>
     <onclick condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,1141)</onclick>
-    <onclick>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",1145)</onclick>
-    <onclick>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",1145)</onclick>
-    <onclick>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",1145)</onclick>
-    <onclick>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",1145)</onclick>
-    <onclick>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",1145)</onclick>
-    <onclick>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1146)</onclick>
-    <onclick>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1146)</onclick>
-    <onclick>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1146)</onclick>
-    <onclick>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1146)</onclick>
+    <onclick>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",home)</onclick>
+    <onclick>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",home)</onclick>
+    <onclick>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",home)</onclick>
+    <onclick>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",home)</onclick>
+    <onclick>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",home)</onclick>
+    <onclick>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1149)</onclick>
+    <onclick>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1149)</onclick>
+    <onclick>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1149)</onclick>
+    <onclick>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1149)</onclick>
     <onclick>ActivateWindow(1140)</onclick>
   </include>
 </includes>
