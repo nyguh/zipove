@@ -363,7 +363,7 @@
         <texture flipy="true">frame/osdfade.png</texture>
       </control>
       <control type="image">
-        <left>425</left>
+        <left>355</left>
         <bottom>64</bottom>
         <width>32</width>
         <height>512</height>
@@ -371,7 +371,7 @@
         <animation effect="rotatex" end="70" time="0" condition="true">Conditional</animation>
       </control>
       <control type="group">
-        <left>385</left>
+        <left>305</left>
         <top>-70</top>
         <control type="label">
           <font>font32_bold</font>
@@ -390,9 +390,9 @@
         <left>546</left>
         <top>-280</top>
         <control type="image">
-          <top>164</top>
+          <top>194</top>
           <left>-1200</left>
-          <height>128</height>
+          <height max="72">72</height>
           <aspectratio>keep</aspectratio>
           <texture>$INFO[Player.Icon]</texture>
         </control>
