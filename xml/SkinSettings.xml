@@ -643,12 +643,18 @@
             <aligny>center</aligny>
           </control>
           <control type="radiobutton" id="1102">
+            <label>$LOCALIZE[31418]</label>
+            <include>DefaultSettingButton</include>
+            <onclick>Skin.ToggleSetting(KeepMinimalPVROSD)</onclick>
+            <selected>Skin.HasSetting(KeepMinimalPVROSD)</selected>
+          </control>
+          <control type="radiobutton" id="1103">
             <label>$LOCALIZE[31311]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(LegacyPVR)</onclick>
             <selected>Skin.HasSetting(LegacyPVR)</selected>
           </control>
-          <control type="label" id="1103">
+          <control type="label" id="1104">
             <textoffsetx>30</textoffsetx>
             <width>470</width>
             <height>80</height>
@@ -657,7 +663,7 @@
             <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
-          <control type="radiobutton" id="1104">
+          <control type="radiobutton" id="1105">
             <label>$LOCALIZE[31395]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(ShowEPGEventIcon)</onclick>

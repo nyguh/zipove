@@ -1859,3 +1859,8 @@ msgstr "Rozwiń Flix Spotlight po nacisnięciu OK"
 msgctxt "#31417"
 msgid "Play trailers FullScreen"
 msgstr "Odtwarzaj zwiastuny w pełnym oknie"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31418"
+msgid "Keep minimal OSD"
+msgstr "Używaj minimalistycznego OSD"

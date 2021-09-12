@@ -38,7 +38,8 @@
 				<shadowcolor>black</shadowcolor>
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control> -->
-      <include content="LiveTV_OSD" condition="VideoPlayer.Content(livetv)"/>
+      <include content="LiveTV_OSD_Minimal" condition="VideoPlayer.Content(livetv) + Skin.HasSetting(KeepMinimalPVROSD)"/>
+      <include content="LiveTV_OSD" condition="VideoPlayer.Content(livetv) + !Skin.HasSetting(KeepMinimalPVROSD)"/>
       <include content="Video_OSD" condition="!VideoPlayer.Content(livetv)"/>
     </control>
   </controls>
