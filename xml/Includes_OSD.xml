@@ -389,12 +389,16 @@
       <control type="group">
         <left>546</left>
         <top>-280</top>
-        <control type="image">
-          <top>194</top>
-          <left>-1200</left>
-          <height max="72">72</height>
-          <aspectratio>keep</aspectratio>
-          <texture>$INFO[Player.Icon]</texture>
+        <control type="group">
+          <height>128</height>
+          <width>230</width>
+          <top>160</top>
+          <left>0</left>
+          <control type="image">
+            <height>128</height>
+            <aspectratio>keep</aspectratio>
+            <texture>$INFO[Player.Icon]</texture>
+          </control>
         </control>
         <control type="grouplist">
           <orientation>vertical</orientation>
