@@ -432,13 +432,13 @@
     <definition>
       <control type="radiobutton" id="$PARAM[id]">
         <width>$PARAM[width]</width>
-        <height>128</height>
+        <height>108</height>
         <align>center</align>
         <aligny>top</aligny>
         <texturefocus border="5" colordiffuse="AltPosterBack">common/box.png</texturefocus>
         <texturenofocus />
         <textoffsetx>5</textoffsetx>
-        <textoffsety>90</textoffsety>
+        <textoffsety>112</textoffsety>
         <radioposx>0</radioposx>
         <radioposy>-5</radioposy>
         <radiowidth>108</radiowidth>

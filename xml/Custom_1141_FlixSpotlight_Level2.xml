@@ -5,25 +5,6 @@
   <onload>SetProperty(TMDbHelper.Blur.Fallback,$VAR[MediaFanartVar],Home)</onload>
   <onload>Skin.SetBool(TMDbHelper.EnableBlur)</onload>
   <onunload condition="!Skin.HasSetting(BlurEnabledByUser)">Skin.Reset(TMDbHelper.EnableBlur)</onunload>
-  <onunload>ClearProperty(spotlight_Duration,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Genre,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Year,1141)</onunload>
-  <onunload>ClearProperty(spotlight_MPAA,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Resolution,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Director,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Cast,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Writer,1141)</onunload>
-  <onunload>ClearProperty(spotlight_TMDBid,1141)</onunload>
-  <onunload>ClearProperty(spotlight_TMDBid2,1141)</onunload>
-  <onunload>ClearProperty(spotlight_TMDBTYPE,1141)</onunload>
-  <onunload>ClearProperty(spotlight_isFolder,1141)</onunload>
-  <onunload>ClearProperty(spotlight_DBID,1141)</onunload>
-  <onunload>ClearProperty(spotlight_EnableWatchlist,1141)</onunload>
-  <onunload>ClearProperty(spotlight_isTrailer,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Trailer,1141)</onunload>
-  <onunload>ClearProperty(spotlight_FindSimilar,1141)</onunload>
-  <onunload>ClearProperty(spotlight_EnableRating,1141)</onunload>
-  <onunload>ClearProperty(spotlight_isPVR,1141)</onunload>
   <controls>
     <control type="group">
       <left>300</left>

@@ -265,7 +265,7 @@
     <value>  |  [COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
   </variable>
   <variable name="Label_InfoLine_Spotlight">
-    <value>$INFO[Window(1141).Property(spotlight_Duration),[COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Genre),   | [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Year),   | [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_MPAA),   | [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Resolution),   | [COLOR=main_fg_100],[/COLOR]]</value>
+    <value>$INFO[Window(1141).Property(spotlight_Duration),[COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Genre),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Year),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_MPAA),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Resolution),   |   [COLOR=main_fg_100],[/COLOR]]</value>
   </variable>
   <variable name="Image_ClearLogo">
     <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
