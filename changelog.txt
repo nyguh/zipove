@@ -1,3 +1,14 @@
+1.0.51
+    Improved: Flix Spotlight movie/tvshow functions performance
+    Removed: Background from main menu in Classic layout
+    Fixed: Play button in Flix Spotlight in some scenarios
+    Improved: More information tab in Flix Spotlight
+    Fixed: Closing the tag
+    Improved: Flix Spotlight
+    Added: Option to set alpha value for home screen independently
+    Fixed: Alpha value for other views than home screen
+    Fixed: Hide overlays in Vertical layout when blur is enabled
+    Added: Colored overlay for Flix spotlight in Vertical layout managed by global alpha value
 1.0.50
     Fixed: Hide widget row when PlayTrailersFullScreen option is enabled
     Fixed: Lag before sliding Flix Spotlight down when manually trailers are enabled
