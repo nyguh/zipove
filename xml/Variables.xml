@@ -59,6 +59,30 @@
     <value condition="String.IsEqual(Skin.String(AlphaValue),0)">00FFFFFF</value>
     <value>37FFFFFF</value>
   </variable>
+  <variable name="HomeAlphaPercentage">
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),100)">FFFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),95)">F2FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),90)">E6FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),85)">D9FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),80)">CCFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),75)">BFFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),70)">B3FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),65)">A6FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),60)">99FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),55)">8CFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),50)">80FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),45)">73FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),40)">66FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),35)">59FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),30)">4DFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),25)">40FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),20)">33FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),15)">26FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),10)">1AFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),5)">0DFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(HomeAlphaValue),0)">00FFFFFF</value>
+    <value>37FFFFFF</value>
+  </variable>
   <variable name="AlphaFadeLevel">
     <value condition="String.IsEqual(Skin.String(AlphaValue),100)">100</value>
     <value condition="String.IsEqual(Skin.String(AlphaValue),95)">95</value>
@@ -134,8 +158,9 @@
   <variable name="BackgroundOverlay">
     <value condition="Control.HasFocus(57)">FFFFFFFF</value>
     <value condition="Control.HasFocus(510)">$VAR[AlphaPercentage]</value>
-    <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
-    <!-- <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) + !Skin.HasSetting(TMDbHelper.EnableColors)">$VAR[AlphaPercentage]</value> -->
+    <value condition="Window.IsVisible(Home)">$VAR[HomeAlphaPercentage]</value>
+    <value condition="!Window.IsVisible(Home) + Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
+    <value condition="Window.IsVisible(1140) | Window.IsVisible(1141)">$VAR[AlphaPercentage]</value>
   </variable>
   <variable name="ColorsOverlay">
     <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Colors.Main))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>

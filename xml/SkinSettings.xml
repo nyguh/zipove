@@ -230,7 +230,7 @@
           </control>
           <control type="button" id="704" description="Overlay alpha">
             <label>$LOCALIZE[31397]</label>
-            <label2>$INFO[Skin.String(AlphaValue),A: (,%) ]$VAR[LuminanceVariable,L: (,) ]$VAR[SaturationVariable,S: (,) ]</label2>
+            <label2>$INFO[Skin.String(HomeAlphaValue),H: (,%) ]$INFO[Skin.String(AlphaValue),A: (,%) ]$VAR[LuminanceVariable,L: (,) ]$VAR[SaturationVariable,S: (,) ]</label2>
             <include>DefaultSettingButton</include>
             <onclick>ActivateWindow(1111)</onclick>
           </control>
