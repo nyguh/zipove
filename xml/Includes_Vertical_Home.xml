@@ -115,7 +115,7 @@
           <control type="image">
             <texture colordiffuse="BFFFFFFF">colors/black.png</texture>
           </control>
-          <visible>ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))</visible>
+          <visible>ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling)) + !Skin.HasSetting(TMDbHelper.EnableBlur)</visible>
           <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(1140)">Conditional</animation>
         </control>
         <control type="group">
