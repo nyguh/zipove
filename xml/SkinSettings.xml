@@ -238,7 +238,8 @@
             <label>$LOCALIZE[31251]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(TMDbHelper.EnableBlur)</onclick>
-            <selected>Skin.HasSetting(TMDbHelper.EnableBlur)</selected>
+            <onclick>Skin.ToggleSetting(BlurEnabledByUser)</onclick>
+            <selected>Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(BlurEnabledByUser)</selected>
           </control>
           <control type="radiobutton" id="706" description="Enable blur, no home">
             <label>$LOCALIZE[31252]</label>

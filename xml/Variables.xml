@@ -264,6 +264,9 @@
     <value condition="Window.IsVisible(VideoFullScreen.xml)">$INFO[VideoPlayer.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[VideoPlayer.MPAA,  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_OSD_Duration,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[VideoPlayer.EndTime]</value>
     <value>  |  [COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
   </variable>
+  <variable name="Label_InfoLine_Spotlight">
+    <value>$INFO[Window(1141).Property(spotlight_Duration),[COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Genre),   | [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Year),   | [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_MPAA),   | [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Resolution),   | [COLOR=main_fg_100],[/COLOR]]</value>
+  </variable>
   <variable name="Image_ClearLogo">
     <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
     <value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + !String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
@@ -906,6 +909,9 @@
     <value condition="Skin.HasSetting(DontBlurHome) + [Skin.HasSetting(TMDbHelper.EnableBlur) + [!Window.IsVisible(Home) | $EXP[infodialog_active]]]">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
     <value condition="!String.IsEmpty(ListItem.Property(background))">$INFO[ListItem.Property(background)]</value>
     <value>$VAR[MediaFanartVar]</value>
+  </variable>
+  <variable name="BlurSpotlight">
+    <value condition="Window.IsVisible(1141)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
   </variable>
   <variable name="WeatherFanartVar">
     <value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>

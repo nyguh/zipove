@@ -19,6 +19,7 @@
   <controls>
     <control type="group">
       <top>300</top>
+      <animation effect="fade" start="100" end="0" time="400" tween="quadratic" condition="Window.IsActive(1141)">Conditional</animation>
       <control type="group" id="5600">
         <top>-100</top>
         <control type="image">
@@ -70,7 +71,6 @@
       <control type="group">
         <top>300</top>
         <left>150</left>
-        <animation effect="fade" start="100" end="0" time="400" tween="quadratic" condition="Window.IsActive(1141)">Conditional</animation>
         <control type="grouplist">
           <orientation>horizontal</orientation>
           <ondown>Dialog.Close(all,true)</ondown>
