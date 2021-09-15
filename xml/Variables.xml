@@ -157,10 +157,8 @@
   </variable>
   <variable name="BackgroundOverlay">
     <value condition="Control.HasFocus(57)">FFFFFFFF</value>
-    <value condition="Control.HasFocus(510)">$VAR[AlphaPercentage]</value>
     <value condition="Window.IsVisible(Home)">$VAR[HomeAlphaPercentage]</value>
-    <value condition="!Window.IsVisible(Home) + Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
-    <value condition="Window.IsVisible(1140) | Window.IsVisible(1141)">$VAR[AlphaPercentage]</value>
+    <value>$VAR[AlphaPercentage]</value>
   </variable>
   <variable name="ColorsOverlay">
     <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Colors.Main))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
