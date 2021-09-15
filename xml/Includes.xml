@@ -1236,6 +1236,34 @@
             <visible>!$EXP[infodialog_active]</visible>
             <visible>!Skin.HasSetting(TMDbHelper.EnableBlur)</visible>
           </control>
+          <control type="group">
+            <include>TrailerWindowDimensions</include>
+            <include>ColoredBackgroundImages</include>
+            <animation effect="zoom" end="300" center="400" time="200" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,100" time="200" reversible="true" condition="Window.IsActive(1140)">Conditional</animation>
+            <animation effect="fade" time="200" end="0" condition="String.IsEqual(Skin.String(AlphaValue),100)">Conditional</animation>
+            <animation effect="fade" time="200" end="5" condition="String.IsEqual(Skin.String(AlphaValue),95)">Conditional</animation>
+            <animation effect="fade" time="200" end="10" condition="String.IsEqual(Skin.String(AlphaValue),90)">Conditional</animation>
+            <animation effect="fade" time="200" end="15" condition="String.IsEqual(Skin.String(AlphaValue),85)">Conditional</animation>
+            <animation effect="fade" time="200" end="20" condition="String.IsEqual(Skin.String(AlphaValue),80)">Conditional</animation>
+            <animation effect="fade" time="200" end="25" condition="String.IsEqual(Skin.String(AlphaValue),75)">Conditional</animation>
+            <animation effect="fade" time="200" end="30" condition="String.IsEqual(Skin.String(AlphaValue),70)">Conditional</animation>
+            <animation effect="fade" time="200" end="35" condition="String.IsEqual(Skin.String(AlphaValue),65)">Conditional</animation>
+            <animation effect="fade" time="200" end="40" condition="String.IsEqual(Skin.String(AlphaValue),60)">Conditional</animation>
+            <animation effect="fade" time="200" end="45" condition="String.IsEqual(Skin.String(AlphaValue),55)">Conditional</animation>
+            <animation effect="fade" time="200" end="50" condition="String.IsEqual(Skin.String(AlphaValue),50)">Conditional</animation>
+            <animation effect="fade" time="200" end="55" condition="String.IsEqual(Skin.String(AlphaValue),45)">Conditional</animation>
+            <animation effect="fade" time="200" end="60" condition="String.IsEqual(Skin.String(AlphaValue),40)">Conditional</animation>
+            <animation effect="fade" time="200" end="65" condition="String.IsEqual(Skin.String(AlphaValue),35)">Conditional</animation>
+            <animation effect="fade" time="200" end="70" condition="String.IsEqual(Skin.String(AlphaValue),30)">Conditional</animation>
+            <animation effect="fade" time="200" end="75" condition="String.IsEqual(Skin.String(AlphaValue),25)">Conditional</animation>
+            <animation effect="fade" time="200" end="80" condition="String.IsEqual(Skin.String(AlphaValue),20)">Conditional</animation>
+            <animation effect="fade" time="200" end="85" condition="String.IsEqual(Skin.String(AlphaValue),15)">Conditional</animation>
+            <animation effect="fade" time="200" end="90" condition="String.IsEqual(Skin.String(AlphaValue),10)">Conditional</animation>
+            <animation effect="fade" time="200" end="95" condition="String.IsEqual(Skin.String(AlphaValue),5)">Conditional</animation>
+            <animation effect="fade" time="200" end="100" condition="String.IsEqual(Skin.String(AlphaValue),0)">Conditional</animation>
+            <visible>Window.IsVisible(1140) + Skin.HasSetting(Vertical_Main)</visible>
+          </control>
           <control type="image">
             <left>-3</left>
             <top>0</top>
