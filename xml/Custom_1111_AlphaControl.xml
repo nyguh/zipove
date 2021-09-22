@@ -101,7 +101,7 @@
           <onclick>Skin.SetString(HomeAlphaValue,95)</onclick>
         </control>
         <control type="button" id="8003">
-          <label>80%</label>
+          <label>90%</label>
           <width>312</width>
           <height>70</height>
           <align>center</align>
