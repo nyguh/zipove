@@ -2045,3 +2045,8 @@ msgstr ""
 msgctxt "#31419"
 msgid "Alpha (home)"
 msgstr ""
+
+#: /xml/Font.xml
+msgctxt "#31420"
+msgid "Liberation Sans"
+msgstr ""
