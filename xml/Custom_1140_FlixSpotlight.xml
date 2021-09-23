@@ -105,6 +105,7 @@
             <param name="onclick_2" value="RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')" />
             <param name="onclick_3_condition" value="![[String.IsEqual(Window.Property(spotlight_DBType1140),movie) | String.IsEqual(Window.Property(spotlight_DBType1140),episode) | String.IsEqual(Window.Property(spotlight_DBType1140),video)] | String.IsEqual(Window(1141).Property(spotlight_isPVR),true)]" />
             <param name="onclick_3" value="RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.FolderPath])" />
+            <param name="onclick_4" value="CancelAlarm(PlayTrailer,true)" />
           </include>
           <include content="InfoButton">
             <param name="id" value="6001"/>

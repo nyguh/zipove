@@ -383,6 +383,7 @@
     <param name="onclick_1_condition">true</param>
     <param name="onclick_2_condition">true</param>
     <param name="onclick_3_condition">true</param>
+    <param name="onclick_4_condition">true</param>
     <definition>
       <control type="group" id="$PARAM[groupid]">
         <left>0</left>
@@ -420,6 +421,7 @@
         <onclick condition="$PARAM[onclick_1_condition]">$PARAM[onclick_1]</onclick>
         <onclick condition="$PARAM[onclick_2_condition]">$PARAM[onclick_2]</onclick>
         <onclick condition="$PARAM[onclick_3_condition]">$PARAM[onclick_3]</onclick>
+        <onclick condition="$PARAM[onclick_4_condition]">$PARAM[onclick_4]</onclick>
         <nested/>
       </control>
     </definition>
