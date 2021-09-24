@@ -1,3 +1,8 @@
+1.0.52
+    Added: Dutch language (thanks to @djdirty60)
+    Fixed: Typo in "overlay playground"
+    Added: Liberation Sans as simpler font
+    Fixed: Freeze after opening Flix Spotlight when trailer is loading
 1.0.51
     Improved: Flix Spotlight movie/tvshow functions performance
     Removed: Background from main menu in Classic layout
