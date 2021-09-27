@@ -10,6 +10,15 @@
       <left>300</left>
       <top>300</top>
       <visible>!$EXP[infodialog_active] + Window.IsVisible(1141)</visible>
+      <control type="image">
+        <top>-300</top>
+        <left>-300</left>
+        <width>1920</width>
+        <height>1080</height>
+        <texture background="true">common/flixspotlight2-shadowspot.png</texture>
+        <visible>Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)</visible>
+        <animation effect="fade" start="0" end="100" time="1200" tween="quadratic" condition="Player.HasVideo">Conditional</animation>
+      </control>
       <control type="group" id="5600">
         <top>-100</top>
         <control type="grouplist">
