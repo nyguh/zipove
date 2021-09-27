@@ -9,7 +9,8 @@
       <visible>!Window.IsActive(fullscreenvideo)</visible>
       <include>ColoredBackgroundImages</include>
     </control>
-    <include condition="!Skin.HasSetting(LegacyPVR)">PVRChannelGuideFamiliar</include>
+    <include condition="!Skin.HasSetting(LegacyPVR)">PVRChannelGuideModern</include>
+    <!-- <include condition="!Skin.HasSetting(LegacyPVR)">PVRChannelGuideFamiliar</include> -->
     <include condition="Skin.HasSetting(LegacyPVR)">PVRChannelGuideLegacy</include>
   </controls>
 </window>
