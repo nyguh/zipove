@@ -1,3 +1,9 @@
+1.0.53
+    Changed: DialogPVRChannelsOSD appearance
+    Changed: DialogPVRChannelGuide appearance
+    Added: Shadow spot to Flix Spotlight for increasing readability when FS trailer playing
+    Fixed: Show shadow spot only when fullscreen trailer is playing
+    Added: Shadow spot to Flix Spotlight L2 for increasing readability when FS trailer playing
 1.0.52
     Added: Dutch language (thanks to @djdirty60)
     Fixed: Typo in "overlay playground"
