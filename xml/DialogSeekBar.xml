@@ -411,9 +411,9 @@
         <info>Player.Cutlist</info>
       </control>
       <control type="ranges">
-        <left>0</left>
+        <left>260</left>
         <top>82</top>
-        <width>100%</width>
+        <width>1400</width>
         <height>4</height>
         <texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
         <righttexture>colors/white.png</righttexture>
