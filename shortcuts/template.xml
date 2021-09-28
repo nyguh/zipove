@@ -238,24 +238,7 @@
     <property name="aspect">Poster</property>
     <propertyGroup>mainmenuWidgets</propertyGroup>
     <controls>
-      <include content="Object_Widget_Content_Horizontal" condition="!Skin.HasSetting(DisableFixedScrolling)">
-        <param name="controltype" value="fixedlist"/>
-        <param name="name" value="$SKINSHORTCUTS[label]"/>
-        <param name="groupid" value="$PYTHON[int(id) + 7601]"/>
-        <param name="image" value="$SKINSHORTCUTS[artwork]"/>
-        <param name="id" value="$PYTHON[int(id) + 7501]"/>
-        <param name="target" value="$SKINSHORTCUTS[target]"/>
-        <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
-        <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]"/>
-        <param name="limit" value="$SKINSHORTCUTS[limit]"/>
-        <param name="path" value="$SKINSHORTCUTS[path]"/>
-        <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']"/>
-        <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
-        <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
-        <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
-        <skinshortcuts>visibility</skinshortcuts>
-      </include>
-      <include content="Object_Widget_Content_Horizontal" condition="Skin.HasSetting(DisableFixedScrolling)">
+      <include content="Object_Widget_Content_Horizontal">
         <param name="controltype" value="list"/>
         <param name="name" value="$SKINSHORTCUTS[label]"/>
         <param name="groupid" value="$PYTHON[int(id) + 7601]"/>

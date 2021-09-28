@@ -1161,7 +1161,7 @@
       <control type="videowindow">
         <depth>DepthBackground</depth>
         <include>FullScreenDimensions</include>
-        <visible>Player.HasVideo + !Skin.HasSetting(BackgroundPlayingTrailers) | Skin.HasSetting(PlayTrailersFullScreen)</visible>
+        <visible>Player.HasVideo + !Skin.HasSetting(BackgroundPlayingTrailers) | Skin.HasSetting(PlayTrailersFullScreen) | Skin.HasSetting(Horizontal_Main)</visible>
         <visible>!Slideshow.IsActive</visible>
       </control>
       <control type="videowindow">
@@ -1189,10 +1189,11 @@
           <include>OpenClose_Fade</include>
           <animation effect="fade" time="100">VisibleChange</animation>
           <control type="multiimage" id="32111">
+            <include content="HorizontalFanartBox" condition="Skin.HasSetting(Horizontal_Main)" />
             <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | ![Skin.HasSetting(Vertical_Main) | Window.IsVisible(home)]" />
             <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
-            <animation effect="zoom" end="150" center="200" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
-            <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
+            <animation effect="zoom" end="150" center="200" time="200" condition="Window.IsActive(1140) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Horizontal_Main)]">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Horizontal_Main)]">Conditional</animation>
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
@@ -1427,6 +1428,12 @@
     <left>560</left>
     <width>1366</width>
     <height>768</height>
+  </include>
+  <include name="HorizontalFanartBox">
+    <top>0</top>
+    <left>0</left>
+    <width>1920</width>
+    <height>720</height>
   </include>
   <include name="FocusableProgressBar">
     <param name="width">100%</param>
