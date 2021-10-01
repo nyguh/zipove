@@ -369,19 +369,19 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
         <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
+        <onback condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">ActivateWindow(1140)</onback>
         <height>460</height>
         <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
         <onclick condition="[Skin.HasSetting(ManuallyStartTrailer) + !Skin.HasSetting(TriggerSpotlightOnSelect)] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(trailerdelay,PlayMedia($ESCINFO[ListItem.Trailer],1),00:01,silent)</onclick>
         <onclick condition="[Skin.HasSetting(ManuallyStartTrailer) + !Skin.HasSetting(TriggerSpotlightOnSelect)] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
         <onclick condition="[Skin.HasSetting(ManuallyStartTrailer) + !Skin.HasSetting(TriggerSpotlightOnSelect)] + [[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties_OnClick</include>
+        <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://)">ActivateWindow(1140)</onclick>
         <!-- Posters aspect ratio -->
         <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout"/>
@@ -411,6 +411,10 @@
             <param name="right" value="44"/>
             <param name="visible" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
           </include>
+          <control type="button">
+            <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
           <control type="button">
             <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
@@ -450,6 +454,10 @@
             <param name="right" value="72"/>
             <param name="visible" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
           </include>
+          <control type="button">
+            <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
           <control type="button">
             <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
@@ -495,6 +503,10 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
+          <control type="button">
+            <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(files)">PlayerControl(Stop)</onunfocus>
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,true)</onunfocus>
@@ -538,6 +550,10 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
+          <control type="button">
+            <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(files)">PlayerControl(Stop)</onunfocus>
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,true)</onunfocus>
@@ -571,13 +587,13 @@
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties</include>
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
         <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
         <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
         <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
+        <onback condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">ActivateWindow(1140)</onback>
         <height>460</height>
         <focusposition>1</focusposition>
         <scrolltime tween="linear" easing="inout">400</scrolltime>
@@ -594,13 +610,17 @@
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(trailerdelay,PlayMedia($ESCINFO[ListItem.Trailer],1),00:01,silent)</onclick>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
-        <include condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">Flix_Spotlight_Properties_OnClick</include>
+        <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://)">ActivateWindow(1140)</onclick>
         <!-- Posters aspect ratio -->
         <itemlayout height="382.5" width="280" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout"/>
         </itemlayout>
         <focusedlayout height="382.5" width="280" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout"/>
+          <control type="button">
+            <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
           <control type="button">
             <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
@@ -617,6 +637,10 @@
         </itemlayout>
         <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
           <include content="ViewSquareItemLayout"/>
+          <control type="button">
+            <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
           <control type="button">
             <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
@@ -639,6 +663,10 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
+          <control type="button">
+            <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(files)">PlayerControl(Stop)</onunfocus>
             <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,true)</onunfocus>
@@ -657,6 +685,10 @@
           <include content="ViewFanartItemLayout">
             <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
+          <control type="button">
+            <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
           <control type="button">
             <include>HiddenObject</include>
             <include>Animation_AlarmDelay</include>
@@ -699,7 +731,7 @@
         <onclick condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(trailerdelay,PlayMedia($ESCINFO[ListItem.Trailer],1),00:01,silent)</onclick>
         <onclick condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
         <onclick condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
-        <include>Flix_Spotlight_Properties_OnClick</include>
+        <onclick condition="!String.StartsWith(ListItem.FolderPath,favourites://)">ActivateWindow(1140)</onclick>
         <!-- Posters aspect ratio -->
         <itemlayout height="330" width="300" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayoutHorizontal">
@@ -710,6 +742,10 @@
           <include content="ViewPosterItemLayoutHorizontal">
             <param name="bg_visible" value="true" />
           </include>
+          <control type="button">
+            <include>HiddenObject</include>
+            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+          </control>
         </focusedlayout>
         <include content="Object_Widget_Content_Path">
           <param name="target" value="$PARAM[target]"/>

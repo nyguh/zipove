@@ -195,12 +195,12 @@
     <value>$INFO[ListItem.Icon]</value>
   </variable>
   <variable name="Flix_Spotlight_Title">
-    <value condition="String.IsEqual(Window(1140).Property(spotlight_DBType1140),episode)">$INFO[Window(1140).Property(spotlight_Season),$LOCALIZE[208] Season , ]$INFO[Window(1140).Property(spotlight_Episode),Episode ,]</value>
-    <value>$INFO[Window(1140).Property(spotlight_Title),$LOCALIZE[208] ]</value>
+    <value condition="String.IsEqual(Window(home).Property(spotlight_DBType),episode)">$INFO[Window(home).Property(spotlight_Season),$LOCALIZE[208] Season , ]$INFO[Window(home).Property(spotlight_Episode),Episode ,]</value>
+    <value>$INFO[Window(home).Property(spotlight_Title),$LOCALIZE[208] ]</value>
   </variable>
   <variable name="Label_Spotlight_Top250">
-    <value condition="!String.IsEmpty(Window(1140).Property(spotlight_250))">$INFO[Window(1140).Property(spotlight_250),No. , on IMDb / ]$INFO[Window(1140).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
-    <value>$INFO[Window(1140).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
+    <value condition="!String.IsEmpty(Window(home).Property(spotlight_250))">$INFO[Window(home).Property(spotlight_250),No. , on IMDb / ]$INFO[Window(home).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
+    <value>$INFO[Window(home).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
   </variable>
   <variable name="Label_OverlayCritics">
     <value condition="!String.IsEmpty(Window.Property(Critics))">$INFO[Window.Property(Critics)]</value>
@@ -288,7 +288,7 @@
     <value>  |  [COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
   </variable>
   <variable name="Label_InfoLine_Spotlight">
-    <value>$INFO[Window(1141).Property(spotlight_Duration),[COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Genre),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Year),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_MPAA),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(1141).Property(spotlight_Resolution),   |   [COLOR=main_fg_100],[/COLOR]]</value>
+    <value>$INFO[Window(home).Property(spotlight_Duration),[COLOR=main_fg_100],[/COLOR]]$INFO[Window(home).Property(spotlight_Genre),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(home).Property(spotlight_Year),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(home).Property(spotlight_MPAA),   |   [COLOR=main_fg_100],[/COLOR]]$INFO[Window(home).Property(spotlight_Resolution),   |   [COLOR=main_fg_100],[/COLOR]]</value>
   </variable>
   <variable name="Image_ClearLogo">
     <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
@@ -924,7 +924,7 @@
     <!-- home fanart first widget item -->
     <value condition="Window.IsVisible(home) + String.IsEmpty(Container(3000).ListItem.Property(Background)) + !String.IsEmpty(Container(7502).ListItem.Art(fanart)) + Control.IsVisible(7502)">$INFO[Container(7502).ListItem.Art(fanart)]</value>
     <!-- flix hub fanart -->
-    <value condition="!String.IsEmpty(Window(1140).Property(spotlight_Fanart)) + Window.IsActive(1140)">$INFO[Window(1140).Property(spotlight_Fanart)]</value>
+    <value condition="!String.IsEmpty(Window(home).Property(spotlight_Fanart)) + Window.IsActive(1140)">$INFO[Window(home).Property(spotlight_Fanart)]</value>
     <value>$INFO[Container.Art(fanart)]</value>
   </variable>
   <variable name="BlurBackground">

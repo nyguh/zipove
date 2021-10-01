@@ -2728,87 +2728,77 @@
     <bordersize>0</bordersize>
   </include>
   <include name="Flix_Spotlight_Properties">
-    <onback>SetProperty(spotlight_Fanart,"$VAR[MediaFanartVar]",1140)</onback>
-    <onback>SetProperty(spotlight_ClearLogo,"$VAR[Image_ClearLogo]",1140)</onback>
-    <onback>SetProperty(spotlight_250,"$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250)]",1140)</onback>
-    <onback>SetProperty(spotlight_Match,"$VAR[PercentageRating]",1140)</onback>
-    <onback>SetProperty(spotlight_DBType1140,"$INFO[ListItem.DBType]",1140)</onback>
-    <onback>SetProperty(spotlight_Title,"$VAR[Label_Title]",1140)</onback>
-    <onback>SetProperty(spotlight_Season,"$INFO[ListItem.Season]",1140)</onback>
-    <onback>SetProperty(spotlight_Episode,"$INFO[ListItem.Episode]",1140)</onback>
-    <onback>SetProperty(spotlight_Plot,"$VAR[Label_OverlayPlot]",1140)</onback>
-    <onback>SetProperty(spotlight_Path,"$ESCINFO[ListItem.FileNameAndPath]",1140)</onback>
-    <onback>SetProperty(spotlight_FolderPath1140,"$ESCINFO[ListItem.FolderPath]",1140)</onback>
-    <onback condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">SetProperty(spotlight_EnableWatchlist,true,1141)</onback>
-    <onback>SetProperty(spotlight_TMDBid,"$INFO[ListItem.Property(TMDB_ID)]",1141)</onback>
-    <onback>SetProperty(spotlight_TMDBid2,"$INFO[Window(home).Property(TMDbHelper.ListItem.TMDB_ID)]",1141)</onback>
-    <onback>SetProperty(spotlight_TMDBTYPE,"$VAR[TMDB_TYPE]",1141)</onback>
-    <onback condition="ListItem.IsFolder">SetProperty(spotlight_isFolder,true,1141)</onback>
-    <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1141)</onback>
-    <onback condition="!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">SetProperty(spotlight_isTrailer,true,1141)</onback>
-    <onback>SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",1141)</onback>
-    <onback condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onback>
-    <onback condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onback>
-    <onback condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,1141)</onback>
-    <onback>SetProperty(spotlight_Duration,"$INFO[ListItem.Duration(h),, $LOCALIZE[31380] ]$INFO[ListItem.Duration(mm),, $LOCALIZE[31381]]",1141)</onback>
-    <onback>SetProperty(spotlight_Genre,"$INFO[ListItem.Genre]",1141)</onback>
-    <onback>SetProperty(spotlight_Year,"$INFO[ListItem.Year]",1141)</onback>
-    <onback>SetProperty(spotlight_MPAA,"$INFO[ListItem.MPAA]",1141)</onback>
-    <onback>SetProperty(spotlight_Resolution,"$INFO[ListItem.VideoResolution]",1141)</onback>
-    <onback>SetProperty(spotlight_Director,"$INFO[ListItem.Director]",1141)</onback>
-    <onback>SetProperty(spotlight_Cast,"$INFO[ListItem.Cast]",1141)</onback>
-    <onback>SetProperty(spotlight_Writer,"$INFO[ListItem.Writer]",1141)</onback>
-    <onback>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",home)</onback>
-    <onback>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",home)</onback>
-    <onback>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",home)</onback>
-    <onback>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",home)</onback>
-    <onback>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",home)</onback>
-    <onback>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1149)</onback>
-    <onback>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1149)</onback>
-    <onback>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1149)</onback>
-    <onback>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1149)</onback>
-    <onback>ActivateWindow(1140)</onback>
-  </include>
-  <include name="Flix_Spotlight_Properties_OnClick">
-    <onclick>SetProperty(spotlight_Fanart,"$VAR[MediaFanartVar]",1140)</onclick>
-    <onclick>SetProperty(spotlight_ClearLogo,"$VAR[Image_ClearLogo]",1140)</onclick>
-    <onclick>SetProperty(spotlight_250,"$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250)]",1140)</onclick>
-    <onclick>SetProperty(spotlight_Match,"$VAR[PercentageRating]",1140)</onclick>
-    <onclick>SetProperty(spotlight_DBType1140,"$INFO[ListItem.DBType]",1140)</onclick>
-    <onclick>SetProperty(spotlight_Title,"$VAR[Label_Title]",1140)</onclick>
-    <onclick>SetProperty(spotlight_Season,"$INFO[ListItem.Season]",1140)</onclick>
-    <onclick>SetProperty(spotlight_Episode,"$INFO[ListItem.Episode]",1140)</onclick>
-    <onclick>SetProperty(spotlight_Plot,"$VAR[Label_OverlayPlot]",1140)</onclick>
-    <onclick>SetProperty(spotlight_Path,"$ESCINFO[ListItem.FileNameAndPath]",1140)</onclick>
-    <onclick>SetProperty(spotlight_FolderPath1140,"$ESCINFO[ListItem.FolderPath]",1140)</onclick>
-    <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">SetProperty(spotlight_EnableWatchlist,true,1141)</onclick>
-    <onclick>SetProperty(spotlight_TMDBid,"$INFO[ListItem.Property(TMDB_ID)]",1141)</onclick>
-    <onclick>SetProperty(spotlight_TMDBid2,"$INFO[Window(home).Property(TMDbHelper.ListItem.TMDB_ID)]",1141)</onclick>
-    <onclick>SetProperty(spotlight_TMDBTYPE,"$VAR[TMDB_TYPE]",1141)</onclick>
-    <onclick condition="ListItem.IsFolder">SetProperty(spotlight_isFolder,true,1141)</onclick>
-    <onclick>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1141)</onclick>
-    <onclick condition="!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">SetProperty(spotlight_isTrailer,true,1141)</onclick>
-    <onclick>SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",1141)</onclick>
-    <onclick condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,1141)</onclick>
-    <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,1141)</onclick>
-    <onclick condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,1141)</onclick>
-    <onclick>SetProperty(spotlight_Duration,"$INFO[ListItem.Duration(h),, $LOCALIZE[31380] ]$INFO[ListItem.Duration(mm),, $LOCALIZE[31381]]",1141)</onclick>
-    <onclick>SetProperty(spotlight_Genre,"$INFO[ListItem.Genre]",1141)</onclick>
-    <onclick>SetProperty(spotlight_Year,"$INFO[ListItem.Year]",1141)</onclick>
-    <onclick>SetProperty(spotlight_MPAA,"$INFO[ListItem.MPAA]",1141)</onclick>
-    <onclick>SetProperty(spotlight_Resolution,"$INFO[ListItem.VideoResolution]",1141)</onclick>
-    <onclick>SetProperty(spotlight_Director,"$INFO[ListItem.Director]",1141)</onclick>
-    <onclick>SetProperty(spotlight_Cast,"$INFO[ListItem.Cast]",1141)</onclick>
-    <onclick>SetProperty(spotlight_Writer,"$INFO[ListItem.Writer]",1141)</onclick>
-    <onclick>SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",home)</onclick>
-    <onclick>SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",home)</onclick>
-    <onclick>SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",home)</onclick>
-    <onclick>SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",home)</onclick>
-    <onclick>SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",home)</onclick>
-    <onclick>SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",1149)</onclick>
-    <onclick>SetProperty(spotlight_Label,"$INFO[ListItem.Label]",1149)</onclick>
-    <onclick>SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",1149)</onclick>
-    <onclick>SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",1149)</onclick>
-    <onclick>ActivateWindow(1140)</onclick>
+    <onunfocus>ClearProperty(spotlight_Fanart,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_ClearLogo,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_250,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Match,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Title,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Season,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Episode,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Plot,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Path,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_EnableWatchlist,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_TMDBid,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_TMDBid2,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_TMDBTYPE,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_isFolder,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_isTrailer,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Trailer,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_FindSimilar,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_EnableRating,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_isPVR,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Duration,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Genre,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Year,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_MPAA,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Resolution,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Director,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Cast,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Writer,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_SimilarLabel,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_SimilarLabel2,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_SimilarTYPE,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_SimilarQUERY,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_SimilarIMDB,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_FolderPath,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_Label,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_DBID,home)</onunfocus>
+    <onunfocus>ClearProperty(spotlight_DBType,home)</onunfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(Skin.String(HomeBackgroundImage)) | !String.IsEmpty(Container.Art(tvshow.fanart)) | !String.IsEmpty(Container.Art(artist.fanart)) | !String.IsEmpty(Container.Art(fanart))">SetProperty(spotlight_Fanart,"$VAR[MediaFanartVar]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Art(clearlogo)) | [!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + !String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.clearlogo)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.tvshow.clearlogo))">SetProperty(spotlight_ClearLogo,"$VAR[Image_ClearLogo]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250))">SetProperty(spotlight_250,"$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250)]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Rating)">SetProperty(spotlight_Match,"$VAR[PercentageRating]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.TVShowTitle) | !String.IsEmpty(ListItem.Title) | !String.IsEmpty(ListItem.Label)">SetProperty(spotlight_Title,"$VAR[Label_Title]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Season)">SetProperty(spotlight_Season,"$INFO[ListItem.Season]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Episode)">SetProperty(spotlight_Episode,"$INFO[ListItem.Episode]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">SetProperty(spotlight_Plot,"$VAR[Label_OverlayPlot]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.FileNameAndPath)">SetProperty(spotlight_Path,"$ESCINFO[ListItem.FileNameAndPath]",home)</onfocus>
+    <onfocus condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">SetProperty(spotlight_EnableWatchlist,true,home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Property(TMDB_ID))">SetProperty(spotlight_TMDBid,"$INFO[ListItem.Property(TMDB_ID)]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.TMDB_ID))">SetProperty(spotlight_TMDBid2,"$INFO[Window(home).Property(TMDbHelper.ListItem.TMDB_ID)]",home)</onfocus>
+    <onfocus condition="String.IsEqual(ListItem.DBTYPE,movie) | ListItem.IsCollection | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">SetProperty(spotlight_TMDBTYPE,"$VAR[TMDB_TYPE]",home)</onfocus>
+    <onfocus condition="ListItem.IsFolder">SetProperty(spotlight_isFolder,true,home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">SetProperty(spotlight_isTrailer,true,home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(spotlight_Trailer,"$ESCINFO[ListItem.Trailer]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_FindSimilar,true,home)</onfocus>
+    <onfocus condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)">SetProperty(spotlight_EnableRating,true,home)</onfocus>
+    <onfocus condition="String.StartsWith(ListItem.FolderPath,pvr://)">SetProperty(spotlight_isPVR,true,home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Duration)">SetProperty(spotlight_Duration,"$INFO[ListItem.Duration(h),, $LOCALIZE[31380] ]$INFO[ListItem.Duration(mm),, $LOCALIZE[31381]]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Genre)">SetProperty(spotlight_Genre,"$INFO[ListItem.Genre]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Year)">SetProperty(spotlight_Year,"$INFO[ListItem.Year]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.MPAA)">SetProperty(spotlight_MPAA,"$INFO[ListItem.MPAA]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.VideoResolution)">SetProperty(spotlight_Resolution,"$INFO[ListItem.VideoResolution]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Director)">SetProperty(spotlight_Director,"$INFO[ListItem.Director]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Cast)">SetProperty(spotlight_Cast,"$INFO[ListItem.Cast]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Writer)">SetProperty(spotlight_Writer,"$INFO[ListItem.Writer]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Label)">SetProperty(spotlight_SimilarLabel,"$INFO[ListItem.Label]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Label2)">SetProperty(spotlight_SimilarLabel2,"$INFO[ListItem.Label2]",home)</onfocus>
+    <onfocus condition="String.IsEqual(ListItem.DBTYPE,movie) | ListItem.IsCollection | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">SetProperty(spotlight_SimilarTYPE,"$VAR[TMDB_TYPE]",home)</onfocus>
+    <onfocus condition="String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Property(imdb_id)) | String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.IMDBNumber) + String.StartsWith(ListItem.IMDBNumber,tt) | [String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.StartsWith(ListItem.Label,Season)] + !String.IsEmpty(ListItem.TvShowTitle) | !String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.Year)">SetProperty(spotlight_SimilarQUERY,"$VAR[INFO_QUERY]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.IMDBNumber)">SetProperty(spotlight_SimilarIMDB,"$INFO[ListItem.IMDBNumber]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.FolderPath)">SetProperty(spotlight_FolderPath,"$INFO[ListItem.FolderPath]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.Label)">SetProperty(spotlight_Label,"$INFO[ListItem.Label]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.DBID)">SetProperty(spotlight_DBID,"$INFO[ListItem.DBID]",home)</onfocus>
+    <onfocus condition="!String.IsEmpty(ListItem.DBType)">SetProperty(spotlight_DBType,"$INFO[ListItem.DBType]",home)</onfocus>
   </include>
 </includes>

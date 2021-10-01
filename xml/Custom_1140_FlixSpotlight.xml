@@ -3,39 +3,7 @@
   <animation effect="slide" start="0,-1000" end="0" time="400" tween="quadratic" condition="Window.IsActive(1140)">WindowOpen</animation>
   <animation effect="fade" start="0" end="100" time="100" delay="100" condition="Window.IsActive(1140)">WindowOpen</animation>
   <defaultcontrol>6000</defaultcontrol>
-  <onunload>ClearProperty(spotlight_Fanart,1140)</onunload>
-  <onunload>ClearProperty(spotlight_ClearLogo,1140)</onunload>
-  <onunload>ClearProperty(spotlight_250,1140)</onunload>
-  <onunload>ClearProperty(spotlight_Match,1140)</onunload>
-  <onunload>ClearProperty(spotlight_DBType1140,1140)</onunload>
-  <onunload>ClearProperty(spotlight_Title,1140)</onunload>
-  <onunload>ClearProperty(spotlight_Season,1140)</onunload>
-  <onunload>ClearProperty(spotlight_Episode,1140)</onunload>
-  <onunload>ClearProperty(spotlight_Plot,1140)</onunload>
-  <onunload>ClearProperty(spotlight_Path,1140)</onunload>
-  <onunload>ClearProperty(spotlight_FolderPath1140,1140)</onunload>
-  <onunload>ClearProperty(spotlight_isPVR,1141)</onunload>
   <onunload>PlayerControl(Stop)</onunload>
-  <!-- clear 1141 props -->
-  <onunload>ClearProperty(spotlight_Duration,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Genre,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Year,1141)</onunload>
-  <onunload>ClearProperty(spotlight_MPAA,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Resolution,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Director,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Cast,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Writer,1141)</onunload>
-  <onunload>ClearProperty(spotlight_TMDBid,1141)</onunload>
-  <onunload>ClearProperty(spotlight_TMDBid2,1141)</onunload>
-  <onunload>ClearProperty(spotlight_TMDBTYPE,1141)</onunload>
-  <onunload>ClearProperty(spotlight_isFolder,1141)</onunload>
-  <onunload>ClearProperty(spotlight_DBID,1141)</onunload>
-  <onunload>ClearProperty(spotlight_EnableWatchlist,1141)</onunload>
-  <onunload>ClearProperty(spotlight_isTrailer,1141)</onunload>
-  <onunload>ClearProperty(spotlight_Trailer,1141)</onunload>
-  <onunload>ClearProperty(spotlight_FindSimilar,1141)</onunload>
-  <onunload>ClearProperty(spotlight_EnableRating,1141)</onunload>
-  <onunload>ClearProperty(spotlight_isPVR,1141)</onunload>
   <controls>
     <control type="group">
       <top>300</top>
@@ -56,8 +24,8 @@
           <left>150</left>
           <width>640</width>
           <aspectratio>keep</aspectratio>
-          <texture background="true">$INFO[Window.Property(spotlight_ClearLogo)]</texture>
-          <visible>!String.IsEmpty(Window.Property(spotlight_ClearLogo))</visible>
+          <texture background="true">$INFO[Window(home).Property(spotlight_ClearLogo)]</texture>
+          <visible>!String.IsEmpty(Window(home).Property(spotlight_ClearLogo))</visible>
         </control>
         <control type="group">
           <control type="image">
@@ -67,7 +35,7 @@
             <height>auto</height>
             <aspectratio>keep</aspectratio>
             <texture>flags/colorful/ratings/imdbtop250.png</texture>
-            <visible>!String.IsEmpty(Window.Property(spotlight_250))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(spotlight_250))</visible>
           </control>
           <control type="image">
             <top>120</top>
@@ -76,7 +44,7 @@
             <height>auto</height>
             <aspectratio>keep</aspectratio>
             <texture>special://skin/extras/icons/userrating.png</texture>
-            <visible>String.IsEmpty(Window.Property(spotlight_250))</visible>
+            <visible>String.IsEmpty(Window(home).Property(spotlight_250))</visible>
           </control>
           <control type="label">
             <textcolor>dialog_fg_100</textcolor>
@@ -89,10 +57,10 @@
           </control>
         </control>
         <include content="Object_Item_Showcase">
-          <param name="title" value="$INFO[Window.Property(spotlight_Title)]"/>
+          <param name="title" value="$INFO[Window(home).Property(spotlight_Title)]"/>
           <param name="title_width" value="1200" />
-          <param name="title_visible" value="String.IsEmpty(Window.Property(spotlight_ClearLogo))" />
-          <param name="plot" value="$INFO[Window.Property(spotlight_Plot)]"/>
+          <param name="title_visible" value="String.IsEmpty(Window(home).Property(spotlight_ClearLogo))" />
+          <param name="plot" value="$INFO[Window(home).Property(spotlight_Plot)]"/>
           <param name="visible_infoline" value="false" />
         </include>
         <visible>!$EXP[infodialog_active]</visible>
@@ -103,7 +71,7 @@
         <control type="grouplist">
           <orientation>horizontal</orientation>
           <ondown>PlayerControl(Stop)</ondown>
-          <ondown>AlarmClock(closeDialogs,Dialog.Close(all),00:01,silent)</ondown>
+          <ondown>AlarmClock(closeDialogs,Dialog.Close(all),00:02,silent)</ondown>
           <include content="InfoButton">
             <param name="id" value="6000"/>
             <param name="groupid" value="7000"/>
@@ -111,12 +79,10 @@
             <param name="label" value="$VAR[Flix_Spotlight_Title]"/>
             <param name="visible" value="Control.IsVisible(6000)"/>
             <param name="onclick_1" value="Dialog.Close(all,true)" />
-            <param name="onclick_2_condition" value="[String.IsEqual(Window.Property(spotlight_DBType1140),movie) | String.IsEqual(Window.Property(spotlight_DBType1140),episode) | String.IsEqual(Window.Property(spotlight_DBType1140),video)] | String.IsEqual(Window(1141).Property(spotlight_isPVR),true)" />
+            <param name="onclick_2_condition" value="[String.IsEqual(Window(home).Property(spotlight_DBType),movie) | String.IsEqual(Window(home).Property(spotlight_DBType),episode) | String.IsEqual(Window(home).Property(spotlight_DBType),video)] | String.IsEqual(Window(home).Property(spotlight_isPVR),true)" />
             <param name="onclick_2" value="RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')" />
-            <param name="onclick_3_condition" value="![[String.IsEqual(Window.Property(spotlight_DBType1140),movie) | String.IsEqual(Window.Property(spotlight_DBType1140),episode) | String.IsEqual(Window.Property(spotlight_DBType1140),video)] | String.IsEqual(Window(1141).Property(spotlight_isPVR),true)]" />
+            <param name="onclick_3_condition" value="![[String.IsEqual(Window(home).Property(spotlight_DBType),movie) | String.IsEqual(Window(home).Property(spotlight_DBType),episode) | String.IsEqual(Window(home).Property(spotlight_DBType),video)] | String.IsEqual(Window(home).Property(spotlight_isPVR),true)]" />
             <param name="onclick_3" value="RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.FolderPath])" />
-            <param name="onclick_4" value="CancelAlarm(PlayTrailer,true)" />
-            <param name="onclick_5" value="CancelAlarm(trailerdelay,true)" />
           </include>
           <include content="InfoButton">
             <param name="id" value="6001"/>
