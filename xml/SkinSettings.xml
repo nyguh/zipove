@@ -104,6 +104,7 @@
             <onclick>SetProperty(Context.3.Label,$LOCALIZE[31307])</onclick>
             <onclick>SetProperty(Context.3.BuiltIn,Skin.SetString(MenuStyle,Text))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
+            <visible>!Skin.HasSetting(Horizontal_Main)</visible>
           </control>
           <control type="radiobutton" id="604" description="Enable Flix Spotlight">
             <label>$LOCALIZE[31407]</label>
@@ -115,16 +116,9 @@
           <control type="radiobutton" id="605" description="Flix spotlight on Enter/OK button">
             <label>$LOCALIZE[31416]</label>
             <include>DefaultSettingButton</include>
-            <visible>Skin.HasSetting(EnableFlixSpotlight)</visible>
+            <visible>Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(Horizontal_Main)</visible>
             <selected>Skin.HasSetting(TriggerSpotlightOnSelect)</selected>
             <onclick>Skin.ToggleSetting(TriggerSpotlightOnSelect)</onclick>
-          </control>
-          <control type="radiobutton" id="606" description="Hide submenu in horizontal">
-            <label>$LOCALIZE[31343]</label>
-            <include>DefaultSettingButton</include>
-            <visible>Skin.HasSetting(Horizontal_Main)</visible>
-            <selected>Skin.HasSetting(DisableSubmenuInHorizontal)</selected>
-            <onclick>Skin.ToggleSetting(DisableSubmenuInHorizontal)</onclick>
           </control>
           <control type="radiobutton" id="607" description="Show weather in horizontal">
             <label>$LOCALIZE[31344]</label>
@@ -146,6 +140,7 @@
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(DisableFixedScrolling)</onclick>
             <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
+            <visible>!Skin.HasSetting(Horizontal_Main)</visible>
           </control>
           <control type="button" id="610" description="Flixed scrolling">
             <label>$LOCALIZE[31401]</label>
@@ -154,6 +149,7 @@
             <enable>!Skin.HasSetting(DisableFixedScrolling)</enable>
             <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
             <onclick condition="String.IsEmpty(Skin.String(FlixedScrolling))">Skin.SetString(FlixedScrolling,Flix It!)</onclick>
+            <visible>!Skin.HasSetting(Horizontal_Main)</visible>
           </control>
           <control type="button" id="611" description="Set Fallback Image">
             <include>DefaultSettingButton</include>
