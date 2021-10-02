@@ -1430,10 +1430,14 @@
     <height>768</height>
   </include>
   <include name="HorizontalFanartBox">
-    <top>0</top>
-    <left>0</left>
-    <width>1920</width>
-    <height>720</height>
+    <definition>
+      <top>0</top>
+      <left>0</left>
+      <width>1920</width>
+      <height>720</height>
+      <animation effect="zoom" end="150" center="200" time="200" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
+      <animation effect="slide" start="0" end="-554,0" time="200" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
+    </definition>
   </include>
   <include name="FocusableProgressBar">
     <param name="width">100%</param>
