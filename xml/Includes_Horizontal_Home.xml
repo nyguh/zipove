@@ -202,6 +202,19 @@
             <param name="top" value="0"/>
           </include>
         </control>
+        <control type="group">
+          <top>520</top>
+          <left>150</left>
+          <include content="ProgressGradient">
+            <param name="id" value="29999"/>
+            <param name="top" value="0"/>
+            <width>940</width>
+            <height>12</height>
+            <info>ListItem.Progress</info>
+          </include>
+          <visible>Integer.IsGreater(Container(3000).NumItems,0) + !Container(3000).IsUpdating</visible>
+          <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+        </control>
         <control type="grouplist" id="3000">
           <onup>9000</onup>
           <top>730</top>
