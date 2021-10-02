@@ -187,13 +187,6 @@
     <value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)">flags/quality/web.png</value>
     <value>flags/quality/info.png</value>
   </variable>
-  <variable name="Image_Poster">
-    <value condition="!String.IsEmpty(ListItem.Art(season.poster)) + !Window.IsVisible(Home)">$INFO[ListItem.Art(season.poster)]</value>
-    <value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + [String.IsEqual(ListItem.Property(Container.Info),library_nextaired) | String.IsEqual(ListItem.Property(Container.Info),trakt_calendar)]">$INFO[ListItem.Art(tvshow.poster)]</value>
-    <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-    <value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
-    <value>$INFO[ListItem.Icon]</value>
-  </variable>
   <variable name="Flix_Spotlight_Title">
     <value condition="String.IsEqual(Window(home).Property(spotlight_DBType),episode)">$INFO[Window(home).Property(spotlight_Season),$LOCALIZE[208] Season , ]$INFO[Window(home).Property(spotlight_Episode),Episode ,]</value>
     <value>$INFO[Window(home).Property(spotlight_Title),$LOCALIZE[208] ]</value>

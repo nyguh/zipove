@@ -220,15 +220,29 @@
       </control>
       <control type="image">
         <top>8</top>
-        <left>40</left>
+        <left>42</left>
         <right>8</right>
-        <width>220</width>
+        <width>216</width>
+        <aspectratio>scale</aspectratio>
+        <texture background="true">$VAR[Image_Poster]</texture>
+        <animation type="Focus">
+          <effect type="zoom" center="0" end="110,110" time="300" tween="sine" easing="out"/>
+          <effect type="slide" start="0" end="0,-50" time="400" tween="cubic" easing="out"/>
+        </animation>
+        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+      </control>
+      <control type="image">
+        <top>8</top>
+        <left>42</left>
+        <right>8</right>
+        <width>216</width>
         <aspectratio>keep</aspectratio>
         <texture background="true">$VAR[Image_Poster]</texture>
         <animation type="Focus">
           <effect type="zoom" center="0" end="110,110" time="300" tween="sine" easing="out"/>
           <effect type="slide" start="0" end="0,-50" time="400" tween="cubic" easing="out"/>
         </animation>
+        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
       </control>
     </definition>
   </include>
