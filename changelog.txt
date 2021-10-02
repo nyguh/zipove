@@ -1,3 +1,18 @@
+1.0.54
+    Fixed: Chapters position in DialogSeekBar
+    Fixed: PlayerControl(Stop) condition when music is playing
+    Removed: Overlay under main menu from Classic layout
+    Changed: New Horizontal layout initial commit
+    Improved: Animation when leaving Flix Spotlight and trailer is playing
+    Improved: Flix Spotlight
+    Fixed: Hide unnecessary settings when Horizontal layout is used
+    Fixed: Bottom panel visibility in Horizontal layout
+    Fixed: Poster aspect ratio in Horizontal layout
+    Fixed: PVR showcase in Horizontal layout
+    Fixed: Widgets labels in Horizontal layout
+    Fixed: Disable Flix Spotlight for music content
+    Fixed: Background fanart dimensions in Horizontal layout
+    Fixed: Posters aspect ratio in Horizontal layout
 1.0.53
     Changed: DialogPVRChannelsOSD appearance
     Changed: DialogPVRChannelGuide appearance
