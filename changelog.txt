@@ -1,3 +1,7 @@
+1.0.55
+    Fixed: Displayed title in Horizontal layout
+    Fixed: PVR channel guide modern visibility
+    Added: Animations to Horizontal layout
 1.0.54
     Fixed: Chapters position in DialogSeekBar
     Fixed: PlayerControl(Stop) condition when music is playing
