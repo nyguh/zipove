@@ -81,6 +81,7 @@
           <onright>303</onright>
           <ondown>3000</ondown>
           <orientation>horizontal</orientation>
+          <include>Flix_Spotlight_ClearProperties_focus</include>
           <scrolltime tween="cubic" easing="out">500</scrolltime>
           <focusedlayout height="95" width="284">
             <control type="group">

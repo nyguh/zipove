@@ -413,6 +413,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -456,6 +457,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -503,6 +505,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -550,6 +553,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -610,7 +614,7 @@
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(trailerdelay,PlayMedia($ESCINFO[ListItem.Trailer],1),00:01,silent)</onclick>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
-        <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://)">ActivateWindow(1140)</onclick>
+        <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + [!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(ListItem.DBTYPE,music) + !String.IsEqual(ListItem.DBTYPE,song) + !String.IsEqual(ListItem.DBTYPE,album) + !String.IsEqual(ListItem.DBTYPE,artist)]">ActivateWindow(1140)</onclick>
         <!-- Posters aspect ratio -->
         <itemlayout height="382.5" width="280" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout"/>
@@ -619,7 +623,8 @@
           <include content="ViewPosterItemLayout"/>
           <control type="button">
             <include>HiddenObject</include>
-            <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
+            <include>Flix_Spotlight_ClearProperties</include>
+            <include condition="[!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(ListItem.DBTYPE,music) + !String.IsEqual(ListItem.DBTYPE,song) + !String.IsEqual(ListItem.DBTYPE,album) + !String.IsEqual(ListItem.DBTYPE,artist)]">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
             <include>HiddenObject</include>
@@ -639,6 +644,7 @@
           <include content="ViewSquareItemLayout"/>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -663,6 +669,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -687,6 +694,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
           <control type="button">
@@ -744,6 +752,7 @@
           </include>
           <control type="button">
             <include>HiddenObject</include>
+            <include>Flix_Spotlight_ClearProperties</include>
             <include condition="!String.StartsWith(ListItem.FolderPath,favourites://)">Flix_Spotlight_Properties</include>
           </control>
         </focusedlayout>
