@@ -768,6 +768,7 @@
   <include name="PVRChannelGuideModern">
     <control type="group">
       <include>Animation_DialogPopupOpenClose</include>
+      <visible>!$EXP[infodialog_active]</visible>
       <control type="image">
         <top>-540</top>
         <width>1920</width>
@@ -915,6 +916,7 @@
         <effect type="fade" start="100" end="0" time="300"/>
         <effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out"/>
       </animation>
+      <visible>!$EXP[infodialog_active]</visible>
       <control type="label" id="2">
         <description>header label</description>
         <textoffsetx>40</textoffsetx>
