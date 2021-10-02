@@ -140,31 +140,32 @@
       <control type="group" id="$PARAM[groupid]">
         <top>$PARAM[top]</top>
         <height>52</height>
+        <width>$PARAM[width]</width>
         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
         <nested/>
         <control type="grouplist">
           <height>52</height>
           <orientation>horizontal</orientation>
           <usecontrolcoords>true</usecontrolcoords>
-          <itemgap>10</itemgap>
+          <itemgap>22</itemgap>
+          <control type="group">
+            <include>SmallBusySpinner</include>
+            <left>18</left>
+            <visible>Container($PARAM[id]).IsUpdating</visible>
+            <visible>Control.HasFocus($PARAM[id])</visible>
+          </control>
           <control type="label">
             <top>0</top>
-            <left>15</left>
-            <width>auto</width>
+            <left>0</left>
+            <width>$PARAM[width]</width>
             <label>$PARAM[label]</label>
             <aligny>center</aligny>
             <textcolor>dialog_fg_100</textcolor>
             <font>font27_bold</font>
             <height>42</height>
+            <scroll>true</scroll>
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
             <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-          </control>
-          <control type="group">
-            <include>SmallBusySpinner</include>
-            <!-- <top>10</top> -->
-            <left>18</left>
-            <visible>Container($PARAM[id]).IsUpdating</visible>
-            <visible>Control.HasFocus($PARAM[id])</visible>
           </control>
         </control>
       </control>
