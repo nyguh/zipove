@@ -177,7 +177,7 @@
           <width>1920</width>
           <height>4</height>
           <texture colordiffuse="selected">common/fancy-line-horizontal.png</texture>
-          <visible>!$EXP[infodialog_active] + Integer.IsGreater(Container(7502).NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)</visible>
+          <visible>!$EXP[infodialog_active] + Integer.IsGreater(Container(7502).NumItems,0) + Integer.IsGreater(Container(3000).NumItems,0)</visible>
         </control>
         <control type="image">
           <bottom>-120</bottom>
@@ -186,7 +186,7 @@
           <height>480</height>
           <aspectratio>scale</aspectratio>
           <texture colordiffuse="$VAR[AlphaPercentage]">common/overlay.png</texture>
-          <visible>!$EXP[infodialog_active] + Integer.IsGreater(Container(7502).NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)</visible>
+          <visible>!$EXP[infodialog_active] + Integer.IsGreater(Container(7502).NumItems,0) + Integer.IsGreater(Container(3000).NumItems,0)</visible>
         </control>
         <control type="group">
           <top>30</top>
