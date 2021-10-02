@@ -204,24 +204,25 @@
           </animation>
         </control>
         <control type="image">
-        <top>-22</top>
-        <left>14</left>
-        <width>272</width>
-        <height>380</height>
-        <aspectratio>scale</aspectratio>
-        <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
-        <bordersize>24</bordersize>
-        <visible>$PARAM[bg_visible]</visible>
-        <animation type="Focus">
-          <effect type="zoom" center="0" end="110,110" time="300" tween="sine" easing="out"/>
-          <effect type="slide" start="0" end="0,-50" time="400" tween="cubic" easing="out"/>
-        </animation>
-      </control>
+          <top>-22</top>
+          <left>14</left>
+          <width>272</width>
+          <height>380</height>
+          <aspectratio>scale</aspectratio>
+          <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+          <bordersize>24</bordersize>
+          <visible>$PARAM[bg_visible]</visible>
+          <animation type="Focus">
+            <effect type="zoom" center="0" end="110,110" time="300" tween="sine" easing="out"/>
+            <effect type="slide" start="0" end="0,-50" time="400" tween="cubic" easing="out"/>
+          </animation>
+        </control>
       </control>
       <control type="image">
         <top>8</top>
-        <left>8</left>
+        <left>40</left>
         <right>8</right>
+        <width>220</width>
         <aspectratio>keep</aspectratio>
         <texture background="true">$VAR[Image_Poster]</texture>
         <animation type="Focus">
