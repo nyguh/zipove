@@ -1196,7 +1196,7 @@
             <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
             <animation effect="zoom" end="175" center="-30" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Horizontal_Main)">Conditional</animation>
             <animation effect="slide" start="0" end="-260,-100" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Horizontal_Main)">Conditional</animation>
-            <aspectratio>scale</aspectratio>
+            <aspectratio aligny="top">scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
             <randomize>true</randomize>
