@@ -1,3 +1,6 @@
+1.0.56
+    Fixed: Items not being playable when Flix spotlight is disabled
+    Improved: Horizontal layout
 1.0.55
     Fixed: Displayed title in Horizontal layout
     Fixed: PVR channel guide modern visibility
