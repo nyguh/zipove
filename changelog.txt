@@ -1,3 +1,6 @@
+1.0.57
+    Changed: Background aspect ratio
+    Fixed: Auto close PVR Channel Guide
 1.0.56
     Fixed: Items not being playable when Flix spotlight is disabled
     Improved: Horizontal layout
