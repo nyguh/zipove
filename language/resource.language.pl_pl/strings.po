@@ -1869,3 +1869,13 @@ msgstr "Używaj minimalistycznego OSD"
 msgctxt "#31419"
 msgid "Alpha (home)"
 msgstr "Przezroczystość (home)"
+
+#: /xml/Font.xml
+msgctxt "#31420"
+msgid "Liberation Sans"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31421"
+msgid "Disable search button"
+msgstr "Wyłącz wyszukiwarkę"

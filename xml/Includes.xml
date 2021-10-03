@@ -1192,8 +1192,10 @@
             <include content="HorizontalFanartBox" condition="Window.IsVisible(home) + Skin.HasSetting(Horizontal_Main)" />
             <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | ![Skin.HasSetting(Vertical_Main) | Window.IsVisible(home)]" />
             <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
-            <animation effect="zoom" end="150" center="200" time="200" condition="Window.IsActive(1140) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Horizontal_Main)]">Conditional</animation>
-            <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Horizontal_Main)]">Conditional</animation>
+            <animation effect="zoom" end="150" center="200" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
+            <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
+            <animation effect="zoom" end="175" center="-30" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Horizontal_Main)">Conditional</animation>
+            <animation effect="slide" start="0" end="-260,-100" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Horizontal_Main)">Conditional</animation>
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
@@ -1431,12 +1433,12 @@
   </include>
   <include name="HorizontalFanartBox">
     <definition>
-      <top>0</top>
+      <top>100</top>
       <left>0</left>
       <width>1920</width>
-      <height>720</height>
-      <animation effect="zoom" end="150" center="200" time="200" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
-      <animation effect="slide" start="0" end="-554,0" time="200" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
+      <height>620</height>
+      <animation effect="zoom" end="160" center="-30" time="200" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
+      <animation effect="slide" start="0" end="-260,-35" time="200" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
     </definition>
   </include>
   <include name="FocusableProgressBar">
@@ -2770,6 +2772,12 @@
   </include>
   <include name="WatchedOverlay_Focus_bs0">
     <bordersize>0</bordersize>
+  </include>
+  <include name="Horizontal_Menubar_NoSearch_Width">
+    <width>1560</width>
+  </include>
+  <include name="Horizontal_Menubar_wSearch_Width">
+    <width>1300</width>
   </include>
   <include name="Flix_Spotlight_Properties">
     <onclick condition="$PARAM[include_condition]">SetProperty(spotlight_Fanart,"$VAR[MediaFanartVar]",home)</onclick>

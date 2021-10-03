@@ -6,7 +6,7 @@
       <animation effect="slide" start="0" end="0,-560" time="400" tween="quadratic" condition="Window.IsActive(1140)">Conditional</animation>
       <control type="image">
           <top>3</top>
-          <left>238</left>
+          <left>208</left>
           <width>92</width>
           <height>92</height>
           <aligny>auto</aligny>
@@ -20,6 +20,7 @@
           <height>92</height>
           <aspectratio>keep</aspectratio>
           <texture colordiffuse="dialog_fg_70">special://skin/extras/icons/search.png</texture>
+          <visible>!Skin.HasSetting(DisableSearchButton)</visible>
         </control>
         <control type="button" id="303">
           <top>0</top>
@@ -40,6 +41,7 @@
           <focusedcolor>selected</focusedcolor>
           <texturefocus/>
           <texturenofocus/>
+          <visible>!Skin.HasSetting(DisableSearchButton)</visible>
         </control>
       </control>
       <control type="group">
@@ -69,57 +71,82 @@
       </control>
       <control type="group">
         <control type="image">
+          <top>0</top>
+          <left>-25%</left>
+          <width>150%</width>
+          <height>100</height>
+          <aspectratio>scale</aspectratio>
+          <texture>$VAR[MenubarBlur]</texture>
+        </control>
+        <control type="image">
+          <top>0</top>
+          <left>-25%</left>
+          <width>150%</width>
+          <height>100</height>
+          <aspectratio>scale</aspectratio>
+          <texture colordiffuse="$VAR[AlphaPercentage]">common/overlay.png</texture>
+        </control>
+        <control type="image">
           <top>100</top>
           <width>1920</width>
           <height>4</height>
           <texture colordiffuse="selected">common/fancy-line-horizontal.png</texture>
         </control>
         <control type="list" id="9000">
-          <width>1100</width>
-          <height>180</height>
+          <include content="Horizontal_Menubar_NoSearch_Width" condition="Skin.HasSetting(DisableSearchButton)" />
+          <include content="Horizontal_Menubar_wSearch_Width" condition="!Skin.HasSetting(DisableSearchButton)" />
+          <height>100</height>
           <top>0</top>
           <left>300</left>
-          <onright>303</onright>
+          <onright condition="!Skin.HasSetting(DisableSearchButton)">303</onright>
           <ondown>3000</ondown>
           <orientation>horizontal</orientation>
           <include>Flix_Spotlight_ClearProperties_focus</include>
           <scrolltime tween="cubic" easing="out">500</scrolltime>
-          <focusedlayout height="95" width="284">
+          <focusedlayout height="95" width="260">
             <control type="group">
+              <control type="image">
+                <top>0</top>
+                <left>0</left>
+                <width>260</width>
+                <height>100</height>
+                <texture colordiffuse="$VAR[AlphaPercentage]">common/white-gradient90.png</texture>
+              </control>
+              <control type="image">
+                <top>99</top>
+                <left>0</left>
+                <width>260</width>
+                <height>4</height>
+                <texture colordiffuse="selected">common/fancy-line.png</texture>
+              </control>
               <control type="label">
-                <left>84</left>
+                <left>0</left>
                 <top>0</top>
                 <height>95</height>
-                <width>300</width>
+                <width>260</width>
                 <scroll>true</scroll>
                 <aligny>center</aligny>
-                <align>left</align>
+                <align>center</align>
                 <font>font_menu</font>
                 <textcolor>selected</textcolor>
                 <label>$INFO[ListItem.Label]</label>
                 <shadowcolor>text_shadow</shadowcolor>
               </control>
               <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-              <control type="image">
-                <top>99</top>
-                <left>0</left>
-                <width>284</width>
-                <height>4</height>
-                <texture colordiffuse="selected">common/fancy-line.png</texture>
-              </control>
             </control>
           </focusedlayout>
-          <itemlayout height="95" width="284">
+          <itemlayout height="95" width="260">
             <control type="group">
               <control type="label">
-                <left>84</left>
+                <left>0</left>
                 <top>0</top>
                 <height>95</height>
-                <width>300</width>
+                <width>260</width>
                 <scroll>true</scroll>
                 <aligny>center</aligny>
-                <align>left</align>
+                <align>center</align>
                 <font>font_menu</font>
+                <textcolor>dialog_fg_70</textcolor>
                 <label>$INFO[ListItem.Label]</label>
                 <shadowcolor>text_shadow</shadowcolor>
               </control>
@@ -174,7 +201,6 @@
           <bottom>360</bottom>
           <left>-25%</left>
           <width>150%</width>
-          <width>1920</width>
           <height>4</height>
           <texture colordiffuse="selected">common/fancy-line-horizontal.png</texture>
           <visible>!$EXP[infodialog_active] + Integer.IsGreater(Container(7502).NumItems,0) + Integer.IsGreater(Container(3000).NumItems,0)</visible>
@@ -194,9 +220,9 @@
         </control>
         <control type="group">
           <top>30</top>
-          <left>30</left>
+          <left>10</left>
           <include content="WidgetHorizontalLabel">
-            <param name="width" value="210" />
+            <param name="width" value="168" />
           </include>
         </control>
         <control type="group" id="2999">

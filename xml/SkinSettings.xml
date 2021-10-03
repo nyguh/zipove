@@ -120,6 +120,13 @@
             <selected>Skin.HasSetting(TriggerSpotlightOnSelect)</selected>
             <onclick>Skin.ToggleSetting(TriggerSpotlightOnSelect)</onclick>
           </control>
+          <control type="radiobutton" id="606" description="Disable search button in horizontal layout">
+            <label>$LOCALIZE[31421]</label>
+            <include>DefaultSettingButton</include>
+            <visible>Skin.HasSetting(Horizontal_Main)</visible>
+            <selected>Skin.HasSetting(DisableSearchButton)</selected>
+            <onclick>Skin.ToggleSetting(DisableSearchButton)</onclick>
+          </control>
           <control type="radiobutton" id="607" description="Show weather in horizontal">
             <label>$LOCALIZE[31344]</label>
             <include>DefaultSettingButton</include>

@@ -163,7 +163,7 @@
             <textcolor>dialog_fg_100</textcolor>
             <font>font27_bold</font>
             <height>42</height>
-            <scroll>true</scroll>
+            <!-- <scroll>true</scroll> -->
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
             <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
           </control>
