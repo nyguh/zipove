@@ -1,3 +1,5 @@
+1.0.58
+    Fixed: Triggering Flix Spotlight onback
 1.0.57
     Changed: Background aspect ratio
     Fixed: Auto close PVR Channel Guide
