@@ -353,6 +353,9 @@
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
         <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
+        <include content="Flix_Spotlight_Properties_onBack">
+          <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+        </include>
         <onback condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">ActivateWindow(1140)</onback>
         <height>460</height>
         <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
@@ -574,6 +577,9 @@
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
         <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
+        <include content="Flix_Spotlight_Properties_onBack">
+          <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+        </include>
         <onback condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">ActivateWindow(1140)</onback>
         <height>460</height>
         <focusposition>1</focusposition>
