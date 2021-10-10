@@ -1,3 +1,11 @@
+1.0.59
+    Changed: Classic layout
+    Changed: Diffuse for different aspect ratios
+    Added: ColorOverlay to different aspect ratios background color
+    Removed: Divider from info line
+    Improved: Menu behavior in Classic layout
+    Fixed: Clearlogo in Classic layout
+    Added: Fanart animation to Classic layout when Flix spotlight is active
 1.0.58
     Fixed: Triggering Flix Spotlight onback
 1.0.57
