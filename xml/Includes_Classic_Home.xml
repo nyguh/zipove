@@ -274,7 +274,7 @@
           <width>417</width>
           <height>1080</height>
           <texture colordiffuse="selected">common/white-gradient-t40.png</texture>
-          <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+          <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]">Conditional</animation>
         </control>
         <control type="image">
           <top>342</top>
@@ -282,13 +282,13 @@
           <width>1080</width>
           <height>4</height>
           <texture colordiffuse="selected">common/fancy-line-horizontal.png</texture>
-          <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+          <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]">Conditional</animation>
           <animation effect="rotate" end="90" center="360,288" time="0" condition="true">Conditional</animation>
         </control>
       </control>
       <control type="group">
         <depth>DepthContentPanel</depth>
-        <include>OpenClose_Left</include>
+        <!-- <include>OpenClose_Left</include> -->
         <control type="fixedlist" id="9000">
           <top>180</top>
           <width>462</width>
@@ -334,7 +334,8 @@
               <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
             </control>
             <control type="image">
-              <animation effect="slide" start="0,0" end="-280,0" time="400" tween="linear" easing="inout" condition="ControlGroup(3000).HasFocus | Window.IsActive(1140)">Conditional</animation>
+              <animation effect="slide" start="0,0" end="-280,0" time="400" tween="linear" easing="inout" condition="ControlGroup(3000).HasFocus | Window.IsActive(1140) | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]
+     | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]">Conditional</animation>
               <top>-32</top>
               <left>400</left>
               <width>32</width>
