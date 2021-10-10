@@ -254,7 +254,7 @@
         <width>360</width>
         <height>422.5</height>
         <aspectratio>scale</aspectratio>
-        <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+        <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
         <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
         <bordersize>24</bordersize>
       </control>
@@ -289,7 +289,7 @@
           <width>598</width>
           <height>366</height>
           <aspectratio>scale</aspectratio>
-          <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+          <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
           <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
           <bordersize>24</bordersize>
         </control>
@@ -334,7 +334,7 @@
           <width>598</width>
           <height>366</height>
           <aspectratio>scale</aspectratio>
-          <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+          <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
           <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
           <bordersize>24</bordersize>
         </control>
