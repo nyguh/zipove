@@ -2,6 +2,7 @@
 <includes>
   <include name="Classic_Main">
     <control type="group">
+      <visible>!Window.IsActive(1140)</visible>
       <control type="image">
         <top>0</top>
         <left>0</left>
