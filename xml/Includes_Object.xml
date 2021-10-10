@@ -590,9 +590,14 @@
         <animation effect="slide" time="0" start="0" end="-390,0" condition="Skin.HasSetting(Vertical_Main) + $PARAM[landscapecondition] | $PARAM[fanartcondition]">Conditional</animation>
         <!-- classic layout -->
         <animation effect="slide" time="0" start="0" end="195,0" condition="Skin.HasSetting(Classic_Main) + $PARAM[postercondition]">Conditional</animation>
+        <animation effect="slide" time="400" start="0" end="280,0" condition="[Skin.HasSetting(Classic_Main) + $PARAM[postercondition]] + [Control.HasFocus(9000) | Control.HasFocus(9001)] + Integer.IsGreater(Container($PARAM[id]).CurrentItem,1)">Conditional</animation>
         <animation effect="slide" time="0" start="0" end="120,0" condition="Skin.HasSetting(Classic_Main) + $PARAM[squarecondition]">Conditional</animation>
+        <animation effect="slide" time="400" start="0" end="355,0" condition="[Skin.HasSetting(Classic_Main) + $PARAM[squarecondition]] + [Control.HasFocus(9000) | Control.HasFocus(9001)] + Integer.IsGreater(Container($PARAM[id]).CurrentItem,1)">Conditional</animation>
         <animation effect="slide" time="0" start="0" end="-130,0" condition="Skin.HasSetting(Classic_Main) + $PARAM[landscapecondition]">Conditional</animation>
         <animation effect="slide" time="0" start="0" end="265,0" condition="Skin.HasSetting(Classic_Main) + $PARAM[fanartcondition]">Conditional</animation>
+        <animation effect="slide" time="400" start="0" end="605,0" condition="[Skin.HasSetting(Classic_Main) + $PARAM[landscapecondition]] + [Control.HasFocus(9000) | Control.HasFocus(9001)] + Integer.IsGreater(Container($PARAM[id]).CurrentItem,1)">Conditional</animation>
+        <animation effect="slide" time="400" start="0" end="605,0" condition="[Skin.HasSetting(Classic_Main) + $PARAM[fanartcondition]] + [Control.HasFocus(9000) | Control.HasFocus(9001)] + Integer.IsGreater(Container($PARAM[id]).CurrentItem,1)">Conditional</animation>
+        <!-- ... -->
         <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(trailerdelay,PlayMedia($ESCINFO[ListItem.Trailer],1),00:01,silent)</onclick>
         <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
@@ -765,6 +770,7 @@
         <control type="group">
           <top>60</top>
           <control type="label">
+            <top>$PARAM[title_top]</top>
             <left>150</left>
             <bottom>60</bottom>
             <scroll>true</scroll>
@@ -848,43 +854,43 @@
     <definition>
       <control type="group">
         <top>$PARAM[top]</top>
+        <control type="group">
+          <top>60</top>
+          <control type="textbox">
+            <left>150</left>
+            <top>0</top>
+            <autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+            <height>150</height>
+            <width>$PARAM[title_width]</width>
+            <textcolor>$VAR[TitleColour]</textcolor>
+            <wrapmultiline>$PARAM[wrapmultiline_title]</wrapmultiline>
+            <shadowcolor>black</shadowcolor>
+            <label>$PARAM[title]</label>
+            <font>font_title_bold</font>
+            <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
+            <visible>$PARAM[title_visible]</visible>
+          </control>
+          <control type="image">
+            <top>$PARAM[clearlogo_top_margin]</top>
+            <left>150</left>
+            <width>$PARAM[clearlogo_width]</width>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[Image_ClearLogo]</texture>
+            <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
+          </control>
           <control type="group">
-            <top>60</top>
             <control type="textbox">
+              <top>$PARAM[plot_top]</top>
               <left>150</left>
-              <top>0</top>
-              <autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-              <height>150</height>
-              <width>$PARAM[title_width]</width>
-              <textcolor>$VAR[TitleColour]</textcolor>
-              <wrapmultiline>$PARAM[wrapmultiline_title]</wrapmultiline>
+              <width>940</width>
+              <height>$PARAM[plot_height]</height>
+              <textcolor>white</textcolor>
+              <label>$PARAM[plot]</label>
+              <font>font32</font>
               <shadowcolor>black</shadowcolor>
-              <label>$PARAM[title]</label>
-              <font>font_title_bold</font>
-              <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
-              <visible>$PARAM[title_visible]</visible>
+              <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
+              <visible>!Skin.HasSetting(HidePlot)</visible>
             </control>
-            <control type="image">
-              <top>$PARAM[clearlogo_top_margin]</top>
-              <left>150</left>
-              <width>$PARAM[clearlogo_width]</width>
-              <aspectratio>keep</aspectratio>
-              <texture background="true">$VAR[Image_ClearLogo]</texture>
-              <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
-            </control>
-            <control type="group">
-              <control type="textbox">
-                <top>$PARAM[plot_top]</top>
-                <left>150</left>
-                <width>940</width>
-                <height>$PARAM[plot_height]</height>
-                <textcolor>white</textcolor>
-                <label>$PARAM[plot]</label>
-                <font>font32</font>
-                <shadowcolor>black</shadowcolor>
-                <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
-                <visible>!Skin.HasSetting(HidePlot)</visible>
-              </control>
           </control>
         </control>
       </control>
