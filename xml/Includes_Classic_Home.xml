@@ -54,6 +54,8 @@
         <param name="plot_height" value="200"/>
         <param name="info_line_top" value="180"/>
         <param name="plot_top" value="300"/>
+        <param name="clearlogo_top_margin" value="-985" />
+        <param name="clearlogo_width" value="360"/>
       </include>
       <visible>!$EXP[infodialog_active]</visible>
       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(1140)">Conditional</animation>
@@ -334,8 +336,7 @@
               <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
             </control>
             <control type="image">
-              <animation effect="slide" start="0,0" end="-280,0" time="400" tween="linear" easing="inout" condition="ControlGroup(3000).HasFocus | Window.IsActive(1140) | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]
-     | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]">Conditional</animation>
+              <animation effect="slide" start="0,0" end="-280,0" time="400" tween="linear" easing="inout" condition="ControlGroup(3000).HasFocus | Window.IsActive(1140) | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]     | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]">Conditional</animation>
               <top>-32</top>
               <left>400</left>
               <width>32</width>

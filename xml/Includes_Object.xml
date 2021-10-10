@@ -764,6 +764,8 @@
     <param name="plot_top" default="235"/>
     <param name="plot_height" default="120"/>
     <param name="title_visible" default="true" />
+    <param name="clearlogo_top_margin" default="-940" />
+    <param name="clearlogo_width" default="480" />
     <definition>
       <control type="group">
         <top>$PARAM[top]</top>
@@ -787,9 +789,9 @@
             </animation>
           </control>
           <control type="image">
-            <top>-940</top>
+            <top>$PARAM[clearlogo_top_margin]</top>
             <left>150</left>
-            <width>480</width>
+            <width>$PARAM[clearlogo_width]</width>
             <aspectratio>keep</aspectratio>
             <texture background="true">$VAR[Image_ClearLogo]</texture>
             <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
