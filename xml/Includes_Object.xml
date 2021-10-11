@@ -32,7 +32,8 @@
           <control type="group">
             <control type="image">
               <include content="submenuVerticalIconLayout" condition="Skin.HasSetting(Vertical_Main)"/>
-              <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main)"/>
+              <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main) + !String.IsEqual(Skin.String(MenuStyle),Icons)"/>
+              <include content="submenuClassicIconsOnlyLayout" condition="Skin.HasSetting(Classic_Main) + String.IsEqual(Skin.String(MenuStyle),Icons)"/>
               <texture colordiffuse="dialog_fg_100">$PARAM[icon]</texture>
             </control>
             <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
@@ -64,7 +65,8 @@
           <control type="group">
             <control type="image">
               <include content="submenuVerticalIconLayout" condition="Skin.HasSetting(Vertical_Main)"/>
-              <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main)"/>
+              <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main) + !String.IsEqual(Skin.String(MenuStyle),Icons)"/>
+              <include content="submenuClassicIconsOnlyLayout" condition="Skin.HasSetting(Classic_Main) + String.IsEqual(Skin.String(MenuStyle),Icons)"/>
               <texture colordiffuse="44FFFFFF">$PARAM[icon]</texture>
             </control>
             <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))]</visible>

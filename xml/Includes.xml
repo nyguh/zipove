@@ -1448,7 +1448,7 @@
       <left>417</left>
       <width>1920</width>
       <height>1080</height>
-      <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+      <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
       <animation effect="slide" start="0" end="0,-150" time="400" condition="Window.IsActive(1140)">Conditional</animation>
     </definition>
   </include>
@@ -2743,6 +2743,15 @@
   <include name="submenuClassicIconLayout">
     <definition>
       <left>288</left>
+      <top>1</top>
+      <align>right</align>
+      <width>95</width>
+      <height>95</height>
+    </definition>
+  </include>
+  <include name="submenuClassicIconsOnlyLayout">
+    <definition>
+      <left>20</left>
       <top>1</top>
       <align>right</align>
       <width>95</width>
