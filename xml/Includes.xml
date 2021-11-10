@@ -1448,8 +1448,8 @@
       <left>417</left>
       <width>1920</width>
       <height>1080</height>
-      <animation effect="slide" start="0" end="-280,0" time="400" condition="ControlGroup(3000).HasFocus | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
-      <animation effect="slide" start="0" end="0,-150" time="400" condition="Window.IsActive(1140)">Conditional</animation>
+      <animation effect="slide" start="0" end="-280,0" time="200" condition="ControlGroup(3000).HasFocus | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
+      <animation effect="slide" start="0" end="0,-150" time="200" condition="Window.IsActive(1140)">Conditional</animation>
     </definition>
   </include>
   <include name="FocusableProgressBar">
