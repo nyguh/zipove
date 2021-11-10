@@ -1,3 +1,9 @@
+1.0.60
+    Fixed: Menu behavior with icons only menu style
+    Improved: Animations time in Classic layout
+    Fixed: Spacing in Classic layout
+    Added: Left margin to Flix spotlight
+    Changed: MediaMenu appearance
 1.0.59
     Changed: Classic layout
     Changed: Diffuse for different aspect ratios
