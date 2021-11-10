@@ -45,7 +45,7 @@
       <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
     </control>
     <control type="group" id="5600">
-      <left>300</left>
+      <left>340</left>
       <animation effect="slide" start="0,0" end="-280,0" time="200" reversible="true" tween="linear" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
       <animation effect="slide" start="0,0" end="-280,0" time="200" reversible="true" tween="linear" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
       <include content="Object_Item_Showcase">
@@ -130,7 +130,7 @@
         <include>OpenClose_Right</include>
         <animation effect="slide" start="0" end="0,280" time="200" tween="quadratic" condition="Window.IsActive(1140) + !Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
         <animation effect="slide" start="0" end="0,560" time="200" tween="quadratic" condition="Window.IsActive(1140) + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
-        <left>430</left>
+        <left>470</left>
         <control type="group">
           <animation effect="slide" start="0,0" end="-280,0" time="200" reversible="true" tween="linear" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
           <animation effect="slide" start="0,0" end="280" time="200" reversible="true" tween="linear" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
