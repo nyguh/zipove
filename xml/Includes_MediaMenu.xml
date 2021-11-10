@@ -261,26 +261,28 @@
     <textcolor>$VAR[ColorHighlight]</textcolor>
   </include>
   <include name="MediaMenuCommon">
-    <include>OpenClose_Left</include>
-    <depth>DepthSideBlade</depth>
-    <left>-520</left>
+    <include>Animation_DialogPopupOpenClose</include>
+    <top>-2000</top>
+    <left>700</left>
     <animation type="Conditional" condition="$EXP[sidebar_visible]" reversible="true">
-      <effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out"/>
+      <effect type="slide" start="0" end="0,2180" time="200" tween="cubic" easing="out"/>
     </animation>
     <control type="image">
-      <width>4000</width>
-      <height>100%</height>
+      <width>8000</width>
+      <height>120%</height>
+      <top>-20%</top>
+      <left>-2000</left>
       <aspectratio>scale</aspectratio>
       <texture colordiffuse="80FFFFFF">colors/black.png</texture>
       <visible>$EXP[sidebar_visible] + !System.HasActiveModalDialog</visible>
       <animation effect="fade" time="200">VisibleChange</animation>
     </control>
     <control type="image">
-      <left>0</left>
-      <top>0</top>
+      <left>-20</left>
+      <top>40</top>
       <width>520</width>
-      <height>100%</height>
-      <texture border="0,0,52,0">lists/panel-mediamenu.png</texture>
+      <height>680</height>
+      <texture border="20" colordiffuse="dialog_bg_100">common/box.png</texture>
     </control>
     <control type="button" id="6131">
       <left>0</left>
@@ -346,7 +348,7 @@
       <left>0</left>
       <top>100</top>
       <width>470</width>
-      <height>100%</height>
+      <height>610</height>
       <onleft>9000</onleft>
       <onup>9000</onup>
       <onright condition="![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]">50</onright>
