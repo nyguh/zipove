@@ -263,9 +263,10 @@
   <include name="MediaMenuCommon">
     <include>Animation_DialogPopupOpenClose</include>
     <top>-2000</top>
-    <left>700</left>
+    <left>-700</left>
     <animation type="Conditional" condition="$EXP[sidebar_visible]" reversible="true">
       <effect type="slide" start="0" end="0,2180" time="200" tween="cubic" easing="out"/>
+      <effect type="slide" start="0" end="1400,0" time="0" tween="cubic" easing="out"/>
     </animation>
     <control type="image">
       <width>8000</width>
