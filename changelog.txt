@@ -1,3 +1,6 @@
+1.0.61
+    Fixed: Temporary fix for continuously popping up MediaMenu when using mouse
+    Fixed: Background movement when focusing over weather/settings widget in Classic layout
 1.0.60
     Fixed: Menu behavior with icons only menu style
     Improved: Animations time in Classic layout
