@@ -1879,3 +1879,8 @@ msgstr ""
 msgctxt "#31421"
 msgid "Disable search button"
 msgstr "Wyłącz wyszukiwarkę"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31422"
+msgid "Bring me back this F' Classic!"
+msgstr "Przywróc do cholery ten klasyczny układ!"

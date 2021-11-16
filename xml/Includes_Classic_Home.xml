@@ -3,6 +3,7 @@
   <include name="Classic_Main">
     <control type="group">
       <visible>!Window.IsActive(1140)</visible>
+      <visible>!Skin.HasSetting(BringBackClassic)</visible>
       <control type="image">
         <top>0</top>
         <left>0</left>
@@ -271,6 +272,7 @@
         </control>
       </control>
       <control type="group">
+        <visible>!Skin.HasSetting(BringBackClassic)</visible>
         <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
         <control type="image">
           <top>0</top>
@@ -346,6 +348,7 @@
               <texture colordiffuse="selected">common/fancy-line.png</texture>
               <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
               <visible>!String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
+              <visible>!Skin.HasSetting(BringBackClassic)</visible>
             </control>
             <control type="image">
               <top>-32</top>
