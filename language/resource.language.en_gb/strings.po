@@ -2060,3 +2060,18 @@ msgstr ""
 msgctxt "#31422"
 msgid "Bring me back this F' Classic!"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31423"
+msgid "Wish me happy xmas!"
+msgstr ""
+
+#: /xml/Custom_1999_Xmas.xml
+msgctxt "#31424"
+msgid "May the miracle of Christmas bring you love and joy,[CR][CR][CR]May the New Year open of the happiness door,[CR][CR][CR]May all of your dreams come true,[CR][CR][CR]A very happy Christmas to You!"
+msgstr ""
+
+#: /xml/Custom_1999_Xmas.xml
+msgctxt "#31425"
+msgid "Close and don't show again"
+msgstr ""

@@ -810,7 +810,7 @@
           <left>60</left>
           <top>360</top>
           <width>800</width>
-          <height>480</height>
+          <height>380</height>
           <font>font37</font>
           <textcolor>dialog_fg_100</textcolor>
           <label>31278</label>
@@ -819,14 +819,14 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1300"/>
-          <top>633</top>
+          <top>533</top>
           <height>80</height>
           <right>0</right>
           <visible>ControlGroup(1300).HasFocus()</visible>
         </include>
         <!-- Cosmic -->
         <control type="grouplist" id="1300">
-          <top>633</top>
+          <top>533</top>
           <left>0</left>
           <right>0</right>
           <bottom>140</bottom>
@@ -835,6 +835,12 @@
           <onup>1300</onup>
           <ondown>1300</ondown>
           <visible>Container(9000).HasFocus(8)</visible>
+          <pagecontrol>60</pagecontrol>
+          <control type="button" id="1304" description="Show wishes">
+            <label>$LOCALIZE[31423]</label>
+            <include>DefaultSettingButton</include>
+            <onclick>ActivateWindow(1999)</onclick>
+          </control>
           <control type="button" id="1303" description="Toggle debugging">
             <label>$LOCALIZE[31248]</label>
             <include>DefaultSettingButton</include>

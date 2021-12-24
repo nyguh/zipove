@@ -1884,3 +1884,18 @@ msgstr "Wyłącz wyszukiwarkę"
 msgctxt "#31422"
 msgid "Bring me back this F' Classic!"
 msgstr "Przywróc do cholery ten klasyczny układ!"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31423"
+msgid "Wish me happy xmas!"
+msgstr "Życz mi wesołych świąt!"
+
+#: /xml/Custom_1999_Xmas.xml
+msgctxt "#31424"
+msgid "May the miracle of Christmas bring you love and joy,[CR][CR][CR]May the New Year open of the happiness door,[CR][CR][CR]May all of your dreams come true,[CR][CR][CR]A very happy Christmas to You!"
+msgstr "Niech cud Bożego Narodzenia przyniesie Ci miłość i radość,[CR][CR][CR]Niech Nowy Rok otworzy drzwi do szczęścia,[CR][CR][CR]Niech spełnią się wszystkie Twoje marzenia,[CR][CR][CR]Wesołych Świąt!"
+
+#: /xml/Custom_1999_Xmas.xml
+msgctxt "#31425"
+msgid "Close and don't show again"
+msgstr "Zamknij i nie pokazuj w przyszłości"

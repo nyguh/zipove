@@ -12,6 +12,8 @@
   <onload condition="String.IsEmpty(Skin.String(HighlightSize))">Skin.SetString(HighlightSize,Bold)</onload>
   <!-- set colourful rating icons as default -->
   <onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons,colorful)</onload>
+  <!-- xmas mode -->
+  <onload condition="!String.IsEqual(Skin.String(xmasmode),1)">ActivateWindow(1999)</onload>
   <controls>
     <control type="button" id="20000">
       <include>HiddenObject</include>
