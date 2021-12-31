@@ -1,3 +1,7 @@
+1.0.64
+    Removed Xmas wishes
+1.0.63
+    Little thing for Christmas:)
 1.0.62
     Added: Option to disable bars in new Classic layout
 1.0.61
