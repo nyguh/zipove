@@ -836,11 +836,11 @@
           <ondown>1300</ondown>
           <visible>Container(9000).HasFocus(8)</visible>
           <pagecontrol>60</pagecontrol>
-          <control type="button" id="1304" description="Show wishes">
+          <!-- <control type="button" id="1304" description="Show wishes">
             <label>$LOCALIZE[31423]</label>
             <include>DefaultSettingButton</include>
             <onclick>ActivateWindow(1999)</onclick>
-          </control>
+          </control> -->
           <control type="button" id="1303" description="Toggle debugging">
             <label>$LOCALIZE[31248]</label>
             <include>DefaultSettingButton</include>
