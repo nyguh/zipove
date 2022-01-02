@@ -339,26 +339,6 @@
               <visible>String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))</visible>
               <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
             </control>
-            <control type="image">
-              <animation effect="slide" start="0,0" end="-280,0" time="200" tween="linear" easing="inout" condition="ControlGroup(3000).HasFocus | Window.IsActive(1140) | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus] | [ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus]">Conditional</animation>
-              <top>-32</top>
-              <left>400</left>
-              <width>32</width>
-              <height>159</height>
-              <texture colordiffuse="selected">common/fancy-line.png</texture>
-              <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
-              <visible>!String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
-              <visible>!Skin.HasSetting(BringBackClassic)</visible>
-            </control>
-            <control type="image">
-              <top>-32</top>
-              <left>120</left>
-              <width>32</width>
-              <height>159</height>
-              <texture colordiffuse="selected">common/fancy-line.png</texture>
-              <animation effect="fade" start="100" end="0" time="50" condition="Player.HasVideo + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
-              <visible>String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
-            </control>
           </focusedlayout>
           <itemlayout height="95">
             <control type="group">
