@@ -173,7 +173,7 @@
           <param name="title_visible" value="true" />
           <param name="wrapmultiline_title" value="true" />
           <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
-          <param name="plot_height" value="155" />
+          <param name="plot_height" value="150" />
           <param name="top" value="130"/>
           <param name="plot_top" value="160"/>
         </include>
