@@ -1,3 +1,7 @@
+1.0.65
+    Fixed: Background trailers are not stopped when losing focus
+    Removed: fancy-line.png from Classic layout
+    Fixed: Height of plot in showcase
 1.0.64
     Removed Xmas wishes
 1.0.63
