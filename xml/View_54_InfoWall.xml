@@ -76,6 +76,41 @@
       </control>
     </definition>
   </include>
+  <include name="YouTubeSection">
+    <control type="list" id="$PARAM[id]">
+      <scrolltime tween="quadratic">400</scrolltime>
+      <orientation>horizontal</orientation>
+      <height>375.5</height>
+      <itemlayout height="375.5" width="600">
+        <include content="ViewLandscapeItemLayout">
+        </include>
+      </itemlayout>
+      <focusedlayout height="375.5" width="600">
+        <include content="ViewLandscapeItemLayout">
+        </include>
+        <include content="Selectbox">
+          <param name="pad_top_b" value="-8"/>
+          <param name="pad_bottom_b" value="18"/>
+          <param name="pad_left_b" value="-8"/>
+          <param name="pad_right_b" value="10"/>
+          <param name="pad_top_t" value="-3"/>
+          <param name="pad_bottom_t" value="23"/>
+          <param name="pad_left_t" value="-3"/>
+          <param name="pad_right_t" value="15"/>
+          <param name="visible_posters" value="false"/>
+          <param name="visible_squares" value="false"/>
+          <param name="visible_landscapes" value="true + Control.HasFocus(1060)"/>
+        </include>
+      </focusedlayout>
+      <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
+      <onclick>PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
+      <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.TvShowTitle) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.TvShowTitle,plugin://plugin.video.youtube/search/?q=,]</content>
+      <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.Artist) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Artist,plugin://plugin.video.youtube/search/?q=,]</content>
+      <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.Title) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Title,plugin://plugin.video.youtube/search/?q=,]</content>
+      <content limit="10" target="videos" sortby="file" condition="System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Label,plugin://plugin.video.youtube/search/?q=,]</content>
+      <visible>$PARAM[visible]</visible>
+    </control>
+  </include>
   <include name="InfoDialogItemLayout">
     <control type="group">
       <left>0</left>
