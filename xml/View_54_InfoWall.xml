@@ -202,21 +202,11 @@
   <include name="ViewPosterItemLayout">
     <definition>
       <control type="image">
-        <top>-16</top>
-        <left>-16</left>
-        <width>290</width>
-        <height>422.5</height>
-        <aspectratio>scale</aspectratio>
-        <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-        <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
-        <bordersize>24</bordersize>
-      </control>
-      <control type="image">
         <top>8</top>
         <left>8</left>
         <right>18</right>
-        <aspectratio>scale</aspectratio>
-        <texture background="true">$VAR[Image_Poster]</texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+        <texture background="true" diffuse="diffuse/poster-std.png">$VAR[Image_Poster]</texture>
       </control>
     </definition>
   </include>
@@ -329,7 +319,7 @@
           <bordersize>24</bordersize>
         </control>
         <control type="image">
-          <right>0</right>
+          <right>18</right>
           <height>$PARAM[iconheight]</height>
           <aspectratio scalediffuse="false">scale</aspectratio>
           <texture background="true" diffuse="diffuse/landscape-big.png" >$VAR[Image_Landscape]</texture>

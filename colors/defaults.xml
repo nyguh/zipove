@@ -32,12 +32,13 @@
   <color name="panel_fg_30">4Dededed</color>
   <color name="panel_fg_12">1Fededed</color>
   <!-- Highlight -->
-  <color name="Highlight">ff00695c</color>
-  <color name="Gradient">ffffe082</color>
+  <color name="Highlight">ff1561df</color>
+  <color name="Gradient">ff15b88e</color>
   <color name="selected">ffffffff</color>
   <!-- Shadows -->
   <color name="shadow">55ffffff</color>
   <!-- Old references... -->
   <color name="invalid">FFFF0000</color>
+  <color name="text_color">ff606060</color>
   <color name="text_shadow">22000000</color>
 </colors>
