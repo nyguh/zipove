@@ -288,27 +288,27 @@
         <left>-16</left>
         <width>360</width>
         <height>422.5</height>
-        <aspectratio>scale</aspectratio>
-        <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+        <texture diffuse="diffuse/square-diffuse-big.png" colordiffuse="ff1a1a1a">common/white.png</texture>
         <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
         <bordersize>24</bordersize>
       </control>
       <control type="image">
         <top>8</top>
-        <right>50</right>
-        <height>290</height>
-        <width>290</width>
+        <right>40</right>
+        <height>312</height>
+        <width>312</width>
         <align>center</align>
-        <aspectratio>keep</aspectratio>
-        <texture background="true">$VAR[Image_Poster]</texture>
+        <aspectratio scalediffuse="true">keep</aspectratio>
+        <texture background="true" diffuse="diffuse/square-icon-diffuse.png">$VAR[Image_Poster]</texture>
       </control>
       <control type="label">
-        <top>320</top>
+        <top>337</top>
         <left>20</left>
         <right>20</right>
         <width>290</width>
         <align>center</align>
-        <font>font32_title</font>
+        <font>font_tiny_hintlabel</font>
         <scroll>true</scroll>
         <label>$INFO[ListItem.Label]</label>
       </control>
@@ -324,15 +324,15 @@
           <width>598</width>
           <height>366</height>
           <aspectratio>scale</aspectratio>
-          <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
+          <texture diffuse="diffuse/landscape-big.png" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
           <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
           <bordersize>24</bordersize>
         </control>
         <control type="image">
-          <right>18</right>
+          <right>0</right>
           <height>$PARAM[iconheight]</height>
-          <aspectratio>scale</aspectratio>
-          <texture background="true">$VAR[Image_Landscape]</texture>
+          <aspectratio scalediffuse="false">scale</aspectratio>
+          <texture background="true" diffuse="diffuse/landscape-big.png" >$VAR[Image_Landscape]</texture>
           <bordersize>15</bordersize>
           <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
@@ -341,8 +341,8 @@
           <centerleft>50%</centerleft>
           <centertop>50%</centertop>
           <width>200</width>
-          <aspectratio>keep</aspectratio>
-          <texture background="true">$VAR[Image_Landscape]</texture>
+          <aspectratio scalediffuse="true">keep</aspectratio>
+          <texture background="true" diffuse="diffuse/landscape-big.png" >$VAR[Image_Landscape]</texture>
           <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
         <control type="group">
