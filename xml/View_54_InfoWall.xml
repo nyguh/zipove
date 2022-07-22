@@ -322,7 +322,7 @@
           <right>18</right>
           <height>$PARAM[iconheight]</height>
           <aspectratio scalediffuse="false">scale</aspectratio>
-          <texture background="true" diffuse="diffuse/landscape-big.png" >$VAR[Image_Landscape]</texture>
+          <texture background="true" diffuse="diffuse/landscape-big.png">$VAR[Image_Landscape]</texture>
           <bordersize>15</bordersize>
           <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
@@ -332,7 +332,7 @@
           <centertop>50%</centertop>
           <width>200</width>
           <aspectratio scalediffuse="true">keep</aspectratio>
-          <texture background="true" diffuse="diffuse/landscape-big.png" >$VAR[Image_Landscape]</texture>
+          <texture background="true" diffuse="diffuse/landscape-big.png">$VAR[Image_Landscape]</texture>
           <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
         <control type="group">
@@ -366,8 +366,8 @@
         <control type="image">
           <right>18</right>
           <height>$PARAM[iconheight]</height>
-          <aspectratio>scale</aspectratio>
-          <texture background="true">$VAR[Image_Fanart]</texture>
+          <aspectratio scalediffuse="false">scale</aspectratio>
+          <texture background="true" diffuse="diffuse/landscape-big.png">$VAR[Image_Fanart]</texture>
           <bordersize>15</bordersize>
           <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
@@ -390,6 +390,40 @@
             <texture background="true">$VAR[Image_ClearLogo]</texture>
             <visible>$PARAM[clearlogo]</visible>
           </control>
+        </control>
+      </control>
+    </definition>
+  </include>
+  <include name="ViewPrimeItemLayout">
+    <param name="iconheight" default="400"/>
+    <definition>
+      <control type="group">
+        <control type="image">
+          <top>-8</top>
+          <left>-8</left>
+          <width>598</width>
+          <height>420</height>
+          <aspectratio>scale</aspectratio>
+          <texture diffuse="special://skin/extras/backgrounds/primary.jpg" colordiffuse="$VAR[ColorsOverlay]">common/white.png</texture>
+          <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+          <bordersize>24</bordersize>
+        </control>
+        <control type="image">
+          <right>18</right>
+          <height>$PARAM[iconheight]</height>
+          <aspectratio scalediffuse="false">scale</aspectratio>
+          <texture background="true" diffuse="diffuse/landscape-big.png">$VAR[Image_Landscape]</texture>
+          <bordersize>15</bordersize>
+          <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+        </control>
+        <control type="image">
+          <!-- <right>18</right> -->
+          <centerleft>50%</centerleft>
+          <centertop>50%</centertop>
+          <width>200</width>
+          <aspectratio>keep</aspectratio>
+          <texture background="true">$VAR[Image_Landscape]</texture>
+          <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
       </control>
     </definition>

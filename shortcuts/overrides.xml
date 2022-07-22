@@ -66,6 +66,7 @@
   <property property="widgetAspect">Square</property>
   <property property="widgetAspect">Landscape</property>
   <property property="widgetAspect">Fanart</property>
+  <property property="widgetAspect">Prime</property>
   <propertySettings property="widgetAspect" buttonID="505" title="Widget Aspect"/>
   <!-- Search Item Default Properties -->
   <propertydefault labelID="artists" group="searchmenu" property="widgetAspect">Square</propertydefault>

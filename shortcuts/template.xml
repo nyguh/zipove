@@ -165,6 +165,7 @@
         <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
         <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
         <param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']"/>
+        <param name="primecondition" value="$PYTHON['true' if aspect in 'Prime' else 'false']"/>
         <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
         <skinshortcuts>visibility</skinshortcuts>
       </include>
@@ -182,6 +183,7 @@
         <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
         <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
         <param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']"/>
+        <param name="primecondition" value="$PYTHON['true' if aspect in 'Prime' else 'false']"/>
         <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
         <skinshortcuts>visibility</skinshortcuts>
       </include>
