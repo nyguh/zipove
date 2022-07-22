@@ -94,6 +94,12 @@
       <filename>RobotoCondensed-Bold.ttf</filename>
       <size>30</size>
     </font>
+    <font>
+      <name>font30_title_upp</name>
+      <filename>RobotoCondensed-Bold.ttf</filename>
+      <size>30</size>
+      <style>uppercase</style>
+    </font>
     <!-- Normal Fonts -->
     <font>
       <name>font14</name>
