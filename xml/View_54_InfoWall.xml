@@ -298,6 +298,7 @@
         <right>20</right>
         <width>290</width>
         <align>center</align>
+        <textcolor>white</textcolor>
         <font>font_tiny_hintlabel</font>
         <scroll>true</scroll>
         <label>$INFO[ListItem.Label]</label>
