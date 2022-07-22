@@ -191,7 +191,7 @@
     <height>75</height>
     <include content="ButtonType">
       <param name="texturenofocus" value="true"/>
-      <param name="colordiffuse" value="1fdedede"/>
+      <param name="colordiffuse" value="dialog_fg_12"/>
     </include>
     <include content="ButtonType">
       <param name="texturefocus" value="true"/>
@@ -199,7 +199,7 @@
     <textoffsetx>0</textoffsetx>
     <textcolor>dialog_fg_100</textcolor>
     <align>center</align>
-    <focusedcolor>dialog_fg_100</focusedcolor>
+    <focusedcolor>white</focusedcolor>
     <radioposx>265</radioposx>
     <radioposy>0</radioposy>
   </include>

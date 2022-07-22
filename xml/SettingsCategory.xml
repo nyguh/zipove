@@ -34,18 +34,18 @@
       <centerleft>50%</centerleft>
       <top>180</top>
       <width>1680</width>
-      <height>880</height>
+      <height>850</height>
       <include>OpenClose_Right</include>
       <control type="image">
         <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
-        <bordertexture border="24">common/shadow-24.png</bordertexture>
-        <bordersize>24</bordersize>
+        <bordertexture border="20">common/shadow-20.png</bordertexture>
+        <bordersize>10</bordersize>
         <width>1680</width>
-        <height>880</height>
-        <top>-24</top>
-        <left>-24</left>
-        <right>-24</right>
-        <bottom>-24</bottom>
+        <height>850</height>
+        <top>-10</top>
+        <left>-10</left>
+        <right>-10</right>
+        <bottom>-10</bottom>
       </control>
       <include content="Object_Separator">
         <param name="horizontal" value="false"/>
@@ -62,7 +62,7 @@
           <bottom>137</bottom>
           <height>70</height>
           <left>470</left>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(5).HasFocus()</visible>
         </include>
         <control type="grouplist" id="5">
@@ -151,7 +151,7 @@
         </include>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="20"/>
-          <param name="height" value="880"/>
+          <param name="height" value="850"/>
           <width>70</width>
           <left>0</left>
           <top>133</top>
@@ -182,9 +182,9 @@
         </control>
       </control>
       <control type="group">
-        <right>55</right>
-        <top>60</top>
-        <bottom>137</bottom>
+        <right>30</right>
+        <top>130</top>
+        <bottom>90</bottom>
         <width>60</width>
         <control type="scrollbar" id="60">
           <right>0</right>

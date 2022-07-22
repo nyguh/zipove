@@ -36,18 +36,18 @@
       <centerleft>50%</centerleft>
       <top>180</top>
       <width>1680</width>
-      <height>880</height>
+      <height>850</height>
       <include>OpenClose_Right</include>
       <control type="image">
         <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
-        <bordertexture border="24">common/shadow-24.png</bordertexture>
-        <bordersize>24</bordersize>
+        <bordertexture border="20">common/shadow-20.png</bordertexture>
+        <bordersize>10</bordersize>
         <width>1680</width>
-        <height>880</height>
-        <top>-24</top>
-        <left>-24</left>
-        <right>-24</right>
-        <bottom>-24</bottom>
+        <height>850</height>
+        <top>-10</top>
+        <left>-10</left>
+        <right>-10</right>
+        <bottom>-10</bottom>
       </control>
       <include content="Object_Separator">
         <param name="horizontal" value="false"/>
@@ -62,14 +62,14 @@
           <param name="id" value="600"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(600).HasFocus()</visible>
         </include>
         <!-- Start -->
         <control type="grouplist" id="600">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <pagecontrol>60</pagecontrol>
           <onleft>9000</onleft>
@@ -213,14 +213,14 @@
           <param name="id" value="700"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(700).HasFocus()</visible>
         </include>
         <!-- Background -->
         <control type="grouplist" id="700">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -299,14 +299,14 @@
           <param name="id" value="800"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(800).HasFocus()</visible>
         </include>
         <!-- Miscellaneous -->
         <control type="grouplist" id="800">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -403,14 +403,14 @@
           <param name="id" value="900"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(900).HasFocus()</visible>
         </include>
         <!-- Library -->
         <control type="grouplist" id="900">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -586,14 +586,14 @@
           <param name="id" value="1000"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(1000).HasFocus()</visible>
         </include>
         <!-- Video / Music OSD -->
         <control type="grouplist" id="1000">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -640,14 +640,14 @@
           <param name="id" value="1100"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(1100).HasFocus()</visible>
         </include>
         <!-- Live TV -->
         <control type="grouplist" id="1100">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -696,14 +696,14 @@
           <param name="id" value="1200"/>
           <top>60</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(1200).HasFocus()</visible>
         </include>
         <!-- Manage -->
         <control type="grouplist" id="1200">
           <top>60</top>
           <left>0</left>
-          <right>60</right>
+          <right>30</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -832,14 +832,14 @@
           <param name="id" value="1300"/>
           <top>550</top>
           <height>70</height>
-          <right>48</right>
+          <right>20</right>
           <visible>ControlGroup(1300).HasFocus()</visible>
         </include>
         <!-- Cosmic -->
         <control type="grouplist" id="1300">
           <top>550</top>
           <left>0</left>
-          <right>48</right>
+          <right>20</right>
           <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -940,9 +940,9 @@
         </control>
       </control>
       <control type="group">
-        <right>55</right>
-        <top>60</top>
-        <bottom>137</bottom>
+        <right>30</right>
+        <top>130</top>
+        <bottom>90</bottom>
         <width>60</width>
         <control type="scrollbar" id="60">
           <right>0</right>

@@ -127,7 +127,7 @@
   <default type="scrollbar">
     <width>8</width>
     <texturesliderbackground colordiffuse="1Fededed" border="4">common/white.png</texturesliderbackground>
-    <texturesliderbar colordiffuse="4Dededed" border="4">scrollbar/scrollv.png</texturesliderbar>
+    <texturesliderbar colordiffuse="e7333333" border="4">scrollbar/scrollv.png</texturesliderbar>
     <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
     <textureslidernib/>
     <textureslidernibfocus/>

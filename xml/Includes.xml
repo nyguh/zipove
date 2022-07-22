@@ -1671,8 +1671,8 @@
         <width>370</width>
         <height>190</height>
         <texture diffuse="diffuse/landscape-std-np.png" border="5">common/diagonal-squares.png</texture>
-        <bordertexture border="5">common/shadow-20.png</bordertexture>
-        <bordersize>12</bordersize>
+        <bordertexture border="20">common/shadow-20.png</bordertexture>
+        <bordersize>10</bordersize>
       </control>
       <control type="image">
         <centerleft>50%</centerleft>
@@ -1690,8 +1690,8 @@
           <width>370</width>
           <height>190</height>
           <texture diffuse="diffuse/landscape-std-np.png" border="5">common/diagonal-squares.png</texture>
-          <bordertexture border="5">common/shadow-20.png</bordertexture>
-          <bordersize>12</bordersize>
+          <bordertexture border="20">common/shadow-20.png</bordertexture>
+          <bordersize>10</bordersize>
         </control>
         <include content="Selectbox">
           <param name="pad_top_b" value="-10"/>
