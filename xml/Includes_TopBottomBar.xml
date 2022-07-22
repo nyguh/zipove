@@ -237,7 +237,6 @@
           <width>100%</width>
           <label>$PARAM[main_label]</label>
           <font>font30_title_upp</font>
-          <shadowcolor>text_shadow</shadowcolor>
           <height>65</height>
           <align>center</align>
           <scroll>true</scroll>
@@ -246,7 +245,6 @@
         <control type="label" id="$PARAM[id]">
           <label>$PARAM[sub_label]</label>
           <left>85</left>
-          <shadowcolor>text_shadow</shadowcolor>
           <align>center</align>
           <height>100</height>
           <width>100%</width>
@@ -299,6 +297,7 @@
             <left>64</left>
             <width>300</width>
             <height>44</height>
+            <textcolor>b3ededed</textcolor>
             <label>$LOCALIZE[33063]</label>
             <onclick>SetFocus(9000)</onclick>
             <texturefocus/>
