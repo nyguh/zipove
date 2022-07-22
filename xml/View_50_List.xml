@@ -162,8 +162,8 @@
             <aligny>center</aligny>
             <scroll>true</scroll>
             <font>font27</font>
+            <textcolor>white</textcolor>
             <label>$VAR[ListLabelVar]</label>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
           <control type="label">
             <top>0</top>
@@ -173,15 +173,16 @@
             <align>right</align>
             <aligny>center</aligny>
             <font>font12</font>
+            <textcolor>white</textcolor>
             <label>$VAR[ListLabel2Var]</label>
             <animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
           <control type="image">
             <left>21</left>
             <centertop>50%</centertop>
             <width>32</width>
             <height>32</height>
+            <textcolor>white</textcolor>
             <texture>$VAR[ListWatchedIconVar]</texture>
             <animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
           </control>
@@ -204,8 +205,8 @@
             <bottom>0</bottom>
             <aligny>center</aligny>
             <font>font27</font>
+            <textcolor>b3ededed</textcolor>
             <label>$VAR[ListLabelVar]</label>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
           <control type="label">
             <left>20</left>
@@ -216,15 +217,14 @@
             <aligny>center</aligny>
             <font>font12</font>
             <label>$VAR[ListLabel2Var]</label>
-            <textcolor>grey</textcolor>
-            <shadowcolor>text_shadow</shadowcolor>
+            <textcolor>b3ededed</textcolor>
           </control>
           <control type="image">
             <left>21</left>
             <centertop>50%</centertop>
             <width>32</width>
             <height>32</height>
-            <texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+            <texture colordiffuse="b3ededed">$VAR[ListWatchedIconVar]</texture>
           </control>
         </itemlayout>
       </control>
