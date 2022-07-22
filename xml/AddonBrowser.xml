@@ -49,39 +49,14 @@
       </include>
       <include>MediaMenuMouseOverlay</include>
       <control type="group">
-        <include>MediaMenuCommon</include>
-        <control type="grouplist" id="9000">
-          <top>50</top>
-          <include>MediaMenuListCommon</include>
-          <control type="label" id="201">
-            <include>MediaMenuLabelCommon</include>
-            <label>$LOCALIZE[31021]</label>
-          </control>
-          <control type="radiobutton" id="7">
-            <description>Hide foreign</description>
-            <include>MediaMenuItemsCommon</include>
-            <label>$LOCALIZE[25001]</label>
-            <visible>Control.IsEnabled(7)</visible>
-          </control>
-          <control type="radiobutton" id="8">
-            <description>Hide incompatible</description>
-            <include>MediaMenuItemsCommon</include>
-            <label>$LOCALIZE[24999]</label>
-            <visible>Control.IsEnabled(8)</visible>
-          </control>
-          <control type="button" id="9">
-            <description>Check for repository updates</description>
-            <include>MediaMenuItemsCommon</include>
-            <label>$LOCALIZE[24034]</label>
-          </control>
-          <control type="button" id="5">
-            <description>Addon settings</description>
-            <include>MediaMenuItemsCommon</include>
-            <label>$LOCALIZE[10004]</label>
-          </control>
-          <include>MediaMenuNowPlaying</include>
-        </control>
+        <include content="MediaMenuCommon">
+          <param name="visible">$EXP[MediaMenu]</param>
+          <param name="onleft">50</param>
+          <param name="onright">50</param>
+          <param name="onback">50</param>
+        </include>
       </control>
+      <include>Defs_MediaMenuCommon</include>
       <control type="group">
         <height>78</height>
         <bottom>0</bottom>

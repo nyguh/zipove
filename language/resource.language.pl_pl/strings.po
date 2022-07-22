@@ -1914,3 +1914,8 @@ msgstr "Ustaw układ prime z wieloma widgetami"
 msgctxt "#31428"
 msgid "Prime"
 msgstr ""
+
+#: /xml/Includes_items.xml
+msgctxt "#31429"
+msgid "Extended List"
+msgstr "Lista rozszerzona"
