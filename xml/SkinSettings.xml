@@ -79,18 +79,22 @@
             <label>$LOCALIZE[31183]</label>
             <label2>$VAR[homeLayout]</label2>
             <include>DefaultSettingButton</include>
-            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31184],home)</onclick>
-            <onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31185],home)</onclick>
+            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31426],home)</onclick>
+            <onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31427],home)</onclick>
             <onclick>SetProperty(Dialog.1.Icon,special://skin/extras/icons/home.png,home)</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Classic_Main) || Skin.SetBool(Vertical_Main),home)</onclick>
-            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31345],home)</onclick>
-            <onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31346],home)</onclick>
+            <onclick>SetProperty(Dialog.1.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Classic_Main) || Skin.Reset(Vertical_Main) || Skin.SetBool(Prime_Main),home)</onclick>
+            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31184],home)</onclick>
+            <onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31185],home)</onclick>
             <onclick>SetProperty(Dialog.2.Icon,special://skin/extras/icons/home.png,home)</onclick>
-            <onclick>SetProperty(Dialog.2.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Vertical_Main) || Skin.SetBool(Classic_Main),home)</onclick>
-            <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31186],home)</onclick>
-            <onclick>SetProperty(Dialog.3.Label2,$LOCALIZE[31187],home)</onclick>
+            <onclick>SetProperty(Dialog.2.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Classic_Main) || Skin.Reset(Prime_Main) || Skin.SetBool(Vertical_Main),home)</onclick>
+            <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31345],home)</onclick>
+            <onclick>SetProperty(Dialog.3.Label2,$LOCALIZE[31346],home)</onclick>
             <onclick>SetProperty(Dialog.3.Icon,special://skin/extras/icons/home.png,home)</onclick>
-            <onclick>SetProperty(Dialog.3.BuiltIn, Skin.Reset(Vertical_Main) || Skin.Reset(Classic_Main) || Skin.SetBool(Horizontal_Main),home)</onclick>
+            <onclick>SetProperty(Dialog.3.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Vertical_Main) || Skin.Reset(Prime_Main) || Skin.SetBool(Classic_Main),home)</onclick>
+            <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31186],home)</onclick>
+            <onclick>SetProperty(Dialog.4.Label2,$LOCALIZE[31187],home)</onclick>
+            <onclick>SetProperty(Dialog.4.Icon,special://skin/extras/icons/home.png,home)</onclick>
+            <onclick>SetProperty(Dialog.4.BuiltIn, Skin.Reset(Vertical_Main) || Skin.Reset(Classic_Main) || Skin.Reset(Prime_Main) || Skin.SetBool(Horizontal_Main),home)</onclick>
             <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31183],usedetails=true,window=home)</onclick>
           </control>
           <control type="button" id="603" description="Home Menu Style">

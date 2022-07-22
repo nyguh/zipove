@@ -1899,3 +1899,18 @@ msgstr "Niech cud Bożego Narodzenia przyniesie Ci miłość i radość,[CR][CR]
 msgctxt "#31425"
 msgid "Close and don't show again"
 msgstr "Zamknij i nie pokazuj w przyszłości"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31426"
+msgid "Prime Layout"
+msgstr "Układ Prime"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31427"
+msgid "Set prime home layout with multiple widgets"
+msgstr "Ustaw układ prime z wieloma widgetami"
+
+#: /xml/Variables.xml
+msgctxt "#31428"
+msgid "Prime"
+msgstr ""

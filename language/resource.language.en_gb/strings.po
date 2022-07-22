@@ -2075,3 +2075,18 @@ msgstr ""
 msgctxt "#31425"
 msgid "Close and don't show again"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31426"
+msgid "Prime Layout"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31427"
+msgid "Set prime home layout with multiple widgets"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31428"
+msgid "Prime"
+msgstr ""

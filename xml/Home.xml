@@ -5,7 +5,7 @@
   <onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
   <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onload>
   <!-- set default home layout if none is set -->
-  <onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Classic_Main)</onload>
+  <onload condition="!Skin.HasSetting(Prime_Main) + !Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Prime_Main)</onload>
   <!-- set fallback menu style -->
   <onload condition="String.IsEmpty(Skin.String(MenuStyle))">Skin.SetString(MenuStyle,IconsText)</onload>
   <!-- set default selection box -->
@@ -50,6 +50,7 @@
     </control>
     <control type="group">
       <include>Visible_Fade</include>
+      <include condition="Skin.HasSetting(Prime_Main)">Prime_Main</include>
       <include condition="Skin.HasSetting(Vertical_Main)">Vertical_Main</include>
       <include condition="Skin.HasSetting(Classic_Main)">Classic_Main</include>
       <include condition="Skin.HasSetting(Horizontal_Main)">Horizontal_Main</include>

@@ -45,6 +45,12 @@
       <linespacing>0.8</linespacing>
     </font>
     <font>
+      <name>font_rating</name>
+      <filename>Glory-Bold.ttf</filename>
+      <size>24</size>
+      <style>uppercase bold</style>
+    </font>
+    <font>
       <name>font_small_defaults</name>
       <filename>Glory-Regular.ttf</filename>
       <size>25</size>

@@ -13,6 +13,7 @@
     <value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">type=tv</value>
   </variable>
   <variable name="homeLayout">
+    <value condition="Skin.HasSetting(Prime_Main)">$LOCALIZE[31428]</value>
     <value condition="Skin.HasSetting(Vertical_Main)">$LOCALIZE[31369]</value>
     <value condition="Skin.HasSetting(Classic_Main)">$LOCALIZE[31370]</value>
     <value condition="Skin.HasSetting(Horizontal_Main)">$LOCALIZE[31371]</value>
@@ -168,7 +169,7 @@
     <value condition="!Window.IsVisible(Home)">$VAR[AlphaPercentage]</value>
   </variable>
   <variable name="HomeBackgroundColor">
-    <value condition="Skin.HasSetting(Vertical_Main)">ff000000</value>
+    <value condition="Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Prime_Main)">ff000000</value>
     <value>Background</value>
   </variable>
   <variable name="Horizontal_RightTopbar">
@@ -194,6 +195,9 @@
   <variable name="Label_Spotlight_Top250">
     <value condition="!String.IsEmpty(Window(home).Property(spotlight_250))">$INFO[Window(home).Property(spotlight_250),No. , on IMDb / ]$INFO[Window(home).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
     <value>$INFO[Window(home).Property(spotlight_Match),[COLOR ff27ae60],% $LOCALIZE[31384][/COLOR]]</value>
+  </variable>
+  <variable name="Label_PrimeShowcase_Top250">
+    <value>$INFO[Window(home).Property(TMDbHelper.ListItem.Top250),#, on IMDb ]</value>
   </variable>
   <variable name="Label_OverlayCritics">
     <value condition="!String.IsEmpty(Window.Property(Critics))">$INFO[Window.Property(Critics)]</value>
@@ -225,6 +229,13 @@
     <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Plot]</value>
     <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Tagline),[B],[/B][CR]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Artist),[B],[/B][CR]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Plot)]</value>
     <value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$VAR[Label_Plot]</value>
+  </variable>
+  <variable name="Label_PlotTextBoxPrimeVar">
+    <value condition="!String.IsEmpty(Window.Property(Plot))">$INFO[Window.Property(Plot)]</value>
+    <value condition="!String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(ListItem.AddonDisclaimer) | !String.IsEmpty(ListItem.AddonNews)">$INFO[ListItem.AddonDisclaimer,[B]$LOCALIZE[24052][/B] ,  ]$INFO[ListItem.AddonDescription,[B]$LOCALIZE[21821][/B] ,  ]$INFO[ListItem.AddonNews,[B]$LOCALIZE[31385][/B] ,  ]</value>
+    <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B] ]$INFO[ListItem.Artist,[B],[/B] ]$INFO[ListItem.Plot]</value>
+    <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Tagline),[B],[/B]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Artist),[B],[/B]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Plot)]</value>
+    <value>$INFO[ListItem.Tagline,[B],[/B] ]$INFO[ListItem.Artist,[B],[/B] ]$VAR[Label_Plot]</value>
   </variable>
   <variable name="Label_Info_NextAired_Status">
     <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Status)]$VAR[Label_Info_NextAired_Date]</value>
