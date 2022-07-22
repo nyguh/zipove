@@ -15,39 +15,39 @@
       <imagepath colordiffuse="35FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
       <visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
     </control>
+    <control type="label">
+      <left>200</left>
+      <top>200</top>
+      <height>400</height>
+      <textcolor>white</textcolor>
+      <label>$INFO[ListItem.Label]</label>
+      <align>left</align>
+      <font>font_pvr_clock</font>
+    </control>
+    <control type="label">
+      <right>300</right>
+      <top>200</top>
+      <height>400</height>
+      <textcolor>white</textcolor>
+      <label>$INFO[System.Time]</label>
+      <align>right</align>
+      <font>font_pvr_clock</font>
+    </control>
     <control type="group">
       <centerleft>50%</centerleft>
       <width>1600</width>
       <top>50</top>
       <bottom>0</bottom>
       <include>OpenClose_Right</include>
-      <control type="label">
-        <left>0</left>
-        <right>0</right>
-        <top>395</top>
-        <height>400</height>
-        <label>$LOCALIZE[5]</label>
-        <align>center</align>
-        <font>font27</font>
-      </control>
       <control type="panel" id="9000">
         <left>0</left>
-        <width>100%</width>
-        <top>120</top>
-        <height>300</height>
-        <onup>noop</onup>
-        <ondown>Control.SetFocus(9001,$INFO[Container(9000).Position],absolute)</ondown>
-        <include>SettingsPanel</include>
-        <include>Items_Settings_System</include>
-      </control>
-      <control type="panel" id="9001">
-        <left>0</left>
         <right>0</right>
-        <top>470</top>
+        <top>260</top>
         <bottom>0</bottom>
-        <onup>Control.SetFocus(9000,$INFO[Container(9001).Position],absolute)</onup>
+        <onup>Control.SetFocus(9000,$INFO[Container(9000).Position],absolute)</onup>
         <ondown>noop</ondown>
         <include>SettingsPanel</include>
+        <include>Items_Settings_System</include>
         <include>Items_Settings_Main</include>
       </control>
     </control>
