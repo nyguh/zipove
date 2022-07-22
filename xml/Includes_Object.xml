@@ -903,7 +903,7 @@
     <param name="top" default="0"/>
     <param name="info_line_top" default="185"/>
     <param name="plot_top" default="235"/>
-    <param name="plot_height" default="115"/>
+    <param name="plot_height" default="100"/>
     <param name="title_visible" default="true" />
     <param name="clearlogo_top_margin" default="-940" />
     <param name="clearlogo_width" default="480" />
@@ -989,7 +989,7 @@
     <param name="top" default="0"/>
     <param name="info_line_top" default="185"/>
     <param name="plot_top" default="235"/>
-    <param name="plot_height" default="121"/>
+    <param name="plot_height" default="100"/>
     <param name="title_visible" default="true" />
     <param name="clearlogo_top_margin" default="-800" />
     <param name="clearlogo_width" default="320" />

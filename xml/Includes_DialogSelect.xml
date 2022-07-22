@@ -45,7 +45,7 @@
             <top>7</top>
             <width>110</width>
             <height>110</height>
-            <texture>$VAR[InfoWallThumbVar]</texture>
+            <texture colordiffuse="dialog_fg_70">$VAR[InfoWallThumbVar]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
@@ -55,6 +55,7 @@
             <height>60</height>
             <font>font27</font>
             <aligny>center</aligny>
+            <textcolor>dialog_fg_70</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="textbox">
@@ -63,7 +64,7 @@
             <right>20</right>
             <height>67</height>
             <font>font12</font>
-            <textcolor>grey</textcolor>
+            <textcolor>dialog_fg_30</textcolor>
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </itemlayout>
@@ -79,14 +80,13 @@
             <control type="image">
               <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
             </control>
-            <visible>Control.HasFocus(6)</visible>
           </control>
           <control type="image">
             <left>32</left>
             <top>7</top>
             <width>110</width>
             <height>110</height>
-            <texture>$VAR[InfoWallThumbVar]</texture>
+            <texture colordiffuse="white">$VAR[InfoWallThumbVar]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
@@ -97,6 +97,7 @@
             <aligny>center</aligny>
             <scroll>true</scroll>
             <font>font27</font>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="textbox">
@@ -105,6 +106,7 @@
             <right>20</right>
             <height>67</height>
             <font>font12</font>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </focusedlayout>
@@ -129,6 +131,12 @@
         <textcolor>dialog_fg_70</textcolor>
         <label>$VAR[SelectLabel]</label>
       </control>
+      <include content="Object_Separator">
+        <param name="horizontal" value="false"/>
+        <left>890</left>
+        <top>100</top>
+        <bottom>0</bottom>
+      </include>
       <control type="grouplist" id="9001">
         <left>920</left>
         <top>100</top>

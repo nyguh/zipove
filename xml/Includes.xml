@@ -280,7 +280,6 @@
           <control type="image">
             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
           </control>
-          <visible>Control.HasFocus($PARAM[list_id])</visible>
         </control>
         <control type="group">
           <visible>ListItem.Property(PVR.IsRecordingTimer) | ListItem.Property(PVR.IsRemindingTimer)</visible>
@@ -308,6 +307,7 @@
             <align>$PARAM[align]</align>
             <font>$PARAM[font]</font>
             <aligny>center</aligny>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]</label>
             <scroll>true</scroll>
           </control>
@@ -322,6 +322,7 @@
             <align>$PARAM[align]</align>
             <font>$PARAM[font]</font>
             <aligny>center</aligny>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]</label>
             <scroll>true</scroll>
           </control>
