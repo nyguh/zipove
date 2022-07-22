@@ -11,59 +11,66 @@
       <include>FullScreenDimensions</include>
       <aspectratio>scale</aspectratio>
       <fadetime>600</fadetime>
-      <animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
       <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
       <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
       <animation effect="fade" time="400">VisibleChange</animation>
       <imagepath background="true" colordiffuse="30FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
       <visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
     </control>
-    <control type="group">
-      <width>1400</width>
-      <height>833</height>
-      <left>260</left>
+    <control type="label">
       <top>100</top>
+      <left>120</left>
+      <textcolor>white</textcolor>
+      <label>$LOCALIZE[20077]</label>
+      <include>BreadcrumbsLabel</include>
+    </control>
+    <control type="label">
+      <top>100</top>
+      <right>260</right>
+      <textcolor>white</textcolor>
+      <align>right</align>
+      <label>$INFO[System.Time]</label>
+      <include>BreadcrumbsLabel</include>
+    </control>
+    <control type="group">
+      <centerleft>50%</centerleft>
+      <top>180</top>
+      <width>1680</width>
+      <height>880</height>
       <include>OpenClose_Right</include>
       <control type="image">
-        <texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
-        <bordertexture border="24">common/shadow-dialog-24.png</bordertexture>
+        <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
+        <bordertexture border="24">common/shadow-24.png</bordertexture>
         <bordersize>24</bordersize>
-        <width>1500</width>
-        <height>900</height>
-        <top>-20</top>
-        <left>-50</left>
+        <width>1680</width>
+        <height>880</height>
+        <top>-24</top>
+        <left>-24</left>
+        <right>-24</right>
+        <bottom>-24</bottom>
       </control>
-      <control type="label">
-        <top>30</top>
-        <left>10</left>
-        <label>$LOCALIZE[20077]</label>
-        <include>BreadcrumbsLabel</include>
-      </control>
-      <control type="image">
-        <description>Dialog Header image</description>
-        <left>490</left>
-        <top>135</top>
-        <right>0</right>
-        <width>3</width>
-        <height>600</height>
-        <texture colordiffuse="$VAR[ColorHighlight]" border="2">common/separator-grey-vertical.png</texture>
-      </control>
+      <include content="Object_Separator">
+        <param name="horizontal" value="false"/>
+        <top>130</top>
+        <left>470</left>
+        <height>800</height>
+      </include>
       <control type="group" id="10000">
-        <left>490</left>
+        <left>470</left>
         <include>OpenClose_Right</include>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="600"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(600).HasFocus()</visible>
         </include>
         <!-- Start -->
         <control type="grouplist" id="600">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <pagecontrol>60</pagecontrol>
           <onleft>9000</onleft>
           <onright>60</onright>
@@ -188,9 +195,9 @@
             <onclick>Skin.ToggleSetting(DisableClock)</onclick>
           </control>
           <control type="label" id="614">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>40</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31300]</label>
             <font>font_small_defaults</font>
@@ -204,17 +211,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="700"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(700).HasFocus()</visible>
         </include>
         <!-- Background -->
         <control type="grouplist" id="700">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>700</onup>
@@ -222,9 +229,9 @@
           <ondown>700</ondown>
           <visible>Container(9000).HasFocus(2)</visible>
           <control type="label" id="701">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
             <font>font_small_defaults</font>
@@ -290,17 +297,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="800"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(800).HasFocus()</visible>
         </include>
         <!-- Miscellaneous -->
         <control type="grouplist" id="800">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>800</onup>
@@ -308,9 +315,9 @@
           <ondown>800</ondown>
           <visible>Container(9000).HasFocus(3)</visible>
           <control type="label" id="801">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31301]</label>
             <font>font_small_defaults</font>
@@ -358,9 +365,9 @@
             <onclick condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">Skin.SetString(PosterHighlight,White)</onclick>
           </control>
           <control type="label" id="808">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
             <font>font_small_defaults</font>
@@ -394,17 +401,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="900"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(900).HasFocus()</visible>
         </include>
         <!-- Library -->
         <control type="grouplist" id="900">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>900</onup>
@@ -412,9 +419,9 @@
           <ondown>900</ondown>
           <visible>Container(9000).HasFocus(4)</visible>
           <control type="label" id="901">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31327]</label>
             <font>font_small_defaults</font>
@@ -486,9 +493,9 @@
             <enable>Skin.HasSetting(BackgroundPlayingTrailers) + [System.AddonIsEnabled(plugin.video.youtube) + System.HasAddon(plugin.video.youtube)]</enable>
           </control>
           <control type="label" id="909">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
             <font>font_small_defaults</font>
@@ -577,17 +584,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1000"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(1000).HasFocus()</visible>
         </include>
         <!-- Video / Music OSD -->
         <control type="grouplist" id="1000">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>1000</onup>
@@ -595,9 +602,9 @@
           <ondown>1000</ondown>
           <visible>Container(9000).HasFocus(5)</visible>
           <control type="label" id="1001">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
             <font>font_small_defaults</font>
@@ -631,17 +638,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1100"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(1100).HasFocus()</visible>
         </include>
         <!-- Live TV -->
         <control type="grouplist" id="1100">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>1100</onup>
@@ -649,9 +656,9 @@
           <ondown>1100</ondown>
           <visible>Container(9000).HasFocus(6)</visible>
           <control type="label" id="1101">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
             <font>font_small_defaults</font>
@@ -670,9 +677,9 @@
             <selected>Skin.HasSetting(LegacyPVR)</selected>
           </control>
           <control type="label" id="1104">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31394]</label>
             <font>font_small_defaults</font>
@@ -687,17 +694,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1200"/>
-          <top>133</top>
-          <height>80</height>
-          <right>0</right>
+          <top>60</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(1200).HasFocus()</visible>
         </include>
         <!-- Manage -->
         <control type="grouplist" id="1200">
-          <top>133</top>
+          <top>60</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>60</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>1200</onup>
@@ -705,9 +712,9 @@
           <ondown>1200</ondown>
           <visible>Container(9000).HasFocus(7)</visible>
           <control type="label" id="1201">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31297]</label>
             <font>font_small_defaults</font>
@@ -720,9 +727,9 @@
             <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
           </control>
           <control type="label" id="1203">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>50</textoffsetx>
             <width>470</width>
-            <height>80</height>
+            <height>70</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31298]</label>
             <font>font_small_defaults</font>
@@ -823,17 +830,17 @@
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1300"/>
-          <top>533</top>
-          <height>80</height>
-          <right>0</right>
+          <top>550</top>
+          <height>70</height>
+          <right>48</right>
           <visible>ControlGroup(1300).HasFocus()</visible>
         </include>
         <!-- Cosmic -->
         <control type="grouplist" id="1300">
-          <top>533</top>
+          <top>550</top>
           <left>0</left>
-          <right>0</right>
-          <bottom>140</bottom>
+          <right>48</right>
+          <height>700</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>1300</onup>
@@ -853,47 +860,46 @@
         </control>
       </control>
       <control type="group">
-        <depth>DepthContentPanel</depth>
         <left>0</left>
         <include>OpenClose_Left</include>
         <control type="list" id="9000">
           <description>button area</description>
           <left>0</left>
-          <top>130</top>
+          <top>60</top>
           <width>470</width>
           <height>615</height>
           <onleft>10000</onleft>
           <onright>10000</onright>
           <onup>9000</onup>
           <ondown>9000</ondown>
-          <itemlayout height="85" width="470">
+          <itemlayout height="70" width="470">
             <control type="label">
-              <textoffsetx>30</textoffsetx>
+              <textoffsetx>50</textoffsetx>
               <width>470</width>
-              <height>85</height>
+              <height>70</height>
               <label>$INFO[ListItem.Label]</label>
               <font>font_small_defaults</font>
               <aligny>center</aligny>
             </control>
           </itemlayout>
-          <focusedlayout height="85" width="470">
+          <focusedlayout height="70" width="470">
             <control type="group">
               <width>470</width>
-              <height>85</height>
+              <height>70</height>
               <control type="image">
                 <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
               </control>
               <control type="image">
                 <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
               </control>
-              <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
             </control>
             <control type="label">
-              <textoffsetx>30</textoffsetx>
+              <textoffsetx>50</textoffsetx>
               <width>470</width>
-              <height>85</height>
+              <height>70</height>
               <font>font_small_defaults</font>
               <aligny>center</aligny>
+              <textcolor>white</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </focusedlayout>
@@ -934,15 +940,15 @@
         </control>
       </control>
       <control type="group">
-        <right>0</right>
-        <top>133</top>
+        <right>55</right>
+        <top>60</top>
         <bottom>137</bottom>
         <width>60</width>
         <control type="scrollbar" id="60">
           <right>0</right>
           <top>0</top>
           <bottom>0</bottom>
-          <width>12</width>
+          <width>8</width>
           <orientation>vertical</orientation>
           <texturesliderbackground/>
           <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
@@ -956,20 +962,16 @@
         </control>
       </control>
     </control>
-    <include content="TopBar">
-      <!-- <param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" /> -->
-    </include>
-    <include>BottomBar</include>
     <control type="textbox" id="6">
       <include>OpenClose_Right</include>
       <description>description area</description>
-      <left>790</left>
-      <bottom>120</bottom>
+      <top>1030</top>
+      <left>125</left>
       <width>1400</width>
-      <height>100</height>
+      <height>50</height>
       <font>font12</font>
-      <align>justify</align>
-      <textcolor>$VAR[ColorHighlight]</textcolor>
+      <align>left</align>
+      <textcolor>b3ededed</textcolor>
       <label>$VAR[SkinSettingsHelpTextVar]</label>
       <autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
     </control>

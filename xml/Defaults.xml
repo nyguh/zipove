@@ -97,6 +97,7 @@
     <texturedowndisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
     <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
+    <focusedcolor>white</focusedcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
     <textoffsetx>7</textoffsetx>
     <aligny>center</aligny>
@@ -105,7 +106,7 @@
   </default>
   <default type="radiobutton">
     <radiowidth>120</radiowidth>
-    <radioheight>76</radioheight>
+    <radioheight>48</radioheight>
     <textureradioonfocus colordiffuse="selected">buttons/radio-button-on.png</textureradioonfocus>
     <textureradioonnofocus colordiffuse="dialog_fg_70">buttons/radio-button-on.png</textureradioonnofocus>
     <textureradioofffocus colordiffuse="selected">buttons/radio-button-off.png</textureradioofffocus>
@@ -116,6 +117,7 @@
     <texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
     <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
+    <focusedcolor>white</focusedcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
     <textoffsetx>7</textoffsetx>
     <align>left</align>

@@ -9,7 +9,6 @@
       <centerleft>50%</centerleft>
       <height>720</height>
       <width>450</width>
-      <include>Animation_DialogPopupVisible</include>
       <animation effect="slide" end="0,200" condition="Integer.IsGreater(Container(111).NumItems,0)">Conditional</animation>
       <control type="group">
         <include>MediaMenuBackground</include>

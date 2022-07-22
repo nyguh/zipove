@@ -1586,4 +1586,22 @@
       <nested/>
     </control>
   </include>
+  <include name="Object_Separator">
+    <param name="colordiffuse" default="1F0f0f0f" />
+    <param name="horizontal" default="false" />
+    <definition>
+      <include content="Object_Control" condition="!$PARAM[horizontal]">
+        <param name="type" value="image" />
+        <nested />
+        <width>1</width>
+        <texture colordiffuse="$PARAM[colordiffuse]">colors/white.png</texture>
+      </include>
+      <include content="Object_Control" condition="$PARAM[horizontal]">
+        <param name="type" value="image" />
+        <nested />
+        <height>1</height>
+        <texture colordiffuse="$PARAM[colordiffuse]">colors/white.png</texture>
+      </include>
+    </definition>
+</include>
 </includes>
