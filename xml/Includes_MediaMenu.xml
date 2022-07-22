@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+  <include name="MediaMenuBackground">
+    <control type="image">
+      <top>-18</top>
+      <bottom>-18</bottom>
+      <left>-18</left>
+      <right>-18</right>
+      <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
+      <bordersize>18</bordersize>
+      <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+    </control>
+  </include>
   <include name="MediaMenuItemsCommon">
     <width>470</width>
     <textoffsetx>20</textoffsetx>

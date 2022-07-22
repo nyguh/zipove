@@ -248,20 +248,20 @@
                 <left>0</left>
                 <width>48</width>
                 <height>64</height>
-                <texture colordiffuse="dialog_fg_12">common/label-left.png</texture>
+                <texture colordiffuse="1Fededed">common/label-left.png</texture>
               </control>
               <control type="image">
                 <left>48</left>
                 <width>300</width>
                 <height>64</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <texture colordiffuse="1Fededed">common/white.png</texture>
               </control>
               <control type="image">
                 <left>348</left>
                 <width>48</width>
                 <height>64</height>
-                <texture colordiffuse="dialog_fg_12">common/label-right.png</texture>
+                <texture colordiffuse="1Fededed">common/label-right.png</texture>
               </control>
             </control>
             <control type="group">
@@ -272,14 +272,14 @@
                   <left>22</left>
                   <width>32</width>
                   <height>64</height>
-                  <texture colordiffuse="dialog_fg_12" border="5">common/menu-selected-left.png</texture>
+                  <texture colordiffuse="1Fededed" border="5">common/menu-selected-left.png</texture>
                   <visible>ControlGroup(3000).HasFocus | ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus</visible>
                 </control>
                 <control type="image">
                   <left>54</left>
                   <width>32</width>
                   <height>64</height>
-                  <texture colordiffuse="dialog_fg_12" border="5">common/menu-selected-right.png</texture>
+                  <texture colordiffuse="1Fededed" border="5">common/menu-selected-right.png</texture>
                   <visible>ControlGroup(3000).HasFocus | ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus</visible>
                 </control>
               </control>
@@ -288,7 +288,7 @@
                 <top>0</top>
                 <width>64</width>
                 <height>64</height>
-                <texture colordiffuse="dialog_fg_100">$INFO[ListItem.Art(thumb)]</texture>
+                <texture colordiffuse="white">$INFO[ListItem.Art(thumb)]</texture>
               </control>
               <visible>String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))</visible>
             </control>
@@ -301,9 +301,8 @@
                 <width>560</width>
                 <aligny>center</aligny>
                 <font>font_menu_focus</font>
-                <textcolor>dialog_fg_100</textcolor>
+                <textcolor>white</textcolor>
                 <label>$INFO[ListItem.Label]</label>
-                <shadowcolor>text_shadow</shadowcolor>
               </control>
               <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
             </control>
@@ -317,7 +316,7 @@
                 <top>0</top>
                 <width>64</width>
                 <height>64</height>
-                <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
+                <texture colordiffuse="B3ededed">$INFO[ListItem.Art(thumb)]</texture>
               </control>
               <visible>String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))</visible>
             </control>
@@ -330,8 +329,8 @@
                 <width>560</width>
                 <aligny>center</aligny>
                 <font>font_menu</font>
+                <textcolor>B3ededed</textcolor>
                 <label>$INFO[ListItem.Label]</label>
-                <shadowcolor>text_shadow</shadowcolor>
               </control>
               <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
             </control>
@@ -370,7 +369,7 @@
             <left>108</left>
             <label>$INFO[System.ProfileName]</label>
             <font>font32_title</font>
-            <textcolor>dialog_fg_100</textcolor>
+            <textcolor>white</textcolor>
             <visible>Control.HasFocus(9000) | Control.IsVisible(9000)</visible>
           </control>
           <control type="button" id="303">
@@ -386,7 +385,7 @@
             <textcolor>$VAR[ColorHighlight]</textcolor>
             <label>$LOCALIZE[31188]</label>
             <onclick>ActivateWindow(LoginScreen.xml)</onclick>
-            <focusedcolor>dialog_fg_100</focusedcolor>
+            <focusedcolor>white</focusedcolor>
             <texturefocus/>
             <texturenofocus/>
             <visible>Control.IsVisible(9000)</visible>
