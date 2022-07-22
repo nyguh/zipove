@@ -56,6 +56,12 @@
       <size>25</size>
     </font>
     <font>
+      <name>font_small_defaults_light</name>
+      <filename>RobotoCondensed-Light.ttf</filename>
+      <size>25</size>
+      <style>lighten</style>
+    </font>
+    <font>
       <name>font12</name>
       <filename>RobotoCondensed-Regular.ttf</filename>
       <size>25</size>

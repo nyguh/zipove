@@ -1742,21 +1742,25 @@
     <value>$LOCALIZE[571]</value>
   </variable>
   <include name="ProgressGradient">
-    <control type="progress" id="$PARAM[id]">
-      <nested/>
-    </control>
-    <control type="progress">
-      <description>Progressbar</description>
-      <top>$PARAM[top]</top>
-      <nested/>
-      <texturebg colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturebg>
-      <lefttexture colordiffuse="00ffffff" border="4">diffuse/progress-left.png</lefttexture>
-      <midtexture colordiffuse="$VAR[ColorGradient]" border="4" diffuse="progress/diffuse.png">diffuse/progress-end.png</midtexture>
-      <righttexture colordiffuse="$VAR[ColorGradient]" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-right.png</righttexture>
-      <include content="ProgressColorFade">
-        <param name="id" value="$PARAM[id]"/>
-      </include>
-    </control>
+    <param name="info" default="Control.GetLabel($PARAM[id])"/>
+    <definition>
+      <control type="progress" id="$PARAM[id]">
+        <nested/>
+      </control>
+      <control type="progress">
+        <description>Progressbar</description>
+        <top>$PARAM[top]</top>
+        <nested/>
+        <texturebg colordiffuse="00ffffff" border="6">progress/progress-bg.png</texturebg>
+        <lefttexture colordiffuse="00ffffff" border="6">progress/progress-left.png</lefttexture>
+        <midtexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse.png">progress/progress-end.png</midtexture>
+        <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">progress/progress-right.png</righttexture>
+        <include content="ProgressColorFade">
+          <param name="id" value="$PARAM[id]"/>
+          <param name="info" value="$PARAM[info]"/>
+        </include>
+      </control>
+    </definition>
   </include>
   <include name="ProgressColorFader">
     <animation effect="fade" start="100" end="0" condition="Integer.IsEqual($PARAM[info],0)">Conditional</animation>
@@ -1862,7 +1866,7 @@
   </include>
   <include name="ProgressColorFade">
     <include content="ProgressColorFader">
-      <param name="info" value="Control.GetLabel($PARAM[id])"/>
+      <param name="info" value="$PARAM[info]"/>
     </include>
   </include>
   <include name="Dialog_ColorPicker_SwatchLabel">

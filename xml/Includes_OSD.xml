@@ -367,13 +367,14 @@
         <bottom>64</bottom>
         <width>32</width>
         <height>512</height>
-        <texture>common/fancy-line.png</texture>
+        <texture colordiffuse="80FFFFFF">common/fancy-line.png</texture>
         <animation effect="rotatex" end="70" time="0" condition="true">Conditional</animation>
       </control>
       <control type="group">
         <left>305</left>
         <top>-70</top>
         <control type="label">
+          <textcolor>B3cccccc</textcolor>
           <font>font32_bold</font>
           <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
         </control>
@@ -382,8 +383,9 @@
         <left>612</left>
         <top>-200</top>
         <control type="label">
+          <textcolor>B3cccccc</textcolor>
           <font>font32</font>
-          <label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelGroup, / ,]</label>
+          <label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelGroup, / ,] &#x2022; $INFO[System.Time]</label>
         </control>
       </control>
       <control type="group">
@@ -407,6 +409,7 @@
             <top>180</top>
             <left>256</left>
             <font>font45</font>
+            <textcolor>B3cccccc</textcolor>
             <width max="1000">auto</width>
             <label>$INFO[VideoPlayer.Title]</label>
           </control>
@@ -414,6 +417,7 @@
             <top>64</top>
             <left>256</left>
             <font>font27</font>
+            <textcolor>B3cccccc</textcolor>
             <width max="1000">auto</width>
             <label>$INFO[VideoPlayer.StartTime,, - ]$INFO[VideoPlayer.EndTime,, / ]$INFO[VideoPlayer.NextTitle, $LOCALIZE[19031]: ]</label>
             <visible>!Pvr.IsTimeShift</visible>
@@ -422,6 +426,7 @@
             <top>64</top>
             <left>256</left>
             <font>font27</font>
+            <textcolor>B3cccccc</textcolor>
             <width max="1000">auto</width>
             <label>$INFO[System.Time] (-$INFO[PVR.TimeshiftOffset]) - $INFO[VideoPlayer.EndTime,, / ]$INFO[VideoPlayer.NextTitle, $LOCALIZE[19031]: ]</label>
             <visible>Pvr.IsTimeShift</visible>
