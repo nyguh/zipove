@@ -305,8 +305,8 @@
                 <width>128</width>
                 <visible>ListItem.HasEpg</visible>
                 <info>ListItem.Progress</info>
-                <lefttexture colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-left.png</lefttexture>
-                <righttexture colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-right.png</righttexture>
+                <lefttexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-left.png</lefttexture>
+                <righttexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-right.png</righttexture>
                 <texturebg colordiffuse="panel_fg_30" border="4">diffuse/progress-256-bg.png</texturebg>
               </control>
             </control>
@@ -380,7 +380,7 @@
                 <height>12</height>
                 <visible>ListItem.HasEpg</visible>
                 <info>ListItem.Progress</info>
-                <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
+                <texturebg colordiffuse="panel_fg_12" border="4">progress/progress-bg.png</texturebg>
               </control>
               <control type="label">
                 <font>font13</font>
@@ -475,7 +475,7 @@
                 <control type="image">
                   <top>110</top>
                   <height>12</height>
-                  <texture colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texture>
+                  <texture colordiffuse="panel_fg_12" border="4">progress/progress-bg.png</texture>
                 </control>
                 <control type="label">
                   <font>font13</font>
@@ -708,9 +708,9 @@
           <align>center</align>
           <aligny>center</aligny>
           <colordiffuse>88FFFFFF</colordiffuse>
-          <midtexture colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-end.png</midtexture>
-          <lefttexture colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-left.png</lefttexture>
-          <righttexture colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-right.png</righttexture>
+          <midtexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-end.png</midtexture>
+          <lefttexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-left.png</lefttexture>
+          <righttexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-right.png</righttexture>
           <texturebg colordiffuse="panel_fg_30" border="4">diffuse/progress-256-bg.png</texturebg>
           <visible>ListItem.HasEpg + !$PARAM[has_info_icon]</visible>
           <info>ListItem.Progress</info>
@@ -748,9 +748,9 @@
           <height>12</height>
           <align>center</align>
           <aligny>center</aligny>
-          <midtexture colordiffuse="white" border="4">diffuse/progress-end.png</midtexture>
-          <lefttexture colordiffuse="white" border="4">diffuse/progress-left.png</lefttexture>
-          <righttexture colordiffuse="white" border="4">diffuse/progress-right.png</righttexture>
+          <midtexture colordiffuse="white" border="4">progress/progress-end.png</midtexture>
+          <lefttexture colordiffuse="white" border="4">progress/progress-left.png</lefttexture>
+          <righttexture colordiffuse="white" border="4">progress/progress-right.png</righttexture>
           <texturebg colordiffuse="panel_fg_30" border="4">diffuse/progress-256-bg.png</texturebg>
           <visible>ListItem.HasEpg + !$PARAM[has_info_icon]</visible>
           <info>ListItem.Progress</info>
