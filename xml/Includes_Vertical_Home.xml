@@ -211,13 +211,13 @@
           <bottom>0</bottom>
           <include>OpenClose_Right</include>
           <control type="label">
-            <left>0</left>
-            <right>0</right>
-            <top>440</top>
+            <left>30</left>
+            <top>200</top>
             <height>400</height>
-            <label>$LOCALIZE[5]</label>
-            <align>center</align>
-            <font>font27</font>
+            <textcolor>white</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <align>left</align>
+            <font>font_pvr_clock</font>
           </control>
           <include>View_Settings</include>
         </control>

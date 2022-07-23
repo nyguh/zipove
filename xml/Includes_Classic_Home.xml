@@ -251,22 +251,22 @@
         </control>
         <control type="group" id="5000">
           <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
-          <animation effect="slide" start="0,0" end="-280,0" time="200" reversible="true" tween="linear" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
-          <animation effect="slide" start="0,0" end="280" time="200" reversible="true" tween="linear" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+          <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+          <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
           <centerleft>50%</centerleft>
           <width>1600</width>
-          <left>70</left>
           <top>0</top>
+          <left>70</left>
           <bottom>0</bottom>
           <include>OpenClose_Right</include>
           <control type="label">
-            <left>0</left>
-            <right>0</right>
-            <top>440</top>
+            <left>30</left>
+            <top>200</top>
             <height>400</height>
-            <label>$LOCALIZE[5]</label>
-            <align>center</align>
-            <font>font27</font>
+            <textcolor>white</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <align>left</align>
+            <font>font_pvr_clock</font>
           </control>
           <include>View_Settings</include>
         </control>
