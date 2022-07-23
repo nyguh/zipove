@@ -2297,7 +2297,7 @@
   </include>
   <include name="submenuVerticalParams">
     <definition>
-      <left>92</left>
+      <left>50</left>
       <top>145</top>
       <right>0</right>
       <height>1080</height>
@@ -2328,7 +2328,7 @@
   </include>
   <include name="submenuPrimeParams">
     <definition>
-      <left>92</left>
+      <left>50</left>
       <top>144</top>
       <right>0</right>
       <height>1080</height>

@@ -227,7 +227,7 @@
         </control>
         <control type="fixedlist" id="9000">
           <animation effect="slide" start="0,0" end="0,-125" time="0" reversible="false" condition="Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
-          <left>92</left>
+          <left>50</left>
           <top>285</top>
           <width>396</width>
           <height>750</height>
@@ -263,24 +263,25 @@
                 <height>64</height>
                 <texture colordiffuse="1Fededed">common/label-right.png</texture>
               </control>
+              <visible>!String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
             </control>
             <control type="group">
-              <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
-              <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+              <animation effect="slide" start="0,0" end="-50,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
+              <animation effect="slide" start="0,0" end="-120,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
               <control type="group">
                 <control type="image">
                   <left>22</left>
                   <width>32</width>
                   <height>64</height>
                   <texture colordiffuse="1Fededed" border="5">common/menu-selected-left.png</texture>
-                  <visible>ControlGroup(3000).HasFocus | ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus</visible>
+                  <visible>ControlGroup(3000).HasFocus | ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus | String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
                 </control>
                 <control type="image">
                   <left>54</left>
                   <width>32</width>
                   <height>64</height>
                   <texture colordiffuse="1Fededed" border="5">common/menu-selected-right.png</texture>
-                  <visible>ControlGroup(3000).HasFocus | ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus</visible>
+                  <visible>ControlGroup(3000).HasFocus | ControlGroup(4000).HasFocus | ControlGroup(5000).HasFocus | String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
                 </control>
               </control>
               <control type="image">
@@ -309,8 +310,8 @@
           </focusedlayout>
           <itemlayout height="64">
             <control type="group">
-              <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
-              <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+              <animation effect="slide" start="0,0" end="-50,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
+              <animation effect="slide" start="0,0" end="-120,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
               <control type="image">
                 <left>22</left>
                 <top>0</top>
@@ -346,7 +347,6 @@
         <animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
         <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
         <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-        <!-- <top>30</top> -->
         <left>64</left>
         <control type="group" id="700">
           <height>200</height>
@@ -363,32 +363,31 @@
             <texture diffuse="common/circle.png">$INFO[System.ProfileThumb]</texture>
             <visible>Control.HasFocus(9000) | Control.IsVisible(9000)</visible>
           </control>
-          <control type="label">
-            <animation effect="slide" start="0,0" end="-714,0" time="250" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)  + !Control.HasFocus(303)">Conditional</animation>
-            <top>88</top>
-            <left>108</left>
-            <label>$INFO[System.ProfileName]</label>
-            <font>font32_title</font>
-            <textcolor>white</textcolor>
-            <visible>Control.HasFocus(9000) | Control.IsVisible(9000)</visible>
-          </control>
           <control type="button" id="303">
             <animation effect="slide" start="0,0" end="-714,0" time="250" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)  + !Control.HasFocus(303)">Conditional</animation>
-            <top>108</top>
+            <top>50</top>
             <left>80</left>
             <onup>noop</onup>
             <ondown>9000</ondown>
             <onleft>noop</onleft>
             <onright>3000</onright>
-            <align>left</align>
-            <font>font27_narrow</font>
-            <textcolor>$VAR[ColorHighlight]</textcolor>
-            <label>$LOCALIZE[31188]</label>
-            <onclick>ActivateWindow(LoginScreen.xml)</onclick>
-            <focusedcolor>white</focusedcolor>
+            <label>$INFO[System.ProfileName]</label>
+            <font>font32_title</font>
+            <textcolor>white</textcolor>
+            <focusedcolor>$VAR[ColorHighlight]</focusedcolor>
             <texturefocus/>
             <texturenofocus/>
+            <onclick>ActivateWindow(LoginScreen.xml)</onclick>
             <visible>Control.IsVisible(9000)</visible>
+          </control>
+          <control type="label">
+            <animation effect="slide" start="0,0" end="-714,0" time="250" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)  + !Control.HasFocus(303)">Conditional</animation>
+            <top>150</top>
+            <left>110</left>
+            <label>$INFO[ListItem.Label]</label>
+            <font>font_small_defaults</font>
+            <textcolor>white</textcolor>
+            <visible>[Control.HasFocus(9000) | Control.HasFocus(9001)] + String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
           </control>
         </control>
       </control>
