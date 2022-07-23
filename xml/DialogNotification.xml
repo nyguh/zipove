@@ -15,7 +15,6 @@
           <param name="sub_id" value="9402"/>
           <param name="label" value="$INFO[Control.GetLabel(401)]"/>
           <param name="label2" value="$INFO[Control.GetLabel(402)]"/>
-          <param name="fgcolor" value="panel_fg"/>
         </include>
       </control>
     </control>
