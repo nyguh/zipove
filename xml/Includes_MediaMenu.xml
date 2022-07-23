@@ -288,22 +288,12 @@
     <definition>
       <control type="group">
         <nested />
-        <top>-110</top>
+        <top>100</top>
         <right>27</right>
         <height>700</height>
         <width>380</width>
         <visible>$PARAM[visible]</visible>
         <include>Animation_MediaMenu</include>
-        <animation effect="slide" end="0,-70" condition="Control.IsVisible(510)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,10)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,9)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,8)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,7)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,6)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,5)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,4)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,3)">Conditional</animation>
-        <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,2)">Conditional</animation>
         <control type="group">
           <include>MediaMenuBackground</include>
           <visible>Integer.IsEqual(Container(9000).NumItems,9)</visible>
