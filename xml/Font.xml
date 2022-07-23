@@ -57,6 +57,12 @@
       <style>uppercase bold</style>
     </font>
     <font>
+      <name>font_guide_time</name>
+      <filename>RobotoCondensed-Regular.ttf</filename>
+      <size>24</size>
+      <style>uppercase bold</style>
+    </font>
+    <font>
       <name>font_seekbar</name>
       <filename>RobotoCondensed-Bold.ttf</filename>
       <size>22</size>
