@@ -17,7 +17,7 @@
           <top>0</top>
           <depth>DepthContentPanel</depth>
           <control type="group">
-            <top>75</top>
+            <top>140</top>
             <left>100</left>
             <height>180</height>
             <control type="label">
@@ -34,7 +34,7 @@
               <top>0</top>
               <left>210</left>
               <right>360</right>
-              <height>120</height>
+              <height>63</height>
               <align>left</align>
               <textcolor>b3ededed</textcolor>
               <label>$INFO[ListItem.Plot]</label>
@@ -42,9 +42,9 @@
               <animation effect="fade" end="0" start="100" time="200" reversible="true" condition="Control.HasFocus(11)">Conditional</animation>
             </control>
             <control type="group">
-              <top>145</top>
+              <top>80</top>
               <left>210</left>
-              <control type="image" id="14">
+              <control type="image">
                 <top>0</top>
                 <left>0</left>
                 <width>1590</width>
@@ -107,7 +107,7 @@
             <top>80</top>
             <left>420</left>
             <right>420</right>
-            <onup>63</onup>
+            <onup>SetFocus(9000)</onup>
             <ondown>63</ondown>
             <orientation>horizontal</orientation>
             <scrolltime>200</scrolltime>
@@ -363,6 +363,9 @@
           </control>
         </control>
       </control>
+      <include content="TopBar">
+        <param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRChannelsVar]"/>
+      </include>
       <include>PVRChannelNumberInput</include>
       <control type="group">
         <include content="MediaMenuCommon">
@@ -375,7 +378,7 @@
     </control>
     <include>Defs_MediaMenuCommon</include>
     <control type="label">
-      <top>70</top>
+      <top>100</top>
       <left>30</left>
       <width>280</width>
       <align>center</align>
@@ -384,11 +387,13 @@
       <label>$INFO[System.Time]</label>
     </control>
     <control type="label" id="29">
+      <label></label>
       <font></font>
       <include>HiddenObject</include>
     </control>
     <control type="label" id="30">
       <font></font>
+      <label></label>
       <include>HiddenObject</include>
     </control>
   </controls>
