@@ -257,6 +257,7 @@
           <height>65</height>
           <align>center</align>
           <scroll>true</scroll>
+          <textcolor>white</textcolor>
           <animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
         </control>
         <control type="label" id="$PARAM[id]">
@@ -265,6 +266,7 @@
           <align>center</align>
           <height>100</height>
           <width>100%</width>
+          <textcolor>white</textcolor>
         </control>
       </control>
     </definition>

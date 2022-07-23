@@ -126,7 +126,7 @@
   <include name="DefaultSettingLabel">
     <left>0</left>
     <top>0</top>
-    <height>80</height>
+    <height>70</height>
     <label/>
     <textoffsetx>40</textoffsetx>
     <aligny>center</aligny>
@@ -136,7 +136,7 @@
   <include name="SettingsItemCommon">
     <align>left</align>
     <aligny>center</aligny>
-    <height>80</height>
+    <height>70</height>
     <texturenofocus />
     <texturefocus />
     <texturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</texturefocus>
@@ -484,13 +484,15 @@
         <radiowidth>110</radiowidth>
         <radioheight>66</radioheight>
         <textwidth>130</textwidth>
+        <textcolor>b3ededed</textcolor>
+        <disabledcolor>1fcccccc</disabledcolor>
         <font>font_tiny_match</font>
         <textureradioonfocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonfocus>
         <textureradioonnofocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonnofocus>
         <textureradioofffocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioofffocus>
         <textureradiooffnofocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradiooffnofocus>
-        <textureradiooffdisabled colordiffuse="dialog_fg_30">$PARAM[icon]</textureradiooffdisabled>
-        <textureradioondisabled colordiffuse="dialog_fg_30">$PARAM[icon]</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="1fcccccc">$PARAM[icon]</textureradiooffdisabled>
+        <textureradioondisabled colordiffuse="1fcccccc">$PARAM[icon]</textureradioondisabled>
         <label>$PARAM[label]</label>
         <onclick condition="$PARAM[onclick_1_condition]">$PARAM[onclick_1]</onclick>
         <onclick condition="$PARAM[onclick_2_condition]">$PARAM[onclick_2]</onclick>
@@ -516,13 +518,15 @@
         <radiowidth>110</radiowidth>
         <radioheight>66</radioheight>
         <textwidth>130</textwidth>
+        <textcolor>b3ededed</textcolor>
+        <disabledcolor>1fcccccc</disabledcolor>
         <font>font_tiny_match</font>
         <textureradioonfocus colordiffuse="D0FFFFFF">$PARAM[icon_on]</textureradioonfocus>
         <textureradioonnofocus colordiffuse="D0FFFFFF">$PARAM[icon_on]</textureradioonnofocus>
         <textureradioofffocus colordiffuse="D0FFFFFF">$PARAM[icon_off]</textureradioofffocus>
         <textureradiooffnofocus colordiffuse="D0FFFFFF">$PARAM[icon_off]</textureradiooffnofocus>
-        <textureradiooffdisabled colordiffuse="dialog_fg_30">$PARAM[icon_off]</textureradiooffdisabled>
-        <textureradioondisabled colordiffuse="dialog_fg_30">$PARAM[icon_on]</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="1fcccccc">$PARAM[icon_off]</textureradiooffdisabled>
+        <textureradioondisabled colordiffuse="1fcccccc">$PARAM[icon_on]</textureradioondisabled>
         <selected>$PARAM[selected]</selected>
         <label>$PARAM[label]</label>
         <onclick>$PARAM[onclick_1]</onclick>

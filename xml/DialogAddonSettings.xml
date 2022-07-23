@@ -14,28 +14,26 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="2"/>
       </include>
-      <control type="image">
+      <include content="Object_Separator">
+        <param name="horizontal" value="false"/>
         <top>100</top>
-        <left>429</left>
-        <bottom>0</bottom>
-        <width>1</width>
-        <height>560</height>
-        <texture colordiffuse="dialog_bg_70">common/white.png</texture>
-      </control>
+        <left>400</left>
+        <height>800</height>
+      </include>
       <include content="DefaultSettingButtonGradient">
         <param name="id" value="3"/>
         <top>100</top>
-        <left>29</left>
+        <left>0</left>
         <width>400</width>
-        <height>80</height>
+        <height>70</height>
       </include>
       <control type="grouplist" id="3">
         <description>Categories Area</description>
-        <left>29</left>
-        <top>80</top>
+        <left>0</left>
+        <top>100</top>
         <width>400</width>
-        <height>600</height>
-        <itemgap>-40</itemgap>
+        <height>700</height>
+        <itemgap>0</itemgap>
         <orientation>vertical</orientation>
         <onleft>9000</onleft>
         <onright>5</onright>
@@ -44,7 +42,7 @@
       </control>
       <control type="button" id="10">
         <description>Default Category Button</description>
-        <height>120</height>
+        <height>70</height>
         <width>390</width>
         <textoffsetx>20</textoffsetx>
         <align>center</align>
@@ -56,17 +54,17 @@
       <include content="DefaultSettingButtonGradient">
         <param name="id" value="5"/>
         <top>100</top>
-        <left>429</left>
-        <width>1060</width>
-        <height>80</height>
+        <left>400</left>
+        <width>1100</width>
+        <height>70</height>
         <visible>ControlGroup(5).HasFocus()</visible>
       </include>
       <control type="grouplist" id="5">
         <description>control area</description>
-        <left>429</left>
+        <left>400</left>
         <top>100</top>
-        <width>1060</width>
-        <height>720</height>
+        <width>1100</width>
+        <height>700</height>
         <pagecontrol>60</pagecontrol>
         <onleft>3</onleft>
         <onright>60</onright>
@@ -132,29 +130,37 @@
         </include>
       </control>
       <control type="radiobutton" id="20">
-        <left>29</left>
-        <top>700</top>
-        <width>390</width>
-        <height>120</height>
-        <font>font25_title</font>
+        <left>0</left>
+        <top>730</top>
+        <width>400</width>
+        <height>70</height>
+        <align>center</align>
         <aligny>center</aligny>
         <onclick>SettingsLevelChange</onclick>
-        <textoffsetx>100</textoffsetx>
+        <textoffsetx>0</textoffsetx>
         <textoffsety>0</textoffsety>
-        <radioposx>40</radioposx>
+        <radioposx>60</radioposx>
         <radioposy>0</radioposy>
-        <radiowidth>40</radiowidth>
-        <radioheight>40</radioheight>
+        <radiowidth>32</radiowidth>
+        <radioheight>32</radioheight>
         <onleft>9000</onleft>
         <onright>5</onright>
         <onup>3</onup>
         <ondown>3</ondown>
-        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/white.png</texturefocus>
         <texturenofocus/>
-        <textureradioonfocus>icons/settings.png</textureradioonfocus>
-        <textureradioonnofocus>icons/settings.png</textureradioonnofocus>
-        <textureradioofffocus>icons/settings.png</textureradioofffocus>
-        <textureradiooffnofocus>icons/settings.png</textureradiooffnofocus>
+        <textureradiooffnofocus colordiffuse="dialog_fg_70">icons/settings.png</textureradiooffnofocus>
+        <textureradioonnofocus colordiffuse="dialog_fg_70">icons/settings.png</textureradioonnofocus>
+        <textureradioonfocus colordiffuse="white">icons/settings.png</textureradioonfocus>
+        <textureradioofffocus colordiffuse="white">icons/settings.png</textureradioofffocus>
+      </control>
+      <control type="image">
+        <left>0</left>
+        <top>730</top>
+        <width>400</width>
+        <height>70</height>
+        <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+        <visible>Control.HasFocus(20)</visible>
       </control>
       <control type="scrollbar" id="60">
         <left>1489</left>

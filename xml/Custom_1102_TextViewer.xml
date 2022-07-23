@@ -18,7 +18,7 @@
         <width>82%</width>
         <pagecontrol>3000</pagecontrol>
         <font>font_title_bold</font>
-        <textcolor>dialog_fg_100</textcolor>
+        <textcolor>white</textcolor>
         <label>$INFO[Window(home).Property(TextViewer_Header)]</label>
       </control>
       <control type="textbox" id="2000">
@@ -28,7 +28,7 @@
         <height>675</height>
         <pagecontrol>3000</pagecontrol>
         <font>font60</font>
-        <textcolor>dialog_fg_100</textcolor>
+        <textcolor>white</textcolor>
         <label>$INFO[Window(home).Property(TextViewer_Text)]</label>
       </control>
       <control type="scrollbar" id="3000">
