@@ -232,7 +232,7 @@
           <width>396</width>
           <height>750</height>
           <bottom>-40</bottom>
-          <movement>7</movement>
+          <movement>11</movement>
           <focusposition>0</focusposition>
           <onleft>9001</onleft>
           <include>Flix_Spotlight_ClearProperties_focus</include>
