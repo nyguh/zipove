@@ -26,7 +26,7 @@
           <textcolor>b3ededed</textcolor>
         </control>
         <control type="group">
-          <right>60</right>
+          <right>130</right>
           <width>1920</width>
           <visible>!Control.IsVisible(503) + Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
           <animation effect="fade" time="200">VisibleChange</animation>
@@ -107,6 +107,7 @@
           </control>
           <control type="image">
             <top>-3</top>
+            <left>13</left>
             <width>48</width>
             <height>48</height>
             <texture colordiffuse="ff333333">special://skin/extras/icons/settings.png</texture>

@@ -1949,7 +1949,7 @@
     </control>
   </include>
   <include name="Object_Separator">
-    <param name="colordiffuse" default="1F0f0f0f" />
+    <param name="colordiffuse" default="main_fg_12" />
     <param name="horizontal" default="false" />
     <definition>
       <include content="Object_Control" condition="!$PARAM[horizontal]">

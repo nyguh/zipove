@@ -1346,6 +1346,7 @@
       <control type="progress">
         <description>Progressbar</description>
         <top>$PARAM[top]</top>
+        <bottom>$PARAM[bottom]</bottom>
         <nested/>
         <texturebg colordiffuse="00ffffff" border="6">progress/progress-bg.png</texturebg>
         <lefttexture colordiffuse="00ffffff" border="6">progress/progress-left.png</lefttexture>

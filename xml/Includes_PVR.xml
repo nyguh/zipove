@@ -601,172 +601,161 @@
     </control>
   </include>
   <include name="PVRListItemLayout">
+    <param name="text_color" default="b3ededed"/>
     <definition>
-      <control type="label">
-        <left>30</left>
-        <top>0</top>
-        <right>30</right>
-        <font>font36_title</font>
-        <aligny>center</aligny>
-        <visible>$PARAM[only_label_condition]</visible>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
       <control type="group">
-        <visible>!$PARAM[only_label_condition]</visible>
-        <animation effect="slide" start="0,0" end="0,16" time="0" condition="!$EXP[listitem_has_epg_event_info]">Conditional</animation>
+        <control type="group">
+          <control type="image">
+            <left>20</left>
+            <top>0</top>
+            <width>80</width>
+            <aligny>center</aligny>
+            <aspectratio align="center">keep</aspectratio>
+            <visible>ListItem.IsParentFolder | !Skin.HasSetting(ShowChannelIcon)</visible>
+            <texture>$INFO[ListItem.ActualIcon]</texture>
+          </control>
+          <control type="label">
+            <left>164</left>
+            <top>0</top>
+            <height>100</height>
+            <font>font_small_pvr_channels</font>
+            <aligny>center</aligny>
+            <textcolor>white</textcolor>
+            <label>$INFO[ListItem.ChannelNumberLabel,,   ]</label>
+          </control>
+          <control type="label">
+            <left>220</left>
+            <right>120</right>
+            <top>0</top>
+            <height>100</height>
+            <width>$PARAM[width]</width>
+            <font>font_small_pvr_channels</font>
+            <aligny>center</aligny>
+            <textcolor>$PARAM[text_color]</textcolor>
+            <label>$PARAM[label3]</label>
+          </control>
+        </control>
         <control type="image">
-          <left>29</left>
-          <top>17</top>
+          <right>110</right>
+          <top>0</top>
           <width>32</width>
-          <height>32</height>
-          <aspectratio align="center">keep</aspectratio>
-          <visible>$PARAM[has_info_icon]</visible>
-          <texture>$PARAM[info_icon]</texture>
-        </control>
-        <control type="label">
-          <left>10</left>
-          <top>10</top>
-          <width>90</width>
-          <height>50</height>
-          <align>center</align>
           <aligny>center</aligny>
-          <font>font32_title</font>
-          <visible>!$PARAM[has_info_icon]</visible>
-          <label>$PARAM[label0]</label>
-        </control>
-        <control type="label">
-          <left>105</left>
-          <right>120</right>
-          <top>10</top>
-          <height>30</height>
-          <aligny>top</aligny>
-          <label>$PARAM[label1]</label>
-        </control>
-        <control type="label">
-          <left>105</left>
-          <right>120</right>
-          <top>10</top>
-          <height>30</height>
-          <align>right</align>
-          <aligny>top</aligny>
-          <label>$PARAM[label2]</label>
+          <aspectratio align="center">keep</aspectratio>
+          <texture>$VAR[PVRStatusImageVar]</texture>
+          <visible>$PARAM[has_status_icon]</visible>
         </control>
       </control>
       <control type="group">
-        <visible>!$PARAM[only_label_condition]</visible>
-        <control type="label">
-          <left>105</left>
-          <right>120</right>
-          <top>53</top>
-          <height>30</height>
-          <font>font12</font>
-          <aligny>top</aligny>
-          <label>$PARAM[label3]</label>
+        <left>800</left>
+        <control type="group">
+          <control type="label">
+            <left>64</left>
+            <right>120</right>
+            <top>0</top>
+            <height>100</height>
+            <width>$PARAM[width_next]</width>
+            <font>font_small_pvr_channels</font>
+            <aligny>center</aligny>
+            <textcolor>$PARAM[text_color]</textcolor>
+            <label>$PARAM[label4]</label>
+          </control>
         </control>
-        <control type="label">
-          <left>105</left>
-          <right>120</right>
-          <top>53</top>
-          <height>30</height>
-          <font>font12</font>
-          <align>right</align>
-          <aligny>top</aligny>
-          <label>$PARAM[label4]</label>
+        <control type="image">
+          <right>110</right>
+          <top>0</top>
+          <width>32</width>
+          <aligny>center</aligny>
+          <aspectratio align="center">keep</aspectratio>
+          <texture>$VAR[PVRStatusImageVar]</texture>
+          <visible>$PARAM[has_status_icon]</visible>
         </control>
-      </control>
-      <control type="image">
-        <right>110</right>
-        <top>0</top>
-        <width>32</width>
-        <aligny>center</aligny>
-        <aspectratio align="center">keep</aspectratio>
-        <texture>$VAR[PVRStatusImageVar]</texture>
-        <visible>$PARAM[has_status_icon]</visible>
-      </control>
-      <control type="image">
-        <right>20</right>
-        <top>0</top>
-        <width>80</width>
-        <aligny>center</aligny>
-        <aspectratio align="center">keep</aspectratio>
-        <visible>!$PARAM[only_label_condition] | ListItem.IsParentFolder</visible>
-        <texture>$INFO[ListItem.ActualIcon]</texture>
       </control>
     </definition>
+  </include>
+  <include name="PVRListItemSimpleLayout">
+    <itemlayout height="100">
+      <control type="progress">
+        <top>1</top>
+        <left>1</left>
+        <bottom>1</bottom>
+        <width>573</width>
+        <texturebg>pvr/progressline-back.png</texturebg>
+        <lefttexture border="2" colordiffuse="bf777777">pvr/progressline-left2.png</lefttexture>
+        <midtexture border="2" colordiffuse="bf777777">pvr/progressline-mid2.png</midtexture>
+        <righttexture border="2" colordiffuse="bf777777">pvr/progressline-right2.png</righttexture>
+        <info>ListItem.Progress</info>
+      </control>
+      <include content="PVRListItemLayout">
+        <param name="only_label_condition" value="$PARAM[only_label_condition]"/>
+        <param name="info_icon" value="$PARAM[info_icon]"/>
+        <param name="has_info_icon" value="$PARAM[has_info_icon]"/>
+        <param name="has_status_icon" value="$PARAM[has_status_icon]"/>
+        <param name="label0" value="[COLOR b3ededed]$INFO[ListItem.ChannelNumberLabel][/COLOR]"/>
+        <param name="label1" value="$PARAM[label1]"/>
+        <param name="label2" value="$PARAM[label2]"/>
+        <param name="label3" value="$VAR[PVRListItemSubLabel]"/>
+        <param name="label4" value="[COLOR b3ededed]$INFO[ListItem.NextStartTime][/COLOR]   $INFO[ListItem.NextTitle]"/>
+        <param name="width" value="$PARAM[width]"/>
+        <param name="width_next" value="$PARAM[width_next]"/>
+      </include>
+    </itemlayout>
+    <focusedlayout height="100">
+      <control type="group">
+        <left>0</left>
+        <top>0</top>
+        <right>0</right>
+        <animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
+        <control type="image">
+          <texture colordiffuse="main_bg_30" border="10">common/white.png</texture>
+        </control>
+        <visible>true</visible>
+      </control>
+      <control type="progress">
+        <top>0</top>
+        <left>0</left>
+        <bottom>0</bottom>
+        <width>573</width>
+        <texturebg>pvr/progressline-back.png</texturebg>
+        <lefttexture border="2" colordiffuse="bf777777">pvr/progressline-left2.png</lefttexture>
+        <midtexture border="2" colordiffuse="bf777777">pvr/progressline-mid2.png</midtexture>
+        <righttexture border="2" colordiffuse="bf777777">pvr/progressline-right2.png</righttexture>
+        <info>ListItem.Progress</info>
+      </control>
+      <include content="PVRListItemLayout">
+        <param name="only_label_condition" value="$PARAM[only_label_condition]"/>
+        <param name="info_icon" value="$PARAM[info_icon]"/>
+        <param name="has_info_icon" value="$PARAM[has_info_icon]"/>
+        <param name="has_status_icon" value="$PARAM[has_status_icon]"/>
+        <param name="label0" value="$INFO[ListItem.ChannelNumberLabel]"/>
+        <param name="label1" value="$PARAM[label1]"/>
+        <param name="label2" value="$PARAM[label2]"/>
+        <param name="label3" value="$VAR[PVRListItemSubLabelFocused]"/>
+        <param name="label4" value="[COLOR b3ededed]$INFO[ListItem.NextStartTime][/COLOR]   $INFO[ListItem.NextTitle]"/>
+        <param name="width" value="$PARAM[width]"/>
+        <param name="width_next" value="$PARAM[width_next]"/>
+        <param name="text_color" value="white"/>
+      </include>
+    </focusedlayout>
   </include>
   <include name="PVRListItemLayouts">
     <param name="only_label_condition">false</param>
     <param name="has_info_icon">false</param>
     <param name="has_status_icon">false</param>
     <definition>
-      <itemlayout height="100">
-        <control type="progress">
-          <left>20</left>
-          <top>66</top>
-          <width>70</width>
-          <height>12</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <colordiffuse>88FFFFFF</colordiffuse>
-          <midtexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-end.png</midtexture>
-          <lefttexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-left.png</lefttexture>
-          <righttexture colordiffuse="$VAR[ColorHighlight]" border="4">progress/progress-right.png</righttexture>
-          <texturebg colordiffuse="panel_fg_30" border="4">diffuse/progress-256-bg.png</texturebg>
-          <visible>ListItem.HasEpg + !$PARAM[has_info_icon]</visible>
-          <info>ListItem.Progress</info>
-        </control>
-        <include content="PVRListItemLayout">
-          <param name="only_label_condition" value="$PARAM[only_label_condition]"/>
-          <param name="info_icon" value="$PARAM[info_icon]"/>
-          <param name="has_info_icon" value="$PARAM[has_info_icon]"/>
-          <param name="has_status_icon" value="$PARAM[has_status_icon]"/>
-          <param name="label0" value="[COLOR grey]$INFO[ListItem.ChannelNumberLabel][/COLOR]"/>
-          <param name="label1" value="$PARAM[label1]"/>
-          <param name="label2" value="$PARAM[label2]"/>
-          <param name="label3" value="$VAR[PVRListItemSubLabel]"/>
-          <param name="label4" value="[COLOR grey]$INFO[ListItem.Comment][/COLOR]"/>
-        </include>
-      </itemlayout>
-      <focusedlayout height="100">
-        <control type="group">
-          <left>0</left>
-          <top>0</top>
-          <right>0</right>
-          <animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-          <control type="image">
-            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
-          </control>
-          <control type="image">
-            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
-          </control>
-          <visible>Control.HasFocus($PARAM[list_id])</visible>
-        </control>
-        <control type="progress">
-          <left>20</left>
-          <top>66</top>
-          <width>70</width>
-          <height>12</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <midtexture colordiffuse="white" border="4">progress/progress-end.png</midtexture>
-          <lefttexture colordiffuse="white" border="4">progress/progress-left.png</lefttexture>
-          <righttexture colordiffuse="white" border="4">progress/progress-right.png</righttexture>
-          <texturebg colordiffuse="panel_fg_30" border="4">diffuse/progress-256-bg.png</texturebg>
-          <visible>ListItem.HasEpg + !$PARAM[has_info_icon]</visible>
-          <info>ListItem.Progress</info>
-        </control>
-        <include content="PVRListItemLayout">
-          <param name="only_label_condition" value="$PARAM[only_label_condition]"/>
-          <param name="info_icon" value="$PARAM[info_icon]"/>
-          <param name="has_info_icon" value="$PARAM[has_info_icon]"/>
-          <param name="has_status_icon" value="$PARAM[has_status_icon]"/>
-          <param name="label0" value="$INFO[ListItem.ChannelNumberLabel]"/>
-          <param name="label1" value="$PARAM[label1]"/>
-          <param name="label2" value="$PARAM[label2]"/>
-          <param name="label3" value="$VAR[PVRListItemSubLabelFocused]"/>
-          <param name="label4" value="$INFO[ListItem.Comment]"/>
-        </include>
-      </focusedlayout>
+      <include content="PVRListItemSimpleLayout" condition="!Skin.HasSetting(PVRChannelsExtendedInfo)">
+        <param name="list_id" value="50"/>
+        <param name="label1" value="$INFO[ListItem.Label]"/>
+        <param name="has_status_icon" value="true"/>
+        <param name="width" value="$PARAM[width]"/>
+        <param name="width_next" value="$PARAM[width_next]"/>
+      </include>
+      <include content="PVRListItemSimpleLayout" condition="Skin.HasSetting(PVRChannelsExtendedInfo)">
+        <param name="list_id" value="51"/>
+        <param name="label1" value="$INFO[ListItem.Label]"/>
+        <param name="has_status_icon" value="true"/>
+        <param name="width" value="$PARAM[width]"/>
+        <param name="width_next" value="$PARAM[width_next]"/>
+      </include>
     </definition>
   </include>
   <include name="PVRChannelGuideModern">
@@ -1200,7 +1189,7 @@
               <width>150</width>
               <bottom>0</bottom>
               <aligny>center</aligny>
-              <textcolor>grey</textcolor>
+              <textcolor>b3ededed</textcolor>
               <label>$INFO[ListItem.StartTime]</label>
             </control>
             <control type="label">
@@ -1361,7 +1350,7 @@
           <height>70</height>
           <aligny>center</aligny>
           <font>font27</font>
-          <textcolor>grey</textcolor>
+          <textcolor>b3ededed</textcolor>
           <label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
         </control>
       </itemlayout>
@@ -1588,7 +1577,7 @@
         <width>830</width>
         <height>262</height>
         <font>font36_title</font>
-        <label>$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
+        <label>$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR b3ededed],[/COLOR])]</label>
         <scroll>true</scroll>
         <visible>!ListItem.HasEpg</visible>
       </control>
@@ -1597,7 +1586,7 @@
         <width>830</width>
         <height>262</height>
         <font>font36_title</font>
-        <label>$INFO[ListItem.EpgEventTitle] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
+        <label>$INFO[ListItem.EpgEventTitle] $INFO[ListItem.Year,([COLOR b3ededed],[/COLOR])]</label>
         <scroll>true</scroll>
         <visible>ListItem.HasEpg</visible>
       </control>
@@ -1612,7 +1601,7 @@
         <top>465</top>
         <width>830</width>
         <bottom>80</bottom>
-        <label>$VAR[FlagLabel,,[CR]]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]$INFO[ListItem.TimerType,[COLOR grey]$LOCALIZE[803]:[/COLOR] ,[CR]]$VAR[RecordingSizeLabel]$VAR[ExpirationDateTimeLabel]$INFO[ListItem.Plot,[CR]]</label>
+        <label>$VAR[FlagLabel,,[CR]]$INFO[ListItem.Genre,[COLOR b3ededed]$LOCALIZE[515]:[/COLOR] ,[CR]]$INFO[ListItem.TimerType,[COLOR b3ededed]$LOCALIZE[803]:[/COLOR] ,[CR]]$VAR[RecordingSizeLabel]$VAR[ExpirationDateTimeLabel]$INFO[ListItem.Plot,[CR]]</label>
         <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
       </control>
     </control>
