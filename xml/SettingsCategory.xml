@@ -24,7 +24,7 @@
     </control>
     <control type="label">
       <top>100</top>
-      <right>260</right>
+      <right>160</right>
       <textcolor>white</textcolor>
       <align>right</align>
       <label>$INFO[System.Time]</label>
