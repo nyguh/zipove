@@ -175,7 +175,6 @@
             <width>$PARAM[width]</width>
             <aligny>center</aligny>
             <label>$PARAM[item_label]</label>
-            <shadowcolor>text_shadow</shadowcolor>
             <font>$PARAM[font]</font>
           </control>
         </focusedlayout>
@@ -186,7 +185,6 @@
             <width>$PARAM[width]</width>
             <aligny>center</aligny>
             <label>$PARAM[item_label]</label>
-            <shadowcolor>text_shadow</shadowcolor>
             <font>$PARAM[font]</font>
           </control>
         </itemlayout>
@@ -528,8 +526,8 @@
             <right>20</right>
             <aligny>center</aligny>
             <scroll>true</scroll>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]</label>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
           <control type="label">
             <left>0</left>
@@ -539,8 +537,8 @@
             <right>0</right>
             <align>right</align>
             <aligny>center</aligny>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label2]</label>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
         </focusedlayout>
         <itemlayout height="list_item_height">
@@ -558,8 +556,8 @@
             <bottom>0</bottom>
             <right>20</right>
             <aligny>center</aligny>
+            <textcolor>b3ededed</textcolor>
             <label>$INFO[ListItem.Label]</label>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
           <control type="label">
             <left>0</left>
@@ -569,9 +567,8 @@
             <right>0</right>
             <align>right</align>
             <aligny>center</aligny>
+            <textcolor>b3ededed</textcolor>
             <label>$INFO[ListItem.Label2]</label>
-            <textcolor>grey</textcolor>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
         </itemlayout>
       </control>
@@ -1465,9 +1462,11 @@
   </include>
   <include name="ProgressColorFade">
     <param name="info" default="Control.GetLabel($PARAM[id])"/>
-    <include content="ProgressColorFader">
-      <param name="info" value="$PARAM[info]"/>
-    </include>
+    <definition>
+      <include content="ProgressColorFader">
+        <param name="info" value="$PARAM[info]"/>
+      </include>
+    </definition>
   </include>
   <include name="Dialog_ColorPicker_SwatchLabel">
     <control type="label">

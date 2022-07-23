@@ -6,16 +6,22 @@
     <control type="group">
       <centerleft>50%</centerleft>
       <centertop>50%</centertop>
-      <width>1300</width>
+      <width>1440</width>
       <height>850</height>
       <include content="DialogBackgroundCommons">
-        <param name="width" value="1300"/>
+        <param name="width" value="1440"/>
         <param name="height" value="850"/>
         <param name="header_label" value=""/>
         <param name="header_id" value="411"/>
       </include>
+      <include content="Object_Separator">
+        <param name="horizontal" value="false"/>
+        <left>1060</left>
+        <top>100</top>
+        <height>700</height>
+      </include>
       <control type="grouplist" id="9000">
-        <left>990</left>
+        <left>1080</left>
         <top>105</top>
         <width>400</width>
         <height>400</height>
@@ -45,19 +51,18 @@
         </include>
       </control>
       <control type="image">
-        <left>1010</left>
-        <top>420</top>
+        <left>1100</left>
+        <top>380</top>
         <width>260</width>
         <height>380</height>
-        <aspectratio aligny="bottom">keep</aspectratio>
-        <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+        <aspectratio aligny="center">keep</aspectratio>
         <bordersize>4</bordersize>
         <texture border="4" background="true">$INFO[ListItem.Icon]</texture>
       </control>
       <control type="panel" id="450">
-        <left>20</left>
+        <left>0</left>
         <top>100</top>
-        <width>940</width>
+        <width>1060</width>
         <height>700</height>
         <onleft>9000</onleft>
         <onright>60</onright>
@@ -65,14 +70,14 @@
         <ondown>450</ondown>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="140" width="960">
+        <itemlayout height="140" width="1060">
           <control type="image">
             <top>24</top>
             <left>24</left>
             <width>92</width>
             <height>92</height>
             <aligny>center</aligny>
-            <texture>$INFO[ListItem.Icon]</texture>
+            <texture colordiffuse="main_fg_70">$INFO[ListItem.Icon]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
@@ -81,11 +86,10 @@
             <right>20</right>
             <height>140</height>
             <aligny>center</aligny>
-            <selectedcolor>selected</selectedcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="140" width="960">
+        <focusedlayout height="140" width="1060">
           <control type="group">
             <left>0</left>
             <top>0</top>
@@ -105,7 +109,7 @@
             <width>92</width>
             <height>92</height>
             <aligny>center</aligny>
-            <texture>$INFO[ListItem.Icon]</texture>
+            <texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
@@ -114,7 +118,7 @@
             <right>20</right>
             <height>140</height>
             <aligny>center</aligny>
-            <selectedcolor>selected</selectedcolor>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </focusedlayout>
@@ -122,7 +126,7 @@
       <control type="panel" id="451">
         <left>20</left>
         <top>100</top>
-        <width>960</width>
+        <width>1060</width>
         <height>700</height>
         <onleft>9000</onleft>
         <onright>60</onright>
@@ -160,10 +164,10 @@
         </focusedlayout>
       </control>
       <control type="scrollbar" id="60">
-        <left>965</left>
-        <top>100</top>
+        <left>1060</left>
+        <top>97</top>
         <width>12</width>
-        <height>698</height>
+        <height>707</height>
         <onleft>450</onleft>
         <onright>9000</onright>
         <orientation>vertical</orientation>
@@ -180,7 +184,7 @@
         <textcolor>grey</textcolor>
       </control>
       <control type="label">
-        <left>0</left>
+        <right>30</right>
         <bottom>10</bottom>
         <width>1270</width>
         <height>30</height>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol always="true">20</defaultcontrol>
+  <backgroundcolor>Background</backgroundcolor>
   <controls>
     <include>DefaultBackground</include>
     <control type="image">
@@ -82,7 +83,7 @@
         <height>48</height>
         <aligny>center</aligny>
         <align>right</align>
-        <shadowcolor>text_shadow</shadowcolor>
+        <textcolor>b3ededed</textcolor>
         <label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
       </control>
       <control type="label" id="102">
@@ -93,15 +94,14 @@
         <align>right</align>
         <aligny>center</aligny>
         <label>$PARAM[header_label]</label>
-        <haspath>true</haspath>
-        <shadowcolor>black</shadowcolor>
+        <textcolor>b3ededed</textcolor>
       </control>
       <control type="label">
         <left>730</left>
         <width>400</width>
         <height>48</height>
         <aligny>center</aligny>
-        <shadowcolor>text_shadow</shadowcolor>
+        <textcolor>b3ededed</textcolor>
         <label>$INFO[Container(20).CurrentItem,, / ]$INFO[Container(20).NumItems]</label>
       </control>
       <control type="label" id="101">
@@ -111,8 +111,7 @@
         <font>font30_title</font>
         <aligny>center</aligny>
         <label>$PARAM[header_label]</label>
-        <haspath>true</haspath>
-        <shadowcolor>black</shadowcolor>
+        <textcolor>b3ededed</textcolor>
       </control>
     </control>
   </controls>

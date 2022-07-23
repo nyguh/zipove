@@ -176,7 +176,7 @@
     <focusedcolor>white</focusedcolor>
     <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
-    <texturefocus colordiffuse="dialog_bg_30">common/white.png</texturefocus>
+    <texturefocus colordiffuse="dialog_bg_30" border="5">common/button-dialog.png</texturefocus>
     <texturenofocus/>
     <pulseonselect>false</pulseonselect>
   </default>
