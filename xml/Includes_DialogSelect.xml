@@ -5,9 +5,9 @@
       <centertop>50%</centertop>
       <centerleft>50%</centerleft>
       <height>750</height>
-      <width>1240</width>
+      <width>1440</width>
       <include content="DialogBackgroundCommons">
-        <param name="width" value="1220"/>
+        <param name="width" value="1420"/>
         <param name="height" value="750"/>
         <param name="header_label" value=""/>
         <param name="header_id" value="1"/>
@@ -15,60 +15,64 @@
       <control type="list" id="3">
         <left>0</left>
         <top>100</top>
-        <width>890</width>
+        <width>1100</width>
         <bottom>20</bottom>
         <onup>3</onup>
         <ondown>3</ondown>
-        <onleft>9001</onleft>
         <onright>61</onright>
         <pagecontrol>61</pagecontrol>
         <scrolltime>200</scrolltime>
         <include content="DefaultSimpleListLayout">
-          <param name="width" value="890"/>
+          <param name="width" value="1100"/>
           <param name="list_id" value="3"/>
         </include>
       </control>
       <control type="list" id="6">
         <left>0</left>
         <top>100</top>
-        <width>890</width>
+        <width>1100</width>
         <bottom>20</bottom>
         <onup>6</onup>
         <ondown>6</ondown>
-        <onleft>9001</onleft>
         <onright>61</onright>
         <pagecontrol>61</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="125" width="890">
+        <itemlayout height="125" width="1100">
           <control type="image">
-            <left>32</left>
+            <left>64</left>
+            <centertop>50%</centertop>
+            <width>24</width>
+            <height>24</height>
+            <texture colordiffuse="$VAR[ColorHighlight]">buttons/check-on.png</texture>
+            <visible>ListItem.IsSelected</visible>
+          </control>
+          <control type="image">
+            <left>64</left>
+            <centertop>50%</centertop>
+            <width>24</width>
+            <height>24</height>
+            <texture colordiffuse="dialog_fg_70">buttons/check-off.png</texture>
+            <visible>!ListItem.IsSelected</visible>
+          </control>
+          <control type="image">
+            <left>150</left>
             <top>7</top>
             <width>110</width>
             <height>110</height>
-            <texture colordiffuse="dialog_fg_70">$VAR[InfoWallThumbVar]</texture>
+            <texture>$VAR[InfoWallThumbVar]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>155</left>
+            <left>300</left>
             <top>0</top>
             <right>20</right>
-            <height>60</height>
+            <height>125</height>
             <font>font27</font>
             <aligny>center</aligny>
-            <textcolor>dialog_fg_70</textcolor>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-          <control type="textbox">
-            <left>155</left>
-            <top>50</top>
-            <right>20</right>
-            <height>67</height>
-            <font>font12</font>
-            <textcolor>dialog_fg_30</textcolor>
-            <label>$INFO[ListItem.Label2]</label>
+            <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="125" width="890">
+        <focusedlayout height="125" width="1100">
           <control type="group">
             <left>0</left>
             <top>0</top>
@@ -80,49 +84,57 @@
             <control type="image">
               <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
             </control>
+            <visible>Control.HasFocus(6)</visible>
           </control>
           <control type="image">
-            <left>32</left>
+            <left>64</left>
+            <centertop>50%</centertop>
+            <width>24</width>
+            <height>24</height>
+            <texture colordiffuse="dialog_fg_70">buttons/check-on.png</texture>
+            <visible>ListItem.IsSelected</visible>
+          </control>
+          <control type="image">
+            <left>64</left>
+            <centertop>50%</centertop>
+            <width>24</width>
+            <height>24</height>
+            <texture colordiffuse="dialog_fg_70">buttons/check-off.png</texture>
+            <visible>!ListItem.IsSelected</visible>
+          </control>
+          <control type="image">
+            <left>150</left>
             <top>7</top>
             <width>110</width>
             <height>110</height>
-            <texture colordiffuse="white">$VAR[InfoWallThumbVar]</texture>
+            <texture>$VAR[InfoWallThumbVar]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>155</left>
+            <left>300</left>
             <top>0</top>
             <right>20</right>
-            <height>60</height>
-            <aligny>center</aligny>
-            <scroll>true</scroll>
+            <height>125</height>
             <font>font27</font>
-            <textcolor>white</textcolor>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-          <control type="textbox">
-            <left>155</left>
-            <top>50</top>
-            <right>20</right>
-            <height>67</height>
-            <font>font12</font>
-            <textcolor>white</textcolor>
-            <label>$INFO[ListItem.Label2]</label>
+            <aligny>center</aligny>
+            <textcolor>dialog_fg_70</textcolor>
+            <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
           </control>
         </focusedlayout>
       </control>
       <control type="scrollbar" id="61">
-        <left>890</left>
+        <left>1100</left>
         <top>100</top>
         <width>12</width>
         <bottom>20</bottom>
+        <onright>9001</onright>
         <onleft condition="Control.IsVisible(3)">3</onleft>
         <onleft condition="Control.IsVisible(6)">6</onleft>
-        <onright>9001</onright>
+        <onright>6</onright>
         <orientation>vertical</orientation>
       </control>
       <control type="label">
-        <left>925</left>
+        <left>1100</left>
         <bottom>10</bottom>
         <width>275</width>
         <height>35</height>
@@ -131,18 +143,12 @@
         <textcolor>dialog_fg_70</textcolor>
         <label>$VAR[SelectLabel]</label>
       </control>
-      <include content="Object_Separator">
-        <param name="horizontal" value="false"/>
-        <left>890</left>
-        <top>100</top>
-        <bottom>0</bottom>
-      </include>
       <control type="grouplist" id="9001">
-        <left>920</left>
+        <left>1120</left>
         <top>100</top>
-        <onleft>61</onleft>
+        <onleft>6</onleft>
         <itemgap>20</itemgap>
-        <onright>3</onright>
+        <onright>61</onright>
         <include content="DefaultDialogButton">
           <param name="id" value="5"/>
           <param name="label" value="$LOCALIZE[21452]"/>
@@ -155,6 +161,15 @@
           <param name="id" value="7"/>
           <param name="label" value="$LOCALIZE[222]"/>
         </include>
+      </control>
+    </control>
+    <control type="group">
+      <control type="image">
+        <left>1340</left>
+        <top>265</top>
+        <width>1</width>
+        <height>625</height>
+        <texture colordiffuse="main_fg_12">common/white.png</texture>
       </control>
     </control>
   </include>

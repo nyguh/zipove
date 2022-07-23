@@ -16,7 +16,7 @@
     <font>font_small_defaults</font>
     <textcolor>main_fg_70</textcolor>
     <focusedcolor>main_fg_70</focusedcolor>
-    <selectedcolor>white</selectedcolor>
+    <selectedcolor>main_fg_70</selectedcolor>
     <disabledcolor>dialog_fg_30</disabledcolor>
     <scroll>false</scroll>
     <scrollspeed>40</scrollspeed>
@@ -36,7 +36,7 @@
     <textcolor>main_fg_70</textcolor>
     <focusedcolor>white</focusedcolor>
     <disabledcolor>dialog_fg_30</disabledcolor>
-    <selectedcolor>white</selectedcolor>
+    <selectedcolor>main_fg_70</selectedcolor>
     <texturefocus colordiffuse="dialog_bg_12">common/white.png</texturefocus>
     <texturenofocus colordiffuse="dialog_bg_30">common/white.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
