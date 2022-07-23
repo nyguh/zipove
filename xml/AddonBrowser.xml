@@ -44,9 +44,6 @@
       <include content="TopBar">
         <param name="breadcrumbs_label" value="$LOCALIZE[24001]"/>
       </include>
-      <include content="BottomBar">
-        <param name="info_visible" value="true"/>
-      </include>
       <include>MediaMenuMouseOverlay</include>
       <control type="group">
         <include content="MediaMenuCommon">
@@ -67,6 +64,28 @@
           <param name="sub_label" value="$LOCALIZE[31069]"/>
         </include>
       </control>
+    </control>
+    <!-- hidden buttons -->
+    <include>Defs_MediaMenuCommon</include>
+    <control type="button" id="5">
+      <description>Settings</description>
+      <label>5</label>
+      <include>HiddenObject</include>
+    </control>
+    <control type="button" id="9">
+      <description>Check for updates</description>
+      <label>24034</label>
+      <include>HiddenObject</include>
+    </control>
+    <control type="radiobutton" id="7">
+      <description>Hide Foriegn</description>
+      <label>25001</label>
+      <include>HiddenObject</include>
+    </control>
+    <control type="radiobutton" id="8">
+      <description>Hide incompat</description>
+      <label>24999</label>
+      <include>HiddenObject</include>
     </control>
   </controls>
 </window>

@@ -1663,6 +1663,7 @@
         <label>$INFO[Control.GetLabel(9)]</label>
         <icon>special://skin/extras/icons/update.png</icon>
         <onclick>SendClick(9)</onclick>
+        <onclick>Action(Back)</onclick>
         <visible>Control.IsEnabled(9)</visible>
       </item>
       <!-- Search -->

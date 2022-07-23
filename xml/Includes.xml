@@ -663,7 +663,7 @@
           <width>1400</width>
           <label>$PARAM[main_label]</label>
           <font>font30_title</font>
-          <shadowcolor>text_shadow</shadowcolor>
+          <textcolor>b3ededed</textcolor>
           <height>35</height>
           <scroll>true</scroll>
           <animation effect="slide" start="0,0" end="0,15" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
@@ -672,7 +672,7 @@
           <label>$PARAM[sub_label]</label>
           <font>font12</font>
           <left>85</left>
-          <shadowcolor>text_shadow</shadowcolor>
+          <textcolor>b3ededed</textcolor>
           <height>100</height>
           <width>1400</width>
         </control>
