@@ -51,6 +51,12 @@
       <style>uppercase bold</style>
     </font>
     <font>
+      <name>font_seekbar</name>
+      <filename>RobotoCondensed-Bold.ttf</filename>
+      <size>22</size>
+      <style>uppercase</style>
+    </font>
+    <font>
       <name>font_small_defaults</name>
       <filename>RobotoCondensed-Regular.ttf</filename>
       <size>25</size>

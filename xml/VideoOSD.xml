@@ -2,7 +2,7 @@
 <window>
   <onload condition="!Player.PauseEnabled">SetFocus(603)</onload>
   <defaultcontrol always="true">602</defaultcontrol>
-  <depth>DepthOSD</depth>
+  <onunload>ClearProperty(show_ext_info,home)</onunload>
   <controls>
     <control type="button">
       <description>background close area</description>
@@ -13,6 +13,7 @@
       <texturefocus/>
       <texturenofocus/>
       <onclick>Action(close)</onclick>
+      <onclick>ClearProperty(show_ext_info,home)</onclick>
     </control>
     <control type="button" id="99220">
       <include>HiddenObject</include>

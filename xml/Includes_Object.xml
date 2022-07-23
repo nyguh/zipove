@@ -1329,7 +1329,7 @@
           <param name="label" value="$VAR[Label_OSD_InfoLine]"/>
           <param name="textcolor" value="$VAR[ColorHighlight]"/>
           <param name="divider" value="false"/>
-          <param name="visible" value="Window.IsVisible(videoosd)"/>
+          <param name="visible" value="String.IsEqual(Window(home).Property(show_ext_info),True)"/>
           <param name="width" value="1200" />
         </include>
       </control>
