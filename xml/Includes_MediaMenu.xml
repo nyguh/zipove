@@ -91,7 +91,7 @@
           <onright>SetFocus(50)</onright>
           <onup>14100</onup>
           <ondown>6051</ondown>
-          <width>450</width>
+          <width>380</width>
           <include content="PVRQuickNavItemsCommon">
             <param name="control_id" value="100"/>
             <param name="area" value="Channels"/>
@@ -288,12 +288,13 @@
     <definition>
       <control type="group">
         <nested />
-        <top>0</top>
-        <centerleft>50%</centerleft>
+        <top>-110</top>
+        <right>27</right>
         <height>700</height>
-        <width>450</width>
+        <width>380</width>
         <visible>$PARAM[visible]</visible>
-        <include>Animation_DialogPopupVisible</include>
+        <include>Animation_MediaMenu</include>
+        <animation effect="slide" end="0,-70" condition="Control.IsVisible(510)">Conditional</animation>
         <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,10)">Conditional</animation>
         <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,9)">Conditional</animation>
         <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(9000).NumItems,8)">Conditional</animation>
@@ -360,7 +361,7 @@
           <onleft>$PARAM[onleft]</onleft>
           <onright>$PARAM[onright]</onright>
           <onback>$PARAM[onback]</onback>
-          <itemlayout width="450" height="70">
+          <itemlayout width="380" height="70">
             <control type="label">
               <font>font_tiny_hintlabel</font>
               <align>left</align>
@@ -385,7 +386,7 @@
               <texture colordiffuse="dialog_fg_70">$INFO[ListItem.Icon]</texture>
             </control>
           </itemlayout>
-          <focusedlayout width="450" height="70">
+          <focusedlayout width="380" height="70">
             <control type="image">
               <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
             </control>
@@ -417,6 +418,14 @@
             </control>
           </focusedlayout>
           <include>MediaMenuItems</include>
+        </control>
+        <control type="image">
+          <top>-16</top>
+          <right>48</right>
+          <width>16</width>
+          <height>16</height>
+          <texture colordiffuse="dialog_bg_100">common/arrow-menu-up.png</texture>
+          <aspectratio>keep</aspectratio>
         </control>
       </control>
     </definition>
@@ -484,7 +493,7 @@
         <itemgap>-17</itemgap>
         <left>$PARAM[left]</left>
         <onleft>14100</onleft>
-        <width>450</width>
+        <width>380</width>
         <visible>Player.HasMedia + [$EXP[MediaMenu]]</visible>
         <visible>!System.HasActiveModalDialog</visible>
         <include content="BottomMainMenuToggleItem">

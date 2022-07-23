@@ -1006,8 +1006,8 @@
             <animation effect="fade" time="100" delay="600">Hidden</animation>
             <animation effect="fade" start="100" end="0" time="200" condition="!Player.HasVideo + Window.IsActive(1140)">Conditional</animation>
             <texture background="true">common/vignette-prime.png</texture>
-            <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
-            <visible>Skin.HasSetting(Prime_Main) + !Control.HasFocus(510)</visible>
+            <visible>[[Window.IsVisible(Home) | Control.IsVisible(510)] + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
+            <visible>Skin.HasSetting(Prime_Main)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
           </control>
         </control>

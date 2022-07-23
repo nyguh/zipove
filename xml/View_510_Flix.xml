@@ -5,42 +5,20 @@
       <include>OpenClose_Right</include>
       <visible>Control.IsVisible(510)</visible>
       <include>Visible_Right</include>
-      <control type="grouplist">
-        <left>1500</left>
-        <orientation>vertical</orientation>
-        <itemgap>30</itemgap>
-        <usecontrolcoords>true</usecontrolcoords>
-        <control type="label">
-          <top>35</top>
-          <right>75</right>
-          <font>font_clock</font>
-          <align>right</align>
-          <label>$INFO[System.Time]</label>
-          <visible>!$EXP[infodialog_active]</visible>
-        </control>
-        <control type="label">
-          <top>35</top>
-          <right>75</right>
-          <align>right</align>
-          <font>font_clock</font>
-          <label>[UPPERCASE]$VAR[BreadcrumbsVideoVar][/UPPERCASE]</label>
-          <visible>!$EXP[infodialog_active]</visible>
-        </control>
-        <visible>!Skin.HasSetting(DisableClock)</visible>
-      </control>
       <control type="group" id="5600">
-        <include content="Object_Item_Showcase">
+        <include content="Object_Item_PrimeShowcase">
           <param name="title" value="$VAR[Label_Title]"/>
-          <param name="title_width" value="930"/>
-          <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
-          <param name="plot_height" value="200"/>
-          <param name="info_line_top" value="180"/>
-          <param name="plot_top" value="300"/>
-          <param name="visible_infoline" value="Control.HasFocus(510)" />
+          <param name="title_top" value="120"/>
+          <param name="title_width" value="1200" />
+          <param name="plot" value="$VAR[Label_PlotTextBoxPrimeVar]"/>
+          <param name="plot_top" value="375"/>
+          <param name="info_line_top" value="320"/>
+          <param name="visible_infoline" value="Control.HasFocus(510) | Control.HasFocus(9000)" />
+          <param name="clearlogo_top_margin" value="-740"/>
         </include>
         <include content="Object_Ratings_Content">
-          <param name="top" value="240"/>
-          <param name="left" value="150"/>
+          <param name="top" value="480"/>
+          <param name="left" value="140"/>
           <param name="align" value="left"/>
           <param name="directory" value="$INFO[Skin.String(Icons)]"/>
         </include>
@@ -52,26 +30,25 @@
         <width>2400</width>
         <scrolltime tween="linear" easing="inout">400</scrolltime>
         <orientation>horizontal</orientation>
-        <onleft>9000</onleft>
-        <onup>9000</onup>
+        <onup>SetFocus(9000)</onup>
         <ondown>511</ondown>
         <pagecontrol>511</pagecontrol>
         <focusposition>1</focusposition>
-        <animation effect="slide" time="0" start="0" end="-100,0" condition="true">Conditional</animation>
+        <animation effect="slide" time="0" start="0" end="-70,0" condition="true">Conditional</animation>
         <viewtype label="$LOCALIZE[31392]">icon</viewtype>
         <include content="View_Forced">
           <param name="string" value="$LOCALIZE[31392]"/>
         </include>
         <focusedlayout height="382.5" width="270" condition="Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
           <control type="group">
-            <include content="View_56_Posters_Layout">
+            <include content="ViewPosterItemLayout">
               <param name="WallWatchedIconVar_visible" value="false"/>
             </include>
           </control>
         </focusedlayout>
         <itemlayout height="382.5" width="270" condition="Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
           <control type="group">
-            <include content="View_56_Posters_Layout">
+            <include content="ViewPosterItemLayout">
               <param name="WallWatchedIconVar_visible" value="false"/>
             </include>
             <!-- <include content="View_WatchedOverlay">
@@ -89,7 +66,7 @@
         <height>382.5</height>
         <include content="Selectbox">
           <param name="pad_top_b" value="-13"/>
-          <param name="pad_bottom_b" value="-10"/>
+          <param name="pad_bottom_b" value="-20"/>
           <param name="pad_left_b" value="17"/>
           <param name="pad_right_b" value="-32"/>
           <param name="pad_top_t" value="-8"/>
@@ -104,19 +81,8 @@
         <include content="View_WatchedOverlay">
           <param name="bottom" value="-12"/>
           <param name="right" value="20"/>
-          <param name="visible" value="true"/>
+          <param name="visible" value="Control.HasFocus(510)"/>
         </include>
-      </control>
-      <control type="group">
-        <top>620</top>
-        <left>0</left>
-        <width>65</width>
-        <height>360</height>
-        <control type="image">
-          <texture colordiffuse="BFFFFFFF">colors/black.png</texture>
-        </control>
-        <animation effect="fade" time="400">VisibleChange</animation>
-        <visible>Integer.IsGreater(Container(510).CurrentItem,1)</visible>
       </control>
       <control type="scrollbar" id="511">
         <onup>510</onup>

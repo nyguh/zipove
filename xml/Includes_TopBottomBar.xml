@@ -54,6 +54,14 @@
             </control>
           </control>
         </control>
+        <control type="image">
+          <top>27</top>
+          <right>60</right>
+          <width>48</width>
+          <height>48</height>
+          <texture colordiffuse="FFcccccc">common/circle.png</texture>
+          <aspectratio>keep</aspectratio>
+        </control>
         <control type="grouplist">
           <top>30</top>
           <align>right</align>
@@ -62,6 +70,7 @@
           <orientation>horizontal</orientation>
           <width>1920</width>
           <itemgap>10</itemgap>
+          <usecontrolcoords>true</usecontrolcoords>
           <visible>!Window.IsVisible(extendedprogressdialog) + !Window.IsActive(fullscreenvideo)</visible>
           <animation effect="fade" time="150">VisibleChange</animation>
           <control type="group">
@@ -95,6 +104,13 @@
             <textcolor>b3ededed</textcolor>
             <animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
             <label>$INFO[System.Time]</label>
+          </control>
+          <control type="image">
+            <top>-3</top>
+            <width>48</width>
+            <height>48</height>
+            <texture colordiffuse="ff333333">special://skin/extras/icons/settings.png</texture>
+            <aspectratio>keep</aspectratio>
           </control>
         </control>
         <control type="grouplist">
