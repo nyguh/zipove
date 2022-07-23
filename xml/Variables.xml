@@ -1167,4 +1167,31 @@
   <variable name="ChannelListEPGVar">
     <value>$INFO[ListItem.EpgEventIcon]</value>
   </variable>
+  <variable name="Image_Watched">
+    <value condition="System.Setting(hidewatched)">special://skin/extras/icons/watched-hide.png</value>
+    <value>special://skin/extras/icons/watched-show.png</value>
+  </variable>
+  <variable name="Image_GroupRecordings">
+    <value condition="String.Contains(Control.GetLabel(5),*)">special://skin/extras/icons/antenna-on.png</value>
+    <value>special://skin/extras/icons/antenna.png</value>
+  </variable>
+  <variable name="Label_ExtraFanart">
+    <value>$LOCALIZE[31014]: $LOCALIZE[16039]</value>
+  </variable>
+  <variable name="Label_Filtered">
+    <value condition="Container.Filtered">$LOCALIZE[16041]</value>
+    <value>$LOCALIZE[351]</value>
+  </variable>
+  <variable name="Image_Filtered">
+    <value condition="Container.Filtered">special://skin/extras/icons/filter-on.png</value>
+    <value>special://skin/extras/icons/filter-off.png</value>
+  </variable>
+  <variable name="Label_ShowChannelIcon">
+    <value condition="!Skin.HasSetting(ShowChannelIcon)">ON</value>
+    <value>OFF</value>
+  </variable>
+  <variable name="DialogAddonButtonSelected">
+    <value condition="ListItem.IsAutoUpdateable">(*)</value>
+    <value condition="!ListItem.IsAutoUpdateable">(&#009;&#009;)</value>
+  </variable>
 </includes>
