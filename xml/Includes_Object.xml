@@ -167,24 +167,6 @@
           </control>
           <control type="label">
             <top>17</top>
-            <left>22</left>
-            <width>auto</width>
-            <textcolor>$VAR[ColorHighlight]</textcolor>
-            <font>font_rating</font>
-            <label>$VAR[Label_PrimeShowcase_Top250]</label>
-            <visible>Control.HasFocus($PARAM[id]) + Skin.HasSetting(Prime_Main)</visible>
-          </control>
-          <control type="group" id="2999">
-            <include content="Object_Ratings_Content">
-              <param name="top" value="10"/>
-              <param name="left" value="0"/>
-              <param name="directory" value="$INFO[Skin.String(Icons)]"/>
-              <param name="align" value="left"/>
-            </include>
-            <visible>Control.HasFocus($PARAM[id]) + Skin.HasSetting(Prime_Main)</visible>
-          </control>
-          <control type="label">
-            <top>17</top>
             <left>1640</left>
             <textcolor>white</textcolor>
             <shadowcolor>text_shadow</shadowcolor>
@@ -1049,6 +1031,26 @@
             <param name="visible1" value="!String.IsEmpty(ListItem.Genre)"/>
             <param name="visible3" value="!String.IsEmpty(ListItem.Cast)"/>
           </include>
+        </control>
+        <control type="group">
+          <top>545</top>
+          <left>140</left>
+          <control type="label">
+            <top>17</top>
+            <left>22</left>
+            <width>auto</width>
+            <textcolor>$VAR[ColorHighlight]</textcolor>
+            <font>font_rating</font>
+            <label>$VAR[Label_PrimeShowcase_Top250]</label>
+          </control>
+          <control type="group" id="2999">
+            <include content="Object_Ratings_Content">
+              <param name="top" value="10"/>
+              <param name="left" value="0"/>
+              <param name="directory" value="$INFO[Skin.String(Icons)]"/>
+              <param name="align" value="left"/>
+            </include>
+          </control>
         </control>
       </control>
     </definition>
