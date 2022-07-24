@@ -191,7 +191,7 @@
           <textcolor>white</textcolor>
           <label>$INFO[VideoPlayer.Title]</label>
           <visible>String.IsEmpty(Player.Art(clearlogo)) + String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
-          <animation effect="slide" time="400" start="0" end="0,-160" tween="cubic" easing="inout" condition="String.IsEqual(Window(home).Property(show_ext_info),True)">Conditional</animation>
+          <animation effect="slide" time="400" start="0" end="0,-178" tween="cubic" easing="inout" condition="String.IsEqual(Window(home).Property(show_ext_info),True)">Conditional</animation>
         </control>
         <control type="image">
           <left>60</left>
