@@ -426,30 +426,22 @@
         <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout"/>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="-25"/>
+            <param name="bottom" value="0"/>
             <param name="right" value="44"/>
-            <param name="visible" value="false"/>
+            <param name="visible" value="true"/>
           </include>
         </itemlayout>
         <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout"/>
           <include content="Selectbox">
-            <param name="pad_top_b" value="-15"/>
-            <param name="pad_bottom_b" value="-22"/>
-            <param name="pad_left_b" value="-15"/>
-            <param name="pad_right_b" value="-5"/>
-            <param name="pad_top_t" value="-10"/>
-            <param name="pad_bottom_t" value="-16"/>
-            <param name="pad_left_t" value="-10"/>
-            <param name="pad_right_t" value="0"/>
             <param name="visible_posters" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
             <param name="visible_squares" value="false"/>
             <param name="visible_landscapes" value="false"/>
           </include>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="-25"/>
+            <param name="bottom" value="0"/>
             <param name="right" value="44"/>
-            <param name="visible" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
+            <param name="selected" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
           </include>
           <control type="button">
             <include>HiddenObject</include>
@@ -467,33 +459,33 @@
         </focusedlayout>
         <!-- Square aspect ratio -->
         <itemlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
-          <include content="ViewSquareItemLayout"/>
-          <include content="View_WatchedOverlay">
-            <param name="bottom" value="-25"/>
-            <param name="right" value="72"/>
-            <param name="visible" value="false"/>
-          </include>
+          <control type="group">
+            <width>360</width>
+            <height>422.5</height>
+            <include content="ViewSquareItemLayout"/>
+            <include content="View_WatchedOverlay">
+              <param name="bottom" value="0"/>
+              <param name="right" value="48"/>
+              <param name="visible" value="true"/>
+            </include>
+          </control>
         </itemlayout>
         <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
-          <include content="ViewSquareItemLayout"/>
-          <include content="Selectbox">
-            <param name="pad_top_b" value="-15"/>
-            <param name="pad_bottom_b" value="-23"/>
-            <param name="pad_left_b" value="-15"/>
-            <param name="pad_right_b" value="17"/>
-            <param name="pad_top_t" value="-8"/>
-            <param name="pad_bottom_t" value="-18"/>
-            <param name="pad_left_t" value="-10"/>
-            <param name="pad_right_t" value="22"/>
-            <param name="visible_posters" value="false"/>
-            <param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
-            <param name="visible_landscapes" value="false"/>
-          </include>
-          <include content="View_WatchedOverlay">
-            <param name="bottom" value="-25"/>
-            <param name="right" value="72"/>
-            <param name="visible" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
-          </include>
+          <control type="group">
+            <width>360</width>
+            <height>422.5</height>
+            <include content="ViewSquareItemLayout"/>
+            <include content="Selectbox">
+              <param name="visible_posters" value="false"/>
+              <param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
+              <param name="visible_landscapes" value="false"/>
+            </include>
+            <include content="View_WatchedOverlay">
+              <param name="bottom" value="0"/>
+              <param name="right" value="48"/>
+              <param name="selected" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
+            </include>
+          </control>
           <control type="button">
             <include>HiddenObject</include>
             <include>Flix_Spotlight_ClearProperties</include>
@@ -514,9 +506,9 @@
             <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="18"/>
+            <param name="bottom" value="0"/>
             <param name="right" value="72"/>
-            <param name="visible" value="false"/>
+            <param name="visible" value="true"/>
           </include>
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
@@ -524,22 +516,14 @@
             <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
-            <param name="pad_top_b" value="-8"/>
-            <param name="pad_bottom_b" value="18"/>
-            <param name="pad_left_b" value="-8"/>
-            <param name="pad_right_b" value="10"/>
-            <param name="pad_top_t" value="-3"/>
-            <param name="pad_bottom_t" value="23"/>
-            <param name="pad_left_t" value="-3"/>
-            <param name="pad_right_t" value="15"/>
             <param name="visible_posters" value="false"/>
             <param name="visible_squares" value="false"/>
             <param name="visible_landscapes" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
           </include>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="18"/>
+            <param name="bottom" value="0"/>
             <param name="right" value="72"/>
-            <param name="visible" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
+            <param name="selected" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
           </include>
           <control type="button">
             <include>HiddenObject</include>
@@ -557,36 +541,29 @@
         </focusedlayout>
         <!-- Fanart aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
-          <include content="ViewFanartItemLayout">
+          <include content="ViewLandscapeItemLayout">
             <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
+            <param name="image_source" value="$VAR[Image_Fanart]"/>
           </include>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="18"/>
+            <param name="bottom" value="0"/>
             <param name="right" value="72"/>
-            <param name="visible" value="false"/>
+            <param name="visible" value="true"/>
           </include>
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
-          <include content="ViewFanartItemLayout">
+          <include content="ViewLandscapeItemLayout">
             <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
-            <param name="pad_top_b" value="-8"/>
-            <param name="pad_bottom_b" value="18"/>
-            <param name="pad_left_b" value="-8"/>
-            <param name="pad_right_b" value="10"/>
-            <param name="pad_top_t" value="-3"/>
-            <param name="pad_bottom_t" value="23"/>
-            <param name="pad_left_t" value="-3"/>
-            <param name="pad_right_t" value="15"/>
             <param name="visible_posters" value="false"/>
             <param name="visible_squares" value="false"/>
             <param name="visible_landscapes" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
           </include>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="18"/>
+            <param name="bottom" value="0"/>
             <param name="right" value="72"/>
-            <param name="visible" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
+            <param name="selected" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
           </include>
           <control type="button">
             <include>HiddenObject</include>
@@ -608,14 +585,16 @@
             <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
-            <param name="bottom" value="18"/>
-            <param name="right" value="72"/>
-            <param name="visible" value="false"/>
+            <param name="bottom" value="0"/>
+            <param name="right" value="48"/>
+            <param name="visible" value="true"/>
           </include>
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[primecondition]">
           <control type="group">
-            <include content="ViewPrimeItemLayout"/>
+            <include content="ViewLandscapeItemLayout">
+              <param name="prime_logo" value="true"/>
+            </include>
             <control type="image">
               <left>0</left>
               <top>200</top>
@@ -623,19 +602,8 @@
               <height>200</height>
               <texture>overlays/overlayfade.png</texture>
             </control>
-            <control type="group">
-              <height>400</height>
-              <control type="image">
-                <left>40</left>
-                <bottom>120</bottom>
-                <width>33%</width>
-                <aspectratio align="right" aligny="bottom">keep</aspectratio>
-                <texture background="true">$VAR[Image_ClearLogo]</texture>
-                <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]</visible>
-              </control>
-            </control>
             <control type="image">
-              <top>290</top>
+              <top>270</top>
               <left>160</left>
               <width>600</width>
               <height>40</height>
@@ -645,7 +613,7 @@
               <align>right</align>
             </control>
             <control type="label">
-              <top>292</top>
+              <top>275</top>
               <left>35</left>
               <width>320</width>
               <height>40</height>
@@ -656,9 +624,9 @@
               <align>left</align>
             </control>
             <control type="label">
-              <top>325</top>
+              <top>305</top>
               <left>35</left>
-              <width>500</width>
+              <width>450</width>
               <height>40</height>
               <font>font_tiny_hintlabel</font>
               <textcolor>white</textcolor>
@@ -667,22 +635,14 @@
               <align>left</align>
             </control>
             <include content="Selectbox">
-              <param name="pad_top_b" value="-8"/>
-              <param name="pad_bottom_b" value="-30"/>
-              <param name="pad_left_b" value="-8"/>
-              <param name="pad_right_b" value="10"/>
-              <param name="pad_top_t" value="-3"/>
-              <param name="pad_bottom_t" value="-23"/>
-              <param name="pad_left_t" value="-3"/>
-              <param name="pad_right_t" value="15"/>
               <param name="visible_posters" value="false"/>
               <param name="visible_squares" value="false"/>
               <param name="visible_landscapes" value="$PARAM[primecondition] + Control.HasFocus($PARAM[id])"/>
             </include>
             <include content="View_WatchedOverlay">
-              <param name="bottom" value="-30"/>
+              <param name="bottom" value="0"/>
               <param name="right" value="72"/>
-              <param name="visible" value="$PARAM[primecondition] + Control.HasFocus($PARAM[id])"/>
+              <param name="selected" value="$PARAM[primecondition] + Control.HasFocus($PARAM[id])"/>
             </include>
           </control>
           <control type="button">
