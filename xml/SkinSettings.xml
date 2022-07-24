@@ -127,14 +127,14 @@
           <control type="radiobutton" id="605" description="Enable Flix Spotlight">
             <label>$LOCALIZE[31407]</label>
             <include>DefaultSettingButton</include>
-            <visible>Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)</visible>
+            <visible>Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)</visible>
             <selected>Skin.HasSetting(EnableFlixSpotlight)</selected>
             <onclick>Skin.ToggleSetting(EnableFlixSpotlight)</onclick>
           </control>
           <control type="radiobutton" id="606" description="Flix spotlight on Enter/OK button">
             <label>$LOCALIZE[31416]</label>
             <include>DefaultSettingButton</include>
-            <visible>Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(Horizontal_Main)</visible>
+            <visible>Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Prime_Main)</visible>
             <selected>Skin.HasSetting(TriggerSpotlightOnSelect)</selected>
             <onclick>Skin.ToggleSetting(TriggerSpotlightOnSelect)</onclick>
           </control>

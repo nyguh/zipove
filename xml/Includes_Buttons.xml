@@ -395,14 +395,14 @@
           <param name="visible" value="Control.HasFocus($PARAM[id]) | $PARAM[focused]"/>
           <param name="texture" value="common/button-view-fo.png"/>
           <param name="icon" value="$PARAM[icon]"/>
-          <param name="colordiffuse-icon" value="panel_bg"/>
+          <param name="colordiffuse-icon" value="ff000000"/>
           <param name="colordiffuse-texture" value="selected"/>
         </include>
         <include content="InfoButtonLeft">
           <param name="visible" value="![Control.HasFocus($PARAM[id]) | $PARAM[focused]]"/>
           <param name="texture" value="common/button-view-nf.png"/>
           <param name="icon" value="$PARAM[icon]"/>
-          <param name="colordiffuse-icon" value="main_fg_70"/>
+          <param name="colordiffuse-icon" value="b3ededed"/>
           <param name="colordiffuse-texture" value="main_fg_12"/>
         </include>
       </control>
@@ -417,7 +417,7 @@
         <label>[UPPERCASE]$PARAM[label][COLOR=00ffffff]------[/COLOR][/UPPERCASE]</label>
         <align>left</align>
         <textoffsetx>10</textoffsetx>
-        <textcolor>main_fg_70</textcolor>
+        <textcolor>b3ededed</textcolor>
         <focusedcolor>panel_bg</focusedcolor>
         <onclick condition="$PARAM[onclick_1_condition]">$PARAM[onclick_1]</onclick>
         <onclick condition="$PARAM[onclick_2_condition]">$PARAM[onclick_2]</onclick>
@@ -450,6 +450,7 @@
         <textwidth>118</textwidth>
         <font>font_tiny_match</font>
         <label>$PARAM[label]</label>
+        <textcolor>b3ededed</textcolor>
         <textureradioonfocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonfocus>
         <textureradioonnofocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonnofocus>
         <textureradioofffocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioofffocus>
