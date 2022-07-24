@@ -155,7 +155,7 @@
           <control type="radiobutton" id="609" description="Hide Profile Info in vertical">
             <label>$LOCALIZE[31189]</label>
             <include>DefaultSettingButton</include>
-            <visible>Skin.HasSetting(Vertical_Main)</visible>
+            <visible>Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Prime_Main)</visible>
             <selected>Skin.HasSetting(DisabledProfileInfo)</selected>
             <onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
           </control>
