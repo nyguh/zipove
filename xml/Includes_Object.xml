@@ -1032,12 +1032,14 @@
             <param name="visible3" value="!String.IsEmpty(ListItem.Cast)"/>
           </include>
         </control>
-        <control type="group">
+        <control type="grouplist">
           <top>545</top>
           <left>140</left>
+          <orientation>horizontal</orientation>
+          <usecontrolcoords>true</usecontrolcoords>
           <control type="label">
             <top>17</top>
-            <left>22</left>
+            <left>0</left>
             <width>auto</width>
             <textcolor>$VAR[ColorHighlight]</textcolor>
             <font>font_rating</font>
@@ -1046,7 +1048,7 @@
           <control type="group" id="2999">
             <include content="Object_Ratings_Content">
               <param name="top" value="10"/>
-              <param name="left" value="0"/>
+              <param name="left" value="10"/>
               <param name="directory" value="$INFO[Skin.String(Icons)]"/>
               <param name="align" value="left"/>
             </include>
