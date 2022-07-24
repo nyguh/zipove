@@ -42,6 +42,7 @@
               <font>font_small_pvr_channels_bold</font>
               <aligny>center</aligny>
               <textcolor>FFededed</textcolor>
+              <selectedcolor>B3cccccc</selectedcolor>
               <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
             </control>
           </control>
@@ -72,7 +73,7 @@
                 <aligny>top</aligny>
                 <width max="660">auto</width>
                 <textcolor>B3cccccc</textcolor>
-                <selectedcolor>B3cccccc</selectedcolor>
+                <selectedcolor>ffffd700</selectedcolor>
                 <label fallback="195">$INFO[ListItem.Title]</label>
               </control>
               <include content="ProgressGradient">
@@ -127,6 +128,7 @@
               <font>font_small_pvr_channels_bold</font>
               <aligny>center</aligny>
               <textcolor>ffffd700</textcolor>
+              <selectedcolor>ffffd700</selectedcolor>
               <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
             </control>
           </control>
@@ -147,6 +149,7 @@
                 <aligny>top</aligny>
                 <width max="128">auto</width>
                 <textcolor>B3cccccc</textcolor>
+                <selectedcolor>B3cccccc</selectedcolor>
                 <label>$INFO[ListItem.StartTime]</label>
               </control>
               <control type="label">
@@ -156,6 +159,7 @@
                 <aligny>top</aligny>
                 <width max="660">auto</width>
                 <textcolor>ffffd700</textcolor>
+                <selectedcolor>ffffd700</selectedcolor>
                 <label fallback="195">$INFO[ListItem.Title]</label>
               </control>
               <include content="ProgressGradient">
@@ -175,6 +179,7 @@
                 <aligny>top</aligny>
                 <width max="128">auto</width>
                 <textcolor>B3cccccc</textcolor>
+                <selectedcolor>B3cccccc</selectedcolor>
                 <label>$INFO[ListItem.NextStartTime]</label>
               </control>
               <control type="label">
@@ -184,6 +189,7 @@
                 <aligny>top</aligny>
                 <width max="660">auto</width>
                 <textcolor>white</textcolor>
+                <selectedcolor>white</selectedcolor>
                 <label>$INFO[ListItem.NextTitle]</label>
               </control>
             </control>
