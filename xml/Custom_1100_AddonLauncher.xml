@@ -2,9 +2,9 @@
 <window id="1100">
   <defaultcontrol always="true">9000</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
-    <include>OpenClose_Animation</include>
     <control type="multiimage">
       <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
@@ -75,7 +75,6 @@
         </include>
       </control>
       <control type="group">
-        <include>OpenClose_Left</include>
         <include content="ContentPanel">
           <param name="width" value="523"/>
         </include>
@@ -231,7 +230,6 @@
         <height>120</height>
         <onup>SetFocus(9000,99,absolute)</onup>
         <ondown>SetFocus(9000,0,absolute)</ondown>
-        <include>OpenClose_Left</include>
         <onright>400</onright>
         <usecontrolcoords>true</usecontrolcoords>
         <control type="radiobutton" id="801">

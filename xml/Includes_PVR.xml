@@ -534,8 +534,6 @@
   </include>
   <include name="PVRChannelsOSDLayout_Legacy">
     <control type="group">
-      <depth>DepthOSD</depth>
-      <include>OpenClose_Left</include>
       <control type="image">
         <width>970</width>
         <texture background="true">lists/panel.png</texture>
@@ -1171,7 +1169,6 @@
       <depth>DepthOSD</depth>
       <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
       <control type="group">
-        <include>OpenClose_Left</include>
         <control type="image">
           <width>780</width>
           <texture background="true">lists/panel.png</texture>

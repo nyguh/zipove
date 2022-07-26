@@ -56,7 +56,6 @@
       </include>
       <control type="group" id="10000">
         <left>470</left>
-        <include>OpenClose_Right</include>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="600"/>
           <top>60</top>
