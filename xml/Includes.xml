@@ -1383,7 +1383,6 @@
         <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">progress/progress-right.png</righttexture>
         <include content="ProgressColorFade">
           <param name="id" value="$PARAM[id]"/>
-          <param name="info" value="$PARAM[info]"/>
         </include>
       </control>
     </definition>
@@ -1493,10 +1492,9 @@
     </definition>
   </include>
   <include name="ProgressColorFade">
-    <param name="info" default="Control.GetLabel($PARAM[id])"/>
     <definition>
       <include content="ProgressColorFader">
-        <param name="info" value="$PARAM[info]"/>
+        <param name="info" value="Control.GetLabel($PARAM[id])"/>
       </include>
     </definition>
   </include>
