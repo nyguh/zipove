@@ -38,11 +38,6 @@
             <textcolor>main_fg_70</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
-          <control type="group">
-            <left>-160</left>
-            <top>80</top>
-            <include>MediaFlags_NewLine</include>
-          </control>
           <control type="textbox">
             <left>-160</left>
             <top>140</top>

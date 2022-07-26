@@ -126,6 +126,7 @@
           <itemgap>0</itemgap>
           <orientation>horizontal</orientation>
           <usecontrolcoords>true</usecontrolcoords>
+          <animation effect="slide" end="-70,0" time="0" condition="!Window.IsVisible(Home)">conditional</animation>
           <control type="label">
             <height>50</height>
             <width>auto</width>
