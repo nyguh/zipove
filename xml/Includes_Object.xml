@@ -165,15 +165,6 @@
             <visible>Container($PARAM[id]).IsUpdating</visible>
             <visible>Control.HasFocus($PARAM[id])</visible>
           </control>
-          <control type="label">
-            <top>17</top>
-            <left>1640</left>
-            <textcolor>white</textcolor>
-            <shadowcolor>text_shadow</shadowcolor>
-            <font>font_rating</font>
-            <label>$INFO[System.Time]</label>
-            <visible>Skin.HasSetting(Prime_Main) + !Skin.HasSetting(DisableClock)</visible>
-          </control>
         </control>
       </control>
     </definition>

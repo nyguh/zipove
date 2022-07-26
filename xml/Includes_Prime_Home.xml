@@ -391,6 +391,7 @@
           </control>
         </control>
       </control>
+      <include>TopBar</include>
     </control>
   </include>
 </includes>
