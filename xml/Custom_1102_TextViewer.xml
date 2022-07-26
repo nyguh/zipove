@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1102">
   <defaultcontrol always="true">1000</defaultcontrol>
-  <include>Animation_DialogPopupOpenClose</include>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="image">
       <width>1920</width>

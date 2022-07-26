@@ -5,6 +5,7 @@
   <onunload>ClearProperty(infobackground,home)</onunload>
   <onunload>ClearProperty(spotlight.user_rating,home)</onunload>
   <onload condition="String.IsEqual(Window(home).Property(spotlight.user_rating),true)">SendClick(7)</onload>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="group">
       <centertop>50%</centertop>

@@ -4,6 +4,7 @@
   <backgroundcolor>Background</backgroundcolor>
   <controls>
     <include>DefaultBackground</include>
+    <include>OpenClose_Animation</include>
     <control type="multiimage">
       <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
@@ -19,7 +20,6 @@
     <control type="group">
       <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
       <control type="group" id="400">
-        <include>OpenClose_Right</include>
         <include content="AddonLauncherPanel">
           <param name="group_id" value="500"/>
           <param name="id" value="video"/>

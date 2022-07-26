@@ -4,6 +4,7 @@
   <backgroundcolor>Background</backgroundcolor>
   <views>50</views>
   <menucontrol>9000</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
@@ -11,11 +12,8 @@
       <control type="group">
         <description>Guide Timeline</description>
         <visible>Control.IsVisible(50)</visible>
-        <include>OpenClose_Right</include>
-        <include>Visible_Right</include>
         <control type="group">
           <top>0</top>
-          <depth>DepthContentPanel</depth>
           <control type="group">
             <top>140</top>
             <left>100</left>

@@ -2,9 +2,7 @@
 <includes>
   <include name="View_510_Flix">
     <control type="group">
-      <include>OpenClose_Right</include>
       <visible>Control.IsVisible(510)</visible>
-      <include>Visible_Right</include>
       <control type="group" id="5600">
         <include content="Object_Item_PrimeShowcase">
           <param name="title" value="$VAR[Label_Title]"/>

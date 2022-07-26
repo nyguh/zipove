@@ -89,14 +89,6 @@
         <include content="ViewLandscapeItemLayout">
         </include>
         <include content="Selectbox">
-          <param name="pad_top_b" value="-8"/>
-          <param name="pad_bottom_b" value="18"/>
-          <param name="pad_left_b" value="-8"/>
-          <param name="pad_right_b" value="10"/>
-          <param name="pad_top_t" value="-3"/>
-          <param name="pad_bottom_t" value="23"/>
-          <param name="pad_left_t" value="-3"/>
-          <param name="pad_right_t" value="15"/>
           <param name="visible_posters" value="false"/>
           <param name="visible_squares" value="false"/>
           <param name="visible_landscapes" value="true + Control.HasFocus(1060)"/>
@@ -137,14 +129,6 @@
         <width>297</width>
         <height>407</height>
         <include content="Selectbox">
-          <param name="pad_top_b" value="2"/>
-          <param name="pad_bottom_b" value="1"/>
-          <param name="pad_left_b" value="1"/>
-          <param name="pad_right_b" value="1"/>
-          <param name="pad_top_t" value="6"/>
-          <param name="pad_bottom_t" value="6"/>
-          <param name="pad_left_t" value="6"/>
-          <param name="pad_right_t" value="6"/>
           <param name="visible_posters" value="true"/>
           <param name="visible_squares" value="false"/>
           <param name="visible_landscapes" value="false"/>
@@ -569,11 +553,9 @@
   </include>
   <include name="View_54_InfoWall">
     <control type="group">
-      <include>OpenClose_Right</include>
       <left>100</left>
       <top>0</top>
       <visible>Control.IsVisible(54)</visible>
-      <include>Visible_Right</include>
       <control type="panel" id="54">
         <left>490</left>
         <top>0</top>

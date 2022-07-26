@@ -424,7 +424,7 @@ msgstr "Εμφάνιση πληροφοριών καιρού στην επάνω
 
 #: /xml/SkinSettings.xml
 msgctxt "#31095"
-msgid "Use slide animations"
+msgid "Use OpenClose Animations"
 msgstr "Χρησιμοποιήστε animations διαφανειών"
 
 #: /xml/DialogSubtitles.xml

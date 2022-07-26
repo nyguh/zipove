@@ -27,8 +27,6 @@
       </control>
       <control type="group">
         <visible>Control.IsVisible(57)</visible>
-        <include>Visible_Right</include>
-        <include>OpenClose_Right</include>
         <top>160</top>
         <control type="list" id="57">
           <left>0</left>
@@ -56,7 +54,6 @@
               <texture colordiffuse="CCFFFFFF">diffuse/box-sharp.png</texture>
             </control>
             <control type="image">
-              <depth>DepthContentPopout</depth>
               <left>0</left>
               <bottom>60</bottom>
               <width>200</width>
@@ -86,7 +83,6 @@
               <texture colordiffuse="$VAR[ColorHighlight]">colors/grey.png</texture>
             </control>
             <control type="image">
-              <depth>DepthContentPopout</depth>
               <left>0</left>
               <bottom>60</bottom>
               <width>200</width>

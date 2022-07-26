@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1118">
   <defaultcontrol>9000</defaultcontrol>
-  <include>Animation_DialogPopupOpenClose</include>
+  <include>OpenClose_Animation</include>
   <coordinates>
     <origin x="50%" y="175"/>
   </coordinates>

@@ -120,8 +120,6 @@
         <height>720</height>
         <control type="group">
           <visible>Control.IsVisible(56)</visible>
-          <include>Visible_Right</include>
-          <include>OpenClose_Right</include>
           <control type="fixedlist" id="56">
             <top>466</top>
             <left>630</left>
@@ -161,14 +159,6 @@
                   <param name="WallWatchedIconVar_visible" value="false"/>
                 </include>
                 <include content="Selectbox">
-                  <param name="pad_top_b" value="-13"/>
-                  <param name="pad_bottom_b" value="18"/>
-                  <param name="pad_left_b" value="17"/>
-                  <param name="pad_right_b" value="10"/>
-                  <param name="pad_top_t" value="-8"/>
-                  <param name="pad_bottom_t" value="20"/>
-                  <param name="pad_left_t" value="17"/>
-                  <param name="pad_right_t" value="14"/>
                   <param name="visible_posters" value="true"/>
                   <param name="visible_squares" value="false"/>
                   <param name="visible_landscapes" value="false"/>

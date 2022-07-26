@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1130">
   <defaultcontrol always="true">1000</defaultcontrol>
-  <include>Animation_DialogPopupOpenClose</include>
+  <include>OpenClose_Animation</include>
   <onunload>ClearProperty(Title,1130)</onunload>
   <onunload>ClearProperty(Plot,1130)</onunload>
   <controls>

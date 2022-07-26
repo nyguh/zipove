@@ -2,11 +2,9 @@
 <includes>
   <include name="View_500_Wall">
     <control type="group">
-      <include>OpenClose_Right</include>
       <left>50</left>
       <top>0</top>
       <visible>Control.IsVisible(500)</visible>
-      <include>Visible_Right</include>
       <control type="panel" id="500">
         <left>0</left>
         <top>0</top>
@@ -33,7 +31,6 @@
         </itemlayout>
         <focusedlayout height="445" width="300" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
           <control type="group">
-            <depth>DepthContentPopout</depth>
             <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,300">Focus</animation>
             <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,300">UnFocus</animation>
             <top>120</top>
@@ -53,7 +50,6 @@
         </itemlayout>
         <focusedlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
           <control type="group">
-            <depth>DepthContentPopout</depth>
             <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,280">Focus</animation>
             <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,280">UnFocus</animation>
             <top>110</top>
@@ -72,7 +68,6 @@
         </itemlayout>
         <focusedlayout height="425" width="442" condition="Container.Content(images)">
           <control type="group">
-            <depth>DepthContentPopout</depth>
             <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,330">Focus</animation>
             <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,330">UnFocus</animation>
             <left>40</left>
@@ -92,7 +87,6 @@
         </itemlayout>
         <focusedlayout height="401" width="300" condition="Container.Content(artists) | Container.Content(albums)">
           <control type="group">
-            <depth>DepthContentPopout</depth>
             <top>150</top>
             <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,350">Focus</animation>
             <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,350">UnFocus</animation>
@@ -112,7 +106,6 @@
         </itemlayout>
         <focusedlayout height="401" width="300" condition="Container.Content(addons)">
           <control type="group">
-            <depth>DepthContentPopout</depth>
             <top>150</top>
             <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="150,350">Focus</animation>
             <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="150,350">UnFocus</animation>

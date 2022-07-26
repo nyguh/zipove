@@ -2,7 +2,7 @@
 <window type="dialog" id="1116">
   <defaultcontrol always="true">8999</defaultcontrol>
   <onunload>ClearProperty(colorpick,home)</onunload>
-  <include>Animation_DialogPopupOpenClose</include>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="group">
       <width>980</width>

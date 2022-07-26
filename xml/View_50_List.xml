@@ -2,12 +2,10 @@
 <includes>
   <include name="View_50_List">
     <control type="group">
-      <include>OpenClose_Bottom</include>
       <top>120</top>
       <left>0</left>
       <height>800</height>
       <visible>Control.IsVisible(50)</visible>
-      <include>Visible_Right</include>
       <include content="ListContainer">
         <param name="list_id" value="50"/>
         <param name="right" value="836"/>
@@ -15,7 +13,6 @@
         <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)"/>
       </include>
       <control type="group">
-        <depth>DepthContentPanel</depth>
         <control type="group">
           <right>-20</right>
           <width>634</width>
@@ -28,9 +25,6 @@
   </include>
   <include name="RightListPanel">
     <control type="group">
-        <depth>DepthContentPanel</depth>
-        <include>OpenClose_Bottom</include>
-        <include>Visible_Left</include>
         <control type="group">
           <width>656</width>
           <height>450</height>
@@ -60,18 +54,6 @@
             <label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
             <autoscroll delay="5000" time="5000" repeat="10000">!Skin.HasSetting(autoscroll)</autoscroll>
           </control>
-<!--          <control type="textbox">-->
-<!--            <left>-160</left>-->
-<!--            <top>360</top>-->
-<!--            <width>530</width>-->
-<!--            <height>413</height>-->
-<!--            <align>center</align>-->
-<!--            <aligny>center</aligny>-->
-<!--            <font>font27</font>-->
-<!--            <textcolor>80FFFFFF</textcolor>-->
-<!--            <label>$LOCALIZE[19055]</label>-->
-<!--            <visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>-->
-<!--          </control>-->
           <control type="group">
             <left>20</left>
             <top>245</top>
@@ -87,7 +69,6 @@
         </control>
       </control>
     <control type="group">
-      <depth>DepthContentPanel</depth>
       <control type="group">
         <right>-32</right>
         <control type="group">
@@ -300,7 +281,6 @@
     <param name="top">105</param>
     <definition>
       <control type="group">
-        <depth>DepthContentPanel</depth>
         <control type="image">
           <left>40</left>
           <top>$PARAM[top]</top>

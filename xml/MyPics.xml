@@ -4,6 +4,7 @@
   <backgroundcolor>Background</backgroundcolor>
   <views>50,52,53,54,55,500</views>
   <menucontrol>9000</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
@@ -19,9 +20,7 @@
       <include>View_500_Wall</include>
       <include>CommonScrollbars</include>
       <control type="group">
-        <include>OpenClose_Left</include>
         <visible>Control.Isvisible(54)</visible>
-        <include>Visible_Left</include>
         <visible>Container.Content(images)</visible>
         <include content="ContentPanel">
           <param name="width" value="656"/>
@@ -191,9 +190,7 @@
         </control>
       </control>
       <control type="group">
-        <include>OpenClose_Left</include>
         <visible>Control.IsVisible(50) | Control.IsVisible(55)</visible>
-        <include>Visible_Left</include>
         <include>ListThumbInfoPanel</include>
       </control>
       <include content="TopBar">

@@ -3,6 +3,7 @@
   <defaultcontrol always="true">15100</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
   <menucontrol>10000</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="button" id="20000">
       <include>HiddenObject</include>
@@ -39,7 +40,6 @@
       <include>ColoredBackgroundImages</include>
     </control>
     <control type="multiimage">
-      <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
       <aspectratio>scale</aspectratio>
       <fadetime>400</fadetime>

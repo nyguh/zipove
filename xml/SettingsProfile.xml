@@ -2,10 +2,10 @@
 <window>
   <defaultcontrol always="true">9000</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="multiimage">
-      <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
       <aspectratio>scale</aspectratio>
       <fadetime>600</fadetime>
@@ -21,7 +21,6 @@
       <height>833</height>
       <left>260</left>
       <top>100</top>
-      <include>OpenClose_Right</include>
       <control type="image">
         <texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
         <bordertexture border="24">common/shadow-dialog-24.png</bordertexture>
@@ -47,7 +46,6 @@
         <texture colordiffuse="$VAR[ColorHighlight]" border="2">common/separator-grey-vertical.png</texture>
       </control>
       <control type="group" id="9100">
-        <include>OpenClose_Right</include>
         <left>472</left>
         <control type="panel" id="2">
           <top>148</top>
@@ -206,8 +204,6 @@
         </control>
       </control>
       <control type="group">
-        <depth>DepthContentPanel</depth>
-        <include>OpenClose_Left</include>
         <control type="list" id="9000">
           <left>0</left>
           <top>130</top>

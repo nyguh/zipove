@@ -4,10 +4,10 @@
   <backgroundcolor>Background</backgroundcolor>
   <views>50,51</views>
   <menucontrol>9000</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
-      <include>OpenClose_Bottom</include>
       <control type="label">
         <top>30</top>
         <left>60</left>

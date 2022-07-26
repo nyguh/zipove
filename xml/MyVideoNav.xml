@@ -4,6 +4,7 @@
   <backgroundcolor>Background</backgroundcolor>
   <views>50,510,51,52,53,54,55,56,57,500,501,502</views>
   <menucontrol>9000</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
@@ -21,10 +22,7 @@
       <include>View_501_Banner</include>
       <include>View_502_FanArt</include>
       <control type="group">
-        <depth>DepthContentPanel</depth>
-        <include>OpenClose_Left</include>
         <visible>Control.IsVisible(55)</visible>
-        <include>Visible_Left</include>
         <include>ListThumbInfoPanel</include>
       </control>
       <control type="group">

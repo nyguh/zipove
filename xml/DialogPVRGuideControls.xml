@@ -2,7 +2,6 @@
 <window>
   <defaultcontrol always="true">602</defaultcontrol>
   <include>Animation_BottomSlide</include>
-  <depth>DepthOSD</depth>
   <controls>
     <control type="button">
       <description>background close area</description>

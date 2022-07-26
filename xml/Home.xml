@@ -49,7 +49,7 @@
       </content>
     </control>
     <control type="group">
-      <include>Visible_Fade</include>
+      <include>OpenClose_Animation</include>
       <include condition="Skin.HasSetting(Prime_Main)">Prime_Main</include>
       <include condition="Skin.HasSetting(Vertical_Main)">Vertical_Main</include>
       <include condition="Skin.HasSetting(Classic_Main)">Classic_Main</include>

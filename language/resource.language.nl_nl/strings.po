@@ -424,7 +424,7 @@ msgstr "Toon weersinformatie in de bovenste balk"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31095"
-msgid "Use slide animations"
+msgid "Use OpenClose Animations"
 msgstr "Dia animaties gebruiken"
 
 #: /xml/DialogSubtitles.xml

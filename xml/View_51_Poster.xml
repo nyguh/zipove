@@ -26,8 +26,6 @@
       </control>
       <control type="group">
         <visible>Control.IsVisible(51)</visible>
-        <include>Visible_Right</include>
-        <include>OpenClose_Right</include>
         <control type="fixedlist" id="51">
           <left>0</left>
           <top>0</top>
@@ -124,10 +122,7 @@
       <centertop>50%</centertop>
       <height>670</height>
       <left>101</left>
-      <depth>DepthContentPopout</depth>
       <visible>Control.IsVisible(51)</visible>
-      <include>OpenClose_Left</include>
-      <include>Visible_Left</include>
       <control type="image">
         <top>-16</top>
         <left>-16</left>

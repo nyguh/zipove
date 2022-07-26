@@ -2,6 +2,7 @@
 <window>
   <defaultcontrol always="true">20</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="image">
@@ -16,7 +17,6 @@
     </control>
     <control type="group">
       <left>0</left>
-      <include>OpenClose_Left</include>
       <include content="ContentPanel">
         <param name="width" value="872"/>
       </include>
@@ -42,7 +42,6 @@
     <control type="group">
       <width>818</width>
       <right>0</right>
-      <include>OpenClose_Right</include>
       <include content="ContentPanel">
         <param name="width" value="878"/>
         <param name="flipx" value="true"/>

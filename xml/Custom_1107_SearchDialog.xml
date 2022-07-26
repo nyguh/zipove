@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1107">
   <defaultcontrol always="true">9000</defaultcontrol>
-  <include>Animation_DialogPopupOpenClose</include>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="group">
       <centerleft>50%</centerleft>

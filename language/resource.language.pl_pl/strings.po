@@ -326,8 +326,8 @@ msgid "Show weather info in top bar"
 msgstr "Pokazuj aktualną pogodę w górnym pasku"
 
 msgctxt "#31095"
-msgid "Use slide animations"
-msgstr "Używaj animacji przesuwania"
+msgid "Use OpenClose Animations"
+msgstr "Używaj animacji podczas otwierania/zamykania"
 
 msgctxt "#31096"
 msgid "Local subtitle available"

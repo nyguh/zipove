@@ -4,6 +4,7 @@
   <backgroundcolor>Background</backgroundcolor>
   <views>50,52,55</views>
   <menucontrol>9000</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
@@ -13,10 +14,8 @@
       <include>View_55_WideList</include>
       <include>CommonScrollbars</include>
       <control type="group">
-        <include>OpenClose_Left</include>
         <visible>Control.IsVisible(55)</visible>
         <visible>Container.Content(addons) | Container.Content()</visible>
-        <include>Visible_Left</include>
         <include content="ListThumbInfoPanel">
           <param name="fallback_image" value="DefaultAddon.png"/>
         </include>

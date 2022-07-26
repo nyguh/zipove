@@ -4,14 +4,13 @@
   <menucontrol>9000</menucontrol>
   <views>50</views>
   <menucontrol>6053</menucontrol>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
       <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
       <control type="group">
         <visible>Control.IsVisible(50)</visible>
-        <include>OpenClose_Left</include>
-        <include>Visible_Left</include>
         <control type="fixedlist" id="50">
           <left>0</left>
           <top>100</top>
@@ -34,8 +33,6 @@
         </control>
       </control>
       <control type="group">
-        <depth>DepthContentPanel</depth>
-        <include>OpenClose_Right</include>
         <width>870</width>
         <right>0</right>
         <include content="ContentPanel">

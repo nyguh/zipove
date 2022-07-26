@@ -424,7 +424,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31095"
-msgid "Use slide animations"
+msgid "Use OpenClose Animations"
 msgstr ""
 
 #: /xml/DialogSubtitles.xml

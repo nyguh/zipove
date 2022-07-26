@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="buttonMenu" id="111">
   <defaultcontrol>111</defaultcontrol>
-  <include>Animation_DialogPopupOpenClose</include>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="group">
       <nested />
-      <top>75</top>
+      <top>70</top>
       <centerleft>50%</centerleft>
       <height>720</height>
       <width>450</width>
@@ -57,14 +57,14 @@
       <include content="DefaultSettingButtonGradient">
         <param name="id" value="111"/>
         <top>25</top>
-        <height>75</height>
+        <height>70</height>
         <left>0</left>
         <visible>Control.HasFocus(111)</visible>
       </include>
       <control type="panel" id="111">
         <top>25</top>
         <orientation>vertical</orientation>
-        <itemlayout width="450" height="75">
+        <itemlayout width="450" height="70">
           <control type="label">
             <font>font_tiny_hintlabel</font>
             <align>left</align>
@@ -80,7 +80,7 @@
             <texture colordiffuse="dialog_fg_70">$INFO[ListItem.Icon]</texture>
           </control>
         </itemlayout>
-        <focusedlayout width="450" height="75">
+        <focusedlayout width="450" height="70">
           <control type="image">
             <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
           </control>

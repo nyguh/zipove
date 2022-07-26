@@ -4,6 +4,7 @@
   <backgroundcolor>Background</backgroundcolor>
   <menucontrol>9000</menucontrol>
   <views>55,503</views>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="group">
@@ -12,8 +13,6 @@
       <include condition="Window.IsActive(musicplaylist)">View_503_NowPlaying</include>
       <include>CommonScrollbars</include>
       <control type="group">
-        <include>OpenClose_Left</include>
-        <include>Visible_Left</include>
         <include>ListThumbInfoPanel</include>
       </control>
       <include content="TopBar" condition="Window.IsActive(videoplaylist)">
@@ -29,7 +28,6 @@
       </include>
       <control type="group">
         <visible>!Container.Content(songs)</visible>
-        <depth>DepthBars</depth>
         <bottom>0</bottom>
         <height>70</height>
         <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>

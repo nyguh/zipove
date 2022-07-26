@@ -2,10 +2,10 @@
 <window>
   <defaultcontrol>3</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="multiimage">
-      <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
       <aspectratio>scale</aspectratio>
       <animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -35,7 +35,6 @@
       <top>180</top>
       <width>1680</width>
       <height>850</height>
-      <include>OpenClose_Right</include>
       <control type="image">
         <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
         <bordertexture border="20">common/shadow-20.png</bordertexture>
@@ -54,7 +53,6 @@
         <height>800</height>
       </include>
       <control type="group">
-        <include>OpenClose_Right</include>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="5"/>
           <param name="height" value="70"/>
@@ -111,8 +109,6 @@
           <aligny>center</aligny>
       </control>
       <control type="group">
-        <depth>DepthContentPanel</depth>
-        <include>OpenClose_Left</include>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="3"/>
           <param name="height" value="70"/>
@@ -204,7 +200,6 @@
       </control>
     </control>
     <control type="textbox" id="6">
-      <include>OpenClose_Right</include>
       <description>description area</description>
       <top>1030</top>
       <left>125</left>

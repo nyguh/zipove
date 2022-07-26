@@ -28,8 +28,6 @@
       </control>
       <control type="group">
         <visible>Control.IsVisible(53)</visible>
-        <include>Visible_Right</include>
-        <include>OpenClose_Right</include>
         <top>160</top>
         <control type="image">
           <left>600</left>
@@ -66,7 +64,6 @@
           </include>
           <itemlayout width="370">
             <control type="image">
-              <depth>DepthContentPopout</depth>
               <left>0</left>
               <top>90</top>
               <width>370</width>
@@ -100,7 +97,6 @@
           </itemlayout>
           <focusedlayout width="370">
             <control type="image">
-              <depth>DepthContentPopout</depth>
               <left>0</left>
               <top>90</top>
               <width>370</width>

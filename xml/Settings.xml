@@ -2,10 +2,10 @@
 <window>
   <defaultcontrol>9000</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="multiimage">
-      <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
       <aspectratio>scale</aspectratio>
       <animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -38,7 +38,6 @@
       <width>1600</width>
       <top>50</top>
       <bottom>0</bottom>
-      <include>OpenClose_Right</include>
       <control type="panel" id="9000">
         <left>0</left>
         <right>0</right>

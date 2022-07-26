@@ -4,10 +4,10 @@
   <backgroundcolor>Background</backgroundcolor>
   <onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
   <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onunload>
+  <include>OpenClose_Animation</include>
   <controls>
     <include>DefaultBackground</include>
     <control type="multiimage">
-      <depth>DepthBackground</depth>
       <include>FullScreenDimensions</include>
       <aspectratio>scale</aspectratio>
       <fadetime>600</fadetime>
@@ -37,7 +37,6 @@
       <top>180</top>
       <width>1680</width>
       <height>850</height>
-      <include>OpenClose_Right</include>
       <control type="image">
         <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
         <bordertexture border="20">common/shadow-20.png</bordertexture>
@@ -376,8 +375,8 @@
           <control type="radiobutton" id="809" description="Disable slide animations">
             <label>$LOCALIZE[31095]</label>
             <include>DefaultSettingButton</include>
-            <selected>!Skin.HasSetting(no_slide_animations)</selected>
-            <onclick>Skin.ToggleSetting(no_slide_animations)</onclick>
+            <selected>!Skin.HasSetting(no_openclose_animations)</selected>
+            <onclick>Skin.ToggleSetting(no_openclose_animations)</onclick>
           </control>
           <control type="radiobutton" id="810" description="Show weather info in topbar">
             <label>$LOCALIZE[31093]</label>
@@ -861,7 +860,6 @@
       </control>
       <control type="group">
         <left>0</left>
-        <include>OpenClose_Left</include>
         <control type="list" id="9000">
           <description>button area</description>
           <left>0</left>
@@ -963,7 +961,6 @@
       </control>
     </control>
     <control type="textbox" id="6">
-      <include>OpenClose_Right</include>
       <description>description area</description>
       <top>1030</top>
       <left>125</left>

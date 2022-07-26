@@ -2,11 +2,9 @@
 <includes>
   <include name="View_501_Banner">
     <control type="group">
-      <include>OpenClose_Right</include>
       <left>80</left>
       <top>0</top>
       <visible>Control.IsVisible(501)</visible>
-      <include>Visible_Right</include>
       <control type="panel" id="501">
         <right>20</right>
         <top>0</top>

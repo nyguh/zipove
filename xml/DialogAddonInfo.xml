@@ -4,6 +4,7 @@
   <onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
   <onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
   <onunload>ClearProperty(infobackground,home)</onunload>
+  <include>OpenClose_Animation</include>
   <controls>
     <control type="group">
       <centertop>60%</centertop>
@@ -11,7 +12,6 @@
       <centerleft>50%</centerleft>
       <width>1920</width>
       <control type="group">
-        <include>OpenClose_Right</include>
         <control type="button" id="5000">
           <left>606</left>
           <top>400</top>
@@ -196,7 +196,6 @@
         </control>
       </control>
       <control type="group">
-        <include>OpenClose_Left</include>
         <top>158</top>
         <left>80</left>
         <control type="image">
