@@ -17,9 +17,7 @@
   </include>
   <include name="OpenClose_Animation">
     <include condition="Skin.HasSetting(no_openclose_animations)">Visible_Fade</include>
-    <include content="OpenClose_ZoomFade" condition="!Skin.HasSetting(no_openclose_animations)">
-      <param name="id" value="$PARAM[id]"/>
-    </include>
+    <include content="OpenClose_ZoomFade" condition="!Skin.HasSetting(no_openclose_animations)"/>
   </include>
   <include name="OpenClose_ZoomFade">
     <animation type="WindowOpen" reversible="false">
