@@ -1027,6 +1027,7 @@
           <top>545</top>
           <left>140</left>
           <orientation>horizontal</orientation>
+          <itemgap>12</itemgap>
           <usecontrolcoords>true</usecontrolcoords>
           <control type="label">
             <top>17</top>
@@ -1035,11 +1036,12 @@
             <textcolor>$VAR[ColorHighlight]</textcolor>
             <font>font_rating</font>
             <label>$VAR[Label_PrimeShowcase_Top250]</label>
+            <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Top250))</visible>
           </control>
           <control type="group" id="2999">
             <include content="Object_Ratings_Content">
               <param name="top" value="10"/>
-              <param name="left" value="10"/>
+              <param name="left" value="0"/>
               <param name="directory" value="$INFO[Skin.String(Icons)]"/>
               <param name="align" value="left"/>
             </include>

@@ -59,7 +59,7 @@
             <top>7</top>
             <width>110</width>
             <height>110</height>
-            <texture>$VAR[InfoWallThumbVar]</texture>
+            <texture colordiffuse="dialog_fg_70">$VAR[InfoWallThumbVar]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
@@ -91,7 +91,7 @@
             <centertop>50%</centertop>
             <width>24</width>
             <height>24</height>
-            <texture colordiffuse="dialog_fg_70">buttons/check-on.png</texture>
+            <texture>buttons/check-on.png</texture>
             <visible>ListItem.IsSelected</visible>
           </control>
           <control type="image">
@@ -99,7 +99,7 @@
             <centertop>50%</centertop>
             <width>24</width>
             <height>24</height>
-            <texture colordiffuse="dialog_fg_70">buttons/check-off.png</texture>
+            <texture>buttons/check-off.png</texture>
             <visible>!ListItem.IsSelected</visible>
           </control>
           <control type="image">
@@ -117,7 +117,7 @@
             <height>125</height>
             <font>font27</font>
             <aligny>center</aligny>
-            <textcolor>dialog_fg_70</textcolor>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
           </control>
         </focusedlayout>
