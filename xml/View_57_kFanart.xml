@@ -15,14 +15,14 @@
           <bottom>0</bottom>
           <width>100%</width>
           <height>380</height>
-          <texture colordiffuse="CCFFFFFF">diffuse/box-sharp.png</texture>
+          <texture colordiffuse="dialog_bg_70">common/white.png</texture>
         </control>
         <control type="image">
           <right>0</right>
           <bottom>40</bottom>
           <width>36%</width>
           <height>330</height>
-          <texture colordiffuse="CCFFFFFF">diffuse/box-sharp.png</texture>
+          <texture colordiffuse="dialog_bg_70">common/white.png</texture>
         </control>
       </control>
       <control type="group">
@@ -33,13 +33,11 @@
           <top>0</top>
           <width>62.5%</width>
           <height>695</height>
-          <pagecontrol>5199</pagecontrol>
           <scrolltime tween="cubic" easing="out">500</scrolltime>
           <orientation>horizontal</orientation>
           <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
           <onleft>53</onleft>
-          <onup>9000</onup>
-          <ondown>5199</ondown>
+          <onup>SetFocus(9000)</onup>
           <onright>53</onright>
           <viewtype label="31362">icon</viewtype>
           <include content="View_Forced">
@@ -51,7 +49,7 @@
               <bottom>15</bottom>
               <width>200</width>
               <height>45</height>
-              <texture colordiffuse="CCFFFFFF">diffuse/box-sharp.png</texture>
+              <texture colordiffuse="dialog_bg_70">common/white.png</texture>
             </control>
             <control type="image">
               <left>0</left>
@@ -61,14 +59,14 @@
               <aspectratio aligny="center">scale</aspectratio>
               <texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
             </control>
-            <control type="textbox">
+            <control type="label">
               <left>10</left>
               <bottom>20</bottom>
               <width>180</width>
-              <height>35</height>
+              <height>30</height>
               <aligny>center</aligny>
-              <font>font_tiny10</font>
-              <textcolor>ff181818</textcolor>
+              <font>font_tiny_hintlabel</font>
+              <textcolor>dialog_fg_30</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </itemlayout>
@@ -78,7 +76,6 @@
               <bottom>15</bottom>
               <width>200</width>
               <height>45</height>
-              <visible>Control.HasFocus(57)</visible>
               <animation effect="fade" time="200">VisibleChange</animation>
               <texture colordiffuse="$VAR[ColorHighlight]">colors/grey.png</texture>
             </control>
@@ -90,15 +87,15 @@
               <aspectratio aligny="center">scale</aspectratio>
               <texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
             </control>
-            <control type="textbox">
+            <control type="label">
               <left>10</left>
               <bottom>20</bottom>
               <width>180</width>
-              <height>35</height>
+              <height>30</height>
               <aligny>center</aligny>
-              <font>font_tiny10</font>
+              <textcolor>white</textcolor>
+              <font>font_tiny_hintlabel</font>
               <label>$INFO[ListItem.Label]</label>
-              <autoscroll delay="3000" time="1000" repeat="3000">Skin.HasSetting(autoscroll)</autoscroll>
             </control>
           </focusedlayout>
         </control>
@@ -111,7 +108,7 @@
           <align>center</align>
           <font>font_clock</font>
           <width>120</width>
-          <textcolor>ff181818</textcolor>
+          <textcolor>dialog_fg_30</textcolor>
           <label>$INFO[Container.CurrentItem]</label>
         </control>
         <control type="label">
@@ -120,7 +117,7 @@
           <width>420</width>
           <scroll>true</scroll>
           <font>font32_bold</font>
-          <textcolor>4D181818</textcolor>
+          <textcolor>dialog_fg_70</textcolor>
           <label>$INFO[ListItem.Label]</label>
         </control>
         <control type="label">
@@ -129,7 +126,7 @@
           <width>420</width>
           <scroll>true</scroll>
           <font>font12</font>
-          <textcolor>B3181818</textcolor>
+          <textcolor>dialog_fg_70</textcolor>
           <label>$INFO[ListItem.Genre]</label>
         </control>
         <control type="image">
@@ -137,7 +134,7 @@
           <left>1260</left>
           <width>620</width>
           <height>1</height>
-          <texture colordiffuse="4D181818">diffuse/box-sharp.png</texture>
+          <texture colordiffuse="main_fg_30">common/white.png</texture>
         </control>
         <control type="label">
           <top>615</top>
@@ -145,17 +142,17 @@
           <align>center</align>
           <font>font37</font>
           <width>120</width>
-          <textcolor>ff181818</textcolor>
+          <textcolor>dialog_fg_30</textcolor>
           <label>$INFO[Container.NumItems]</label>
         </control>
         <control type="textbox">
           <top>625</top>
           <left>1360</left>
           <align>justify</align>
-          <font>font_tiny10</font>
+          <font>font_tiny_hintlabel</font>
           <width>500</width>
           <height>140</height>
-          <textcolor>B3181818</textcolor>
+          <textcolor>dialog_fg_70</textcolor>
           <label>$INFO[ListItem.Plot]</label>
           <autoscroll delay="3000" time="3500" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
         </control>
@@ -172,8 +169,8 @@
           <top>785</top>
           <right>60</right>
           <align>right</align>
-          <font>font_tiny10</font>
-          <textcolor>ff181818</textcolor>
+          <font>font_tiny_hintlabel</font>
+          <textcolor>dialog_fg_30</textcolor>
           <label>$INFO[ListItem.Duration(mins),, $LOCALIZE[31191]]</label>
         </control>
       </control>
@@ -181,40 +178,10 @@
     <control type="group">
       <visible>Control.IsVisible(57)</visible>
       <control type="image">
-        <left>-20%</left>
-        <top>-30</top>
-        <width>150%</width>
-        <height>140</height>
-        <texture colordiffuse="ff000000">diffuse/box-sharp.png</texture>
-        <bordertexture border="21">overlays/shadow.png</bordertexture>
-        <bordersize>20</bordersize>
-      </control>
-      <control type="image">
-        <left>32</left>
-        <top>10</top>
-        <width>64</width>
-        <height>64</height>
-        <texture colordiffuse="$VAR[ColorHighlight]">diffuse/box-sharp.png</texture>
-      </control>
-      <control type="image">
-        <left>32</left>
-        <top>10</top>
-        <width>64</width>
-        <height>64</height>
-        <texture>$VAR[BreadcrumbsVideoIconVar]</texture>
-      </control>
-      <control type="label">
-        <top>0</top>
-        <left>128</left>
-        <font>font60</font>
-        <label>[UPPERCASE]$VAR[BreadcrumbsVideoVar][/UPPERCASE]</label>
-      </control>
-      <control type="label">
-        <top>0</top>
-        <right>60</right>
-        <align>right</align>
-        <font>font60</font>
-        <label>$INFO[System.Time]</label>
+        <left>-50%</left>
+        <width>200%</width>
+        <height>400</height>
+        <texture colordiffuse="ff000000" flipy="true">overlays/overlayfade.png</texture>
       </control>
     </control>
   </include>
