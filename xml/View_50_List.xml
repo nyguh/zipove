@@ -223,7 +223,6 @@
             <left>301</left>
             <top>560</top>
             <control type="group">
-              <animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
               <include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
                 <param name="infolabel" value="MusicPlayer.UserRating"/>
               </include>
