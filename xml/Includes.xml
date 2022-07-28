@@ -99,7 +99,6 @@
           <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
           <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
           <animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-          <hitrect x="0" y="20" w="100%" h="40"/>
         </control>
       </control>
     </control>
@@ -915,7 +914,6 @@
       </control>
       <control type="group">
         <include>FullScreenDimensions</include>
-        <animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
         <control type="group">
           <animation effect="fade" start="100" end="0" time="300" condition="Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">Conditional</animation>
           <animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
@@ -940,7 +938,6 @@
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
             <randomize>true</randomize>
-            <loop>yes</loop>
             <imagepath background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</imagepath>
             <visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
             <animation effect="fade" end="0" start="100" time="50" reversible="true" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -1214,7 +1211,7 @@
           <top>34</top>
           <width>52</width>
           <height>52</height>
-          <texture colordiffuse="grey">$VAR[VolumeIconVar]</texture>
+          <texture colordiffuse="b3ededed">$VAR[VolumeIconVar]</texture>
         </control>
       </control>
       <include content="IconButton">
@@ -1242,9 +1239,9 @@
       <radiowidth>60</radiowidth>
       <radioheight>60</radioheight>
       <textureradioonfocus>icons/back.png</textureradioonfocus>
-      <textureradioonnofocus colordiffuse="grey">icons/back.png</textureradioonnofocus>
+      <textureradioonnofocus colordiffuse="b3ededed">icons/back.png</textureradioonnofocus>
       <textureradioofffocus>icons/back.png</textureradioofffocus>
-      <textureradiooffnofocus colordiffuse="grey">icons/back.png</textureradiooffnofocus>
+      <textureradiooffnofocus colordiffuse="b3ededed">icons/back.png</textureradiooffnofocus>
     </control>
   </include>
   <include name="TouchBackOSDButton">
@@ -1263,9 +1260,9 @@
       <radiowidth>60</radiowidth>
       <radioheight>60</radioheight>
       <textureradioonfocus>icons/back.png</textureradioonfocus>
-      <textureradioonnofocus colordiffuse="grey">icons/back.png</textureradioonnofocus>
+      <textureradioonnofocus colordiffuse="b3ededed">icons/back.png</textureradioonnofocus>
       <textureradioofffocus>icons/back.png</textureradioofffocus>
-      <textureradiooffnofocus colordiffuse="grey">icons/back.png</textureradiooffnofocus>
+      <textureradiooffnofocus colordiffuse="b3ededed">icons/back.png</textureradiooffnofocus>
       <include>Animation_TopSlide</include>
     </control>
   </include>
@@ -1284,9 +1281,9 @@
       <radiowidth>60</radiowidth>
       <radioheight>60</radioheight>
       <textureradioonfocus>icons/back.png</textureradioonfocus>
-      <textureradioonnofocus colordiffuse="grey">icons/back.png</textureradioonnofocus>
+      <textureradioonnofocus colordiffuse="b3ededed">icons/back.png</textureradioonnofocus>
       <textureradioofffocus>icons/back.png</textureradioofffocus>
-      <textureradiooffnofocus colordiffuse="grey">icons/back.png</textureradiooffnofocus>
+      <textureradiooffnofocus colordiffuse="b3ededed">icons/back.png</textureradiooffnofocus>
       <visible>!Window.IsVisible(PictureInfo)</visible>
     </control>
   </include>
@@ -1370,8 +1367,8 @@
         <nested/>
         <texturebg colordiffuse="00ffffff" border="6">progress/progress-bg.png</texturebg>
         <lefttexture colordiffuse="00ffffff" border="6">progress/progress-left.png</lefttexture>
-        <midtexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse.png">progress/progress-end.png</midtexture>
-        <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">progress/progress-right.png</righttexture>
+        <midtexture colordiffuse="$VAR[ColorGradient]" border="6">progress/progress-end.png</midtexture>
+        <righttexture colordiffuse="$VAR[ColorGradient]" border="6">progress/progress-right.png</righttexture>
         <include content="ProgressColorFade">
           <param name="id" value="$PARAM[id]"/>
         </include>
@@ -1512,7 +1509,7 @@
         <top>40</top>
         <height>40</height>
         <control type="image">
-          <texture border="32" colordiffuse="Shadow">common/shadow-20.png</texture>
+          <texture border="32" colordiffuse="shadow">common/shadow-20.png</texture>
           <visible>!Control.HasFocus($PARAM[id])</visible>
         </control>
         <control type="button" id="$PARAM[id]">
@@ -1538,8 +1535,8 @@
           </control>
           <control type="image">
             <bordersize>20</bordersize>
-            <bordertexture border="32" colordiffuse="Shadow">common/shadow-20.png</bordertexture>
-            <texture border="20" colordiffuse="Selected">common/selectbox.png</texture>
+            <bordertexture border="32" colordiffuse="shadow">common/shadow-20.png</bordertexture>
+            <texture border="20" colordiffuse="$VAR[ColorHighlight]">common/selectbox.png</texture>
             <visible>Control.HasFocus($PARAM[id])</visible>
           </control>
         </control>
@@ -1673,7 +1670,6 @@
         <centertop>50%</centertop>
         <width>80</width>
         <height>80</height>
-        <aspectratio>keep</aspectratio>
         <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
         <control type="image">
           <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
@@ -1702,7 +1698,6 @@
         <centertop>50%</centertop>
         <width>80</width>
         <height>80</height>
-        <aspectratio>keep</aspectratio>
         <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
         <control type="image">
           <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
