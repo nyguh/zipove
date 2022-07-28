@@ -59,7 +59,7 @@
             <top>7</top>
             <width>110</width>
             <height>110</height>
-            <texture colordiffuse="dialog_fg_70">$VAR[InfoWallThumbVar]</texture>
+            <texture>$VAR[InfoWallThumbVar]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
@@ -207,7 +207,7 @@
               <height>250</height>
               <aspectratio>scale</aspectratio>
               <texture border="4">DefaultVideo.png</texture>
-              <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+              <bordertexture colordiffuse="60FFFFFF">colors/black.png</bordertexture>
               <bordersize>4</bordersize>
             </control>
             <control type="gamewindow">
@@ -238,7 +238,7 @@
               <height>250</height>
               <aspectratio>scale</aspectratio>
               <texture border="4">DefaultVideo.png</texture>
-              <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+              <bordertexture colordiffuse="60FFFFFF">colors/black.png</bordertexture>
               <bordersize>4</bordersize>
             </control>
             <control type="gamewindow">
@@ -313,7 +313,7 @@
               <height>250</height>
               <aspectratio>scale</aspectratio>
               <texture border="4">DefaultVideo.png</texture>
-              <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+              <bordertexture colordiffuse="60FFFFFF">colors/black.png</bordertexture>
               <bordersize>4</bordersize>
             </control>
             <control type="gamewindow">
@@ -344,7 +344,7 @@
               <height>250</height>
               <aspectratio>scale</aspectratio>
               <texture border="4">DefaultVideo.png</texture>
-              <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+              <bordertexture colordiffuse="60FFFFFF">colors/black.png</bordertexture>
               <bordersize>4</bordersize>
             </control>
             <control type="gamewindow">
