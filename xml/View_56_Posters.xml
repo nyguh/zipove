@@ -189,6 +189,5 @@
         </control>
       </control>
     </control>
-    <include>TopBar</include>
   </include>
 </includes>

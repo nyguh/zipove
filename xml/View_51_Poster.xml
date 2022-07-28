@@ -101,9 +101,9 @@
             <top>400</top>
             <right>50</right>
             <height>40</height>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
             <font>font45_title</font>
-            <shadowcolor>text_shadow</shadowcolor>
           </control>
           <control type="textbox">
             <left>645</left>

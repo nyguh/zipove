@@ -38,7 +38,6 @@
             <centertop>50%</centertop>
             <width>32</width>
             <height>32</height>
-            <textcolor>white</textcolor>
             <texture>$VAR[ListWatchedIconVar]</texture>
           </control>
           <control type="label">
@@ -240,7 +239,6 @@
         <scroll>true</scroll>
         <textcolor>white</textcolor>
         <label>$VAR[ListLabelVarExtended]</label>
-        <textcolor>b3ededed</textcolor>
       </control>
       <control type="label">
         <left>35</left>
@@ -268,7 +266,6 @@
         <align>right</align>
         <aligny>center</aligny>
         <label>$VAR[ListLabel2Var]</label>
-        <textcolor>grey</textcolor>
         <textcolor>b3ededed</textcolor>
       </control>
     </itemlayout>
@@ -348,7 +345,6 @@
         <font>font27</font>
         <textcolor>b3ededed</textcolor>
         <label>$VAR[AddonsLabel2Var]</label>
-        <textcolor>b3ededed</textcolor>
       </control>
       <control type="image">
         <right>80</right>

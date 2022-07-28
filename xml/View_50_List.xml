@@ -160,7 +160,7 @@
             <aligny>center</aligny>
             <height>110</height>
             <font>font32_title</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>white</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="textbox">
@@ -169,7 +169,7 @@
             <width>656</width>
             <height>155</height>
             <bottom>100</bottom>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>white</textcolor>
             <visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
             <label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
             <autoscroll delay="5000" time="5000" repeat="10000">!Skin.HasSetting(autoscroll)</autoscroll>
@@ -198,9 +198,7 @@
             <right>74</right>
             <width>761.44</width>
             <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
-            <texture fallback="DefaultVideo.png" background="true" diffuse="diffuse/rightlistpanel-diffuse.png">$VAR[Image_Landscape]</texture>
-            <bordertexture border="24">common/rightlistpanel-diffuse-shadow.png</bordertexture>
-            <bordersize>27</bordersize>
+            <texture fallback="DefaultVideo.png" background="true" diffuse="diffuse/landscape-big.png">$VAR[Image_Landscape]</texture>
           </control>
           <control type="group">
             <left>291</left>
