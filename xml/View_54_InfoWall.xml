@@ -1,188 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-  <include name="InfoDialogLabel">
-    <param name="altid" default="999999"/>
-    <param name="uselabel2" default="false"/>
-    <param name="spinner-visible" default="true"/>
-    <definition>
-      <control type="group" id="$PARAM[groupid]">
-        <top>0</top>
-        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
-        <visible>$PARAM[visible]</visible>
-        <nested/>
-        <control type="grouplist">
-          <top>$PARAM[top]</top>
-          <left>$PARAM[left]</left>
-          <orientation>horizontal</orientation>
-          <usecontrolcoords>true</usecontrolcoords>
-          <itemgap>10</itemgap>
-          <control type="label">
-            <top>20</top>
-            <left>15</left>
-            <width>auto</width>
-            <label>$PARAM[altlabel]</label>
-            <aligny>center</aligny>
-            <textcolor>dialog_fg_100</textcolor>
-            <font>font13</font>
-            <height>24</height>
-            <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
-            <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-          </control>
-          <control type="label">
-            <top>20</top>
-            <left>15</left>
-            <width>auto</width>
-            <label>$PARAM[altlabel]</label>
-            <aligny>center</aligny>
-            <font>font13</font>
-            <height>24</height>
-            <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
-            <visible>![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]</visible>
-          </control>
-          <control type="label">
-            <top>20</top>
-            <width>auto</width>
-            <label>|</label>
-            <aligny>center</aligny>
-            <textcolor>$VAR[ColorHighlight]</textcolor>
-            <font>font13</font>
-            <height>24</height>
-            <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-            <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Label)</visible>
-            <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-          </control>
-          <control type="label">
-            <top>20</top>
-            <width>auto</width>
-            <label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
-            <aligny>center</aligny>
-            <textcolor>dialog_fg_100</textcolor>
-            <font>font_tiny</font>
-            <height>24</height>
-            <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-            <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-            <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-            <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
-            <visible>!$PARAM[uselabel2]</visible>
-          </control>
-          <control type="group">
-            <include>SmallBusySpinner</include>
-            <top>10</top>
-            <left>18</left>
-            <visible>Container($PARAM[id]).IsUpdating</visible>
-            <visible>$PARAM[spinner-visible]</visible>
-          </control>
-        </control>
-      </control>
-    </definition>
-  </include>
-  <include name="YouTubeSection">
-    <control type="list" id="$PARAM[id]">
-      <scrolltime tween="quadratic">400</scrolltime>
-      <orientation>horizontal</orientation>
-      <height>375.5</height>
-      <itemlayout height="375.5" width="600">
-        <include content="ViewLandscapeItemLayout">
-        </include>
-      </itemlayout>
-      <focusedlayout height="375.5" width="600">
-        <include content="ViewLandscapeItemLayout">
-        </include>
-        <include content="Selectbox">
-          <param name="visible_posters" value="false"/>
-          <param name="visible_squares" value="false"/>
-          <param name="visible_landscapes" value="true + Control.HasFocus(1060)"/>
-        </include>
-      </focusedlayout>
-      <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-      <onclick>PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
-      <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.TvShowTitle) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.TvShowTitle,plugin://plugin.video.youtube/search/?q=,]</content>
-      <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.Artist) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Artist,plugin://plugin.video.youtube/search/?q=,]</content>
-      <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.Title) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Title,plugin://plugin.video.youtube/search/?q=,]</content>
-      <content limit="10" target="videos" sortby="file" condition="System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Label,plugin://plugin.video.youtube/search/?q=,]</content>
-      <visible>$PARAM[visible]</visible>
-    </control>
-  </include>
-  <include name="InfoDialogItemLayout">
-    <control type="group">
-      <left>0</left>
-      <top>10</top>
-      <control type="image">
-        <left>4</left>
-        <top>-10</top>
-        <width>290</width>
-        <height>400</height>
-        <texture background="true">$PARAM[icon]</texture>
-        <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
-        <bordersize>24</bordersize>
-        <aspectratio>scale</aspectratio>
-      </control>
-    </control>
-  </include>
-  <include name="InfoDialogFocusedLayout">
-    <control type="group">
-      <left>0</left>
-      <top>10</top>
-      <control type="group">
-        <left>0</left>
-        <top>-14</top>
-        <width>297</width>
-        <height>407</height>
-        <include content="Selectbox">
-          <param name="visible_posters" value="true"/>
-          <param name="visible_squares" value="false"/>
-          <param name="visible_landscapes" value="false"/>
-        </include>
-        <animation effect="fade" start="0" end="100" time="200" tween="sine">Focus</animation>
-        <animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-      </control>
-      <control type="image">
-        <left>4</left>
-        <top>-10</top>
-        <width>290</width>
-        <height>400</height>
-        <texture background="true">$PARAM[icon]</texture>
-        <aspectratio>scale</aspectratio>
-        <bordersize>20</bordersize>
-      </control>
-    </control>
-  </include>
-  <include name="InfoDialogWallContainer">
-    <definition>
-      <include content="InfoDialogLabel">
-        <param name="groupid" value="$PARAM[groupid]"/>
-        <param name="id" value="$PARAM[id]"/>
-        <param name="label" value="$PARAM[label]"/>
-        <param name="altlabel" value="$PARAM[altlabel]"/>
-        <param name="left" value="20"/>
-        <param name="top" value="0"/>
-        <param name="visible" value="$PARAM[visible]"/>
-      </include>
-      <control type="list" id="$PARAM[id]">
-        <nested/>
-        <scrolltime tween="quadratic">400</scrolltime>
-        <orientation>horizontal</orientation>
-        <height>$PARAM[itemheight]</height>
-        <visible>$PARAM[visible]</visible>
-        <top>$PARAM[top]</top>
-        <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
-          <include content="InfoDialogItemLayout">
-            <param name="icon" value="$PARAM[icon]"/>
-            <param name="label" value="$PARAM[label]"/>
-            <param name="label2" value="$PARAM[label2]"/>
-          </include>
-        </itemlayout>
-        <focusedlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
-          <include content="InfoDialogFocusedLayout">
-            <param name="icon" value="$PARAM[icon]"/>
-            <param name="label" value="$PARAM[label]"/>
-            <param name="label2" value="$PARAM[label2]"/>
-          </include>
-        </focusedlayout>
-        <content limit="$PARAM[limit]" target="$PARAM[target]">$PARAM[content]</content>
-      </control>
-    </definition>
-  </include>
   <include name="InfoWallPictureLayout">
     <param name="focused">false</param>
     <definition>
@@ -438,7 +255,6 @@
           <control type="image">
             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
           </control>
-          <bordersize>20</bordersize>
           <visible>$PARAM[focused]</visible>
         </control>
         <control type="textbox">
@@ -476,7 +292,6 @@
           <control type="image">
             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
           </control>
-          <bordersize>20</bordersize>
           <visible>$PARAM[focused]</visible>
           <include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
         </control>
@@ -561,7 +376,7 @@
         <top>0</top>
         <right>15</right>
         <height>100%</height>
-        <onleft>9000</onleft>
+        <onleft>SetFocus(9000)</onleft>
         <onright>531</onright>
         <onup condition="Integer.IsGreater(Container.NumPages,1)">54</onup>
         <onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
