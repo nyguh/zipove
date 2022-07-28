@@ -39,6 +39,12 @@
       <style>uppercase</style>
     </font>
     <font>
+      <name>font_small_info_upp</name>
+      <style>uppercase bold</style>
+      <filename>RobotoCondensed-Regular.ttf</filename>
+      <size>22</size>
+    </font>
+    <font>
       <name>font_small_pvr_channels_bold</name>
       <filename>RobotoCondensed-Bold.ttf</filename>
       <size>23</size>

@@ -425,6 +425,31 @@
     <value condition="Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)">$INFO[ListItem.Duration]</value>
     <value>$INFO[ListItem.Label2]</value>
   </variable>
+  <!-- view 56 labels with fallback -->
+  <variable name="StudioVar">
+    <value condition="!String.IsEmpty(Container(56).ListItem.Studio)">$INFO[Container(56).ListItem.Studio]</value>
+    <value>-</value>
+  </variable>
+  <variable name="DirectorVar">
+    <value condition="!String.IsEmpty(Container(56).ListItem.Director)">$INFO[Container(56).ListItem.Director]</value>
+    <value>-</value>
+  </variable>
+  <variable name="GenreVar">
+    <value condition="!String.IsEmpty(Container(56).ListItem.Genre)">$INFO[Container(56).ListItem.Genre]</value>
+    <value>-</value>
+  </variable>
+  <variable name="CountryVar">
+    <value condition="!String.IsEmpty(Container(56).ListItem.Country)">$INFO[Container(56).ListItem.Country]</value>
+    <value>-</value>
+  </variable>
+  <variable name="WriterVar">
+    <value condition="!String.IsEmpty(Container(56).ListItem.Writer)">$INFO[Container(56).ListItem.Writer]</value>
+    <value>-</value>
+  </variable>
+  <variable name="CastVar">
+    <value condition="!String.IsEmpty(Container(56).ListItem.Cast)">$INFO[Container(56).ListItem.Cast]</value>
+    <value>-</value>
+  </variable>
   <variable name="ListLabelVarExtended">
     <value condition="Skin.HasSetting(ExtendedList) + String.IsEqual(ListItem.DbType,episode) + Window.IsActive(videoplaylist)">$INFO[ListItem.TVShowtitle,,: ]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title][CR][LIGHT][I]$INFO[ListItem.Genre][/I][/LIGHT] | [LIGHT][I]$INFO[ListItem.Studio][/I][/LIGHT]</value>
     <value condition="Skin.HasSetting(ExtendedList) + String.IsEqual(ListItem.DbType,musicvideo) + Window.IsActive(videoplaylist)">$INFO[ListItem.Artist,, - ]$INFO[ListItem.Title][CR][LIGHT][I]$INFO[ListItem.Genre][/I][/LIGHT]  | [LIGHT][I]$INFO[ListItem.Studio][/I][/LIGHT]</value>
