@@ -37,8 +37,7 @@
     <focusedcolor>white</focusedcolor>
     <disabledcolor>dialog_fg_30</disabledcolor>
     <selectedcolor>main_fg_70</selectedcolor>
-    <texturefocus colordiffuse="dialog_bg_12">common/white.png</texturefocus>
-    <texturenofocus colordiffuse="dialog_bg_30">common/white.png</texturenofocus>
+    <texturefocus>common/button_texture.png</texturefocus>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="togglebutton">
@@ -46,9 +45,9 @@
     <focusedcolor>white</focusedcolor>
     <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
     <disabledcolor>dialog_fg_30</disabledcolor>
-    <texturefocus colordiffuse="dialog_bg_12">common/white.png</texturefocus>
+    <texturefocus>common/button_texture.png</texturefocus>
     <texturenofocus/>
-    <alttexturefocus colordiffuse="dialog_bg_12">common/white.png</alttexturefocus>
+    <alttexturefocus>common/button_texture.png</alttexturefocus>
     <alttexturenofocus/>
     <pulseonselect>false</pulseonselect>
     <font>font_small_defaults</font>
@@ -113,7 +112,7 @@
     <textureradiooffnofocus colordiffuse="main_fg_70">buttons/radio-button-off.png</textureradiooffnofocus>
     <textureradioondisabled colordiffuse="dialog_fg_12">buttons/radio-button-on.png</textureradioondisabled>
     <textureradiooffdisabled colordiffuse="dialog_fg_12">buttons/radio-button-off.png</textureradiooffdisabled>
-    <texturefocus border="21" colordiffuse="$VAR[ColorHighlight]">buttons/button-fo.png</texturefocus>
+    <texturefocus>common/button_texture.png</texturefocus>
     <texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
     <font>font_small_defaults</font>
     <textcolor>main_fg_70</textcolor>

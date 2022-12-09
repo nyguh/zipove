@@ -1340,14 +1340,11 @@
   </variable>
   <!-- Highlight Color -->
   <variable name="ColorHighlight">
-    <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
-    <value>Highlight</value>
+    <value>$INFO[Skin.String(focuscolor.name)]</value>
   </variable>
   <!-- Gradient Color -->
   <variable name="ColorGradient">
-    <value condition="!Skin.HasSetting(EnableMonochromeHighlight) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
-    <value condition="!Skin.HasSetting(EnableMonochromeHighlight)">Gradient</value>
-    <value>00ffffff</value>
+     <value>$INFO[Skin.String(gradientcolor.name)]</value>
   </variable>
   <variable name="Label_ColorValue">
     <value condition="String.IsEqual(Window(Home).Property(colorpick),Highlight) + !String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>

@@ -13,15 +13,6 @@
         <param name="header_label" value="$LOCALIZE[21421]"/>
         <param name="header_id" value="2"/>
       </include>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="9001"/>
-        <param name="height" value="80"/>
-        <top>100</top>
-        <left>30</left>
-        <height>80</height>
-        <width>900</width>
-        <visible>ControlGroup(9001).HasFocus() + !ControlGroup(9002).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="9001">
         <left>30</left>
         <top>100</top>

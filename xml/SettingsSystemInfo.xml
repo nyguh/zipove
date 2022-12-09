@@ -148,14 +148,6 @@
       <control type="group">
         <left>0</left>
         <top>0</top>
-        <include content="DefaultSettingButtonGradient">
-          <param name="id" value="9000"/>
-          <top>133</top>
-          <width>420</width>
-          <height>80</height>
-          <left>0</left>
-          <visible>ControlGroup(9000).HasFocus()</visible>
-        </include>
         <control type="grouplist" id="9000">
           <left>0</left>
           <top>130</top>

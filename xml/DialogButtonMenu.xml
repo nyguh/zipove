@@ -54,13 +54,6 @@
         <bottom>605</bottom>
         <visible>Integer.IsEqual(Container(111).NumItems,1)</visible>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="111"/>
-        <top>25</top>
-        <height>70</height>
-        <left>0</left>
-        <visible>Control.HasFocus(111)</visible>
-      </include>
       <control type="panel" id="111">
         <top>25</top>
         <orientation>vertical</orientation>

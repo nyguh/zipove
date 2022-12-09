@@ -20,7 +20,7 @@
       <top>-1080</top>
       <width>5760</width>
       <height>3240</height>
-      <texturefocus/>
+      <texturefocus>common/button_texture.png</texturefocus>
       <texturenofocus/>
       <onclick>Action(close)</onclick>
     </control>
@@ -39,14 +39,6 @@
         <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
         <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="9000"/>
-        <param name="height" value="70"/>
-        <top>0</top>
-        <height>70</height>
-        <width>458</width>
-        <visible>ControlGroup(9000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="9000">
         <description>grouplist for context buttons</description>
         <left>0</left>
@@ -61,7 +53,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(DisableWatchedOverlay)</onclick>
           <selected>Skin.HasSetting(DisableWatchedOverlay)</selected>
@@ -73,7 +65,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <enable>!Skin.HasSetting(DisableWatchedOverlay)</enable>
           <onclick>Skin.ToggleSetting(DisableIndicator.New)</onclick>
@@ -86,7 +78,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <enable>!Skin.HasSetting(DisableWatchedOverlay)</enable>
           <onclick>Skin.ToggleSetting(DisableIndicator.Episodes)</onclick>
@@ -99,7 +91,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <enable>!Skin.HasSetting(DisableWatchedOverlay)</enable>
           <onclick>Skin.ToggleSetting(DisableIndicator.Watched)</onclick>
@@ -112,7 +104,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <enable>!Skin.HasSetting(DisableWatchedOverlay)</enable>
           <onclick>Skin.ToggleSetting(DisableIndicator.Progress)</onclick>
@@ -125,7 +117,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <enable>!Skin.HasSetting(DisableWatchedOverlay)</enable>
           <onclick>Skin.ToggleSetting(DisableIndicator.Library)</onclick>
@@ -145,7 +137,7 @@
       <width>458</width>
       <height>70</height>
       <align>left</align>
-      <texturefocus/>
+      <texturefocus>common/button_texture.png</texturefocus>
       <texturenofocus/>
     </control>
   </controls>

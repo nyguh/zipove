@@ -46,14 +46,6 @@
         <label/>
         <include>HiddenObject</include>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="9000"/>
-        <top>50</top>
-        <width>530</width>
-        <height>70</height>
-        <left>-20</left>
-        <visible>ControlGroup(9000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="9000">
         <top>50</top>
         <left>0</left>
@@ -338,13 +330,6 @@
           <bottom>605</bottom>
           <visible>Integer.IsEqual(Container(9000).NumItems,1)</visible>
         </control>
-        <include content="DefaultSettingButtonGradient">
-          <param name="id" value="9000"/>
-          <top>25</top>
-          <height>70</height>
-          <left>0</left>
-          <visible>Control.HasFocus(9000)</visible>
-        </include>
         <control type="panel" id="9000">
           <top>25</top>
           <orientation>vertical</orientation>

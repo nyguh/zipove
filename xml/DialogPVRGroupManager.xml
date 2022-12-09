@@ -14,13 +14,6 @@
         <param name="header_label" value="$VAR[PVRGroupMgrHeader]$INFO[Container(13).NumItems, (,)]"/>
         <param name="header_id" value="1"/>
       </include>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="9000"/>
-        <top>70</top>
-        <height>80</height>
-        <width>370</width>
-        <visible>ControlGroup(9000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="9000">
         <left>0</left>
         <top>50</top>

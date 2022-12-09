@@ -69,15 +69,6 @@
       <centertop>40%</centertop>
       <width>360</width>
       <height>610</height>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="8000"/>
-        <param name="height" value="70"/>
-        <top>60</top>
-        <left>-180</left>
-        <height>70</height>
-        <width>312</width>
-        <visible>ControlGroup(8000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="8000">
         <left>-180</left>
         <top>60</top>
@@ -234,15 +225,6 @@
           <onclick>Skin.SetString(HomeAlphaValue,0)</onclick>
         </control>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="9000"/>
-        <param name="height" value="70"/>
-        <top>60</top>
-        <left>220</left>
-        <height>70</height>
-        <width>312</width>
-        <visible>ControlGroup(9000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="9000">
         <left>220</left>
         <top>60</top>
@@ -399,15 +381,6 @@
           <onclick>Skin.SetString(AlphaValue,0)</onclick>
         </control>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="10000"/>
-        <param name="height" value="70"/>
-        <top>60</top>
-        <left>640</left>
-        <height>70</height>
-        <width>312</width>
-        <visible>ControlGroup(10000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="10000">
         <left>640</left>
         <top>60</top>
@@ -564,15 +537,6 @@
           <onclick>Skin.SetString(TMDbHelper.Colors.Luminance,0.0)</onclick>
         </control>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="11000"/>
-        <param name="height" value="70"/>
-        <top>60</top>
-        <left>1040</left>
-        <height>70</height>
-        <width>312</width>
-        <visible>ControlGroup(11000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="11000">
         <left>1040</left>
         <top>60</top>

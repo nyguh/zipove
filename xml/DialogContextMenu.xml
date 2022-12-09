@@ -21,7 +21,7 @@
         <top>-1080</top>
         <width>5760</width>
         <height>3240</height>
-        <texturefocus/>
+        <texturefocus>common/button_texture.png</texturefocus>
         <texturenofocus/>
         <onclick>Action(close)</onclick>
       </control>
@@ -52,14 +52,6 @@
           <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
           <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
         </control>
-        <include content="DefaultSettingButtonGradient">
-          <param name="id" value="996"/>
-          <param name="height" value="70"/>
-          <top>13</top>
-          <height>70</height>
-          <width>432</width>
-          <visible>ControlGroup(996).HasFocus()</visible>
-        </include>
         <control type="grouplist" id="996">
           <description>grouplist for context buttons</description>
           <left>0</left>
@@ -81,7 +73,7 @@
         <width>432</width>
         <height>70</height>
         <align>center</align>
-        <texturefocus/>
+        <texturefocus>common/button_texture.png</texturefocus>
         <texturenofocus/>
       </control>
     </control>

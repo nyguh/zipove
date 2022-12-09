@@ -20,7 +20,7 @@
       <top>-1080</top>
       <width>5760</width>
       <height>3240</height>
-      <texturefocus/>
+      <texturefocus>common/button_texture.png</texturefocus>
       <texturenofocus/>
       <onclick>Action(close)</onclick>
     </control>
@@ -39,14 +39,6 @@
         <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
         <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
       </control>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="9000"/>
-        <param name="height" value="70"/>
-        <top>0</top>
-        <height>70</height>
-        <width>458</width>
-        <visible>ControlGroup(9000).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="9000">
         <description>grouplist for context buttons</description>
         <left>0</left>
@@ -61,7 +53,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.Oscars)</onclick>
           <selected>Skin.HasSetting(Ratings.Oscars)</selected>
@@ -73,7 +65,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.Trakt)</onclick>
           <selected>Skin.HasSetting(Ratings.Trakt)</selected>
@@ -85,7 +77,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.Metacritic)</onclick>
           <selected>Skin.HasSetting(Ratings.Metacritic)</selected>
@@ -97,7 +89,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.RottenTomatoes)</onclick>
           <selected>Skin.HasSetting(Ratings.RottenTomatoes)</selected>
@@ -109,7 +101,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.TheMovieDB)</onclick>
           <selected>Skin.HasSetting(Ratings.TheMovieDB)</selected>
@@ -121,7 +113,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.IMDB)</onclick>
           <selected>Skin.HasSetting(Ratings.IMDB)</selected>
@@ -133,7 +125,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.IMDB.Votes)</onclick>
           <selected>Skin.HasSetting(Ratings.IMDB.Votes)</selected>
@@ -145,7 +137,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.Top250)</onclick>
           <selected>Skin.HasSetting(Ratings.Top250)</selected>
@@ -157,7 +149,7 @@
           <height>70</height>
           <align>right</align>
           <radioposx>470</radioposx>
-          <texturefocus/>
+          <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
           <onclick>Skin.ToggleSetting(Ratings.User)</onclick>
           <selected>Skin.HasSetting(Ratings.User)</selected>
@@ -176,7 +168,7 @@
       <width>458</width>
       <height>70</height>
       <align>left</align>
-      <texturefocus/>
+      <texturefocus>common/button_texture.png</texturefocus>
       <texturenofocus/>
     </control>
   </controls>

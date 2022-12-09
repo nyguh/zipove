@@ -14,14 +14,6 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="2"/>
       </include>
-      <include content="DefaultSettingButtonGradient">
-        <param name="id" value="5"/>
-        <top>100</top>
-        <height>80</height>
-        <width>1160</width>
-        <left>29</left>
-        <visible>ControlGroup(5).HasFocus()</visible>
-      </include>
       <control type="grouplist" id="5">
         <description>control area</description>
         <left>29</left>
