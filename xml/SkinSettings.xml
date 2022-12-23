@@ -85,7 +85,7 @@
                         <include>DefaultSettingButton</include>
                         <label>$LOCALIZE[31304]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
-                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30046],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31304],home)</onclick>
                         <onclick>SetProperty(CustomDialogWindow.items,MenuStyle,home)</onclick>
                         <onclick>ActivateWindow(1150)</onclick>
                     </control>
@@ -498,7 +498,7 @@
                         <include>DefaultSettingButton</include>
                         <label>$LOCALIZE[31293]</label>
                         <label2>$INFO[Skin.String(icons.label)]</label2>
-                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30083],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31293],home)</onclick>
                         <onclick>SetProperty(CustomDialogWindow.items,IconStyle,home)</onclick>
                         <onclick>ActivateWindow(1150)</onclick>
                     </control>
