@@ -81,7 +81,7 @@
             <param name="visible" value="Control.IsVisible(6000)"/>
             <param name="onclick_1" value="Dialog.Close(all,true)" />
             <param name="onclick_2_condition" value="[String.IsEqual(Window(home).Property(spotlight_DBType),movie) | String.IsEqual(Window(home).Property(spotlight_DBType),episode) | String.IsEqual(Window(home).Property(spotlight_DBType),video)] | String.IsEqual(Window(home).Property(spotlight_isPVR),true)" />
-            <param name="onclick_2" value="RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')" />
+            <param name="onclick_2" value="PlayMedia($ESCINFO[ListItem.Filenameandpath])" />
             <param name="onclick_3_condition" value="![[String.IsEqual(Window(home).Property(spotlight_DBType),movie) | String.IsEqual(Window(home).Property(spotlight_DBType),episode) | String.IsEqual(Window(home).Property(spotlight_DBType),video)] | String.IsEqual(Window(home).Property(spotlight_isPVR),true)]" />
             <param name="onclick_3" value="RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.FolderPath])" />
           </include>
