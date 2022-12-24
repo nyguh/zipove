@@ -13,12 +13,11 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="2"/>
       </include>
-      <include content="Object_Separator">
-        <param name="horizontal" value="false"/>
-        <top>100</top>
-        <left>400</left>
-        <height>800</height>
-      </include>
+      <control type="image">
+          <texture colordiffuse="main_fg_12" border="6">dialogs/dialog-half.png</texture>
+          <width>400</width>
+          <height>910</height>
+      </control>
       <control type="grouplist" id="3">
         <description>Categories Area</description>
         <left>0</left>
@@ -35,7 +34,7 @@
       <control type="button" id="10">
         <description>Default Category Button</description>
         <height>70</height>
-        <width>390</width>
+        <width>400</width>
         <textoffsetx>20</textoffsetx>
         <align>center</align>
         <aligny>center</aligny>
@@ -91,8 +90,14 @@
         <description>Default Label</description>
         <include>DefaultSettingLabel</include>
       </control>
+      <control type="image">
+          <texture colordiffuse="main_fg_12" border="6" flipx="true">dialogs/dialog-half.png</texture>
+          <right>0</right>
+          <width>320</width>
+          <height>910</height>
+      </control>
       <control type="grouplist" id="9000">
-        <left>1510</left>
+        <left>1525</left>
         <top>92</top>
         <orientation>vertical</orientation>
         <width>300</width>
@@ -115,7 +120,7 @@
       </control>
       <control type="radiobutton" id="20">
         <left>0</left>
-        <top>730</top>
+        <top>800</top>
         <width>400</width>
         <height>70</height>
         <align>center</align>
@@ -140,7 +145,7 @@
       </control>
       <control type="image">
         <left>0</left>
-        <top>730</top>
+        <top>800</top>
         <width>400</width>
         <height>70</height>
         <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>

@@ -34,6 +34,14 @@
         <brodersize>20</brodersize>
         <visible>Control.IsVisible(51)</visible>
       </control>
+      <control type="image">
+        <texture colordiffuse="main_fg_12" border="6" flipx="true">dialogs/dialog-half.png</texture>
+        <top>520</top>
+        <right>100</right>
+        <width>860</width>
+        <height>500</height>
+        <visible>Control.IsVisible(51)</visible>
+      </control>
       <control type="group">
         <top>120</top>
         <left>100</left>
@@ -50,13 +58,6 @@
           <font>font30_title</font>
           <label>$INFO[ListItem.ChannelName]</label>
         </control>
-        <include content="Object_Separator">
-          <param name="horizontal" value="true"/>
-          <param name="colordiffuse" value="1fcccccc"/>
-          <top>70</top>
-          <left>0</left>
-          <width>1720</width>
-        </include>
         <control type="group">
           <top>100</top>
           <include content="Object_Info_Line">
@@ -145,28 +146,18 @@
           <scrolltime tween="cubic" easing="out">500</scrolltime>
           <viewtype label="31429">list</viewtype>
           <include content="PVRListItemLayouts">
-              <param name="width" value="520"/>
-              <param name="width_next" value="820"/>
+            <param name="width" value="520"/>
+            <param name="width_next" value="820"/>
           </include>
         </control>
-        <include content="Object_Separator">
-          <param name="horizontal" value="false"/>
-          <param name="colordiffuse" value="1fcccccc"/>
-          <left>920</left>
+        <control type="image">
+          <texture colordiffuse="main_fg_12" border="6" flipx="true">dialogs/dialog-half.png</texture>
           <top>200</top>
-          <width>1</width>
+          <right>100</right>
+          <width>860</width>
           <height>800</height>
           <visible>Control.IsVisible(50)</visible>
-        </include>
-        <include content="Object_Separator">
-          <param name="horizontal" value="false"/>
-          <param name="colordiffuse" value="1fcccccc"/>
-          <left>920</left>
-          <top>520</top>
-          <width>1</width>
-          <height>500</height>
-          <visible>Control.IsVisible(51)</visible>
-        </include>
+        </control>
       </control>
       <include content="TopBar">
         <param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRChannelsVar]"/>

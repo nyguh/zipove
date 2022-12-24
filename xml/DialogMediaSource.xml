@@ -14,17 +14,17 @@
         <param name="header_label" value="$LOCALIZE[13406]"/>
         <param name="header_id" value="2"/>
       </include>
-      <include content="Object_Separator">
-        <param name="horizontal" value="false"/>
-        <left>1020</left>
-        <top>220</top>
-        <height>320</height>
-      </include>
+      <control type="image">
+          <texture colordiffuse="main_fg_12" border="6" flipx="true">dialogs/dialog-half.png</texture>
+          <right>0</right>
+          <width>420</width>
+          <height>750</height>
+      </control>
       <control type="edit" id="12">
         <description>Name Button</description>
         <left>50</left>
         <top>100</top>
-        <width>1340</width>
+        <width>940</width>
         <height>90</height>
         <align>center</align>
         <aligny>center</aligny>
@@ -117,7 +117,7 @@
         <left>0</left>
         <bottom>40</bottom>
         <height>100</height>
-        <width>1440</width>
+        <width>940</width>
         <align>center</align>
         <orientation>horizontal</orientation>
         <onup>10</onup>

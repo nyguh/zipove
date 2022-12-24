@@ -14,16 +14,16 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="411"/>
       </include>
-      <include content="Object_Separator">
-        <param name="horizontal" value="false"/>
-        <left>1060</left>
-        <top>100</top>
-        <height>700</height>
-      </include>
+      <control type="image">
+          <texture colordiffuse="main_fg_12" border="6" flipx="true">dialogs/dialog-half.png</texture>
+          <right>0</right>
+          <width>380</width>
+          <height>860</height>
+      </control>
       <control type="grouplist" id="9000">
-        <left>1080</left>
+        <left>1120</left>
         <top>105</top>
-        <width>400</width>
+        <width>380</width>
         <height>400</height>
         <itemgap>10</itemgap>
         <orientation>vertical</orientation>
@@ -51,7 +51,7 @@
         </include>
       </control>
       <control type="image">
-        <left>1100</left>
+        <left>1120</left>
         <top>380</top>
         <width>260</width>
         <height>380</height>

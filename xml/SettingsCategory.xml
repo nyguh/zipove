@@ -46,12 +46,11 @@
         <right>-10</right>
         <bottom>-10</bottom>
       </control>
-      <include content="Object_Separator">
-        <param name="horizontal" value="false"/>
-        <top>60</top>
-        <left>470</left>
-        <height>770</height>
-      </include>
+      <control type="image">
+        <texture colordiffuse="main_fg_12" border="6">dialogs/dialog-half.png</texture>
+        <width>470</width>
+        <height>830</height>
+      </control>
       <control type="group">
         <control type="grouplist" id="5">
           <description>control area</description>
@@ -90,13 +89,13 @@
       </control>
       <control type="label" id="14">
         <description>Default Label</description>
-          <textoffsetx>40</textoffsetx>
-          <width>470</width>
-          <height>70</height>
-          <textcolor>dialog_fg_30</textcolor>
-          <label>$LOCALIZE[31300]</label>
-          <font>font_small_defaults</font>
-          <aligny>center</aligny>
+        <textoffsetx>40</textoffsetx>
+        <width>470</width>
+        <height>70</height>
+        <textcolor>dialog_fg_30</textcolor>
+        <label>$LOCALIZE[31300]</label>
+        <font>font_small_defaults</font>
+        <aligny>center</aligny>
       </control>
       <control type="group">
         <control type="grouplist" id="3">
@@ -121,12 +120,11 @@
           <texturefocus>common/button_texture.png</texturefocus>
           <texturenofocus/>
         </control>
-        <include content="Object_Separator">
-          <param name="horizontal" value="false"/>
-          <top>60</top>
-          <left>70</left>
-          <height>770</height>
-        </include>
+        <control type="image">
+          <texture colordiffuse="main_fg_12" border="6">dialogs/dialog-half.png</texture>
+          <width>70</width>
+          <height>830</height>
+        </control>
         <control type="radiobutton" id="20">
           <top>60</top>
           <width>699</width>

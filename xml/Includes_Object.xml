@@ -1905,22 +1905,4 @@
       <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
     </control>
   </include>
-  <include name="Object_Separator">
-    <param name="colordiffuse" default="main_fg_12" />
-    <param name="horizontal" default="false" />
-    <definition>
-      <include content="Object_Control" condition="!$PARAM[horizontal]">
-        <param name="type" value="image" />
-        <nested />
-        <width>1</width>
-        <texture colordiffuse="$PARAM[colordiffuse]">colors/white.png</texture>
-      </include>
-      <include content="Object_Control" condition="$PARAM[horizontal]">
-        <param name="type" value="image" />
-        <nested />
-        <height>1</height>
-        <texture colordiffuse="$PARAM[colordiffuse]">colors/white.png</texture>
-      </include>
-    </definition>
-</include>
 </includes>
