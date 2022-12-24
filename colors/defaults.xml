@@ -6,23 +6,23 @@
   <color name="main_fg_70">b3dedede</color>
   <color name="main_fg_30">4ddedede</color>
   <color name="main_fg_12">1fdedede</color>
-  <color name="main_bg_100">ff181818</color>
-  <color name="main_bg_90">e7181818</color>
-  <color name="main_bg_70">b3181818</color>
-  <color name="main_bg_30">4d181818</color>
-  <color name="main_bg_12">1f181818</color>
+  <color name="main_bg_100">ff121212</color>
+  <color name="main_bg_90">e7121212</color>
+  <color name="main_bg_70">b3121212</color>
+  <color name="main_bg_30">4d121212</color>
+  <color name="main_bg_12">1f121212</color>
   <!-- Dialogs -->
   <color name="dialog_fg_100">FFededed</color>
   <color name="dialog_fg_70">B3ededed</color>
   <color name="dialog_fg_30">4Dededed</color>
   <color name="dialog_fg_12">1Fededed</color>
-  <color name="dialog_bg_100">FF1A2123</color>
-  <color name="dialog_bg_70">B3181818</color>
-  <color name="dialog_bg_30">4D181818</color>
-  <color name="dialog_bg_12">1F181818</color>
+  <color name="dialog_bg_100">FF121212</color>
+  <color name="dialog_bg_70">B3121212</color>
+  <color name="dialog_bg_30">4D121212</color>
+  <color name="dialog_bg_12">1F121212</color>
   <!-- Background -->
-  <color name="HomePanel">e7181818</color>
-  <color name="Background">ff181818</color>
+  <color name="HomePanel">e7121212</color>
+  <color name="Background">ff212121</color>
   <color name="PosterBack">ff454545</color>
   <color name="AltPosterBack">1fdedede</color>
   <!-- Panels -->
