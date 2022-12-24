@@ -50,7 +50,7 @@
         <param name="horizontal" value="false"/>
         <top>60</top>
         <left>470</left>
-        <height>800</height>
+        <height>770</height>
       </include>
       <control type="group">
         <control type="grouplist" id="5">
@@ -125,7 +125,7 @@
           <param name="horizontal" value="false"/>
           <top>60</top>
           <left>70</left>
-          <height>800</height>
+          <height>770</height>
         </include>
         <control type="radiobutton" id="20">
           <top>60</top>
