@@ -281,7 +281,7 @@
       <control type="group">
         <nested />
         <top>100</top>
-        <right>27</right>
+        <left>27</left>
         <height>700</height>
         <width>380</width>
         <visible>$PARAM[visible]</visible>
@@ -396,7 +396,7 @@
         </control>
         <control type="image">
           <top>-16</top>
-          <right>48</right>
+          <left>48</left>
           <width>16</width>
           <height>16</height>
           <texture colordiffuse="dialog_bg_100">common/arrow-menu-up.png</texture>

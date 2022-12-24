@@ -6,6 +6,15 @@
     <param name="topbar_visible">true</param>
     <definition>
       <control type="group">
+      <control type="image">
+          <top>27</top>
+          <left>60</left>
+          <width>48</width>
+          <height>48</height>
+          <texture colordiffuse="FFcccccc">common/circle.png</texture>
+          <aspectratio>keep</aspectratio>
+          <visible>!Window.IsVisible(Home)</visible>
+        </control>
         <animation effect="slide" end="0,-224" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active] | Window.IsVisible(contextmenu) | ControlGroup(9000).HasFocus">conditional</animation>
         <animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)] + !Window.IsVisible(1109)">WindowOpen</animation>
         <visible>$PARAM[topbar_visible]</visible>
@@ -54,15 +63,6 @@
             </control>
           </control>
         </control>
-        <control type="image">
-          <top>27</top>
-          <right>60</right>
-          <width>48</width>
-          <height>48</height>
-          <texture colordiffuse="FFcccccc">common/circle.png</texture>
-          <aspectratio>keep</aspectratio>
-          <visible>!Window.IsVisible(Home)</visible>
-        </control>
         <control type="grouplist">
           <top>30</top>
           <align>right</align>
@@ -106,15 +106,6 @@
             <animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
             <label>$INFO[System.Time]</label>
             <visible>!Skin.HasSetting(DisableClock)</visible>
-          </control>
-          <control type="image">
-            <top>-3</top>
-            <left>13</left>
-            <width>48</width>
-            <height>48</height>
-            <texture colordiffuse="ff333333">special://skin/extras/icons/settings.png</texture>
-            <aspectratio>keep</aspectratio>
-            <visible>!Window.IsVisible(Home)</visible>
           </control>
         </control>
         <control type="grouplist">
@@ -205,13 +196,24 @@
     <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
     <animation effect="slide" end="0,16" time="200" reversible="true" condition="String.IsEmpty(Control.GetLabel(18900)) + !Window.IsVisible(1170)">Conditional</animation>
     <animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
+    <control type="image">
+      <top>-3</top>
+      <left>0</left>
+      <width>48</width>
+      <height>48</height>
+      <texture colordiffuse="ff333333">special://skin/extras/icons/settings.png</texture>
+      <aspectratio>keep</aspectratio>
+      <visible>!Window.IsVisible(Home)</visible>
+    </control>
     <control type="label">
+      <left>10</left>
       <label>$PARAM[breadcrumbs_label]$INFO[Container.ShowTitle, &#8226; ]</label>
       <font>font30_title_upp</font>
       <textcolor>b3ededed</textcolor>
       <visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName) + Container.Content()</visible>
     </control>
     <control type="label">
+      <left>10</left>
       <label>$PARAM[breadcrumbs_label]$INFO[Container.FolderName, &#8226; ]</label>
       <font>font30_title_upp</font>
       <textcolor>b3ededed</textcolor>

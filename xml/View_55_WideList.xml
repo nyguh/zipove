@@ -14,7 +14,7 @@
         <movement>3</movement>
         <focusposition>4</focusposition>
         <onright>60</onright>
-        <onup>SetFocus(9000)</onup>
+        <onleft>SetFocus(9000)</onleft>
         <ondown>55</ondown>
         <viewtype label="$LOCALIZE[31107]">list</viewtype>
         <include content="View_Forced">
