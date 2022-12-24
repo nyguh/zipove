@@ -52,6 +52,7 @@
   <constant name="list_item_height">80</constant>
   <expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)</expression>
   <expression name="MediaMenu">Control.HasFocus(9000) | Control.HasFocus(6130) | Control.HasFocus(6131)</expression>
+  <expression name="MyVideoNav_Ready">Integer.IsGreaterOrEqual(Container(50).NumItems,1) | Integer.IsGreaterOrEqual(Container(510).NumItems,1) | Integer.IsGreaterOrEqual(Container(51).NumItems,1) | Integer.IsGreaterOrEqual(Container(52).NumItems,1) | Integer.IsGreaterOrEqual(Container(53).NumItems,1) | Integer.IsGreaterOrEqual(Container(54).NumItems,1) | Integer.IsGreaterOrEqual(Container(55).NumItems,1) | Integer.IsGreaterOrEqual(Container(56).NumItems,1) | Integer.IsGreaterOrEqual(Container(57).NumItems,1) | Integer.IsGreaterOrEqual(Container(500).NumItems,1) | Integer.IsGreaterOrEqual(Container(501).NumItems,1) | Integer.IsGreaterOrEqual(Container(502).NumItems,1)</expression>
   <include name="CommonScrollbars">
     <control type="group">
       <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -1033,6 +1034,7 @@
             <texture background="true">common/vignette-prime.png</texture>
             <visible>[[Window.IsVisible(Home) | Control.IsVisible(510)] + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Prime_Main)</visible>
+            <visible>$EXP[MyVideoNav_Ready]</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
           </control>
         </control>

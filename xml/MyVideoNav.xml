@@ -9,6 +9,7 @@
     <include>DefaultBackground</include>
     <control type="group">
       <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+      <visible>$EXP[MyVideoNav_Ready]</visible>
       <include>View_50_List</include>
       <include>View_510_Flix</include>
       <include>View_51_Poster</include>
