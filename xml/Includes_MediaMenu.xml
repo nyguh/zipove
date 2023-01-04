@@ -280,8 +280,8 @@
     <definition>
       <control type="group">
         <nested />
-        <top>100</top>
-        <left>27</left>
+        <top>160</top>
+        <left>155</left>
         <height>700</height>
         <width>380</width>
         <visible>$PARAM[visible]</visible>

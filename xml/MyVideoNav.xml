@@ -27,7 +27,11 @@
         <include>ListThumbInfoPanel</include>
       </control>
       <control type="group">
+        <top>60</top>
+        <width>1600</width>
+        <centerleft>50%</centerleft>
         <include content="TopBar">
+          <param name="width" value="1600"/>
           <param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]"/>
         </include>
       </control>
