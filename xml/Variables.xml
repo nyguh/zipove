@@ -280,7 +280,7 @@
  |        <value condition="[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + [!String.IsEmpty(ListItem.AlbumArtist) | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Property(Album_Label))]">$INFO[ListItem.AlbumArtist, | [COLOR=white],[/COLOR]]$INFO[ListItem.Year, | [COLOR=white],[/COLOR]]$INFO[ListItem.Property(Album_Label), | [COLOR=white],[/COLOR]]</value>
  |        <value condition="!String.IsEmpty(ListItem.AddonVersion)">$INFO[ListItem.AddonVersion, | [COLOR=white],[/COLOR]]$INFO[ListItem.AddonType, | [COLOR=white],[/COLOR]]$INFO[ListItem.AddonCreator, | [COLOR=white],[/COLOR]]$INFO[ListItem.Label2, | [COLOR=white],[/COLOR]]</value>
  |        <value condition="[!String.IsEmpty(ListItem.ChannelNumberLabel) | Window.IsVisible(DialogPVRInfo.xml)] + [!String.IsEmpty(ListItem.ChannelName) | !String.IsEmpty(ListITem.StartTime)]">$INFO[ListItem.ChannelName, | [COLOR=white],[/COLOR]]$INFO[ListItem.Season, | [COLOR=white]S,[/COLOR]]$INFO[ListItem.Episode, | [COLOR=white]E,[/COLOR]]$VAR[Label_PVR_EpisodeName, | [COLOR=white],[/COLOR]]$VAR[Label_PVR_EPGEventTitle, | [COLOR=white],[/COLOR]]$INFO[ListItem.Year, | [COLOR=white],[/COLOR]]$INFO[ListItem.MPAA, | [COLOR=white],[/COLOR]]$INFO[ListItem.StartTime, | [COLOR=white],[/COLOR]]$INFO[ListItem.EndTime,[COLOR=white] - ,[/COLOR]]</value>
-        <value>$INFO[ListItem.Label,  [COLOR=white],[/COLOR]]</value>
+        <value>[COLOR=white]   $LOCALIZE[195][/COLOR]</value>
     </variable>
     <variable name="Label_OSD_Duration">
         <value condition="!String.IsEmpty(VideoPlayer.Duration(h)) + Integer.IsGreater(VideoPlayer.Duration(h),0)">$INFO[VideoPlayer.Duration(h),, $LOCALIZE[31380] ]$INFO[VideoPlayer.Duration(mm),, $LOCALIZE[31381]]</value>
