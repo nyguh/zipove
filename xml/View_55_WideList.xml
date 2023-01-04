@@ -9,7 +9,7 @@
                 <height>780</height>
                 <width>1600</width>
                 <texture colordiffuse="AltPosterBack" border="12">common/box.png</texture>
-                <bordertexture border="24">common/shadow-24.png</bordertexture>
+                <bordertexture border="40">common/shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
             </control>
             <control type="fixedlist" id="55">

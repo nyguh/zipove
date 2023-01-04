@@ -31,6 +31,12 @@
       <size>20</size>
       <style>bold</style>
     </font>
+    <font>
+      <name>font_tiny_infolabel</name>
+      <filename>RobotoCondensed-Regular.ttf</filename>
+      <size>20</size>
+      <style>bold uppercase</style>
+    </font>
     <!-- Small Fonts -->
     <font>
       <name>font_small_pvr_channels</name>
