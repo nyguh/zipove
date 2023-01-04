@@ -1255,13 +1255,13 @@
                 <itemgap>0</itemgap>
                 <left>0</left>
                 <right>0</right>
+                <visible>$PARAM[visible_infoline]</visible>
                 <control type="image">
                     <top>10</top>
                     <width>37</width>
                     <height>24</height>
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="e7ededed">$VAR[Image_VideoQuality]</texture>
-                    <visible>$PARAM[visible_infoline]</visible>
                 </control>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="  $VAR[PercentageRating]% $LOCALIZE[31384]"/>
