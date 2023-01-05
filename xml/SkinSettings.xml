@@ -384,9 +384,7 @@
                         <include>DefaultSettingButton</include>
                         <label>$LOCALIZE[31325]</label>
                         <label2>$VAR[Label_SkinSettings_TrailerDelay]</label2>
-
                         <enable>Skin.HasSetting(BackgroundPlayingTrailers) + [System.AddonIsEnabled(plugin.video.youtube) + System.HasAddon(plugin.video.youtube)] + !Skin.HasSetting(ManuallyStartTrailer)</enable>
-
                         <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31325],home)</onclick>
                         <onclick>SetProperty(CustomDialogWindow.items,TrailerDelay,home)</onclick>
                         <onclick>ActivateWindow(1150)</onclick>
@@ -539,7 +537,6 @@
                         <include>DefaultSettingButton</include>
                         <label>$LOCALIZE[31283]</label>
                         <label2>$INFO[Skin.String(OSD_Timeout),,]</label2>
-
                         <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31283],home)</onclick>
                         <onclick>SetProperty(CustomDialogWindow.items,OSD_Timeout,home)</onclick>
                         <onclick>ActivateWindow(1150)</onclick>

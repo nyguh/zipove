@@ -16,7 +16,6 @@
                 <param name="header_label" value="$INFO[Window(home).Property(CustomDialogWindow.header)]"/>
                 <param name="header_id" value="1"/>
             </include>
-
             <control type="group">
                 <width>915</width>
                 <height>800</height>
@@ -38,7 +37,6 @@
                     <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),TrailerDelay)">Items_SettingsDialog_TrailerDelay</include>
                     <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),IconStyle)">Items_SettingsDialog_IconStyle</include>
                     <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),OSD_Timeout)">Items_SettingsDialog_OSD_Timeout</include>
-
                     <control type="button" id="9999">
                         <include>DefaultSettingButton</include>
                         <label>$LOCALIZE[15067]</label>

@@ -140,7 +140,7 @@
                 <top>25</top>
                 <bottom>45</bottom>
                 <include content="Object_Scrollbar_Vert">
-                    <param name="visible" value="Control.IsVisible(50)" />
+                    <param name="visible" value="Control.IsVisible(50)"/>
                     <param name="left" value="1075"/>
                 </include>
             </control>
@@ -198,7 +198,7 @@
                     <top>290</top>
                     <left>-200</left>
                     <include content="Object_Info_Line">
-                        <param name="visible_infoline" value="true" />
+                        <param name="visible_infoline" value="true"/>
                     </include>
                     <control type="group">
                         <top>30</top>

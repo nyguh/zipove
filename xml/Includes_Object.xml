@@ -225,7 +225,7 @@
                 <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
                 <!-- Posters aspect ratio -->
                 <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-                    <include content="ViewPosterItemLayout" />
+                    <include content="ViewPosterItemLayout"/>
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="-25"/>
                         <param name="right" value="44"/>
@@ -384,7 +384,7 @@
                 <height>460</height>
                 <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
                 <include content="Flix_Spotlight_Properties_onBack">
-                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
                 </include>
                 <onback condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)]">ActivateWindow(1140)</onback>
                 <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
@@ -392,7 +392,7 @@
                 <onclick condition="[Skin.HasSetting(ManuallyStartTrailer) + !Skin.HasSetting(TriggerSpotlightOnSelect)] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
                 <onclick condition="[Skin.HasSetting(ManuallyStartTrailer) + !Skin.HasSetting(TriggerSpotlightOnSelect)] + [[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
                 <include content="Flix_Spotlight_Properties">
-                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
                 </include>
                 <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)">ActivateWindow(1140)</onclick>
                 <!-- Posters aspect ratio -->
@@ -659,7 +659,7 @@
                 <onleft>9000</onleft>
                 <onback condition="!Skin.HasSetting(EnableFlixSpotlight) | Skin.HasSetting(TriggerSpotlightOnSelect)">9000</onback>
                 <include content="Flix_Spotlight_Properties_onBack">
-                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
                 </include>
                 <onback condition="Skin.HasSetting(EnableFlixSpotlight) + !Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)]">ActivateWindow(1140)</onback>
                 <height>460</height>
@@ -684,7 +684,7 @@
                 <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
                 <onclick condition="Skin.HasSetting(ManuallyStartTrailer) + [[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
                 <include content="Flix_Spotlight_Properties">
-                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+                    <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
                 </include>
                 <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)">ActivateWindow(1140)</onclick>
                 <!-- Posters aspect ratio -->
@@ -808,18 +808,18 @@
                 <onclick condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
                 <onclick condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
                 <include content="Flix_Spotlight_Properties">
-                    <param name="include_condition" value="!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)" />
+                    <param name="include_condition" value="!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
                 </include>
                 <onclick condition="!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)">ActivateWindow(1140)</onclick>
                 <!-- Posters aspect ratio -->
                 <itemlayout height="330" width="300" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayoutHorizontal">
-                        <param name="bg_visible" value="false" />
+                        <param name="bg_visible" value="false"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="330" width="300" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayoutHorizontal">
-                        <param name="bg_visible" value="true" />
+                        <param name="bg_visible" value="true"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -844,9 +844,9 @@
         <param name="info_line_top" default="185"/>
         <param name="plot_top" default="235"/>
         <param name="plot_height" default="100"/>
-        <param name="title_visible" default="true" />
-        <param name="clearlogo_top_margin" default="-940" />
-        <param name="clearlogo_width" default="480" />
+        <param name="title_visible" default="true"/>
+        <param name="clearlogo_top_margin" default="-940"/>
+        <param name="clearlogo_width" default="480"/>
         <definition>
             <control type="group">
                 <top>$PARAM[top]</top>
@@ -892,7 +892,7 @@
                     <top>$PARAM[info_line_top]</top>
                     <left>150</left>
                     <include content="Object_Info_Line">
-                        <param name="visible_infoline" value="$PARAM[visible_infoline]" />
+                        <param name="visible_infoline" value="$PARAM[visible_infoline]"/>
                     </include>
                     <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
                         <effect type="fade" start="100" end="0" time="300"/>
@@ -930,10 +930,10 @@
         <param name="info_line_top" default="185"/>
         <param name="plot_top" default="235"/>
         <param name="plot_height" default="100"/>
-        <param name="title_visible" default="true" />
-        <param name="clearlogo_top_margin" default="-800" />
-        <param name="clearlogo_width" default="320" />
-        <param name="cycling_top" default="140" />
+        <param name="title_visible" default="true"/>
+        <param name="clearlogo_top_margin" default="-800"/>
+        <param name="clearlogo_width" default="320"/>
+        <param name="cycling_top" default="140"/>
         <definition>
             <control type="group">
                 <top>$PARAM[top]</top>
@@ -988,7 +988,7 @@
                     <top>$PARAM[info_line_top]</top>
                     <left>140</left>
                     <include content="Object_Info_Line">
-                        <param name="visible_infoline" value="$PARAM[visible_infoline]" />
+                        <param name="visible_infoline" value="$PARAM[visible_infoline]"/>
                     </include>
                     <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
                         <effect type="fade" start="100" end="0" time="300"/>
@@ -1051,12 +1051,12 @@
     <include name="Object_Item_Showcase_Horizontal">
         <param name="top" default="0"/>
         <param name="clearlogo_top_margin" default="-940"/>
-        <param name="clearlogo_width" default="480" />
+        <param name="clearlogo_width" default="480"/>
         <param name="info_line_top" default="185"/>
         <param name="plot_top" default="235"/>
         <param name="plot_height" default="120"/>
-        <param name="title_visible" default="true" />
-        <param name="wrapmultiline_title" default="false" />
+        <param name="title_visible" default="true"/>
+        <param name="wrapmultiline_title" default="false"/>
         <definition>
             <control type="group">
                 <top>$PARAM[top]</top>
@@ -1244,7 +1244,7 @@
         <param name="nextaired" default="true"/>
         <param name="container" default=""/>
         <param name="uid" default="661"/>
-        <param name="visible_infoline" default="!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Container(7502).IsUpdating + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !Control.HasFocus(303)] + !String.StartsWith(ListItem.FolderPath,favourites://)" />
+        <param name="visible_infoline" default="!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Container(7502).IsUpdating + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !Control.HasFocus(303)] + !String.StartsWith(ListItem.FolderPath,favourites://)"/>
         <definition>
             <control type="grouplist">
                 <height>72</height>
@@ -1268,26 +1268,26 @@
                     <param name="divider" value="false"/>
                     <param name="fallback" value="N/A"/>
                     <param name="visible" value="!String.IsEmpty(ListItem.Rating) + Skin.HasSetting(Ratings.User)"/>
-                    <param name="width" value="auto" />
+                    <param name="width" value="auto"/>
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$VAR[Label_InfoLine]"/>
                     <param name="textcolor" value="$VAR[ColorHighlight]"/>
                     <param name="divider" value="false"/>
                     <param name="visible" value="!Window.IsVisible(videoosd) + !Skin.HasSetting(Horizontal_Main)"/>
-                    <param name="width" value="1125" />
+                    <param name="width" value="1125"/>
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$VAR[Label_InfoLine]"/>
                     <param name="visible" value="!Window.IsVisible(videoosd) + Skin.HasSetting(Horizontal_Main)"/>
-                    <param name="width" value="1125" />
+                    <param name="width" value="1125"/>
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$VAR[Label_OSD_InfoLine]"/>
                     <param name="textcolor" value="$VAR[ColorHighlight]"/>
                     <param name="divider" value="false"/>
                     <param name="visible" value="String.IsEqual(Window(home).Property(show_ext_info),True)"/>
-                    <param name="width" value="1200" />
+                    <param name="width" value="1200"/>
                 </include>
             </control>
         </definition>
@@ -1554,11 +1554,11 @@
     </include>
     <include name="Object_Scrollbars">
         <include content="Object_Scrollbar_Vert">
-            <param name="visible" value="Control.IsVisible(50) | Control.IsVisible(55)" />
+            <param name="visible" value="Control.IsVisible(50) | Control.IsVisible(55)"/>
             <param name="left" value="$PARAM[left]"/>
         </include>
         <include content="Object_Scrollbar_Horz">
-            <param name="visible" value="Control.IsVisible(510) | Control.IsVisible(51)" />
+            <param name="visible" value="Control.IsVisible(510) | Control.IsVisible(51)"/>
             <param name="bottom" value="$PARAM[bottom]"/>
         </include>
     </include>
@@ -1583,9 +1583,9 @@
         <control type="button" id="60">
             <visible>$PARAM[visible]</visible>
             <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
-            <font />
-            <texturefocus />
-            <texturenofocus />
+            <font/>
+            <texturefocus/>
+            <texturenofocus/>
             <left>$PARAM[left]</left>
             <width>8</width>
             <top>15</top>
@@ -1619,46 +1619,46 @@
             <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             <include>Object_AlphabetNumber</include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="A" />
+                <param name="label" value="A"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="B" />
+                <param name="label" value="B"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="C" />
+                <param name="label" value="C"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="D" />
+                <param name="label" value="D"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="E" />
+                <param name="label" value="E"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="F" />
+                <param name="label" value="F"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="G" />
+                <param name="label" value="G"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="H" />
+                <param name="label" value="H"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="I" />
+                <param name="label" value="I"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="J" />
+                <param name="label" value="J"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="K" />
+                <param name="label" value="K"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="L" />
+                <param name="label" value="L"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="M" />
+                <param name="label" value="M"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="N" />
+                <param name="label" value="N"/>
             </include>
             <animation effect="fade" start="100" end="0" condition="[String.IsEqual(ListItem.SortLetter,N) | String.IsEqual(ListItem.SortLetter,O) | String.IsEqual(ListItem.SortLetter,P) | String.IsEqual(ListItem.SortLetter,Q) | String.IsEqual(ListItem.SortLetter,R) | String.IsEqual(ListItem.SortLetter,S) | String.IsEqual(ListItem.SortLetter,T) | String.IsEqual(ListItem.SortLetter,U) | String.IsEqual(ListItem.SortLetter,V) | String.IsEqual(ListItem.SortLetter,W) | String.IsEqual(ListItem.SortLetter,X) | String.IsEqual(ListItem.SortLetter,Y) | String.IsEqual(ListItem.SortLetter,Z)]">Conditional</animation>
             <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
@@ -1674,49 +1674,49 @@
             <orientation>vertical</orientation>
             <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="L" />
+                <param name="label" value="L"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="M" />
+                <param name="label" value="M"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="N" />
+                <param name="label" value="N"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="O" />
+                <param name="label" value="O"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="P" />
+                <param name="label" value="P"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="Q" />
+                <param name="label" value="Q"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="R" />
+                <param name="label" value="R"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="S" />
+                <param name="label" value="S"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="T" />
+                <param name="label" value="T"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="U" />
+                <param name="label" value="U"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="V" />
+                <param name="label" value="V"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="W" />
+                <param name="label" value="W"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="X" />
+                <param name="label" value="X"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="Y" />
+                <param name="label" value="Y"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="Z" />
+                <param name="label" value="Z"/>
             </include>
             <animation effect="fade" start="100" end="0" condition="![String.IsEqual(ListItem.SortLetter,N) | String.IsEqual(ListItem.SortLetter,O) | String.IsEqual(ListItem.SortLetter,P) | String.IsEqual(ListItem.SortLetter,Q) | String.IsEqual(ListItem.SortLetter,R) | String.IsEqual(ListItem.SortLetter,S) | String.IsEqual(ListItem.SortLetter,T) | String.IsEqual(ListItem.SortLetter,U) | String.IsEqual(ListItem.SortLetter,V) | String.IsEqual(ListItem.SortLetter,W) | String.IsEqual(ListItem.SortLetter,X) | String.IsEqual(ListItem.SortLetter,Y) | String.IsEqual(ListItem.SortLetter,Z)]">Conditional</animation>
             <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
@@ -1788,9 +1788,9 @@
         <control type="button" id="62">
             <visible>$PARAM[visible]</visible>
             <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
-            <font />
-            <texturefocus />
-            <texturenofocus />
+            <font/>
+            <texturefocus/>
+            <texturenofocus/>
             <height>40</height>
             <left>80</left>
             <right>80</right>
@@ -1825,82 +1825,82 @@
             <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(62)">Conditional</animation>
             <include>Object_AlphabetNumber</include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="A" />
+                <param name="label" value="A"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="B" />
+                <param name="label" value="B"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="C" />
+                <param name="label" value="C"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="D" />
+                <param name="label" value="D"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="E" />
+                <param name="label" value="E"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="F" />
+                <param name="label" value="F"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="G" />
+                <param name="label" value="G"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="H" />
+                <param name="label" value="H"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="I" />
+                <param name="label" value="I"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="J" />
+                <param name="label" value="J"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="K" />
+                <param name="label" value="K"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="L" />
+                <param name="label" value="L"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="M" />
+                <param name="label" value="M"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="N" />
+                <param name="label" value="N"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="O" />
+                <param name="label" value="O"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="P" />
+                <param name="label" value="P"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="Q" />
+                <param name="label" value="Q"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="R" />
+                <param name="label" value="R"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="S" />
+                <param name="label" value="S"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="T" />
+                <param name="label" value="T"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="U" />
+                <param name="label" value="U"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="V" />
+                <param name="label" value="V"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="W" />
+                <param name="label" value="W"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="X" />
+                <param name="label" value="X"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="Y" />
+                <param name="label" value="Y"/>
             </include>
             <include content="Object_AlphabetLetter">
-                <param name="label" value="Z" />
+                <param name="label" value="Z"/>
             </include>
             <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
         </control>

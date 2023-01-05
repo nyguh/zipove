@@ -268,9 +268,7 @@
         <value condition="!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),, $LOCALIZE[31380] ]$INFO[ListItem.Duration(mm),, $LOCALIZE[31381]]</value>
         <value condition="!String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration(mins),, $LOCALIZE[31381]]</value>
     </variable>
-    <variable name="Label_InfoLine">
-        <value condition="[String.IsEqual(ListItem.DBType,set) | ListItem.IsCollection] + !String.IsEmpty(ListItem.DBID) + Window.IsMedia">$INFO[ListItem.Year,[COLOR=white] - ,[/COLOR]]</value>
-        <value condition="[String.IsEqual(ListItem.DBType,set) | ListItem.IsCollection] + !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Set.Years))">$INFO[Window(Home).Property(TMDBHelper.ListItem.Set.Years), | [COLOR=white],[/COLOR]]$INFO[Window(Home).Property(TMDBHelper.ListItem.Set.NumItems), | [COLOR=white], $LOCALIZE[342][/COLOR]]</value>
+    <variable name="Label_InfoLine"><value condition="[String.IsEqual(ListItem.DBType,set) | ListItem.IsCollection] + !String.IsEmpty(ListItem.DBID) + Window.IsMedia">$INFO[ListItem.Year,[COLOR=white] - ,[/COLOR]]</value><value condition="[String.IsEqual(ListItem.DBType,set) | ListItem.IsCollection] + !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Set.Years))">$INFO[Window(Home).Property(TMDBHelper.ListItem.Set.Years), | [COLOR=white],[/COLOR]]$INFO[Window(Home).Property(TMDBHelper.ListItem.Set.NumItems), | [COLOR=white], $LOCALIZE[342][/COLOR]]</value>
  |        <value condition="String.IsEqual(ListItem.DBType,movie)">$INFO[ListItem.Year, | [COLOR=white],[/COLOR]]$INFO[ListItem.MPAA, | [COLOR=white],[/COLOR]]$VAR[Label_Duration, | [COLOR=white],[/COLOR]]$INFO[ListItem.EndTime, | [COLOR=white]$LOCALIZE[31080] ,[/COLOR]]</value>
  |        <value condition="String.IsEqual(ListItem.DBType,tvshow)">$INFO[ListItem.Year, | [COLOR=white],[/COLOR]]$INFO[ListItem.MPAA, | [COLOR=white],[/COLOR]]$INFO[ListItem.Property(WatchedEpisodes), | [COLOR=white]$LOCALIZE[16102] , $LOCALIZE[20163] [/COLOR]]$INFO[ListItem.Property(TotalEpisodes),[COLOR=white],[/COLOR]]$VAR[Label_Info_NextAired_Status, | [COLOR=white],[/COLOR]]</value>
  |        <value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Season, | [COLOR=white]$LOCALIZE[20373] ,[/COLOR]]$INFO[ListItem.Year, | [COLOR=white],[/COLOR]]$INFO[ListItem.MPAA, | [COLOR=white],[/COLOR]]$INFO[ListItem.Property(WatchedEpisodes), | [COLOR=white]$LOCALIZE[16102] , $LOCALIZE[20163] [/COLOR]]$INFO[ListItem.Property(TotalEpisodes),[COLOR=white],[/COLOR]]$VAR[Label_Info_NextAired_Status, | [COLOR=white],[/COLOR]]</value>
@@ -1229,6 +1227,6 @@
     </variable>
     <variable name="DialogAddonButtonSelected">
         <value condition="ListItem.IsAutoUpdateable">(*)</value>
-        <value condition="!ListItem.IsAutoUpdateable">(&#009;&#009;)</value>
+        <value condition="!ListItem.IsAutoUpdateable">(		)</value>
     </variable>
 </includes>

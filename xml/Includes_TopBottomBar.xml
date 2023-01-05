@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="TopBar">
-        <param name="sublabel">$INFO[Container.SortMethod,[UPPERCASE],[/UPPERCASE]  ]$INFO[Container.CurrentItem,, &#8226; ]$INFO[Container.NumItems]</param>
+        <param name="sublabel">$INFO[Container.SortMethod,[UPPERCASE],[/UPPERCASE]  ]$INFO[Container.CurrentItem,, • ]$INFO[Container.NumItems]</param>
         <param name="left" default="0"/>
         <param name="width" default="1920"/>
         <param name="topbar_visible">true</param>
@@ -56,7 +56,7 @@
                             <texture colordiffuse="$VAR[ColorHighlight]">$VAR[NowPlayingIconVar]</texture>
                         </control>
                         <control type="label">
-                            <label>$INFO[Player.Title] &#8226; $VAR[NowPlayingSublabelVar]</label>
+                            <label>$INFO[Player.Title] • $VAR[NowPlayingSublabelVar]</label>
                             <font>font_tiny_hintlabel</font>
                             <height>35</height>
                             <textcolor>b3ededed</textcolor>
@@ -208,21 +208,21 @@
         </control>
         <control type="label">
             <left>20</left>
-            <label>$PARAM[breadcrumbs_label]$INFO[Container.ShowTitle, &#8226; ]</label>
+            <label>$PARAM[breadcrumbs_label]$INFO[Container.ShowTitle, • ]</label>
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
             <visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName) + Container.Content()</visible>
         </control>
         <control type="label">
             <left>20</left>
-            <label>$PARAM[breadcrumbs_label]$INFO[Container.FolderName, &#8226; ]</label>
+            <label>$PARAM[breadcrumbs_label]$INFO[Container.FolderName, • ]</label>
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
             <visible>![Container.Content() + Window.IsActive(videos)]</visible>
             <visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)] + String.IsEmpty(Container.PluginCategory)</visible>
         </control>
         <control type="label">
-            <label>$PARAM[breadcrumbs_label]$INFO[Container.PluginCategory, &#8226; ]</label>
+            <label>$PARAM[breadcrumbs_label]$INFO[Container.PluginCategory, • ]</label>
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
             <visible>!String.isempty(Container.PluginCategory)</visible>
@@ -354,7 +354,7 @@
                     <aligny>center</aligny>
                     <align>right</align>
                     <textcolor>b3ededed</textcolor>
-                    <label>$INFO[Container($PARAM[right_container_id]).CurrentItem,, &#8226; ]$INFO[Container($PARAM[right_container_id]).NumItems]</label>
+                    <label>$INFO[Container($PARAM[right_container_id]).CurrentItem,, • ]$INFO[Container($PARAM[right_container_id]).NumItems]</label>
                 </control>
                 <control type="image">
                     <width>54</width>
@@ -382,7 +382,7 @@
                     <aligny>center</aligny>
                     <align>right</align>
                     <textcolor>b3ededed</textcolor>
-                    <label>$INFO[Container($PARAM[left_container_id]).CurrentItem,, &#8226; ]$INFO[Container($PARAM[left_container_id]).NumItems]</label>
+                    <label>$INFO[Container($PARAM[left_container_id]).CurrentItem,, • ]$INFO[Container($PARAM[left_container_id]).NumItems]</label>
                 </control>
             </control>
         </control>
