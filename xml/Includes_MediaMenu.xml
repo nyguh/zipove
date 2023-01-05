@@ -280,7 +280,7 @@
         <definition>
             <control type="group">
                 <nested/>
-                <top>160</top>
+                <top>120</top>
                 <left>155</left>
                 <height>700</height>
                 <width>380</width>
