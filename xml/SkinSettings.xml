@@ -504,7 +504,7 @@
                     <control type="radiobutton" id="921" description="Landscape art">
                         <label>$LOCALIZE[31351]</label>
                         <include>DefaultSettingButton</include>
-                        <selected>Skin.HasSetting(LandscapeArt)</selected>
+                        <selected>!Skin.HasSetting(LandscapeArt)</selected>
                         <onclick>Skin.ToggleSetting(LandscapeArt)</onclick>
                     </control>
                     <control type="radiobutton" id="922" description="Clearlogo">

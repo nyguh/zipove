@@ -565,9 +565,7 @@
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[primecondition]">
                     <control type="group">
-                        <include content="ViewLandscapeItemLayout">
-                            <param name="prime_logo" value="true"/>
-                        </include>
+                        <include content="ViewLandscapeItemLayout"/>
                         <control type="image">
                             <left>20</left>
                             <top>160</top>

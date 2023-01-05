@@ -398,7 +398,6 @@
     </include>
     <include name="ViewLandscapeItemLayout">
         <param name="iconheight" default="375.5"/>
-        <param name="prime_logo" default="false"/>
         <param name="image_source" default="$VAR[Image_Landscape]"/>
         <definition>
             <control type="group">
@@ -425,18 +424,6 @@
                     <aspectratio scalediffuse="true">keep</aspectratio>
                     <texture background="true">$PARAM[image_source]</texture>
                     <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                </control>
-                <control type="group">
-                    <height>$PARAM[iconheight]</height>
-                    <control type="image">
-                        <left>60</left>
-                        <bottom>30</bottom>
-                        <width>33%</width>
-                        <aspectratio aligny="bottom">keep</aspectratio>
-                        <texture background="true">$VAR[Image_ClearLogo]</texture>
-                        <visible>$PARAM[clearlogo]</visible>
-                        <animation effect="slide" time="0" end="0,-220" condition="$PARAM[prime_logo]">Conditional</animation>
-                    </control>
                 </control>
             </control>
         </definition>
