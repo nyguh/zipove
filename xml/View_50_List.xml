@@ -379,7 +379,16 @@
                     <aspectratio scalediffuse="true">keep</aspectratio>
                     <texture background="true" border="24" diffuse="diffuse/poster-big-half-right.png">$VAR[IconWallThumbVar]</texture>
                     <bordersize>24</bordersize>
-                    <visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
+                    <visible>!String.IsEmpty(Listitem.Art(poster))</visible>
+                </control>
+                <control type="image">
+                    <top>180</top>
+                    <right>172</right>
+                    <width>512</width>
+                    <aspectratio scalediffuse="true">keep</aspectratio>
+                    <texture background="true" border="24" diffuse="diffuse/square-diffuse-big.png">$VAR[IconWallThumbVar]</texture>
+                    <bordersize>24</bordersize>
+                    <visible>String.IsEmpty(Listitem.Art(poster))</visible>
                 </control>
                 <control type="image">
                     <right>119</right>

@@ -223,7 +223,7 @@
                 <bottom>45</bottom>
                 <include content="Object_Scrollbar_Vert">
                     <param name="visible" value="Control.IsVisible(55)"/>
-                    <param name="left" value="1236"/>
+                    <param name="left" value="1200"/>
                 </include>
             </control>
         </control>
