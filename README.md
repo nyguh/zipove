@@ -6,13 +6,13 @@ _The skin is designed to allow the user to focus on media consumption. It provid
 
 _You can install it via repository to provide automatic updates_
 
-- Download repository: [repository.heppen](https://github.com/nfm886/repository.heppen/raw/main/repository.heppen.zip)
+- Download repository: [repository.heppen](https://github.com/heppen7/repository.heppen/raw/main/repository.heppen.zip)
 - Or install it via Kodi file-manager
-  - add source: https://nfm886.github.io/repository.heppen or https://zips.ovh/heppen
+  - add source: https://heppen7.github.io/ or https://zips.ovh/heppen
 
 _or install it manually (updates should be installed manually)_
 
-- [skin.cosmic](https://github.com/nfm886/skin.cosmic/archive/refs/heads/master.zip)
+- [skin.cosmic](https://github.com/heppen7/skin.cosmic/archive/refs/heads/master.zip)
 
 # License
 
