@@ -1257,7 +1257,7 @@
                 <right>0</right>
                 <visible>$PARAM[visible_infoline]</visible>
                 <control type="image">
-                    <top>10</top>
+                    <top>8</top>
                     <width>37</width>
                     <height>24</height>
                     <aspectratio align="left">keep</aspectratio>
@@ -1265,7 +1265,7 @@
                 </control>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="  $VAR[PercentageRating]% $LOCALIZE[31384]"/>
-                    <param name="font" value="font32_title"/>
+                    <param name="font" value="font_tiny_infolabel"/>
                     <param name="textcolor" value="$VAR[ColorHighlight]"/>
                     <param name="divider" value="false"/>
                     <param name="fallback" value="N/A"/>
