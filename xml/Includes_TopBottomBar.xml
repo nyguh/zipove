@@ -72,9 +72,12 @@
                 <control type="group">
                     <width>600</width>
                     <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)">Conditional</animation>
-                    <include content="TopBarLabels">
-                        <param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]"/>
-                    </include>
+                    <control type="group">
+                        <width>500</width>
+                        <include content="TopBarLabels">
+                            <param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]"/>
+                        </include>
+                    </control>
                 </control>
 
                 <!-- sublabel -->
@@ -93,11 +96,27 @@
                     <width>600</width>
                     <control type="grouplist">
                         <height>100</height>
-                        <right>160</right>
+                        <right>85</right>
                         <align>right</align>
                         <itemgap>6</itemgap>
                         <orientation>horizontal</orientation>
                         <usecontrolcoords>true</usecontrolcoords>
+                        <control type="label">
+                            <font>font30_title_upp</font>
+                            <height>64</height>
+                            <width>auto</width>
+                            <textcolor>b3ededed</textcolor>
+                            <label>$INFO[ListItem.ChannelName]</label>
+                            <visible>Control.HasFocus(51)</visible>
+                        </control>
+                        <control type="label">
+                            <top>5</top>
+                            <height>64</height>
+                            <width>auto</width>
+                            <textcolor>b3ededed</textcolor>
+                            <label>•</label>
+                            <visible>Control.HasFocus(51)</visible>
+                        </control>
                         <control type="label">
                             <font>font30_title_upp</font>
                             <height>64</height>
@@ -153,14 +172,14 @@
             <label>$INFO[Player.Title]</label>
             <font>font25_title</font>
             <textcolor>b3ededed</textcolor>
-            <width min="1" max="602">auto</width>
+            <width min="1" max="560">auto</width>
             <visible>!Control.IsVisible(503) + Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !System.HasAlarm(shutdowntimer)</visible>
         </control>
         <control type="label">
             <label>$VAR[NowPlayingSublabelVar]</label>
             <font>font_tiny_hintlabel</font>
             <textcolor>b3ededed</textcolor>
-            <width min="1" max="602">auto</width>
+            <width min="1" max="560">auto</width>
             <visible>!Control.IsVisible(503) + Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !System.HasAlarm(shutdowntimer)</visible>
         </control>
         <control type="label">
@@ -199,6 +218,18 @@
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
             <visible>Window.IsVisible(1170) + !System.HasAlarm(shutdowntimer) + ![Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]</visible>
+        </control>
+        <control type="label">
+            <textcolor>b3ededed</textcolor>
+            <font>font30_title_upp</font>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus(50)</visible>
+        </control>
+        <control type="label">
+            <textcolor>b3ededed</textcolor>
+            <font>font30_title_upp</font>
+            <label>$INFO[ListItem.Title]</label>
+            <visible>Control.HasFocus(51)</visible>
         </control>
     </include>
     <include name="InfoDialogTopBarInfo">
