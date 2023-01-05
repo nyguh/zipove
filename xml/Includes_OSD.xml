@@ -84,14 +84,12 @@
                             </control>
                             <control type="group">
                                 <top>11</top>
-                                <include content="ProgressGradient">
-                                    <param name="id" value="29999"/>
-                                    <param name="top" value="0"/>
+                                <control type="progress">
                                     <width>480</width>
                                     <height>16</height>
                                     <left>0</left>
                                     <info>PVR.EpgEventProgress</info>
-                                </include>
+                                </control>
                             </control>
                         </control>
                         <control type="grouplist">
@@ -433,14 +431,12 @@
                     </control>
                     <control type="group">
                         <top>78</top>
-                        <include content="ProgressGradient">
-                            <param name="id" value="29999"/>
-                            <param name="top" value="0"/>
+                        <control type="progress">
                             <width>1200</width>
                             <height>16</height>
                             <left>0</left>
                             <info>PVR.EpgEventProgress</info>
-                        </include>
+                        </control>
                     </control>
                 </control>
             </control>

@@ -1,51 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <zorder>4</zorder>
-    <controls>
-        <control type="group">
-            <visible>!Window.IsActive(startup) + !Window.IsActive(GameVolume)</visible>
-            <centerleft>50%</centerleft>
-            <width>112</width>
-            <top>0</top>
-            <animation effect="fade" start="100" end="0" time="200" delay="1000" condition="Player.Muted">Conditional</animation>
-            <animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-            <control type="group">
-                <width>620</width>
-                <height>64</height>
-                <top>767</top>
-                <left>-780</left>
-                <control type="image">
-                    <texture border="5" colordiffuse="$VAR[VolumeSliderColour]">common/box.png</texture>
-                </control>
-                <animation effect="rotate" end="90" center="90" time="200" condition="Control.IsVisible(29999)">Conditional</animation>
-            </control>
-            <include content="ProgressGradient">
-                <param name="id" value="29999"/>
-                <param name="top" value="788"/>
-                <top>788</top>
-                <left>-710</left>
-                <height>22</height>
-                <width>480</width>
-                <info>Player.Volume</info>
-                <animation effect="rotate" end="90" center="90" time="200" condition="Control.IsVisible(29999)">Conditional</animation>
-            </include>
-            <control type="image">
-                <left>870</left>
-                <top>260</top>
-                <width>40</width>
-                <height>40</height>
-                <texture colordiffuse="$VAR[ColorHighlight]">$VAR[VolumeIconVar]</texture>
-            </control>
-            <control type="label">
-                <left>855</left>
-                <top>815</top>
-                <width>64</width>
-                <font>font13</font>
-                <align>center</align>
-                <textcolor>$VAR[ColorHighlight]</textcolor>
-                <label>$INFO[Control.GetLabel(29999)]</label>
-            </control>
-        </control>
-    </controls>
+	<controls>
+		<control type="group">
+			<bottom>-680</bottom>
+			<left>-720</left>
+			<width>384</width>
+			<height>64</height>
+			<animation effect="rotate" end="90" center="90" time="0" condition="true">Conditional</animation>
+			<control type="image">
+				<left>60</left>
+				<width>392</width>
+				<height>72</height>
+				<texture colordiffuse="dialog_bg_100" border="16">dialogs/volume/volume-bg.png</texture>
+			</control>
+			<control type="group">
+				<top>4</top>
+				<left>64</left>
+				<control type="progress" id="200">
+					<left>0</left>
+					<width>384</width>
+					<height>64</height>
+					<texturebg colordiffuse="dialog_bg_100" border="16">dialogs/volume/volume-bg.png</texturebg>
+					<midtexture colordiffuse="$VAR[ColorHighlight]" border="0,16,0,16">dialogs/volume/vol-mid.png</midtexture>
+					<lefttexture colordiffuse="00ffffff" border="16,16,0,16">dialogs/volume/vol-left.png</lefttexture>
+					<righttexture colordiffuse="$VAR[ColorHighlight]" border="0,16,16,16">dialogs/volume/vol-right.png</righttexture>
+					<info>Player.Volume</info>
+				</control>
+				<control type="image">
+					<width>64</width>
+					<height>64</height>
+					<texture colordiffuse="$VAR[ColorHighlight]" border="16,16,0,16">dialogs/volume/vol-left.png</texture>
+				</control>
+				<control type="label">
+					<left>64</left>
+					<width>64</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font_vol</font>
+					<textcolor>dialog_fg_100</textcolor>
+					<angle>-90</angle>
+					<label>$INFO[Control.GetLabel(200)]</label>
+				</control>
+				<control type="image">
+					<top>-148</top>
+					<left>-78</left>
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="dialog_fg_100">$VAR[Volume_Icon]</texture>
+					<animation effect="rotate" end="-90" center="-90" time="0" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

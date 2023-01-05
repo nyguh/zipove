@@ -429,17 +429,13 @@
                     <font>font27</font>
                     <label>$INFO[VideoPlayer.StartTime,, - ]$INFO[VideoPlayer.EndTime] $INFO[VideoPlayer.NextTitle, $LOCALIZE[31310]: ,]</label>
                 </control>
-                <control type="group">
+                <control type="progress">
                     <top>946</top>
                     <left>350</left>
-                    <include content="ProgressGradient">
-                        <param name="id" value="29999"/>
-                        <param name="top" value="0"/>
-                        <width>1200</width>
-                        <height>16</height>
-                        <left>0</left>
-                        <info>PVR.EpgEventProgress</info>
-                    </include>
+                    <width>1200</width>
+                    <height>16</height>
+                    <left>0</left>
+                    <info>PVR.EpgEventProgress</info>
                 </control>
                 <control type="label">
                     <top>720</top>

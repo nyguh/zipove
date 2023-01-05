@@ -22,16 +22,13 @@
                 <textcolor>dialog_fg_70</textcolor>
                 <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
-            <include content="ProgressGradient">
-                <param name="id" value="20"/>
-                <param name="top" value="262"/>
-                <param name="info" value="System.Progressbar"/>
+            <control type="progress">
                 <left>30</left>
                 <top>262</top>
                 <width>855</width>
                 <height>24</height>
                 <info>System.Progressbar</info>
-            </include>
+            </control>
             <control type="grouplist" id="9000">
                 <orientation>horizontal</orientation>
                 <left>0</left>
