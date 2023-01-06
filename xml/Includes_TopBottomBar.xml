@@ -7,7 +7,7 @@
         <definition>
 
             <control type="grouplist">
-
+                <visible>$PARAM[topbar_visible]</visible>
                 <top>60</top>
                 <centerleft>50%</centerleft>
                 <width>$PARAM[width]</width>

@@ -1202,12 +1202,14 @@
         <param name="visible" default="true"/>
         <param name="fallback" default=""/>
         <param name="font" default="font_tiny_infolabel"/>
+        <param name="scroll" default="true"/>
+        <param name="top" default="6"/>
         <definition>
             <control type="label">
-                <top>6</top>
+                <top>$PARAM[top]</top>
                 <width>auto</width>
                 <label> | </label>
-                <height>72</height>
+                <height>42</height>
                 <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <textcolor>$VAR[ColorHighlight]</textcolor>
@@ -1216,11 +1218,12 @@
                 <visible>$PARAM[visible]</visible>
             </control>
             <control type="label" id="$PARAM[id]">
-                <top>6</top>
+                <top>$PARAM[top]</top>
                 <width>$PARAM[width]</width>
                 <scroll>true</scroll>
+                <scroll>$PARAM[scroll]</scroll>
                 <label fallback="$PARAM[fallback]">$PARAM[label]</label>
-                <height>72</height>
+                <height>42</height>
                 <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
@@ -1233,18 +1236,20 @@
         <param name="nextaired" default="true"/>
         <param name="container" default=""/>
         <param name="uid" default="661"/>
+        <param name="width" default="1125"/>
         <param name="visible_infoline" default="!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Container(7502).IsUpdating + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !Control.HasFocus(303)] + !String.StartsWith(ListItem.FolderPath,favourites://)"/>
         <definition>
             <control type="grouplist">
-                <height>72</height>
+                <height>42</height>
                 <orientation>horizontal</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
-                <itemgap>0</itemgap>
+                <itemgap>6</itemgap>
                 <left>0</left>
                 <right>0</right>
+                <width>$PARAM[width]</width>
                 <visible>$PARAM[visible_infoline]</visible>
                 <control type="image">
-                    <top>8</top>
+                    <top>9</top>
                     <width>37</width>
                     <height>24</height>
                     <aspectratio align="left">keep</aspectratio>
@@ -1252,24 +1257,19 @@
                 </control>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="  $VAR[PercentageRating]% $LOCALIZE[31384]"/>
-                    <param name="font" value="font_tiny_infolabel"/>
                     <param name="textcolor" value="$VAR[ColorHighlight]"/>
                     <param name="divider" value="false"/>
                     <param name="fallback" value="N/A"/>
                     <param name="visible" value="!String.IsEmpty(ListItem.Rating) + Skin.HasSetting(Ratings.User)"/>
                     <param name="width" value="auto"/>
+                    <param name="top" value="7"/>
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$VAR[Label_InfoLine]"/>
                     <param name="textcolor" value="$VAR[ColorHighlight]"/>
                     <param name="divider" value="false"/>
-                    <param name="visible" value="!Window.IsVisible(videoosd) + !Skin.HasSetting(Horizontal_Main)"/>
-                    <param name="width" value="1125"/>
-                </include>
-                <include content="Object_Info_Line_Label">
-                    <param name="label" value="$VAR[Label_InfoLine]"/>
-                    <param name="visible" value="!Window.IsVisible(videoosd) + Skin.HasSetting(Horizontal_Main)"/>
-                    <param name="width" value="1125"/>
+                    <param name="visible" value="!Window.IsVisible(videoosd)"/>
+                    <param name="width" value="$PARAM[width]"/>
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$VAR[Label_OSD_InfoLine]"/>

@@ -4,10 +4,10 @@
     <backgroundcolor>Background</backgroundcolor>
     <views>50,52,55</views>
     <menucontrol>9000</menucontrol>
-    <include>OpenClose_Animation</include>
     <controls>
         <include>DefaultBackground</include>
         <control type="group">
+            <include>OpenClose_Animation</include>
             <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
             <include>View_50_List</include>
             <include>View_52_IconWall</include>
@@ -40,29 +40,30 @@
                     </control>
                 </control>
             </control>
-            <include content="TopBar">
-                <param name="breadcrumbs_label" value="$LOCALIZE[24001]"/>
+        </control>
+        <include content="TopBar">
+            <param name="breadcrumbs_label" value="$LOCALIZE[24001]"/>
+            <param name="topbar_visible" value="!Window.IsVisible(addoninformation)"/>
+        </include>
+        <include>MediaMenuMouseOverlay</include>
+        <control type="group">
+            <include content="MediaMenuCommon">
+                <param name="visible">$EXP[MediaMenu]</param>
+                <param name="onleft">50</param>
+                <param name="onright">50</param>
+                <param name="onback">50</param>
             </include>
-            <include>MediaMenuMouseOverlay</include>
-            <control type="group">
-                <include content="MediaMenuCommon">
-                    <param name="visible">$EXP[MediaMenu]</param>
-                    <param name="onleft">50</param>
-                    <param name="onright">50</param>
-                    <param name="onback">50</param>
-                </include>
-            </control>
-            <include>Defs_MediaMenuCommon</include>
-            <control type="group">
-                <height>78</height>
-                <bottom>0</bottom>
-                <visible>$EXP[sidebar_visible]</visible>
-                <animation effect="fade" time="300">VisibleChange</animation>
-                <include content="LeftAlignedInfo">
-                    <param name="main_label" value="$INFO[Window(AddonBrowser).Property(Updated)]"/>
-                    <param name="sub_label" value="$LOCALIZE[31069]"/>
-                </include>
-            </control>
+        </control>
+        <include>Defs_MediaMenuCommon</include>
+        <control type="group">
+            <height>78</height>
+            <bottom>0</bottom>
+            <visible>!Window.IsVisible(addoninformation)</visible>
+            <animation effect="fade" time="300">VisibleChange</animation>
+            <include content="LeftAlignedInfo">
+                <param name="main_label" value="$INFO[Window(AddonBrowser).Property(Updated)]"/>
+                <param name="sub_label" value="$LOCALIZE[31069]"/>
+            </include>
         </control>
         <!-- hidden buttons -->
         <include>Defs_MediaMenuCommon</include>

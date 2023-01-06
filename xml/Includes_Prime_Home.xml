@@ -174,6 +174,7 @@
                     <include>View_Settings</include>
                 </control>
             </control>
+            <include content="TopBar" condition="!Skin.HasSetting(DisableTopBar)" />
             <control type="group">
                 <control type="group">
                     <animation effect="slide" start="0,0" end="-714,0" time="250" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001) + !Control.HasFocus(303)">Conditional</animation>
@@ -297,7 +298,6 @@
                 </control>
                 <include>skinshortcuts-template-submenu</include>
             </control>
-            <include content="TopBar" condition="!Skin.HasSetting(DisableTopBar)" />
         </control>
     </include>
 </includes>

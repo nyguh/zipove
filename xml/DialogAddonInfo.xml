@@ -4,9 +4,9 @@
     <onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
     <onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
     <onunload>ClearProperty(infobackground,home)</onunload>
-    <include>OpenClose_Animation</include>
     <controls>
         <control type="group">
+            <include>OpenClose_Animation</include>
             <centertop>60%</centertop>
             <height>1080</height>
             <centerleft>50%</centerleft>
@@ -251,10 +251,10 @@
                 <textcolor>88FFFFFF</textcolor>
                 <autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
             </control>
-            <include content="InfoDialogTopBarInfo">
-                <param name="main_label" value="$INFO[ListItem.AddonName]"/>
-                <param name="sub_label" value="$INFO[ListItem.AddonVersion,[COLOR grey],[/COLOR]]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]"/>
-            </include>
         </control>
+        <include content="TopBar">
+            <param name="breadcrumbs_label" value="$LOCALIZE[24001]"/>
+            <param name="sublabel" value="$INFO[ListItem.AddonName]"/>
+        </include>
     </controls>
 </window>

@@ -52,7 +52,7 @@
             </content>
         </control>
         <control type="group">
-            <include>OpenClose_Animation</include>
+            <include>OpenClose_Fade</include>
             <include condition="Skin.HasSetting(Prime_Main)">Prime_Main</include>
         </control>
     </controls>
