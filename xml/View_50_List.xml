@@ -293,7 +293,7 @@
                         <width>680</width>
                         <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
                         <texture fallback="DefaultVideo.png" background="true" diffuse="diffuse/landscape-big.png">$VAR[Image_Landscape]</texture>
-                        <bordertexture border="24">common/shadow-24.png</bordertexture>
+                        <bordertexture border="48">common/shadow-24.png</bordertexture>
                         <bordersize>24</bordersize>
                     </control>
                     <control type="group">
@@ -391,26 +391,12 @@
                     <visible>String.IsEmpty(Listitem.Art(poster))</visible>
                 </control>
                 <control type="image">
-                    <right>119</right>
-                    <width>620</width>
-                    <height>780</height>
-                    <centertop>50%</centertop>
+                    <top>180</top>
+                    <right>172</right>
+                    <width>512</width>
                     <aspectratio scalediffuse="true">keep</aspectratio>
-                    <fadetime>300</fadetime>
-                    <texture background="true" diffuse="common/landscape-diffuse.png">$INFO[ListItem.Icon]</texture>
-                    <bordertexture border="72" colordiffuse="AltPosterBack">common/dark-shadow-24-2.png</bordertexture>
+                    <texture background="true" border="24" diffuse="diffuse/square-diffuse-big.png">$INFO[ListItem.Icon]</texture>
                     <bordersize>24</bordersize>
-                    <visible>String.IsEqual(ListItem.DbType,episode)</visible>
-                </control>
-                <control type="image">
-                    <right>119</right>
-                    <width>620</width>
-                    <height>780</height>
-                    <centertop>50%</centertop>
-                    <aspectratio scalediffuse="true">keep</aspectratio>
-                    <fadetime>300</fadetime>
-                    <texture background="true" diffuse="common/landscape-diffuse.png">$INFO[ListItem.Icon]</texture>
-                    <bordersize>18</bordersize>
                     <visible>String.IsEqual(ListItem.DbType,episode)</visible>
                 </control>
                 <control type="image">
