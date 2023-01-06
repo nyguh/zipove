@@ -2,7 +2,6 @@
 <window>
     <defaultcontrol>9000</defaultcontrol>
     <backgroundcolor>Background</backgroundcolor>
-    <include>OpenClose_Animation</include>
     <controls>
         <include>DefaultBackground</include>
         <control type="multiimage">
@@ -15,29 +14,12 @@
             <imagepath colordiffuse="35FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
             <visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
         </control>
-        <control type="label">
-            <left>200</left>
-            <top>200</top>
-            <height>400</height>
-            <textcolor>white</textcolor>
-            <label>$INFO[ListItem.Label]</label>
-            <align>left</align>
-            <font>font_pvr_clock</font>
-        </control>
-        <control type="label">
-            <right>300</right>
-            <top>200</top>
-            <height>400</height>
-            <textcolor>white</textcolor>
-            <label>$INFO[System.Time]</label>
-            <align>right</align>
-            <font>font_pvr_clock</font>
-        </control>
         <control type="group">
             <centerleft>50%</centerleft>
             <width>1600</width>
             <top>50</top>
             <bottom>0</bottom>
+            <include>OpenClose_Animation</include>
             <control type="panel" id="9000">
                 <left>0</left>
                 <right>0</right>
@@ -50,5 +32,6 @@
                 <include>Items_Settings_Main</include>
             </control>
         </control>
+        <include>TopBar</include>
     </controls>
 </window>

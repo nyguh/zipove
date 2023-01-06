@@ -2,7 +2,6 @@
 <window>
     <defaultcontrol>3</defaultcontrol>
     <backgroundcolor>Background</backgroundcolor>
-    <include>OpenClose_Animation</include>
     <controls>
         <include>DefaultBackground</include>
         <control type="multiimage">
@@ -15,31 +14,17 @@
             <imagepath colordiffuse="35FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
             <visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
         </control>
-        <control type="label">
-            <top>100</top>
-            <left>120</left>
-            <textcolor>white</textcolor>
-            <label>$INFO[Control.GetLabel(2)]</label>
-            <include>BreadcrumbsLabel</include>
-        </control>
-        <control type="label">
-            <top>100</top>
-            <right>160</right>
-            <textcolor>white</textcolor>
-            <align>right</align>
-            <label>$INFO[System.Time]</label>
-            <include>BreadcrumbsLabel</include>
-        </control>
+        <include>TopBar</include>
         <control type="group">
             <centerleft>50%</centerleft>
             <top>180</top>
-            <width>1680</width>
+            <width>1600</width>
             <height>850</height>
             <control type="image">
                 <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
                 <bordertexture border="20">common/shadow-20.png</bordertexture>
                 <bordersize>10</bordersize>
-                <width>1680</width>
+                <width>1600</width>
                 <height>850</height>
                 <top>-10</top>
                 <left>-10</left>
@@ -56,7 +41,7 @@
                     <description>control area</description>
                     <top>60</top>
                     <left>470</left>
-                    <right>60</right>
+                    <right>22</right>
                     <height>700</height>
                     <itemgap>0</itemgap>
                     <onleft>3</onleft>
@@ -113,7 +98,7 @@
                     <description>Default Category Button</description>
                     <left>0</left>
                     <height>70</height>
-                    <width>400</width>
+                    <!-- <width>400</width> -->
                     <textoffsetx>40</textoffsetx>
                     <aligny>center</aligny>
                     <font>font27</font>

@@ -1291,9 +1291,9 @@
         </control>
     </include>
     <include name="SettingsPanel">
-        <itemlayout height="190" width="370">
+        <itemlayout height="190" width="400">
             <control type="image">
-                <width>370</width>
+                <width>400</width>
                 <height>190</height>
                 <texture diffuse="diffuse/landscape-std-np.png" border="5">common/diagonal-squares.png</texture>
                 <bordertexture border="20">common/shadow-24.png</bordertexture>
@@ -1309,10 +1309,10 @@
                 <aspectratio>keep</aspectratio>
             </control>
         </itemlayout>
-        <focusedlayout height="190" width="370">
+        <focusedlayout height="190" width="400">
             <control type="group">
                 <control type="image">
-                    <width>370</width>
+                    <width>400</width>
                     <height>190</height>
                     <texture diffuse="diffuse/landscape-std-np.png" border="5">common/diagonal-squares.png</texture>
                     <bordertexture border="20">common/shadow-24.png</bordertexture>

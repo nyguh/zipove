@@ -4,7 +4,6 @@
     <backgroundcolor>Background</backgroundcolor>
     <onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onunload>
-    <include>OpenClose_Animation</include>
     <controls>
         <include>DefaultBackground</include>
         <control type="multiimage">
@@ -17,31 +16,18 @@
             <imagepath background="true" colordiffuse="30FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
             <visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
         </control>
-        <control type="label">
-            <top>100</top>
-            <left>120</left>
-            <textcolor>white</textcolor>
-            <label>$LOCALIZE[20077]</label>
-            <include>BreadcrumbsLabel</include>
-        </control>
-        <control type="label">
-            <top>100</top>
-            <right>160</right>
-            <textcolor>white</textcolor>
-            <align>right</align>
-            <label>$INFO[System.Time]</label>
-            <include>BreadcrumbsLabel</include>
-        </control>
+        <include>TopBar</include>
         <control type="group">
+            <include>OpenClose_Animation</include>
             <centerleft>50%</centerleft>
             <top>180</top>
-            <width>1680</width>
+            <width>1600</width>
             <height>850</height>
             <control type="image">
                 <texture colordiffuse="dialog_bg_100" border="6">common/dialog.png</texture>
                 <bordertexture border="20">common/shadow-20.png</bordertexture>
                 <bordersize>10</bordersize>
-                <width>1680</width>
+                <width>1600</width>
                 <height>850</height>
                 <top>-10</top>
                 <left>-10</left>
