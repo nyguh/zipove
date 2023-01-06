@@ -23,22 +23,25 @@
                 <visible>Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)</visible>
             </control>
             <control type="group">
-                <left>-16</left>
-                <centertop>50%</centertop>
-                <width>80</width>
-                <height>80</height>
-                <visible>[Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)] | $PARAM[nowplaying]</visible>
-                <control type="image">
-                    <texture colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <texture colordiffuse="$VAR[ColorGradient]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
-                    <animation effect="fade" end="66" condition="true">Conditional</animation>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <include content="ProgressColorFade">
-                        <param name="id" value="$PARAM[progress-id]"/>
-                    </include>
+                <top>4</top>
+                <control type="group">
+                    <left>-16</left>
+                    <centertop>50%</centertop>
+                    <width>80</width>
+                    <height>80</height>
+                    <visible>[Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)] | $PARAM[nowplaying]</visible>
+                    <control type="image">
+                        <texture colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
+                        <aspectratio align="center" aligny="center">keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <texture colordiffuse="$VAR[ColorGradient]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
+                        <animation effect="fade" end="66" condition="true">Conditional</animation>
+                        <aspectratio align="center" aligny="center">keep</aspectratio>
+                        <include content="ProgressColorFade">
+                            <param name="id" value="$PARAM[progress-id]"/>
+                        </include>
+                    </control>
                 </control>
             </control>
             <control type="group">

@@ -165,7 +165,7 @@
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
             <label>$INFO[System.AlarmPos]</label>
-            <visible>System.HasAlarm(shutdowntimer)</visible>
+            <visible>System.HasAlarm(shutdowntimer) + !Player.HasMedia + !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
         </control>
         <control type="label">
             <top>18</top>
@@ -223,7 +223,7 @@
             <textcolor>b3ededed</textcolor>
             <font>font30_title_upp</font>
             <label>$INFO[ListItem.Label]</label>
-            <visible>Control.HasFocus(50)</visible>
+            <visible>Control.HasFocus(50) + !Window.IsActive(videos)</visible>
         </control>
         <control type="label">
             <textcolor>b3ededed</textcolor>
