@@ -277,6 +277,7 @@
         </control>
     </include>
     <include name="MediaMenuCommon">
+        <param name="id" default="9000"/>
         <definition>
             <control type="group">
                 <nested/>
@@ -288,49 +289,49 @@
                 <include>Animation_MediaMenu</include>
                 <control type="group">
                     <include>MediaMenuBackground</include>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,9)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,9)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,8)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,8)</visible>
                     <bottom>70</bottom>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>145</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,7)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,7)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>210</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,6)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,6)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>285</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,5)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,5)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>360</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,4)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,4)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>445</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,3)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,3)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>530</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,2)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,2)</visible>
                 </control>
                 <control type="group">
                     <include>MediaMenuBackground</include>
                     <bottom>605</bottom>
-                    <visible>Integer.IsEqual(Container(9000).NumItems,1)</visible>
+                    <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,1)</visible>
                 </control>
-                <control type="panel" id="9000">
+                <control type="panel" id="$PARAM[id]">
                     <top>25</top>
                     <orientation>vertical</orientation>
                     <onleft>$PARAM[onleft]</onleft>

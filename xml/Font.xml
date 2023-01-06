@@ -190,13 +190,15 @@
         <!-- Menu Fonts -->
         <font>
             <name>font_menu</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>30</size>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>24</size>
+            <style>uppercase bold</style>
         </font>
         <font>
             <name>font_menu_focus</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>30</size>
+            <style>uppercase bold</style>
         </font>
         <!-- Title Fonts -->
         <font>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Horizontal_Main">
+        <!-- widgets group -->
+        <control type="group">
+            <control type="grouplist" id="3000">
+                <description>widgets</description>
+                <top>480</top>
+                <left>60</left>
+                <onup>1000</onup>
+                <width>2400</width>
+                <height>9999999</height>
+                <orientation>vertical</orientation>
+                <include>skinshortcuts-template-horizontal</include>
+                <include content="Animation_Widget_Slide_Horizontal">
+                    <param name="container">3000</param>
+                </include>
+            </control>
+        </control>
+        <!-- fading -->
+        <control type="image">
+            <width>1920</width>
+            <height>320</height>
+            <texture flipy="true" colordiffuse="black">common/fade.png</texture>
+        </control>
+        <control type="image">
+            <bottom>0</bottom>
+            <width>1920</width>
+            <height>480</height>
+            <texture colordiffuse="black">common/fade.png</texture>
+        </control>
+        <!-- showcase -->
+        <control type="group" id="5600">
+            <top>450</top>
+            <include content="Object_Item_HorizontalShowcase">
+                <param name="title" value="$VAR[Label_Title]"/>
+                <param name="plot" value="$VAR[Label_PlotTextBoxPrimeVar]"/>
+            </include>
+            <visible>!$EXP[infodialog_active]</visible>
+            <visible>ControlGroup(3000).HasFocus</visible>
+        </control>
+        <!-- main menu -->
+        <control type="group">
+            <top>50</top>
+            <width>1000</width>
+            <centerleft>50%</centerleft>
+            <control type="list" id="9000">
+                <width>1000</width>
+                <height>64</height>
+                <onup>2000</onup>
+                <ondown>3000</ondown>
+                <onleft>SetFocus(1000)</onleft>
+                <orientation>horizontal</orientation>
+                <itemlayout width="250" height="64">
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>ffdedede</textcolor>
+                        <font>font_menu</font>
+                        <visible>$PARAM[focused]</visible>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="250" height="64">
+                    <control type="group">
+                        <include>Animation_Bounce</include>
+                        <control type="image">
+                            <top>0</top>
+                            <width>240</width>
+                            <height>64</height>
+                            <centerleft>50%</centerleft>
+                            <texture border="5" colordiffuse="$VAR[ColorGradient]">buttons/menu.png</texture>
+                        </control>
+                        <control type="image">
+                            <top>1</top>
+                            <width>240</width>
+                            <height>62</height>
+                            <centerleft>50%</centerleft>
+                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">buttons/menu.png</texture>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>ffdedede</textcolor>
+                        <font>font_menu</font>
+                        <visible>$PARAM[focused]</visible>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <include>skinshortcuts-mainmenu</include>
+                </content>
+            </control>
+        </control>
+        <!-- topbar -->
+        <include>TopBar</include>
+        <control type="group">
+            <include content="MediaMenuCommon">
+                <param name="id">1000</param>
+                <param name="visible">Control.HasFocus(1000)</param>
+                <param name="onleft">9000</param>
+                <param name="onright">9000</param>
+                <param name="onback">9000</param>
+            </include>
+        </control>
+    </include>
+</includes>

@@ -1037,55 +1037,70 @@
             </control>
         </definition>
     </include>
-    <include name="Object_Item_Showcase_Horizontal">
-        <param name="top" default="0"/>
-        <param name="clearlogo_top_margin" default="-940"/>
-        <param name="clearlogo_width" default="480"/>
-        <param name="info_line_top" default="185"/>
-        <param name="plot_top" default="235"/>
-        <param name="plot_height" default="120"/>
-        <param name="title_visible" default="true"/>
-        <param name="wrapmultiline_title" default="false"/>
+    <include name="Object_Item_HorizontalShowcase">
+        <param name="clearlogo_width" default="320"/>
         <definition>
             <control type="group">
-                <top>$PARAM[top]</top>
+                <left>60</left>
                 <control type="group">
-                    <top>60</top>
-                    <control type="textbox">
-                        <left>150</left>
-                        <top>0</top>
-                        <autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-                        <height>150</height>
-                        <width>$PARAM[title_width]</width>
+                    <control type="label">
+                        <left>140</left>
+                        <scroll>true</scroll>
+                        <width>1200</width>
                         <textcolor>$VAR[TitleColour]</textcolor>
-                        <wrapmultiline>$PARAM[wrapmultiline_title]</wrapmultiline>
                         <shadowcolor>black</shadowcolor>
                         <label>$PARAM[title]</label>
                         <font>font_title_bold</font>
-                        <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
-                        <visible>$PARAM[title_visible]</visible>
                     </control>
                     <control type="image">
-                        <top>$PARAM[clearlogo_top_margin]</top>
-                        <left>150</left>
+                        <top>-420</top>
+                        <left>1400</left>
                         <width>$PARAM[clearlogo_width]</width>
                         <aspectratio>keep</aspectratio>
                         <texture background="true">$VAR[Image_ClearLogo]</texture>
                         <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
                     </control>
-                    <control type="group">
-                        <control type="textbox">
-                            <top>$PARAM[plot_top]</top>
-                            <left>150</left>
-                            <width>940</width>
-                            <height>$PARAM[plot_height]</height>
-                            <textcolor>white</textcolor>
-                            <label>$PARAM[plot]</label>
-                            <font>font32</font>
-                            <shadowcolor>black</shadowcolor>
-                            <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
-                            <visible>!Skin.HasSetting(HidePlot)</visible>
-                        </control>
+                </control>
+                <control type="group">
+                    <top>200</top>
+                    <left>140</left>
+                    <include content="Object_Info_Line">
+                        <param name="visible_infoline" value="true"/>
+                    </include>
+                </control>
+                <control type="textbox">
+                    <top>90</top>
+                    <left>140</left>
+                    <width>940</width>
+                    <height>100</height>
+                    <textcolor>white</textcolor>
+                    <label>$PARAM[plot]</label>
+                    <font>font27</font>
+                    <shadowcolor>black</shadowcolor>
+                    <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
+                </control>
+                <control type="grouplist">
+                    <top>240</top>
+                    <left>140</left>
+                    <orientation>horizontal</orientation>
+                    <itemgap>12</itemgap>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="label">
+                        <top>17</top>
+                        <left>0</left>
+                        <width>auto</width>
+                        <textcolor>$VAR[ColorHighlight]</textcolor>
+                        <font>font_rating</font>
+                        <label>$VAR[Label_PrimeShowcase_Top250]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Top250))</visible>
+                    </control>
+                    <control type="group" id="2999">
+                        <include content="Object_Ratings_Content">
+                            <param name="top" value="10"/>
+                            <param name="left" value="0"/>
+                            <param name="directory" value="$INFO[Skin.String(Icons)]"/>
+                            <param name="align" value="left"/>
+                        </include>
                     </control>
                 </control>
             </control>

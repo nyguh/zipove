@@ -1696,13 +1696,59 @@
                 <onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
                 <visible>Container.Content(addons) + !Window.IsVisible(AddonBrowser.xml)</visible>
             </item>
+            <!-- home screen controls -->
+			<item>
+                <icon>special://skin/extras/icons/download.png</icon>
+				<label>$LOCALIZE[10003]</label>
+				<onclick>ActivateWindow(filemanager)</onclick>
+				<visible>Window.IsVisible(home)</visible>
+			</item>
+			<item>
+                <icon>special://skin/extras/icons/addons.png</icon>
+				<label>$LOCALIZE[24001]</label>
+				<onclick>ActivateWindow(addonbrowser)</onclick>
+				<visible>Window.IsVisible(home)</visible>
+			</item>
+			<item>
+                <icon>special://skin/extras/icons/skinsettings.png</icon>
+				<label>$LOCALIZE[10035]</label>
+				<onclick>ActivateWindow(skinsettings)</onclick>
+				<visible>Window.IsVisible(home)</visible>
+			</item>
+			<item>
+                <icon>special://skin/extras/icons/settings.png</icon>
+				<label>$LOCALIZE[5]</label>
+				<onclick>ActivateWindow(settings)</onclick>
+				<visible>Window.IsVisible(home)</visible>
+			</item>
+            <item>
+                <icon>special://skin/extras/icons/sun.png</icon>
+				<label>$LOCALIZE[24027]</label>
+				<onclick>ActivateWindow(weather)</onclick>
+				<visible>Window.IsVisible(home)</visible>
+			</item>
+			<item>
+                <icon>special://skin/extras/icons/power.png</icon>
+				<label>$LOCALIZE[13005]</label>
+				<onclick>ActivateWindow(shutdownmenu)</onclick>
+				<visible>Window.IsVisible(home)</visible>
+			</item>
+			<!-- end home screen controls -->
         </content>
     </include>
     <include name="Items_SettingsDialog_Layout">
         <control type="button" id="9001">
             <label>$LOCALIZE[31428]</label>
             <include>DefaultSettingButton</include>
+            <onclick>Skin.Reset(Horizontal_Main)</onclick>
             <onclick>Skin.SetBool(Prime_Main)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9002">
+            <label>$LOCALIZE[31371]</label>
+            <include>DefaultSettingButton</include>
+            <onclick>Skin.Reset(Prime_Main)</onclick>
+            <onclick>Skin.SetBool(Horizontal_Main)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
     </include>

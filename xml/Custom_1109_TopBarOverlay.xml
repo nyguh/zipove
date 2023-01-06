@@ -86,9 +86,6 @@
                 <lefttexture colordiffuse="00ffffff" border="6">progress/progress-left.png</lefttexture>
                 <midtexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse.png">progress/progress-end.png</midtexture>
                 <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">progress/progress-right.png</righttexture>
-                <include content="ProgressColorFade">
-                    <param name="id" value="499"/>
-                </include>
                 <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
             </control>
             <control type="slider">
