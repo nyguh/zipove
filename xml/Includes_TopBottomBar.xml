@@ -6,6 +6,18 @@
         <param name="topbar_visible">true</param>
         <definition>
 
+            <!-- sublabel -->
+            <control type="label" id="18900">
+                <top>60</top>
+                <centerleft>50%</centerleft>
+                <label>$PARAM[sublabel]</label>
+                <height>64</height>
+                <width>300</width>
+                <align>center</align>
+                <textcolor>b3ededed</textcolor>
+                <font>font30_title_upp</font>
+            </control>
+
             <control type="grouplist">
                 <visible>$PARAM[topbar_visible]</visible>
                 <top>60</top>
@@ -70,7 +82,7 @@
 
                 <!-- first labels -->
                 <control type="group">
-                    <width>600</width>
+                    <width>800</width>
                     <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)">Conditional</animation>
                     <control type="group">
                         <width>500</width>
@@ -80,20 +92,9 @@
                     </control>
                 </control>
 
-                <!-- sublabel -->
-                <control type="group">
-                    <width>400</width>
-                    <control type="label" id="18900">
-                        <label>$PARAM[sublabel]</label>
-                        <height>64</height>
-                        <textcolor>b3ededed</textcolor>
-                        <font>font30_title_upp</font>
-                    </control>
-                </control>
-
                 <!-- right side -->
                 <control type="group">
-                    <width>600</width>
+                    <width>800</width>
                     <control type="grouplist">
                         <height>100</height>
                         <right>85</right>
@@ -155,7 +156,6 @@
                 </control>
 
             </control>
-
         </definition>
     </include>
     <include name="TopBarLabels">
@@ -233,7 +233,7 @@
             <textcolor>b3ededed</textcolor>
             <font>font30_title_upp</font>
             <label>$INFO[ListItem.Label]</label>
-            <visible>Control.HasFocus(50) + !Window.IsActive(videos) | [Window.IsVisible(settings) | Window.IsVisible(skinsettings)]</visible>
+            <visible>Control.HasFocus(50) + !Window.IsActive(videos) + !Window.IsActive(tvguide) | [Window.IsVisible(settings) | Window.IsVisible(skinsettings)]</visible>
         </control>
         <control type="label">
             <textcolor>b3ededed</textcolor>
