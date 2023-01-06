@@ -162,15 +162,9 @@
         <left>30</left>
         <height>64</height>
         <include content="WidgetVerticalLabel">
-            <param name="top" value="-15"/>
+            <param name="top" value="-10"/>
             <param name="font" value="font_rating"/>
         </include>
-        <control type="label">
-            <font>font30_title_upp</font>
-            <textcolor>b3ededed</textcolor>
-            <label>$INFO[System.ProfileName]</label>
-            <visible>System.HasAlarm(shutdowntimer) + !Player.HasMedia + !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Window.IsVisible(home)</visible>
-        </control>
         <control type="label">
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
