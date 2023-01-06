@@ -903,7 +903,7 @@ msgstr ""
 # Label of disabling Topbar in Vertical home layout
 #: /xml/SkinSettings.xml
 msgctxt "#31189"
-msgid "Hide Topbar in Prime layout"
+msgid "Hide Topbar in Prime layout on home screen"
 msgstr ""
 
 #: /xml/Includes_Labels.xml
