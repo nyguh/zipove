@@ -223,6 +223,7 @@
         <value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$VAR[Label_Plot]</value>
     </variable>
     <variable name="Label_Title">
+        <value condition="!String.IsEmpty(ListItem.ChannelName) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.ChannelName,,: ]$INFO[ListItem.Title]</value>
         <value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
         <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value>$INFO[ListItem.Label]</value>

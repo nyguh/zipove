@@ -429,9 +429,10 @@
 				<control type="image">
 					<width>400</width>
 					<height>220</height>
-					<aspectratio scalediffuse="false">keep</aspectratio>
-					<texture background="true" diffuse="diffuse/landscape-std-horizontal.png">$VAR[Image_Landscape]</texture>
-					<bordersize>20</bordersize>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true" diffuse="diffuse/landscape-std-horizontal.png">$VAR[ChannelListEPGIconVar]</texture>
+					<bordertexture border="24">common/shadow-24.png</bordertexture>
+                    <bordersize>24</bordersize>
 					<visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
 					<animation effect="zoom" start="100" end="120" time="300" tween="sine" easing="inout" center="auto" reversible="true" condition="$PARAM[selected]">Conditional</animation>
 				</control>

@@ -8,7 +8,7 @@
     <onload condition="!Skin.HasSetting(Prime_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Prime_Main)</onload>
     <!-- for horizontal layout -->
     <onload condition="Skin.HasSetting(Horizontal_Main)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
-	<onload condition="Skin.HasSetting(Horizontal_Main)">SetProperty(TMDbHelper.Blur.SourceImage,fanart,Home)</onload>
+	<onload condition="Skin.HasSetting(Horizontal_Main)">SetProperty(TMDbHelper.Blur.SourceImage,Art(tvshow.fanart)|Art(fanart)|Art(tvshow.poster)|Art(poster),Home)</onload>
     <!-- set fallback menu style -->
     <onload condition="String.IsEmpty(Skin.String(MenuStyle))">Skin.SetString(MenuStyle,IconsText)</onload>
     <!-- set default selection box -->
