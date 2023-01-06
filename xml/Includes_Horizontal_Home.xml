@@ -47,10 +47,12 @@
             <control type="list" id="9000">
                 <width>1000</width>
                 <height>64</height>
-                <onup>2000</onup>
+                <onup>8000</onup>
                 <ondown>3000</ondown>
                 <onleft>SetFocus(1000)</onleft>
                 <orientation>horizontal</orientation>
+                <animation effect="slide" time="200" start="0" end="0,-240" condition="Control.HasFocus(8000)">Conditional</animation>
+                <animation effect="fade" time="300" start="100" end="0" condition="Control.HasFocus(8000)">Conditional</animation>
                 <itemlayout width="250" height="64">
                     <control type="label">
                         <aligny>center</aligny>
@@ -92,6 +94,59 @@
                 </focusedlayout>
                 <content>
                     <include>skinshortcuts-mainmenu</include>
+                </content>
+            </control>
+            <control type="list" id="8000">
+                <top>-240</top>
+                <width>1000</width>
+                <height>64</height>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onleft>SetFocus(1000)</onleft>
+                <orientation>horizontal</orientation>
+                <animation effect="slide" time="200" start="0" end="0,240" condition="Control.HasFocus(8000)">Conditional</animation>
+                <animation effect="fade" time="300" start="0" end="100" condition="Control.HasFocus(8000)">Conditional</animation>
+                <itemlayout width="250" height="64">
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>ffdedede</textcolor>
+                        <font>font_menu</font>
+                        <visible>$PARAM[focused]</visible>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="250" height="64">
+                    <control type="group">
+                        <include>Animation_Bounce</include>
+                        <control type="image">
+                            <top>0</top>
+                            <width>240</width>
+                            <height>64</height>
+                            <centerleft>50%</centerleft>
+                            <texture border="5" colordiffuse="$VAR[ColorGradient]">buttons/menu.png</texture>
+                        </control>
+                        <control type="image">
+                            <top>1</top>
+                            <width>240</width>
+                            <height>62</height>
+                            <centerleft>50%</centerleft>
+                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">buttons/menu.png</texture>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <textoffsetx>30</textoffsetx>
+                        <textcolor>ffdedede</textcolor>
+                        <font>font_menu</font>
+                        <visible>$PARAM[focused]</visible>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <include>skinshortcuts-submenu</include>
                 </content>
             </control>
         </control>
