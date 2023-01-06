@@ -342,8 +342,8 @@
         <controls>
             <control type="group">
                 <height>250</height>
-                <skinshortcuts>visibility</skinshortcuts>
                 <control type="fixedlist" id="$SKINSHORTCUTS[id]">
+                    <skinshortcuts>visibility</skinshortcuts>
                     <onup>$PYTHON[int(id) - 1]</onup>
                     <ondown>$PYTHON[int(id) + 1]</ondown>
                     <orientation>horizontal</orientation>
