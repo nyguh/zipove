@@ -165,12 +165,6 @@
                 <param name="ondown_id" value="20001"/>
             </include>
         </control>
-        <include content="TopBar">
-            <param name="breadcrumbs_label" value="$INFO[Window(Weather).Property(Location)]"/>
-            <param name="left" value="$PARAM[left]"/>
-            <param name="topbar_visible" value="$PARAM[topbar_visible]"/>
-        </include>
-        <!-- <include>BottomBar</include> -->
     </include>
     <include name="WatchedOverlay_Focus">
         <definition>

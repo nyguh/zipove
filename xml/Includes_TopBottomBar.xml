@@ -168,6 +168,12 @@
         <control type="label">
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
+            <label>$INFO[Window(Weather).Property(Location)]</label>
+            <visible>![Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))] + [Control.HasFocus(20000) | Control.HasFocus(2001) | Control.HasFocus(15100) | Control.HasFocus(15200)]</visible>
+        </control>
+        <control type="label">
+            <font>font30_title_upp</font>
+            <textcolor>b3ededed</textcolor>
             <label>$INFO[System.AlarmPos]</label>
             <visible>System.HasAlarm(shutdowntimer) + !Player.HasMedia + !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
         </control>

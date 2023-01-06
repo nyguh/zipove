@@ -50,8 +50,6 @@
             <imagepath background="true" colordiffuse="30FFFFFF">$VAR[WeatherFanartVar]</imagepath>
             <visible>!Player.HasMedia</visible>
         </control>
-        <include content="View_Weather">
-            <parma name="topbar_visible" value="true"/>
-        </include>
+        <include content="View_Weather" />
     </controls>
 </window>
