@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cosmic" version="2.0.1" name="Cosmic" provider-name="heppen">
+<addon id="skin.cosmic" version="2.0.2" name="Cosmic" provider-name="heppen">
   <requires>
     <import addon="xbmc.gui" version="5.15.0"/>
     <import addon="script.skinshortcuts"/>
@@ -10,7 +10,7 @@
     <res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <news>2.0.0 - Totally revisided version. Many bugs may appear, please report them.</news>
+    <news>2.0.2 - Totally revisided version. Many bugs may appear, please report them.</news>
     <summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
     <summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
     <description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate.</description>
