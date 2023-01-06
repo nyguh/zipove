@@ -4,11 +4,32 @@
     <onunload>ClearProperty(spotlight.user_rating,home)</onunload>
     <onload condition="String.IsEqual(Window(home).Property(spotlight.user_rating),true)">SendClick(7)</onload>
     <controls>
+        <!-- backgrounds -->
+        <include>Default_Bg</include>
         <control type="image">
-            <include content="FullScreenDimensions" condition="true"/>
+            <include>FullScreenDimensions</include>
+            <texture colordiffuse="black">common/movieinfo_vign.png</texture>
+            <visible>!$EXP[Exp_InfoDialog_Page]</visible>
+            <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+        </control>
+        <control type="image">
+            <include>FullScreenDimensions</include>
+            <texture colordiffuse="Background">common/white.png</texture>
+            <visible>$EXP[Exp_InfoDialog_Page]</visible>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+        </control>
+        <control type="image">
+            <include>FullScreenDimensions</include>
             <aspectratio aligny="top">scale</aspectratio>
             <texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</texture>
-            <animation effect="fade" end="55" time="0" condition="Skin.HasSetting(Horizontal_Main)">Conditional</animation>
+            <animation effect="fade" end="30" time="0" condition="Skin.HasSetting(Horizontal_Main)">Conditional</animation>
+        </control>
+        <control type="image">
+            <include>FullScreenDimensions</include>
+            <aspectratio aligny="top" align="left">scale</aspectratio>
+            <texture background="true" colordiffuse="B3121212">common/mmovieinfo_vign.png</texture>
+            <visible>$EXP[Exp_InfoDialog_Page]</visible>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
         </control>
         <!-- infos -->
         <control type="group">
@@ -82,6 +103,7 @@
             </control>
             <control type="grouplist" id="1180">
                 <top>240</top>
+                <onup>Action(Back)</onup>
                 <ondown>49</ondown>
                 <orientation>horizontal</orientation>
                 <include content="InfoButton">
