@@ -353,6 +353,7 @@
                     <focusposition>1</focusposition>
                     <scrolltime tween="sine" easing="out">300</scrolltime>
                     <animation effect="slide" time="0" end="-300,0" condition="true">Conditional</animation>
+                    <onclick>RunScript(plugin.video.themoviedb.helper,blur_image=$VAR[MediaFanartVar])</onclick>
                     <onclick>Info</onclick>
                     <animation effect="slide" time="200" start="0" end="0,-300" reversible="true" condition="Control.HasFocus($SKINSHORTCUTS[id]) | Control.HasFocus($PYTHON[int(id) + 1]) | Control.HasFocus($PYTHON[int(id) + 2]) | Control.HasFocus($PYTHON[int(id) + 3])">Conditional</animation>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,$SKINSHORTCUTS[id],Home)</onfocus>

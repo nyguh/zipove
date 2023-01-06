@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Horizontal_Main">
+        <visible>!$EXP[infodialog_active]</visible>
         <!-- widgets group -->
         <control type="group">
             <control type="grouplist" id="3000">
@@ -36,7 +37,6 @@
                 <param name="title" value="$VAR[Label_Title]"/>
                 <param name="plot" value="$VAR[Label_PlotTextBoxPrimeVar]"/>
             </include>
-            <visible>!$EXP[infodialog_active]</visible>
             <visible>ControlGroup(3000).HasFocus</visible>
         </control>
         <!-- main menu -->

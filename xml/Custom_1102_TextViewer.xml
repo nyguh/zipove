@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1102">
     <defaultcontrol always="true">1000</defaultcontrol>
-    <include>OpenClose_Animation</include>
     <controls>
         <control type="image">
             <width>1920</width>
@@ -9,6 +8,7 @@
             <texture background="true" colordiffuse="D9FFFFFF">colors/black.png</texture>
         </control>
         <control type="group">
+            <include>OpenClose_Animation</include>
             <left>13%</left>
             <centertop>50%</centertop>
             <height>880</height>
