@@ -98,7 +98,7 @@
                     <control type="radiobutton" id="605" description="Enable Flix Spotlight">
                         <label>$LOCALIZE[31407]</label>
                         <include>DefaultSettingButton</include>
-                        <visible>Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)</visible>
+                        <visible>Skin.HasSetting(Prime_Main)</visible>
                         <selected>Skin.HasSetting(EnableFlixSpotlight)</selected>
                         <onclick>Skin.ToggleSetting(EnableFlixSpotlight)</onclick>
                     </control>
@@ -123,12 +123,12 @@
                         <selected>Skin.HasSetting(EnableWeatherInHorizontalTopbar)</selected>
                         <onclick>Skin.ToggleSetting(EnableWeatherInHorizontalTopbar)</onclick>
                     </control>
-                    <control type="radiobutton" id="609" description="Hide Profile Info in vertical">
+                    <control type="radiobutton" id="609" description="Hide topbar in vertical">
                         <label>$LOCALIZE[31189]</label>
                         <include>DefaultSettingButton</include>
-                        <visible>Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Prime_Main)</visible>
-                        <selected>Skin.HasSetting(DisabledProfileInfo)</selected>
-                        <onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
+                        <visible>Skin.HasSetting(Prime_Main)</visible>
+                        <selected>Skin.HasSetting(DisableTopBar)</selected>
+                        <onclick>Skin.ToggleSetting(DisableTopBar)</onclick>
                     </control>
                     <control type="button" id="610" description="Widgets scrolling type">
                         <label>$LOCALIZE[31348]</label>
@@ -136,7 +136,6 @@
                         <include>DefaultSettingButton</include>
                         <onclick>Skin.ToggleSetting(DisableFixedScrolling)</onclick>
                         <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
-                        <visible>!Skin.HasSetting(Horizontal_Main)</visible>
                     </control>
                     <control type="button" id="611" description="Flixed scrolling">
                         <label>$LOCALIZE[31401]</label>
@@ -145,7 +144,6 @@
                         <enable>!Skin.HasSetting(DisableFixedScrolling)</enable>
                         <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
                         <onclick condition="String.IsEmpty(Skin.String(FlixedScrolling))">Skin.SetString(FlixedScrolling,Flix It!)</onclick>
-                        <visible>!Skin.HasSetting(Horizontal_Main)</visible>
                     </control>
                     <control type="button" id="612" description="Set Fallback Image">
                         <include>DefaultSettingButton</include>

@@ -723,11 +723,11 @@ msgctxt "#31188"
 msgid "Switch Profile"
 msgstr "Zmień Profil"
 
-# Label of disabling profile info in Vertical home layout
+# Label of disabling Topbar in Vertical home layout
 #: /xml/SkinSettings.xml
 msgctxt "#31189"
-msgid "Hide Profile info in Vertical layout"
-msgstr "Ukryj informacje o profilu w pionowym układzie "
+msgid "Hide Topbar in Prime layout on home screen"
+msgstr "Ukryj Topbar w układzie Prime na stronie głównej"
 
 #: /xml/Includes_Labels.xml
 msgctxt "#31190"

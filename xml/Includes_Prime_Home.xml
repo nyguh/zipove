@@ -23,45 +23,6 @@
             <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(1140)">Conditional</animation>
         </control>
         <control type="group">
-            <top>250</top>
-            <left>150</left>
-            <control type="group">
-                <control type="image">
-                    <top>-75</top>
-                    <left>1155</left>
-                    <width>476</width>
-                    <height>290</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                    <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
-                    <bordersize>24</bordersize>
-                </control>
-                <control type="image">
-                    <top>-50</top>
-                    <left>1180</left>
-                    <width max="426">426</width>
-                    <height max="240">240</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>$INFO[Listitem.EpgEventIcon]</texture>
-                </control>
-                <include content="Selectbox">
-                    <param name="pad_top_b" value="-70"/>
-                    <param name="pad_bottom_b" value="620"/>
-                    <param name="pad_left_b" value="1160"/>
-                    <param name="pad_right_b" value="140"/>
-                    <param name="pad_top_t" value="-66"/>
-                    <param name="pad_bottom_t" value="624"/>
-                    <param name="pad_left_t" value="1164"/>
-                    <param name="pad_right_t" value="144"/>
-                    <param name="visible_posters" value="false"/>
-                    <param name="visible_squares" value="false"/>
-                    <param name="visible_landscapes" value="true"/>
-                </include>
-                <visible>!String.IsEmpty(Listitem.EpgEventIcon)</visible>
-            </control>
-            <visible>String.StartsWith(ListItem.FolderPath,pvr://) + Skin.HasSetting(ShowEPGEventIcon)</visible>
-        </control>
-        <control type="group">
             <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
             <control type="group" id="2000">
                 <animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
@@ -222,9 +183,8 @@
                     </control>
                 </control>
                 <control type="fixedlist" id="9000">
-                    <animation effect="slide" start="0,0" end="0,-125" time="0" reversible="false" condition="Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
                     <left>50</left>
-                    <top>285</top>
+                    <top>160</top>
                     <width>396</width>
                     <height>750</height>
                     <bottom>-40</bottom>
@@ -232,7 +192,6 @@
                     <focusposition>0</focusposition>
                     <onleft>9001</onleft>
                     <include>Flix_Spotlight_ClearProperties_focus</include>
-                    <onup condition="!Skin.HasSetting(DisabledProfileInfo)">700</onup>
                     <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
                     <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">4000</onright>
                     <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
@@ -338,56 +297,7 @@
                 </control>
                 <include>skinshortcuts-template-submenu</include>
             </control>
-            <control type="group">
-                <depth>DepthBars</depth>
-                <animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-                <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-                <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                <left>64</left>
-                <control type="group" id="700">
-                    <height>200</height>
-                    <visible>!Skin.HasSetting(DisabledProfileInfo)</visible>
-                    <control type="image">
-                        <animation type="conditional" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)  + !Control.HasFocus(303)">
-                            <effect type="zoom" time="100" start="100" end="75"/>
-                            <effect type="slide" time="100" end="-45,-90"/>
-                        </animation>
-                        <top>78</top>
-                        <width>92</width>
-                        <height>92</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture diffuse="common/circle.png">$INFO[System.ProfileThumb]</texture>
-                        <visible>Control.HasFocus(9000) | Control.IsVisible(9000)</visible>
-                    </control>
-                    <control type="button" id="303">
-                        <animation effect="slide" start="0,0" end="-714,0" time="250" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)  + !Control.HasFocus(303)">Conditional</animation>
-                        <top>50</top>
-                        <left>80</left>
-                        <onup>noop</onup>
-                        <ondown>9000</ondown>
-                        <onleft>noop</onleft>
-                        <onright>3000</onright>
-                        <label>$INFO[System.ProfileName]</label>
-                        <font>font32_title</font>
-                        <textcolor>white</textcolor>
-                        <focusedcolor>$VAR[ColorHighlight]</focusedcolor>
-                        <texturefocus/>
-                        <texturenofocus/>
-                        <onclick>ActivateWindow(LoginScreen.xml)</onclick>
-                        <visible>Control.IsVisible(9000)</visible>
-                    </control>
-                    <control type="label">
-                        <animation effect="slide" start="0,0" end="-714,0" time="250" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)  + !Control.HasFocus(303)">Conditional</animation>
-                        <top>150</top>
-                        <left>110</left>
-                        <label>$INFO[ListItem.Label]</label>
-                        <font>font_small_defaults</font>
-                        <textcolor>white</textcolor>
-                        <visible>[Control.HasFocus(9000) | Control.HasFocus(9001)] + String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
-                    </control>
-                </control>
-            </control>
-            <include>TopBar</include>
+            <include content="TopBar" condition="!Skin.HasSetting(DisableTopBar)" />
         </control>
     </include>
 </includes>

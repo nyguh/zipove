@@ -24,14 +24,14 @@
                         <height>32</height>
                         <texture colordiffuse="FFcccccc">common/circle.png</texture>
                         <aspectratio>keep</aspectratio>
-                        <visible>!Window.IsVisible(Home) + ![Window.IsVisible(notification)] | Window.IsVisible(extendedprogressdialog)</visible>
+                        <visible>![Window.IsVisible(notification)] | Window.IsVisible(extendedprogressdialog)</visible>
                     </control>
                     <control type="image">
                         <width>32</width>
                         <height>32</height>
                         <texture colordiffuse="ff333333">special://skin/extras/icons/settings.png</texture>
                         <aspectratio>keep</aspectratio>
-                        <visible>!Window.IsVisible(Home) + !Player.Muted + !System.HasAlarm(shutdowntimer) + ![Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))] + ![Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)]</visible>
+                        <visible>!Player.Muted + !System.HasAlarm(shutdowntimer) + ![Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))] + ![Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)]</visible>
                     </control>
                     <control type="image">
                         <width>32</width>
@@ -161,6 +161,16 @@
     <include name="TopBarLabels">
         <left>30</left>
         <height>64</height>
+        <include content="WidgetVerticalLabel">
+            <param name="top" value="-15"/>
+            <param name="font" value="font_rating"/>
+        </include>
+        <control type="label">
+            <font>font30_title_upp</font>
+            <textcolor>b3ededed</textcolor>
+            <label>$INFO[System.ProfileName]</label>
+            <visible>System.HasAlarm(shutdowntimer) + !Player.HasMedia + !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Window.IsVisible(home)</visible>
+        </control>
         <control type="label">
             <font>font30_title_upp</font>
             <textcolor>b3ededed</textcolor>
