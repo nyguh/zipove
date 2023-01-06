@@ -985,7 +985,7 @@
         <value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
         <!-- home fanart first widget item -->
-        <value condition="Window.IsVisible(home) + String.IsEmpty(Container(3000).ListItem.Property(Background)) + !String.IsEmpty(Container(7502).ListItem.Art(fanart)) + Control.IsVisible(7502)">$INFO[Container(7502).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(home) + String.IsEmpty(Container(3000).ListItem.Property(Background)) + !String.IsEmpty(Container(7502).ListItem.Art(fanart)) + Integer.IsGreater(Container(7502).NumItems,0) + !String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">$INFO[Container(7502).ListItem.Art(fanart)]</value>
         <!-- flix hub fanart -->
         <value condition="!String.IsEmpty(Window(home).Property(spotlight_Fanart)) + Window.IsActive(1140)">$INFO[Window(home).Property(spotlight_Fanart)]</value>
         <value>$INFO[Container.Art(fanart)]</value>
