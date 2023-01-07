@@ -2,6 +2,7 @@
 <includes>
     <include name="View_502_FanArt">
         <control type="group">
+            <top>120</top>
             <visible>Control.IsVisible(502)</visible>
             <control type="fixedlist" id="502">
                 <left>-5</left>
@@ -13,9 +14,7 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>vertical</orientation>
                 <pagecontrol>60</pagecontrol>
-                <onright>SetFocus(9000)</onright>
-                <onleft>60</onleft>
-                <onup>502</onup>
+                <onup>SetFocus(9000)</onup>
                 <ondown>502</ondown>
                 <viewtype label="$LOCALIZE[20445]">list</viewtype>
                 <include content="View_Forced">
@@ -137,58 +136,32 @@
         <control type="group">
             <visible>Control.IsVisible(502)</visible>
             <control type="group">
+                <top>120</top>
                 <right>-20</right>
                 <width>1235</width>
-                <include content="ContentPanel">
-                    <param name="width" value="1235"/>
-                    <param name="left" value="0"/>
-                    <param name="top" value="-20"/>
-                    <param name="flipx" value="true"/>
-                </include>
                 <control type="image">
                     <left>38</left>
                     <right>36</right>
-                    <top>115</top>
+                    <top>300</top>
                     <height>644</height>
                     <fadetime>300</fadetime>
-                    <texture border="2" fallback="special://skin/extras/home-images/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
-                    <aspectratio align="center" aligny="bottom">scale</aspectratio>
+                    <texture border="2" fallback="special://skin/extras/home-images/movie.jpg" background="true" diffuse="diffuse/landscape-big.png">$VAR[FanartImageVar]</texture>
+                    <aspectratio align="center" aligny="bottom" scalediffuse="false">scale</aspectratio>
+                    <bordertexture border="28">common/shadow-24.png</bordertexture>
+                    <bordersize>22</bordersize>
                 </control>
-                <control type="group">
-                    <left>600</left>
-                    <top>82</top>
-                    <include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-                </control>
-                <control type="textbox">
-                    <left>50</left>
-                    <right>50</right>
-                    <top>769</top>
-                    <bottom>105</bottom>
-                    <label>$VAR[PlotTextBoxVar]</label>
-                    <autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-                </control>
-                <control type="scrollbar" id="502600">
-                    <left>20</left>
-                    <top>list_y_offset</top>
-                    <width>12</width>
-                    <bottom>list_y_offset</bottom>
-                    <onleft>502</onleft>
-                    <onright>502</onright>
-                    <orientation>vertical</orientation>
-                    <animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(502600)">conditional</animation>
-                </control>
-                <control type="group">
-                    <left>40</left>
-                    <top>770</top>
-                    <visible>ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)</visible>
-                    <include content="InfoList">
-                        <param name="bottom" value="108"/>
-                        <param name="width" value="1000"/>
-                        <param name="sortby" value="year"/>
-                        <param name="sortorder" value="ascending"/>
-                        <param name="font" value="font13"/>
-                    </include>
-                </control>
+                <include content="Object_Item_PrimeShowcase">
+                    <param name="left" value="70"/>
+                    <param name="title" value="$VAR[Label_Title]"/>
+                    <param name="title_top" value="0"/>
+                    <param name="title_width" value="1200"/>
+                    <param name="title_visible" value="true"/>
+                    <param name="plot" value="$VAR[Label_PlotTextBoxPrimeVar]"/>
+                    <param name="plot_top" value="120"/>
+                    <param name="info_line_top" value="230"/>
+                    <param name="rating_top" value="260"/>
+                    <param name="clearlogo_visible" value="false"/>
+                </include>
             </control>
         </control>
     </include>

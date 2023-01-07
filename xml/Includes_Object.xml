@@ -925,21 +925,24 @@
     </include>
     <include name="Object_Item_PrimeShowcase">
         <param name="top" default="0"/>
+        <param name="left" default="140"/>
         <param name="info_line_top" default="185"/>
         <param name="plot_top" default="235"/>
         <param name="plot_height" default="100"/>
-        <param name="title_visible" default="true"/>
+        <param name="title_visible" default="[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [[!Control.HasFocus(9000) | Control.IsVisible(510)] + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]"/>
+        <param name="clearlogo_visible" default="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)"/>
         <param name="clearlogo_top_margin" default="-800"/>
         <param name="clearlogo_width" default="320"/>
         <param name="cycling_top" default="140"/>
+        <param name="rating_top" default="545"/>
         <definition>
             <control type="group">
                 <top>$PARAM[top]</top>
+                <left>$PARAM[left]</left>
                 <control type="group">
                     <top>30</top>
                     <control type="label">
                         <top>$PARAM[title_top]</top>
-                        <left>140</left>
                         <top>90</top>
                         <scroll>true</scroll>
                         <width>$PARAM[title_width]</width>
@@ -947,7 +950,6 @@
                         <shadowcolor>black</shadowcolor>
                         <label>$PARAM[title]</label>
                         <font>font_title_bold</font>
-                        <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [[!Control.HasFocus(9000) | Control.IsVisible(510)] + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
                         <visible>$PARAM[title_visible]</visible>
                         <animation type="Conditional" condition="Player.HasVideo + !Skin.HasSetting(DontHideShowcase)" reversible="false">
                             <effect type="fade" start="100" end="0" time="300"/>
@@ -956,11 +958,10 @@
                     </control>
                     <control type="image">
                         <top>$PARAM[clearlogo_top_margin]</top>
-                        <left>140</left>
                         <width>$PARAM[clearlogo_width]</width>
                         <aspectratio>keep</aspectratio>
                         <texture background="true">$VAR[Image_ClearLogo]</texture>
-                        <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
+                        <visible>$PARAM[clearlogo_visible]</visible>
                         <animation type="Conditional" condition="Player.HasVideo + Skin.HasSetting(AnimateClearLogo) + !Skin.HasSetting(DontHideShowcase)" reversible="false">
                             <effect type="slide" start="0" end="0,140" time="350" delay="300"/>
                             <effect type="slide" start="0" end="40,0" time="350" delay="600"/>
@@ -975,7 +976,6 @@
                 </control>
                 <control type="group">
                     <top>$PARAM[info_line_top]</top>
-                    <left>140</left>
                     <include content="Object_Info_Line">
                         <param name="visible_infoline" value="$PARAM[visible_infoline]"/>
                     </include>
@@ -987,7 +987,6 @@
                 <control type="group">
                     <control type="textbox">
                         <top>$PARAM[plot_top]</top>
-                        <left>140</left>
                         <width>940</width>
                         <height>$PARAM[plot_height]</height>
                         <textcolor>white</textcolor>
@@ -1011,8 +1010,7 @@
                     </include>
                 </control>
                 <control type="grouplist">
-                    <top>545</top>
-                    <left>140</left>
+                    <top>$PARAM[rating_top]</top>
                     <orientation>horizontal</orientation>
                     <itemgap>12</itemgap>
                     <usecontrolcoords>true</usecontrolcoords>

@@ -928,16 +928,11 @@
                     <animation effect="fade" time="100">VisibleChange</animation>
                     <control type="multiimage" id="32111">
                         <include content="FullScreenDimensions" condition="[Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]"/>
-                        <animation effect="zoom" end="150" center="200" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
-                        <animation effect="slide" start="0" end="-554,0" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Vertical_Main)">Conditional</animation>
-                        <animation effect="zoom" end="175" center="-30" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Horizontal_Main)">Conditional</animation>
-                        <animation effect="slide" start="0" end="-260,-100" time="200" condition="Window.IsActive(1140) + Skin.HasSetting(Horizontal_Main)">Conditional</animation>
                         <aspectratio aligny="top">scale</aspectratio>
                         <fadetime>600</fadetime>
                         <timeperimage>6000</timeperimage>
                         <randomize>true</randomize>
                         <imagepath background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</imagepath>
-                        <visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
                         <animation effect="fade" end="55" time="0" condition="Skin.HasSetting(Horizontal_Main)">Conditional</animation>
                         <animation effect="fade" end="0" start="100" time="50" reversible="true" condition="$EXP[infodialog_active]">Conditional</animation>
                         <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
@@ -1135,10 +1130,9 @@
     <include name="ContentPanel">
         <param name="width">500</param>
         <param name="left">-40</param>
-        <param name="right">
-    </param>
-        <param name="top">-10%</param>
-        <param name="height">120%</param>
+        <param name="right"></param>
+        <param name="top">-20%</param>
+        <param name="height">140%</param>
         <param name="flipx">false</param>
         <definition>
             <control type="image">
