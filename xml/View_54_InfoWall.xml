@@ -127,47 +127,26 @@
         <param name="focused">false</param>
         <definition>
             <control type="image">
-                <top>10</top>
-                <width>316</width>
-                <height>288</height>
-                <texture>dialogs/dialog-bg-nobo.png</texture>
-                <bordertexture border="21">overlays/shadow.png</bordertexture>
-                <bordersize>20</bordersize>
+                <width>320</width>
+                <height>320</height>
+                <texture colordiffuse="ff1a1a1a" border="6">common/box.png</texture>
+                <bordertexture border="28">common/shadow-24.png</bordertexture>
+                <bordersize>24</bordersize>
             </control>
             <control type="image">
-                <top>6</top>
-                <left>-4</left>
-                <width>324</width>
-                <height>296</height>
-                <texture colordiffuse="$VAR[ColorHighlight]">colors/grey.png</texture>
-                <bordertexture border="21">overlays/shadow.png</bordertexture>
-                <bordersize>20</bordersize>
-                <visible>$PARAM[focused]</visible>
-                <include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-            </control>
-            <control type="image">
-                <left>0</left>
-                <top>10</top>
-                <width>316</width>
-                <height>218</height>
-                <texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
-                <aspectratio>scale</aspectratio>
-                <bordersize>20</bordersize>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>138</top>
-                <width>276</width>
-                <height>70</height>
-                <texture>overlays/overlayfade.png</texture>
-                <visible>!ListItem.IsParentFolder</visible>
+                <top>-5</top>
+                <width>320</width>
+                <height>260</height>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <texture background="true" diffuse="diffuse/square-diffuse-thumb.png">$VAR[InfoWallThumbVar]</texture>
+                <bordersize>24</bordersize>
             </control>
             <control type="label">
-                <left>31</left>
-                <top>178</top>
+                <left>20</left>
+                <top>200</top>
                 <width>260</width>
                 <label>$PARAM[thumb_label]</label>
-                <font>font20_title</font>
+                <font>font_tiny_hintlabel</font>
                 <shadowcolor>text_shadow</shadowcolor>
                 <align>right</align>
             </control>
@@ -180,10 +159,10 @@
             </control>
             <control type="textbox">
                 <left>28</left>
-                <top>202</top>
+                <top>220</top>
                 <width>262</width>
                 <height>80</height>
-                <font>font12</font>
+                <font>font_tiny_hintlabel</font>
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$INFO[ListItem.Label]</label>
@@ -192,41 +171,25 @@
             <control type="group">
                 <visible>!Window.IsActive(videos)</visible>
                 <control type="label">
-                    <left>29</left>
-                    <top>210</top>
-                    <width>260</width>
+                    <left>28</left>
+                    <top>190</top>
+                    <width>262</width>
                     <label>$PARAM[sub_label]</label>
-                    <font>font12</font>
+                    <font>font_tiny_hintlabel</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <scroll>$PARAM[focused]</scroll>
                     <align>center</align>
                 </control>
                 <control type="label">
-                    <left>29</left>
-                    <top>240</top>
-                    <width>260</width>
+                    <left>28</left>
+                    <top>220</top>
+                    <width>262</width>
                     <label>$PARAM[main_label]</label>
-                    <font>font_tiny10</font>
+                    <font>font_tiny_hintlabel</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <scroll>$PARAM[focused]</scroll>
                     <align>center</align>
                 </control>
-            </control>
-            <control type="progress">
-                <left>20</left>
-                <top>258</top>
-                <width>276</width>
-                <height>1</height>
-                <texturebg>
-                </texturebg>
-                <midtexture colordiffuse="$VAR[ColorHighlight]" border="3">progress/texturebg_alt_white.png</midtexture>
-                <info>ListItem.PercentPlayed</info>
-                <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-            </control>
-            <control type="group">
-                <left>134</left>
-                <top>8</top>
-                <include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
             </control>
         </definition>
     </include>
@@ -409,26 +372,28 @@
                         </include>
                     </control>
                 </focusedlayout>
-                <itemlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
+                <itemlayout height="360" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
                     <control type="group">
-                        <left>64</left>
-                        <top>110</top>
+                        <top>30</top>
                         <include content="InfoWallEpisodeLayout">
                             <param name="focused" value="false"/>
                             <param name="thumb_label" value="$INFO[ListItem.Label2]"/>
                         </include>
                     </control>
                 </itemlayout>
-                <focusedlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
+                <focusedlayout height="360" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
                     <control type="group">
-                        <depth>DepthContentPopout</depth>
-                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
-                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
-                        <left>64</left>
-                        <top>110</top>
+                        <top>30</top>
+                        <width>320</width>
+                        <height>320</height>
                         <include content="InfoWallEpisodeLayout">
                             <param name="focused" value="true"/>
                             <param name="thumb_label" value="$INFO[ListItem.Label2]"/>
+                        </include>
+                        <include content="Selectbox">
+                            <param name="visible_posters" value="false"/>
+                            <param name="visible_squares" value="true"/>
+                            <param name="visible_landscapes" value="false"/>
                         </include>
                     </control>
                 </focusedlayout>
