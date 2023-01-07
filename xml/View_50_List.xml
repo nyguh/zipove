@@ -360,15 +360,6 @@
         <definition>
             <control type="group">
                 <control type="image">
-                    <top>$PARAM[top]</top>
-                    <right>160</right>
-                    <width>540</width>
-                    <height>780</height>
-                    <texture colordiffuse="AltPosterBack" border="12">common/box-half-right.png</texture>
-                    <bordersize>24</bordersize>
-                    <visible>String.IsEmpty(ListItem.Art(thumb)) + String.IsEmpty(ListItem.Art(snap)) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + String.IsEmpty(ListItem.Property(fanart)) + String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.fanart)) + String.IsEmpty(ListItem.Thumb)</visible>
-                </control>
-                <control type="image">
                     <top>120</top>
                     <right>160</right>
                     <width>540</width>
@@ -377,7 +368,7 @@
                     <texture background="true" diffuse="diffuse/poster-diffuse-h-right.png" colordiffuse="AltPosterBack" border="8">common/box.png</texture>
                     <bordertexture border="48">common/shadow-24.png</bordertexture>
                     <bordersize>24</bordersize>
-                    <visible>!String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Art(snap)) | !String.IsEmpty(ListItem.Art(landscape)) | !String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Property(fanart)) | !String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(ListItem.Art(tvshow.fanart)) | !String.IsEmpty(ListItem.Thumb)</visible>
+                    <visible>String.IsEmpty(Listitem.Art(poster))</visible>
                 </control>
                 <control type="image">
                     <top>100</top>
