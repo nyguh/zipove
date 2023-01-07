@@ -430,7 +430,7 @@
                 <aspectratio scalediffuse="true">stretch</aspectratio>
                 <texture background="true" diffuse="diffuse/poster-small.png">$VAR[Image_Poster]</texture>
                 <bordertexture border="28">common/shadow-24.png</bordertexture>
-                <bordersize>24</bordersize>
+                <bordersize>22</bordersize>
             </control>
         </definition>
     </include>
