@@ -429,10 +429,8 @@
     <variable name="PosterThumbVar">
         <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
         <value condition="ListItem.IsParentFolder">DefaultFolderBackPoster.png</value>
-        <value>$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="IconWallThumbVar">
-        <value condition="!String.IsEmpty(Listitem.Art(poster)) + ![Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">$INFO[Listitem.Art(poster)]</value>
         <value condition="!String.isempty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>

@@ -307,13 +307,6 @@
                         <bordersize>24</bordersize>
                         <visible>String.IsEmpty(ListItem.Art(thumb)) + String.IsEmpty(ListItem.Art(snap)) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + String.IsEmpty(ListItem.Property(fanart)) + String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.fanart)) + String.IsEmpty(ListItem.Thumb)</visible>
                     </control>
-                    <control type="group">
-                        <left>291</left>
-                        <top>950</top>
-                        <include content="RatingCircle">
-                            <param name="animation" value="True"/>
-                        </include>
-                    </control>
                 </control>
                 <control type="group">
                     <visible>Control.IsVisible(503) + Window.IsActive(musicplaylist)</visible>
@@ -373,6 +366,18 @@
                     <height>780</height>
                     <texture colordiffuse="AltPosterBack" border="12">common/box-half-right.png</texture>
                     <bordersize>24</bordersize>
+                    <visible>String.IsEmpty(ListItem.Art(thumb)) + String.IsEmpty(ListItem.Art(snap)) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + String.IsEmpty(ListItem.Property(fanart)) + String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.fanart)) + String.IsEmpty(ListItem.Thumb)</visible>
+                </control>
+                <control type="image">
+                    <top>120</top>
+                    <right>160</right>
+                    <width>540</width>
+                    <height>780</height>
+                    <aspectratio scalediffuse="false" align="center">scale</aspectratio>
+                    <texture background="true" diffuse="diffuse/poster-diffuse-h-right.png" colordiffuse="AltPosterBack" border="8">common/box.png</texture>
+                    <bordertexture border="48">common/shadow-24.png</bordertexture>
+                    <bordersize>24</bordersize>
+                    <visible>!String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Art(snap)) | !String.IsEmpty(ListItem.Art(landscape)) | !String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Property(fanart)) | !String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(ListItem.Art(tvshow.fanart)) | !String.IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <control type="image">
                     <top>100</top>
@@ -383,49 +388,23 @@
                     <visible>Control.HasFocus(50)</visible>
                 </control>
                 <control type="image">
-                    <top>$PARAM[top]</top>
-                    <right>118</right>
-                    <width>620</width>
+                    <top>120</top>
+                    <right>153</right>
+                    <width>547</width>
                     <height>780</height>
-                    <aspectratio scalediffuse="true">keep</aspectratio>
-                    <texture background="true" border="24" diffuse="diffuse/poster-big-half-right.png">$VAR[IconWallThumbVar]</texture>
+                    <aspectratio scalediffuse="false" align="center">scale</aspectratio>
+                    <texture background="true" diffuse="diffuse/poster-diffuse-h-right.png" border="8">$VAR[PosterThumbVar]</texture>
                     <bordersize>24</bordersize>
                     <visible>!String.IsEmpty(Listitem.Art(poster))</visible>
                 </control>
                 <control type="image">
-                    <top>180</top>
-                    <right>172</right>
+                    <top>0</top>
+                    <right>174</right>
                     <width>512</width>
-                    <aspectratio scalediffuse="true">keep</aspectratio>
-                    <texture background="true" border="24" diffuse="diffuse/square-diffuse-big.png">$VAR[IconWallThumbVar]</texture>
+                    <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
+                    <texture background="true" diffuse="diffuse/square-diffuse-big.png">$VAR[IconWallThumbVar]</texture>
                     <bordersize>24</bordersize>
                     <visible>String.IsEmpty(Listitem.Art(poster))</visible>
-                </control>
-                <control type="image">
-                    <top>180</top>
-                    <right>172</right>
-                    <width>512</width>
-                    <aspectratio scalediffuse="true">keep</aspectratio>
-                    <texture background="true" border="24" diffuse="diffuse/square-diffuse-big.png">$INFO[ListItem.Icon]</texture>
-                    <bordersize>24</bordersize>
-                    <visible>String.IsEqual(ListItem.DbType,episode)</visible>
-                </control>
-                <control type="image">
-                    <top>$PARAM[top]</top>
-                    <right>119</right>
-                    <width>620</width>
-                    <height>780</height>
-                    <aspectratio scalediffuse="true">keep</aspectratio>
-                    <fadetime>300</fadetime>
-                    <texture fallback="DefaultAudio.png" background="true" diffuse="diffuse/thumbinfopanel-diffuse.png">$VAR[IconWallThumbVar]</texture>
-                    <bordersize>20</bordersize>
-                    <visible>String.IsEqual(ListItem.DBType,song)</visible>
-                </control>
-                <control type="group">
-                    <right>273</right>
-                    <top>560</top>
-                    <include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-                    <animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
                 </control>
             </control>
         </definition>
