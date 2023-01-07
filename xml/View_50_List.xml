@@ -293,7 +293,7 @@
                         <right>190</right>
                         <width>680</width>
                         <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
-                        <texture fallback="DefaultVideo.png" background="true" diffuse="diffuse/landscape-big.png">$VAR[ThumbInfo_Landscape]</texture>
+                        <texture background="true" diffuse="diffuse/landscape-big.png">$VAR[ThumbInfo_Landscape]</texture>
                         <bordertexture border="48">common/shadow-24.png</bordertexture>
                         <bordersize>24</bordersize>
                         <visible>!String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Art(snap)) | !String.IsEmpty(ListItem.Art(landscape)) | !String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Property(fanart)) | !String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(ListItem.Art(tvshow.fanart)) | !String.IsEmpty(ListItem.Thumb)</visible>
@@ -303,7 +303,7 @@
                         <right>279</right>
                         <width>512</width>
                         <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
-                        <texture fallback="DefaultVideo.png" background="true" diffuse="diffuse/landscape-big.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" diffuse="diffuse/landscape-big.png">$INFO[ListItem.Icon]</texture>
                         <bordersize>24</bordersize>
                         <visible>String.IsEmpty(ListItem.Art(thumb)) + String.IsEmpty(ListItem.Art(snap)) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + String.IsEmpty(ListItem.Property(fanart)) + String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.fanart)) + String.IsEmpty(ListItem.Thumb)</visible>
                     </control>
