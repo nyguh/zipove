@@ -3,20 +3,8 @@
     <include name="Horizontal_Main">
         <visible>!$EXP[infodialog_active]</visible>
         <!-- widgets group -->
-        <control type="group">
-            <control type="grouplist" id="3000">
-                <description>widgets</description>
-                <top>480</top>
-                <left>60</left>
-                <onup>1000</onup>
-                <width>2400</width>
-                <height>9999999</height>
-                <orientation>vertical</orientation>
-                <include>skinshortcuts-template-horizontal</include>
-                <include content="Animation_Widget_Slide_Horizontal">
-                    <param name="container">3000</param>
-                </include>
-            </control>
+        <control type="group" id="3000">
+            <include>skinshortcuts-template-horizontal</include>
         </control>
         <!-- fading -->
         <control type="image">

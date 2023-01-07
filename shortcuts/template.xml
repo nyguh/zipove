@@ -228,147 +228,116 @@
             </include>
         </controls>
     </submenuOther>
-    <submenuOther include="horizontal" level="1">
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">9001</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[2]">9002</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[3]">9003</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[4]">9004</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[5]">9005</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[6]">9006</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[7]">9007</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[8]">9008</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[9]">9009</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[10]">9010</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[11]">9011</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[12]">9012</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[13]">9013</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[14]">9014</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[15]">9015</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[16]">9016</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[17]">9017</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[18]">9018</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[19]">9019</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[20]">9020</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[21]">9021</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[22]">9022</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[23]">9023</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[24]">9024</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[25]">9025</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[26]">9026</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[27]">9027</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[28]">9028</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[29]">9029</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[30]">9030</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[31]">9031</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[32]">9032</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[33]">9033</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[34]">9034</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[35]">9035</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[36]">9036</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[37]">9037</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[38]">9038</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[39]">9039</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[40]">9040</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[41]">9041</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[42]">9042</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[43]">9043</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[44]">9044</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[45]">9045</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[46]">9046</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[47]">9047</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[48]">9048</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[49]">9049</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[50]">9050</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[51]">9051</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[52]">9052</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[53]">9053</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[54]">9054</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[55]">9055</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[56]">9056</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[57]">9057</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[58]">9058</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[59]">9059</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[60]">9060</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[61]">9061</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[62]">9062</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[63]">9063</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[64]">9064</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[65]">9065</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[66]">9066</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[67]">9067</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[68]">9068</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[69]">9069</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[70]">9070</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[71]">9071</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[72]">9072</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[73]">9073</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[74]">9074</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[75]">9075</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[76]">9076</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[77]">9077</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[78]">9078</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[79]">9079</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[80]">9080</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[81]">9081</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[82]">9082</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[83]">9083</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[84]">9084</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[85]">9085</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[86]">9086</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[87]">9087</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[88]">9088</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[89]">9089</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[90]">9090</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[91]">9091</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[92]">9092</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[93]">9093</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[94]">9094</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[95]">9095</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[96]">9096</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[97]">9097</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[98]">9098</property>
-        <property name="id" tag="property" attribute="name|id" value="$NUMBER[99]">9099</property>
+    <submenu include="horizontal" level="1">
         <!--  -->
-        <condition tag="property" attribute="name|list"/>
         <property name="id" tag="mainmenuid"/>
-        <property name="path" tag="property" attribute="name|list"/>
-        <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
-        <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
-        <property name="limit" tag="property" attribute="name|widgetLimit"/>
-        <property name="aspect" tag="property" attribute="name|widgetAspect"/>
-        <property name="aspect">Landscape</property>
-        <propertyGroup>mainmenuWidgets</propertyGroup>
+        <property name="submenuVisibility" tag="property" attribute="name|submenuVisibility"/>
         <!--  -->
         <controls>
-            <control type="group">
-                <height>250</height>
-                <control type="fixedlist" id="$SKINSHORTCUTS[id]">
-                    <skinshortcuts>visibility</skinshortcuts>
-                    <onup>$PYTHON[int(id) - 1]</onup>
-                    <ondown>$PYTHON[int(id) + 1]</ondown>
-                    <orientation>horizontal</orientation>
-                    <top>40</top>
-                    <height>250</height>
-                    <preload>2</preload>
-                    <focusposition>1</focusposition>
-                    <scrolltime tween="sine" easing="out">300</scrolltime>
-                    <animation effect="slide" time="0" end="-300,0" condition="true">Conditional</animation>
-                    <onclick>Info</onclick>
-                    <animation effect="slide" time="200" start="0" end="0,-300" reversible="true" condition="Control.HasFocus($SKINSHORTCUTS[id]) | Control.HasFocus($PYTHON[int(id) + 1]) | Control.HasFocus($PYTHON[int(id) + 2]) | Control.HasFocus($PYTHON[int(id) + 3])">Conditional</animation>
-                    <onfocus>SetProperty(TMDbHelper.WidgetContainer,$SKINSHORTCUTS[id],Home)</onfocus>
-                    <itemlayout width="405" height="225">
-                        <include content="LandscapeView"/>
-                    </itemlayout>
-                    <focusedlayout width="405" height="225">
-                        <include content="LandscapeView">
-                            <param name="selected">Control.HasFocus($SKINSHORTCUTS[id])</param>
-                        </include>
-                    </focusedlayout>
-                    <content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" limit="$SKINSHORTCUTS[limit]">$SKINSHORTCUTS[path]</content>
-                </control>
+            <control type="grouplist" id="100$SKINSHORTCUTS[id]">
+                <visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),$SKINSHORTCUTS[submenuVisibility])</visible>
+                <description>widgets</description>
+                <top>480</top>
+                <left>60</left>
+                <width>2400</width>
+                <height>9999999</height>
+                <orientation>vertical</orientation>
+                <include content="Animation_Widget_Slide_Horizontal">
+                    <param name="container">100$SKINSHORTCUTS[id]</param>
+                </include>
+                <skinshortcuts insert="widgets">items</skinshortcuts>
             </control>
         </controls>
-    </submenuOther>
+        <items insert="widgets">
+            <!--  -->
+            <condition tag="property" attribute="name|list"/>
+            <property name="mainmenuid" tag="mainmenuid"/>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[2]">2</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[3]">3</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[4]">4</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[5]">5</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[6]">6</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[7]">7</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[8]">8</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[9]">9</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[10]">10</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[11]">11</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[12]">12</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[13]">13</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[14]">14</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[15]">15</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[16]">16</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[17]">17</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[18]">18</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[19]">19</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[20]">20</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[21]">21</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[22]">22</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[23]">23</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[24]">24</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[25]">25</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[26]">26</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[27]">27</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[28]">28</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[29]">29</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[30]">30</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[31]">31</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[32]">32</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[33]">33</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[34]">34</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[35]">35</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[36]">36</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[37]">37</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[38]">38</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[39]">39</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[40]">40</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[41]">41</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[42]">42</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[43]">43</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[44]">44</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[45]">45</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[46]">46</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[47]">47</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[48]">48</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[49]">49</property>
+            <property name="id">50</property>
+            <property name="path" tag="property" attribute="name|list"/>
+            <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
+            <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
+            <property name="limit" tag="property" attribute="name|widgetLimit"/>
+            <!--  -->
+            <controls>
+                <control type="group" id="$PYTHON[int(mainmenuid) * 9000 + int(id)]">
+                    <height>250</height>
+                    <control type="fixedlist" id="$PYTHON[int(mainmenuid) * 9000 + 10 + int(id)]">
+                        <onup condition="$PYTHON['true' if '1' in mainmenuid else 'false']">9000</onup>
+                        <onup condition="$PYTHON['false' if '1' in mainmenuid else 'true']">$PYTHON[(int(mainmenuid) - 1) * 9000 + int(id)]</onup>
+                        <ondown>$PYTHON[(int(mainmenuid) + 1) * 9000 + int(id)]</ondown>
+                        <orientation>horizontal</orientation>
+                        <top>40</top>
+                        <height>250</height>
+                        <preload>2</preload>
+                        <focusposition>1</focusposition>
+                        <scrolltime tween="sine" easing="out">300</scrolltime>
+                        <onclick>Info</onclick>
+                        <animation effect="slide" time="0" end="-300,0" condition="true">Conditional</animation>
+                        <animation effect="slide" time="200" start="0" end="0,-300" reversible="true" condition="Control.HasFocus($PYTHON[int(mainmenuid) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 1) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 2) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 3) * 9000 + 10 + int(id)])">Conditional</animation>
+                        <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PYTHON[int(mainmenuid) * 9000 + 10 + int(id)],Home)</onfocus>
+                        <itemlayout width="405" height="225">
+                            <include content="LandscapeView"/>
+                        </itemlayout>
+                        <focusedlayout width="405" height="225">
+                            <include content="LandscapeView">
+                                <param name="selected">Control.HasFocus($PYTHON[int(mainmenuid) * 9000 + 10 + int(id)])</param>
+                            </include>
+                        </focusedlayout>
+                        <content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" limit="$SKINSHORTCUTS[limit]">$SKINSHORTCUTS[path]</content>
+                    </control>
+                </control>
+            </controls>
+        </items>
+    </submenu>
     <propertyGroup name="mainmenuWidgets">
         <property name="id" tag="mainmenuid"/>
         <property name="name" tag="property" attribute="name|widgetName"/>
