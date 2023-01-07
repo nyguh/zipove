@@ -282,7 +282,7 @@
             <control type="image">
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture background="true" diffuse="diffuse/poster-std.png">$VAR[Image_Poster]</texture>
-                <bordertexture border="24">common/shadow-24.png</bordertexture>
+                <bordertexture border="28">common/shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
             </control>
         </definition>
@@ -355,7 +355,7 @@
                 <height>422.5</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture diffuse="diffuse/square-diffuse-big.png" colordiffuse="ff1a1a1a">common/white.png</texture>
-                <bordertexture border="24">common/shadow-24.png</bordertexture>
+                <bordertexture border="28">common/shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
             </control>
             <control type="image">
@@ -400,7 +400,7 @@
                     <height>$PARAM[iconheight]</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <texture diffuse="diffuse/landscape-big.png" colordiffuse="ff1a1a1a">common/white.png</texture>
-                    <bordertexture border="24">common/shadow-24.png</bordertexture>
+                    <bordertexture border="28">common/shadow-24.png</bordertexture>
                     <bordersize>24</bordersize>
                 </control>
                 <control type="image">
@@ -422,31 +422,43 @@
             </control>
         </definition>
     </include>
+    <include name="PostersView">
+        <definition>
+            <control type="image">
+                <width>260</width>
+                <height>360</height>
+                <aspectratio scalediffuse="true">stretch</aspectratio>
+                <texture background="true" diffuse="diffuse/poster-small.png">$VAR[Image_Poster]</texture>
+                <bordertexture border="28">common/shadow-24.png</bordertexture>
+                <bordersize>24</bordersize>
+            </control>
+        </definition>
+    </include>
     <include name="LandscapeView">
-		<param name="selected">false</param>
-		<definition>
-			<control type="group">
-				<control type="image">
-					<width>400</width>
-					<height>220</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="diffuse/landscape-std-horizontal.png">$VAR[ChannelListEPGIconVar]</texture>
-					<bordertexture border="24">common/shadow-24.png</bordertexture>
+        <param name="selected">false</param>
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <width>400</width>
+                    <height>220</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="diffuse/landscape-std-horizontal.png">$VAR[ChannelListEPGIconVar]</texture>
+                    <bordertexture border="28">common/shadow-24.png</bordertexture>
                     <bordersize>24</bordersize>
-					<visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-					<animation effect="zoom" start="100" end="120" time="300" tween="sine" easing="inout" center="auto" reversible="true" condition="$PARAM[selected]">Conditional</animation>
-				</control>
-				<control type="image">
-					<width>400</width>
-					<height>220</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="diffuse/landscape-std-horizontal.png">$VAR[Image_Landscape]</texture>
-					<bordertexture border="24">common/shadow-24.png</bordertexture>
+                    <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                    <animation effect="zoom" start="100" end="120" time="300" tween="sine" easing="inout" center="auto" reversible="true" condition="$PARAM[selected]">Conditional</animation>
+                </control>
+                <control type="image">
+                    <width>400</width>
+                    <height>220</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="diffuse/landscape-std-horizontal.png">$VAR[Image_Landscape]</texture>
+                    <bordertexture border="28">common/shadow-24.png</bordertexture>
                     <bordersize>24</bordersize>
-					<visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-					<animation effect="zoom" start="100" end="120" time="300" tween="sine" easing="inout" center="auto" reversible="true" condition="$PARAM[selected]">Conditional</animation>
-				</control>
-			</control>
-		</definition>
-	</include>
+                    <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                    <animation effect="zoom" start="100" end="120" time="300" tween="sine" easing="inout" center="auto" reversible="true" condition="$PARAM[selected]">Conditional</animation>
+                </control>
+            </control>
+        </definition>
+    </include>
 </includes>

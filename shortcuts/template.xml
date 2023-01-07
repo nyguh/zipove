@@ -147,6 +147,7 @@
         <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
         <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
         <property name="limit" tag="property" attribute="name|widgetLimit"/>
+        <property name="limit">25</property>
         <property name="aspect" tag="property" attribute="name|widgetAspect"/>
         <property name="aspect">Poster</property>
         <propertyGroup>mainmenuWidgets</propertyGroup>
@@ -197,6 +198,7 @@
         <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
         <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
         <property name="limit" tag="property" attribute="name|widgetLimit"/>
+        <property name="limit">25</property>
         <property name="aspect" tag="property" attribute="name|widgetAspect"/>
         <property name="aspect">Poster</property>
         <propertyGroup>mainmenuWidgets</propertyGroup>
@@ -303,9 +305,11 @@
             <property name="id" tag="property" attribute="name|id" value="$NUMBER[49]">49</property>
             <property name="id">50</property>
             <property name="path" tag="property" attribute="name|list"/>
+            <property name="target" tag="property" attribute="name|widgetTarget"/>
             <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
             <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
             <property name="limit" tag="property" attribute="name|widgetLimit"/>
+            <property name="limit">25</property>
             <!--  -->
             <controls>
                 <control type="group" id="$PYTHON[int(mainmenuid) * 9000 + int(id)]">

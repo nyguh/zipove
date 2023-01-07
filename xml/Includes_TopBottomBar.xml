@@ -239,7 +239,7 @@
             <textcolor>b3ededed</textcolor>
             <font>font30_title_upp</font>
             <label>$INFO[ListItem.Title]</label>
-            <visible>Control.HasFocus(51)</visible>
+            <visible>Control.HasFocus(51) + !Window.IsActive(videos)</visible>
         </control>
     </include>
     <include name="InfoDialogTopBarInfo">
