@@ -47,75 +47,41 @@
         <param name="fallback_image">DefaultFolder.png</param>
         <param name="main_label">$INFO[ListItem.Artist]</param>
         <param name="sub_label">$INFO[ListItem.Title]</param>
-        <param name="single_label">$INFO[ListItem.Label]</param>
         <param name="focused">false</param>
         <definition>
             <control type="image">
-                <top>0</top>
-                <width>316</width>
-                <height>386</height>
-                <texture>dialogs/dialog-bg-nobo.png</texture>
-                <bordertexture border="21">overlays/shadow.png</bordertexture>
-                <bordersize>20</bordersize>
+                <width>320</width>
+                <height>320</height>
+                <texture colordiffuse="ff1a1a1a" border="6">common/box.png</texture>
+                <bordertexture border="24">common/shadow-24.png</bordertexture>
+                <bordersize>24</bordersize>
             </control>
             <control type="image">
-                <top>-4</top>
-                <left>-4</left>
-                <width>324</width>
-                <height>394</height>
-                <texture colordiffuse="$VAR[ColorHighlight]">colors/grey.png</texture>
-                <bordertexture border="21">overlays/shadow.png</bordertexture>
-                <bordersize>20</bordersize>
-                <visible>$PARAM[focused]</visible>
-                <include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+                <top>-5</top>
+                <width>320</width>
+                <height>260</height>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <texture fallback="$PARAM[fallback_image]" background="true" diffuse="diffuse/square-diffuse-thumb.png">$VAR[InfoWallThumbVar]</texture>
+                <bordersize>24</bordersize>
             </control>
-            <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <width>316</width>
-                <height>316</height>
-                <texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
-                <aspectratio>keep</aspectratio>
-                <bordersize>20</bordersize>
+            <control type="label">
+                <left>20</left>
+                <top>200</top>
+                <width>260</width>
+                <label>$PARAM[main_label]</label>
+                <font>font_tiny_hintlabel</font>
+                <shadowcolor>text_shadow</shadowcolor>
+                <align>right</align>
             </control>
             <control type="textbox">
                 <left>28</left>
-                <top>289</top>
+                <top>220</top>
                 <width>262</width>
                 <height>80</height>
-                <font>font12</font>
+                <font>font_tiny_hintlabel</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <label>$PARAM[single_label]</label>
-                <visible>!String.IsEqual(ListItem.DBType,album)</visible>
-            </control>
-            <control type="group">
-                <visible>String.IsEqual(ListItem.DBType,album)</visible>
-                <control type="label">
-                    <left>29</left>
-                    <top>300</top>
-                    <width>260</width>
-                    <label>$PARAM[sub_label]</label>
-                    <font>font_tiny10</font>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <scroll>$PARAM[focused]</scroll>
-                    <align>center</align>
-                </control>
-                <control type="label">
-                    <left>29</left>
-                    <top>328</top>
-                    <width>260</width>
-                    <label>$PARAM[main_label]</label>
-                    <font>font12</font>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <scroll>$PARAM[focused]</scroll>
-                    <align>center</align>
-                </control>
-            </control>
-            <control type="group">
-                <left>133</left>
-                <top>2</top>
-                <include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+                <label>$PARAM[sub_label]</label>
             </control>
         </definition>
     </include>
