@@ -10,13 +10,13 @@
         <control type="image">
             <width>1920</width>
             <height>320</height>
-            <texture flipy="true" colordiffuse="black">common/fade.png</texture>
+            <texture>overlays/horizontal-fade.png</texture>
         </control>
         <control type="image">
             <bottom>0</bottom>
             <width>1920</width>
             <height>480</height>
-            <texture colordiffuse="black">common/fade.png</texture>
+            <texture flipy="true">overlays/horizontal-fade.png</texture>
         </control>
         <!-- showcase -->
         <control type="group" id="5600">

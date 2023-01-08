@@ -992,7 +992,7 @@
         <value>special://skin/extras/backgrounds/blur-background.jpg</value>
     </variable>
     <variable name="BlurBackground">
-        <value condition="[Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | Skin.HasSetting(Horizontal_Main)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
+        <value condition="[Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | Skin.HasSetting(Horizontal_Main) + [![String.IsEmpty(ListItem.Art(tvshow.fanart)) + String.IsEmpty(ListItem.Art(fanart))] | ![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]]">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="Skin.HasSetting(DontBlurHome) + [Skin.HasSetting(TMDbHelper.EnableBlur) + !Window.IsVisible(Home)]">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(background))">$INFO[ListItem.Property(background)]</value>
         <value>$VAR[MediaFanartVar]</value>
