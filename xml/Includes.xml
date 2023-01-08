@@ -822,11 +822,13 @@
             <width>$PARAM[width]</width>
             <height>$PARAM[height]</height>
             <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <right>0</right>
-                <bottom>-10</bottom>
+                <left>-24</left>
+                <top>-24</top>
+                <right>-24</right>
+                <bottom>-24</bottom>
                 <texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
+                <bordertexture border="24">common/shadow-24.png</bordertexture>
+                <bordersize>24</bordersize>
             </control>
             <control type="radiobutton">
                 <left>7</left>
@@ -843,11 +845,10 @@
                 <textureradioonfocus colordiffuse="dialog_fg_70">dialogs/close.png</textureradioonfocus>
                 <textureradioonnofocus colordiffuse="dialog_fg_70">special://skin/extras/icons/kodi.png</textureradioonnofocus>
                 <onclick>Action(close)</onclick>
-                <visible>!Skin.HasSetting(touchmode)</visible>
             </control>
             <control type="label" id="$PARAM[header_id]">
                 <left>92</left>
-                <top>-60</top>
+                <top>0</top>
                 <right>100</right>
                 <height>70</height>
                 <font>font_small_header</font>
