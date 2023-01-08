@@ -58,7 +58,7 @@
         <control type="group">
             <height>78</height>
             <bottom>0</bottom>
-            <visible>!Window.IsVisible(addoninformation)</visible>
+            <visible>!Window.IsVisible(addoninformation) + !Control.IsVisible(52)</visible>
             <animation effect="fade" time="300">VisibleChange</animation>
             <include content="LeftAlignedInfo">
                 <param name="main_label" value="$INFO[Window(AddonBrowser).Property(Updated)]"/>

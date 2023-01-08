@@ -96,7 +96,7 @@
                 <width>320</width>
                 <height>320</height>
                 <texture colordiffuse="ff1a1a1a" border="6">common/box.png</texture>
-                <bordertexture border="28">common/shadow-24.png</bordertexture>
+                <bordertexture border="24">common/shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
             </control>
             <control type="image">
@@ -132,7 +132,6 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$INFO[ListItem.Label]</label>
-                <visible>Window.IsActive(videos)</visible>
             </control>
             <control type="group">
                 <visible>!Window.IsActive(videos)</visible>
