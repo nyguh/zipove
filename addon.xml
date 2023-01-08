@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cosmic" version="2.0.5" name="Cosmic" provider-name="heppen">
+<addon id="skin.cosmic" version="2.0.6" name="Cosmic" provider-name="heppen">
   <requires>
     <import addon="xbmc.gui" version="5.15.0"/>
     <import addon="script.skinshortcuts"/>
