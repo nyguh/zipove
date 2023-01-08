@@ -977,7 +977,6 @@
     <variable name="MediaFanartVar">
         <value condition="Skin.HasSetting(no_fanart)">
         </value>
-        <value condition="String.StartsWith(ListItem.FolderPath,pvr://)">special://skin/extras/home-images/cinema.jpg</value>
         <value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)">$INFO[Window(home).Property(infobackground)]</value>
         <value condition="Container.Content(genres) + Window.IsActive(videos)">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
         <value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.FolderPath]</value>
@@ -989,7 +988,8 @@
         <value condition="Window.IsVisible(home) + String.IsEmpty(Container(3000).ListItem.Property(Background)) + !String.IsEmpty(Container(7502).ListItem.Art(fanart)) + Integer.IsGreater(Container(7502).NumItems,0) + !String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">$INFO[Container(7502).ListItem.Art(fanart)]</value>
         <!-- flix hub fanart -->
         <value condition="!String.IsEmpty(Window(home).Property(spotlight_Fanart)) + Window.IsActive(1140)">$INFO[Window(home).Property(spotlight_Fanart)]</value>
-        <value>$INFO[Container.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
+        <value>special://skin/extras/backgrounds/blur-background.jpg</value>
     </variable>
     <variable name="BlurBackground">
         <value condition="[Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | Skin.HasSetting(Horizontal_Main)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
@@ -1147,9 +1147,6 @@
     <variable name="SeasonEpisodeLabel">
         <value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E]</value>
         <value>$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E,: ]</value>
-    </variable>
-    <variable name="PremieredLabel">
-        <value>$INFO[ListItem.Premiered,[COLOR grey]$LOCALIZE[20416]:[/COLOR] ,[CR]]</value>
     </variable>
     <variable name="FlagLabel">
         <value condition="ListItem.IsPremiere">[B][COLOR $VAR[ColorHighlight]]$LOCALIZE[838][/COLOR][/B]</value>
