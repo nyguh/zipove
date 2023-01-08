@@ -2,9 +2,8 @@
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
-    <onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
-    <onunload>ClearProperty(infobackground,home)</onunload>
     <controls>
+        <include>DialogBackground</include>
         <control type="group">
             <include>OpenClose_Animation</include>
             <centertop>60%</centertop>

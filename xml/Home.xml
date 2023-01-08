@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <backgroundcolor>$VAR[HomeBackgroundColor]</backgroundcolor>
+    <backgroundcolor>Background</backgroundcolor>
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onload>
     <!-- set default home layout if none is set -->
     <onload condition="!Skin.HasSetting(Prime_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Prime_Main)</onload>
     <!-- for horizontal layout -->
     <onload condition="Skin.HasSetting(Horizontal_Main)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
-	<onload condition="Skin.HasSetting(Horizontal_Main)">SetProperty(TMDbHelper.Blur.SourceImage,Art(tvshow.fanart)|Art(fanart)|Art(tvshow.poster)|Art(poster),Home)</onload>
+    <onload>SetProperty(TMDbHelper.Blur.Fallback,special://skin/extras/backgrounds/blur-background.jpg,Home)</onload>
+	<onload>SetProperty(TMDbHelper.Blur.SourceImage,Art(tvshow.fanart)|Art(fanart)|Art(tvshow.poster)|Art(poster),Home)</onload>
     <!-- set fallback menu style -->
     <onload condition="String.IsEmpty(Skin.String(MenuStyle))">Skin.SetString(MenuStyle,IconsText)</onload>
     <!-- set default selection box -->
@@ -35,7 +36,6 @@
             <onclick>noop</onclick>
             <visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
         </control>
-        <include>DefaultBackground</include>
         <control type="list" id="9989">
             <posx>-20</posx>
             <posy>-20</posy>
@@ -53,6 +53,7 @@
             </content>
         </control>
         <control type="group">
+            <include>DefaultBackground</include>
             <include>OpenClose_Fade</include>
             <include condition="Skin.HasSetting(Prime_Main)">Prime_Main</include>
             <include condition="Skin.HasSetting(Horizontal_Main)">Horizontal_Main</include>

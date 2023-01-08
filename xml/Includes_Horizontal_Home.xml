@@ -60,14 +60,14 @@
                             <width>240</width>
                             <height>64</height>
                             <centerleft>50%</centerleft>
-                            <texture border="5" colordiffuse="$VAR[ColorGradient]">buttons/menu.png</texture>
+                            <texture border="5" colordiffuse="$VAR[ColorGradient]">buttons/menu-alpha.png</texture>
                         </control>
                         <control type="image">
                             <top>1</top>
                             <width>240</width>
                             <height>62</height>
                             <centerleft>50%</centerleft>
-                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">buttons/menu.png</texture>
+                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">buttons/menu-alpha.png</texture>
                         </control>
                     </control>
                     <control type="label">
@@ -113,14 +113,14 @@
                             <width>240</width>
                             <height>64</height>
                             <centerleft>50%</centerleft>
-                            <texture border="5" colordiffuse="$VAR[ColorGradient]">buttons/menu.png</texture>
+                            <texture border="5" colordiffuse="$VAR[ColorGradient]">buttons/menu-alpha.png</texture>
                         </control>
                         <control type="image">
                             <top>1</top>
                             <width>240</width>
                             <height>62</height>
                             <centerleft>50%</centerleft>
-                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">buttons/menu.png</texture>
+                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">buttons/menu-alpha.png</texture>
                         </control>
                     </control>
                     <control type="label">

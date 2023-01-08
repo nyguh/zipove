@@ -146,7 +146,7 @@
         <param name="list_id">5000</param>
         <param name="font">font13</param>
         <param name="sortby">
-    </param>
+        </param>
         <param name="sortorder">ascending</param>
         <param name="visible">true</param>
         <definition>
@@ -388,7 +388,7 @@
     </include>
     <include name="MediaFlags">
         <param name="infolabel_prefix">
-    </param>
+        </param>
         <param name="resolution_var">$VAR[ResolutionFlagVar]</param>
         <definition>
             <control type="grouplist">
@@ -499,9 +499,9 @@
     </include>
     <include name="FileManagerPanel">
         <param name="width">
-    </param>
+        </param>
         <param name="right">
-    </param>
+        </param>
         <definition>
             <control type="fixedlist" id="$PARAM[list_id]">
                 <left>0</left>
@@ -882,6 +882,20 @@
             </control>
             <visible>Skin.HasSetting(EnableColoredBackground) | Player.HasVideo</visible>
         </definition>
+    </include>
+    <include name="DialogBackground">
+        <control type="image">
+            <animation effect="fade" time="200" end="0" start="100">WindowClose</animation>
+            <include>FullScreenDimensions</include>
+            <aspectratio aligny="top">scale</aspectratio>
+            <texture background="true" colordiffuse="ff121212">common/white.png</texture>
+        </control>
+        <control type="image">
+            <animation effect="fade" time="200" end="0" start="100">WindowClose</animation>
+            <include>FullScreenDimensions</include>
+            <aspectratio aligny="top">scale</aspectratio>
+            <texture background="true" colordiffuse="alpha_30">special://skin/extras/backgrounds/blur-background.jpg</texture>
+        </control>
     </include>
     <include name="DefaultBackground">
         <definition>

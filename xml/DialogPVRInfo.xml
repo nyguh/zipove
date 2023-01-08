@@ -4,14 +4,7 @@
     <onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
     <onunload>ClearProperty(infobackground,home)</onunload>
     <controls>
-        <control type="image">
-            <include>FullScreenDimensions</include>
-            <aspectratio aligny="top">scale</aspectratio>
-            <fadetime>600</fadetime>
-            <timeperimage>6000</timeperimage>
-            <randomize>true</randomize>
-            <texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</texture>
-        </control>
+        <include>DialogBackground</include>
         <control type="group">
             <top>160</top>
             <centerleft>50%</centerleft>
