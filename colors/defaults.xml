@@ -44,6 +44,6 @@
   <color name="shadow">55ffffff</color>
   <!-- Old references... -->
   <color name="invalid">FFFF0000</color>
-  <color name="text_color">ff606060</color>
+  <color name="text_color">deffffff</color>
   <color name="text_shadow">22000000</color>
 </colors>

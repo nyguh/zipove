@@ -554,27 +554,6 @@
                         <onclick>Skin.ToggleSetting(KeepMinimalPVROSD)</onclick>
                         <selected>Skin.HasSetting(KeepMinimalPVROSD)</selected>
                     </control>
-                    <control type="radiobutton" id="1103">
-                        <label>$LOCALIZE[31311]</label>
-                        <include>DefaultSettingButton</include>
-                        <onclick>Skin.ToggleSetting(LegacyPVR)</onclick>
-                        <selected>Skin.HasSetting(LegacyPVR)</selected>
-                    </control>
-                    <control type="label" id="1104">
-                        <textoffsetx>50</textoffsetx>
-                        <width>470</width>
-                        <height>70</height>
-                        <textcolor>dialog_fg_30</textcolor>
-                        <label>$LOCALIZE[31394]</label>
-                        <font>font_small_defaults</font>
-                        <aligny>center</aligny>
-                    </control>
-                    <control type="radiobutton" id="1105">
-                        <label>$LOCALIZE[31395]</label>
-                        <include>DefaultSettingButton</include>
-                        <onclick>Skin.ToggleSetting(ShowEPGEventIcon)</onclick>
-                        <selected>Skin.HasSetting(ShowEPGEventIcon)</selected>
-                    </control>
                 </control>
                 <!-- Manage -->
                 <control type="grouplist" id="1200">
