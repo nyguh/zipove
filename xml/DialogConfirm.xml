@@ -22,7 +22,7 @@
                 <textcolor>dialog_fg_70</textcolor>
                 <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
-            <control type="progress">
+            <control type="progress" id="20">
                 <left>30</left>
                 <top>262</top>
                 <width>855</width>
