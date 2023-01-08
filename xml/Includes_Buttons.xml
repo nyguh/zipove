@@ -454,7 +454,7 @@
                 <radioposx>-26</radioposx>
                 <radiowidth>110</radiowidth>
                 <radioheight>66</radioheight>
-                <textwidth>130</textwidth>
+                <textwidth>160</textwidth>
                 <textcolor>b3ededed</textcolor>
                 <disabledcolor>1fcccccc</disabledcolor>
                 <font>font_tiny_match</font>

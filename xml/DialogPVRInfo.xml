@@ -133,34 +133,34 @@
             <include content="AddonDialogButton">
                 <param name="width" value="275"/>
                 <param name="id" value="5"/>
-                <param name="icon" value="icons/infodialogs/launch.png"/>
+                <param name="icon" value="special://skin/extras/icons/rocket.png"/>
                 <param name="label" value="$LOCALIZE[19165]"/>
                 <param name="visible" value="Window.IsActive(PVRGuideInfo)"/>
             </include>
             <include content="AddonDialogButton">
                 <param name="width" value="275"/>
                 <param name="id" value="10"/>
-                <param name="icon" value="icons/infodialogs/cinema.png"/>
+                <param name="icon" value="special://skin/extras/icons/cinemavision.png"/>
                 <param name="label" value="$LOCALIZE[19190]"/>
                 <param name="visible" value="Window.IsActive(PVRGuideInfo)"/>
             </include>
             <include content="AddonDialogButton">
                 <param name="width" value="275"/>
                 <param name="id" value="8"/>
-                <param name="icon" value="icons/infodialogs/play_record.png"/>
+                <param name="icon" value="special://skin/extras/icons/videoplay.png"/>
                 <param name="label" value="$LOCALIZE[19687]"/>
                 <param name="visible" value="Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)"/>
             </include>
             <include content="AddonDialogButton">
                 <param name="width" value="275"/>
                 <param name="id" value="6"/>
-                <param name="icon" value="icons/infodialogs/record.png"/>
+                <param name="icon" value="special://skin/extras/icons/recent.png"/>
                 <param name="visible" value="Window.IsActive(PVRGuideInfo)"/>
             </include>
             <include content="AddonDialogButton">
                 <param name="width" value="275"/>
                 <param name="id" value="9"/>
-                <param name="icon" value="icons/infodialogs/timer.png"/>
+                <param name="icon" value="special://skin/extras/icons/clock.png"/>
                 <param name="label" value="$LOCALIZE[19061]"/>
                 <param name="visible" value="Window.IsActive(PVRGuideInfo)"/>
             </include>
@@ -174,7 +174,7 @@
             <include content="AddonDialogButton">
                 <param name="width" value="275"/>
                 <param name="id" value="4"/>
-                <param name="icon" value="icons/infodialogs/similar.png"/>
+                <param name="icon" value="special://skin/extras/icons/dependencies.png"/>
                 <param name="label" value="$LOCALIZE[19003]"/>
                 <param name="visible" value="Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)"/>
             </include>
