@@ -44,10 +44,14 @@
     </include>
     <include name="Animation_MediaMenu">
         <animation type="Visible" reversible="false">
-            <effect type="fade" end="100" time="250"/>
+            <effect type="fade" start="0" end="100" time="250"/>
+            <effect type="zoom" start="30,30" end="100,100" time="250"/>
+            <effect type="slide" end="0,0" start="80,0" time="250"/>
         </animation>
         <animation type="Hidden" reversible="false">
             <effect type="fade" start="100" end="0" time="250"/>
+            <effect type="zoom" end="30,30" start="100,100" time="250"/>
+            <effect type="slide" start="0,0" end="80,0" time="250"/>
         </animation>
     </include>
     <include name="Visible_Fade">
