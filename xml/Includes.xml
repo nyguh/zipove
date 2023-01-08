@@ -33,17 +33,6 @@
     <include file="View_502_FanArt.xml"/>
     <include file="View_510_Flix.xml"/>
     <include file="Variables.xml"/>
-    <constant name="DepthDialog">0.50</constant>
-    <constant name="DepthDialog+">0.52</constant>
-    <constant name="DepthDialog-">0.48</constant>
-    <constant name="DepthMax">0.54</constant>
-    <constant name="DepthOSD">0.40</constant>
-    <constant name="DepthOSD+">0.44</constant>
-    <constant name="DepthContentPopout">0.10</constant>
-    <constant name="DepthContentPanel">0.05</constant>
-    <constant name="DepthBars">0.12</constant>
-    <constant name="DepthBackground">-0.80</constant>
-    <constant name="DepthSideBlade">0.10</constant>
     <constant name="bg_alpha">79</constant>
     <constant name="dialogbuttons_itemgap">-20</constant>
     <constant name="list_y_offset">0</constant>
@@ -882,13 +871,11 @@
     <include name="ColoredBackgroundImages">
         <definition>
             <control type="image">
-                <depth>DepthBackground</depth>
                 <include>FullScreenDimensions</include>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/backgrounds/primary.jpg</texture>
             </control>
             <control type="image">
-                <depth>DepthBackground</depth>
                 <include>FullScreenDimensions</include>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="$VAR[ColorsOverlay]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
@@ -899,7 +886,6 @@
     <include name="DefaultBackground">
         <definition>
             <control type="videowindow">
-                <depth>DepthBackground</depth>
                 <include>FullScreenDimensions</include>
                 <visible>Player.HasVideo + !Skin.HasSetting(BackgroundPlayingTrailers) | Skin.HasSetting(PlayTrailersFullScreen) | Skin.HasSetting(Horizontal_Main)</visible>
                 <visible>!Slideshow.IsActive</visible>
@@ -924,7 +910,6 @@
                 </control>
                 <control type="group" id="31111">
                     <visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
-                    <depth>DepthBackground</depth>
                     <include>OpenClose_Fade</include>
                     <animation effect="fade" time="100">VisibleChange</animation>
                     <control type="multiimage" id="32111">
@@ -1510,7 +1495,6 @@
     </include>
     <include name="DialogBusy">
         <control type="group">
-            <depth>DepthMax</depth>
             <centerleft>50%</centerleft>
             <centertop>50%</centertop>
             <width>80</width>
@@ -1833,17 +1817,6 @@
             <param name="top" value="$PARAM[top]"/>
             <param name="font" value="$PARAM[font]"/>
         </include>
-    </include>
-    <include name="submenuHorizontalLabelLayout">
-        <definition>
-            <left>0</left>
-            <top>995</top>
-            <width>384</width>
-            <height>95</height>
-            <align>center</align>
-            <aligny>center</aligny>
-            <font>font_menu</font>
-        </definition>
     </include>
     <include name="View_UnwatchedEpisodes_Visible">
         <visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]</visible>
