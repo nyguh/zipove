@@ -1202,7 +1202,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31249"
-msgid "Minimize loading spinner"
+msgid "FullScreen loading spinner"
 msgstr ""
 
 #: /xml/SkinSettings.xml

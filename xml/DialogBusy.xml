@@ -13,11 +13,11 @@
                 <texture>colors/black.png</texture>
                 <include>FullScreenDimensions</include>
                 <animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
-                <animation effect="fade" start="100" end="0" time="0" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(FullscreenGame)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(FullscreenGame) | !Skin.HasSetting(FullScreenBusy)">Conditional</animation>
             </control>
             <control type="group">
-                <include content="DialogBusy" condition="!Skin.HasSetting(MinimalDialogBusy)"/>
-                <include content="MinimalDialogBusy" condition="Skin.HasSetting(MinimalDialogBusy)"/>
+                <include content="DialogBusy" condition="Skin.HasSetting(FullScreenBusy)"/>
+                <include content="MinimalDialogBusy" condition="!Skin.HasSetting(FullScreenBusy)"/>
             </control>
         </control>
     </controls>

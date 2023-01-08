@@ -1026,8 +1026,8 @@ msgstr "Włącz debugowanie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31249"
-msgid "Minimize loading spinner"
-msgstr "Zminimalizuj ekran ładowania"
+msgid "FullScreen loading spinner"
+msgstr "Pełnoekranowy ekran ładowania"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31250"

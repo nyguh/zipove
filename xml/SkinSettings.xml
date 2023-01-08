@@ -326,8 +326,8 @@
                     <control type="radiobutton" id="811" description="Minimize loading spinner">
                         <label>$LOCALIZE[31249]</label>
                         <include>DefaultSettingButton</include>
-                        <onclick>Skin.ToggleSetting(MinimalDialogBusy)</onclick>
-                        <selected>Skin.HasSetting(MinimalDialogBusy)</selected>
+                        <onclick>Skin.ToggleSetting(FullScreenBusy)</onclick>
+                        <selected>Skin.HasSetting(FullScreenBusy)</selected>
                     </control>
                     <control type="radiobutton" id="812" description="Dark volume slider">
                         <label>$LOCALIZE[31352]</label>

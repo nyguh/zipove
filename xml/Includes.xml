@@ -1537,9 +1537,8 @@
     </include>
     <include name="MinimalDialogBusy">
         <control type="group">
-            <depth>DepthMax</depth>
-            <bottom>20</bottom>
-            <left>20</left>
+            <top>42</top>
+            <left>172</left>
             <width>80</width>
             <height>80</height>
             <control type="group">
