@@ -21,6 +21,8 @@
     <onload condition="String.IsEmpty(Skin.String(AlphaValue))">Skin.SetString(AlphaValue,15)</onload>
     <onload condition="String.IsEmpty(Skin.String(TMDbHelper.Colors.Luminance))">Skin.SetString(TMDbHelper.Colors.Luminance,0.75)</onload>
     <onload condition="String.IsEmpty(Skin.String(TMDbHelper.Colors.Saturation))">Skin.SetString(TMDbHelper.Colors.Saturation,0.75)</onload>
+    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff00838f)</onload>
+    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff8bc34a)</onload>
     <controls>
         <control type="button" id="20000">
             <include>HiddenObject</include>
