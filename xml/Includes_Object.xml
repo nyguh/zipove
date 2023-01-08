@@ -3,10 +3,13 @@
     <include name="Object_Submenu_Content">
         <control type="fixedlist" id="9001">
             <nested/>
-            <include content="submenuPrimeParams" condition="Skin.HasSetting(Prime_Main)"/>
-            <include content="submenuVerticalParams" condition="Skin.HasSetting(Vertical_Main)"/>
-            <include content="submenuClassicParams" condition="Skin.HasSetting(Classic_Main)"/>
-            <include content="submenuHorizontalParams" condition="Skin.HasSetting(Horizontal_Main)"/>
+            <left>50</left>
+            <top>144</top>
+            <right>0</right>
+            <height>1080</height>
+            <onleft>9000</onleft>
+            <onright>3000</onright>
+            <orientation>vertical</orientation>
             <movement>7</movement>
             <focusposition>0</focusposition>
             <focusedlayout width="384" height="64">
@@ -45,12 +48,13 @@
                             <visible>Control.HasFocus(9001)</visible>
                         </control>
                         <control type="label">
-                            <include content="submenuPrimeLabelLayout" condition="Skin.HasSetting(Prime_Main)">
-                                <font>font_menu_focus</font>
-                            </include>
-                            <include content="submenuVerticalLabelLayout" condition="Skin.HasSetting(Vertical_Main)"/>
-                            <include content="submenuClassicLabelLayout" condition="Skin.HasSetting(Classic_Main)"/>
-                            <include content="submenuHorizontalLabelLayout" condition="Skin.HasSetting(Horizontal_Main)"/>
+                            <top>140</top>
+                            <left>104</left>
+                            <height>64</height>
+                            <width>280</width>
+                            <aligny>center</aligny>
+                            <align>left</align>
+                            <font>font_menu_focus</font>
                             <textcolor>white</textcolor>
                             <label>$PARAM[label]</label>
                             <scroll>true</scroll>
@@ -59,10 +63,12 @@
                     </control>
                     <control type="group">
                         <control type="image">
-                            <include content="submenuPrimeIconLayout" condition="Skin.HasSetting(Prime_Main)"/>
-                            <include content="submenuVerticalIconLayout" condition="Skin.HasSetting(Vertical_Main)"/>
-                            <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main) + !String.IsEqual(Skin.String(MenuStyle),Icons)"/>
-                            <include content="submenuClassicIconsOnlyLayout" condition="Skin.HasSetting(Classic_Main) + String.IsEqual(Skin.String(MenuStyle),Icons)"/>
+                            <left>22</left>
+                            <top>141</top>
+                            <align>left</align>
+                            <width>64</width>
+                            <height>64</height>
+                            <font>font_menu</font>
                             <texture colordiffuse="white">$PARAM[icon]</texture>
                         </control>
                         <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
@@ -84,22 +90,24 @@
                         <control type="label">
                             <textcolor>B3ededed</textcolor>
                             <label>$PARAM[label]</label>
-                            <include content="submenuFont" condition="Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)"/>
-                            <include content="submenuPrimeLabelLayout" condition="Skin.HasSetting(Prime_Main)">
-                                <font>font_menu</font>
-                            </include>
-                            <include content="submenuVerticalLabelLayout" condition="Skin.HasSetting(Vertical_Main)"/>
-                            <include content="submenuClassicLabelLayout" condition="Skin.HasSetting(Classic_Main)"/>
-                            <include content="submenuHorizontalLabelLayout" condition="Skin.HasSetting(Horizontal_Main)"/>
+                            <top>140</top>
+                            <left>104</left>
+                            <height>64</height>
+                            <width>280</width>
+                            <aligny>center</aligny>
+                            <align>left</align>
+                            <font>font_menu</font>
                         </control>
                         <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                     </control>
                     <control type="group">
                         <control type="image">
-                            <include content="submenuPrimeIconLayout" condition="Skin.HasSetting(Prime_Main)"/>
-                            <include content="submenuVerticalIconLayout" condition="Skin.HasSetting(Vertical_Main)"/>
-                            <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main) + !String.IsEqual(Skin.String(MenuStyle),Icons)"/>
-                            <include content="submenuClassicIconsOnlyLayout" condition="Skin.HasSetting(Classic_Main) + String.IsEqual(Skin.String(MenuStyle),Icons)"/>
+                            <left>22</left>
+                            <top>141</top>
+                            <align>left</align>
+                            <width>64</width>
+                            <height>64</height>
+                            <font>font_menu</font>
                             <texture colordiffuse="44FFFFFF">$PARAM[icon]</texture>
                         </control>
                         <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
@@ -162,43 +170,6 @@
                         <left>18</left>
                         <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id])</visible>
-                    </control>
-                </control>
-            </control>
-        </definition>
-    </include>
-    <include name="Object_WidgetHorizontal_Label">
-        <param name="top" default="0"/>
-        <definition>
-            <control type="group" id="$PARAM[groupid]">
-                <top>$PARAM[top]</top>
-                <height>52</height>
-                <width>$PARAM[width]</width>
-                <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
-                <nested/>
-                <control type="grouplist">
-                    <height>52</height>
-                    <orientation>horizontal</orientation>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>22</itemgap>
-                    <control type="group">
-                        <include>SmallBusySpinner</include>
-                        <left>18</left>
-                        <visible>Container($PARAM[id]).IsUpdating</visible>
-                        <visible>Control.HasFocus($PARAM[id])</visible>
-                    </control>
-                    <control type="label">
-                        <top>0</top>
-                        <left>0</left>
-                        <width>$PARAM[width]</width>
-                        <label>$PARAM[label]</label>
-                        <aligny>center</aligny>
-                        <textcolor>B3cccccc</textcolor>
-                        <font>font27_bold</font>
-                        <height>42</height>
-                        <!-- <scroll>true</scroll> -->
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
-                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                     </control>
                 </control>
             </control>
@@ -783,57 +754,6 @@
             </control>
         </definition>
     </include>
-    <include name="Object_Widget_Content_Horizontal">
-        <param name="id" default="5610"/>
-        <param name="target" default=""/>
-        <param name="sortby" default=""/>
-        <param name="sortdirection" default=""/>
-        <param name="limit" default=""/>
-        <param name="path" default=""/>
-        <param name="postercondition" default="true"/>
-        <definition>
-            <control type="list" id="$PARAM[id]">
-                <nested/>
-                <orientation>horizontal</orientation>
-                <onleft>noop</onleft>
-                <onright>noop</onright>
-                <onup>9000</onup>
-                <onback>9000</onback>
-                <height>460</height>
-                <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
-                <onfocus>SetProperty(widgetNameLabelHoriz,$PARAM[name],home)</onfocus>
-                <onclick condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(trailerdelay,PlayMedia($ESCINFO[ListItem.Trailer],1),00:01,silent)</onclick>
-                <onclick condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + String.IsEmpty(ListItem.Trailer) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))">AlarmClock(trailerdelay,PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1),00:01,silent)</onclick>
-                <onclick condition="[[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))] + !Skin.HasSetting(DontShowNotificationANT)">Notification($LOCALIZE[31389], $LOCALIZE[31390])</onclick>
-                <include content="Flix_Spotlight_Properties">
-                    <param name="include_condition" value="!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
-                </include>
-                <onclick condition="!String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)">ActivateWindow(1140)</onclick>
-                <!-- Posters aspect ratio -->
-                <itemlayout height="330" width="300" condition="$PARAM[postercondition]">
-                    <include content="ViewPosterItemLayoutHorizontal">
-                        <param name="bg_visible" value="false"/>
-                    </include>
-                </itemlayout>
-                <focusedlayout height="330" width="300" condition="$PARAM[postercondition]">
-                    <include content="ViewPosterItemLayoutHorizontal">
-                        <param name="bg_visible" value="true"/>
-                    </include>
-                    <control type="button">
-                        <include>HiddenObject</include>
-                        <include>Flix_Spotlight_ClearProperties</include>
-                    </control>
-                </focusedlayout>
-                <include content="Object_Widget_Content_Path">
-                    <param name="target" value="$PARAM[target]"/>
-                    <param name="sortby" value="$PARAM[sortby]"/>
-                    <param name="sortdirection" value="$PARAM[sortdirection]"/>
-                    <param name="limit" value="$PARAM[limit]"/>
-                    <param name="path" value="$PARAM[path]"/>
-                </include>
-            </control>
-        </definition>
-    </include>
     <include name="Object_Widget_Content_Path">
         <content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortdirection]" limit="$PARAM[limit]">$PARAM[path]</content>
     </include>
@@ -1002,6 +922,7 @@
                     </animation>
                 </control>
                 <control type="group">
+                    <left>-$PARAM[left]</left>
                     <top>$PARAM[cycling_top]</top>
                     <include content="CyclingInfo" condition="!Skin.HasSetting(HideInfoTag)">
                         <param name="visible2" value="!String.IsEmpty(ListItem.Studio)"/>
