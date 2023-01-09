@@ -312,31 +312,22 @@
             <property name="limit">25</property>
             <!--  -->
             <controls>
-                <control type="group" id="$PYTHON[int(mainmenuid) * 9000 + int(id)]">
+                <control type="group">
                     <height>250</height>
-                    <control type="fixedlist" id="$PYTHON[int(mainmenuid) * 9000 + 10 + int(id)]">
-                        <onup condition="$PYTHON['true' if '1' in mainmenuid else 'false']">9000</onup>
+                    <visible>Integer.IsGreater(Container($PYTHON[int(mainmenuid) * 9000 + int(id)]).NumItems,0)</visible>
+                    <control type="grouplist" id="$PYTHON[int(mainmenuid) * 9000 + int(id)]">
+                        <onup condition="$PYTHON['true' if '1' in mainmenuid else 'false']">SetFocus(9000)</onup>
                         <onup condition="$PYTHON['false' if '1' in mainmenuid else 'true']">$PYTHON[(int(mainmenuid) - 1) * 9000 + int(id)]</onup>
-                        <ondown>$PYTHON[(int(mainmenuid) + 1) * 9000 + int(id)]</ondown>
-                        <orientation>horizontal</orientation>
-                        <top>40</top>
-                        <height>250</height>
-                        <preload>2</preload>
-                        <focusposition>1</focusposition>
-                        <scrolltime tween="sine" easing="out">300</scrolltime>
-                        <onclick>Info</onclick>
-                        <animation effect="slide" time="0" end="-300,0" condition="true">Conditional</animation>
-                        <animation effect="slide" time="200" start="0" end="0,-300" reversible="true" condition="Control.HasFocus($PYTHON[int(mainmenuid) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 1) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 2) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 3) * 9000 + 10 + int(id)])">Conditional</animation>
-                        <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PYTHON[int(mainmenuid) * 9000 + 10 + int(id)],Home)</onfocus>
-                        <itemlayout width="405" height="225">
-                            <include content="LandscapeView"/>
-                        </itemlayout>
-                        <focusedlayout width="405" height="225">
-                            <include content="LandscapeView">
-                                <param name="selected">Control.HasFocus($PYTHON[int(mainmenuid) * 9000 + 10 + int(id)])</param>
-                            </include>
-                        </focusedlayout>
-                        <content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" limit="$SKINSHORTCUTS[limit]">$SKINSHORTCUTS[path]</content>
+                        <ondown>$PYTHON[(int(mainmenuid) + 1) * 9000 + 10 + int(id)]</ondown>
+                        <include content="Object_Widget_Content_Horizontal">
+                            <param name="id" value="$PYTHON[int(mainmenuid) * 9000 + 10 + int(id)]"/>
+                            <param name="anim_condition" value="Control.HasFocus($PYTHON[int(mainmenuid) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 1) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 2) * 9000 + 10 + int(id)]) | Control.HasFocus($PYTHON[(int(mainmenuid) + 3) * 9000 + 10 + int(id)])"/>
+                            <param name="target" value="$SKINSHORTCUTS[target]"/>
+                            <param name="sort" value="$SKINSHORTCUTS[sortby]"/>
+                            <param name="direction" value="$SKINSHORTCUTS[sortdirection]"/>
+                            <param name="limit" value="$SKINSHORTCUTS[limit]"/>
+                            <param name="path" value="$SKINSHORTCUTS[path]"/>
+                        </include>
                     </control>
                 </control>
             </controls>
