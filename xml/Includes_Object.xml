@@ -370,7 +370,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="44"/>
-                        <param name="visible" value="true"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
@@ -383,7 +383,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="44"/>
-                        <param name="selected" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
+                        <param name="selected" value="[$PARAM[postercondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -408,7 +408,7 @@
                         <include content="View_WatchedOverlay">
                             <param name="bottom" value="0"/>
                             <param name="right" value="48"/>
-                            <param name="visible" value="true"/>
+                            <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
                         </include>
                     </control>
                 </itemlayout>
@@ -425,7 +425,7 @@
                         <include content="View_WatchedOverlay">
                             <param name="bottom" value="0"/>
                             <param name="right" value="48"/>
-                            <param name="selected" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
+                            <param name="selected" value="[$PARAM[squarecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
                         </include>
                     </control>
                     <control type="button">
@@ -450,7 +450,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="visible" value="true"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
@@ -465,7 +465,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="selected" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
+                        <param name="selected" value="[$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -490,7 +490,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="visible" value="true"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
@@ -505,7 +505,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="selected" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
+                        <param name="selected" value="[$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -529,7 +529,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="48"/>
-                        <param name="visible" value="true"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[primecondition]">
@@ -582,7 +582,7 @@
                         <include content="View_WatchedOverlay">
                             <param name="bottom" value="0"/>
                             <param name="right" value="72"/>
-                            <param name="selected" value="$PARAM[primecondition] + Control.HasFocus($PARAM[id])"/>
+                            <param name="selected" value="[$PARAM[primecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
                         </include>
                     </control>
                     <control type="button">
