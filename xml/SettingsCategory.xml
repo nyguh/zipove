@@ -98,7 +98,7 @@
                     <description>Default Category Button</description>
                     <left>0</left>
                     <height>70</height>
-                    <!-- <width>400</width> -->
+                    <width>400</width>
                     <textoffsetx>40</textoffsetx>
                     <aligny>center</aligny>
                     <font>font27</font>
@@ -158,7 +158,7 @@
         <control type="textbox" id="6">
             <description>description area</description>
             <top>1030</top>
-            <left>125</left>
+            <left>170</left>
             <width>1400</width>
             <height>50</height>
             <font>font12</font>
