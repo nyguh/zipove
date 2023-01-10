@@ -47,7 +47,8 @@
             </control>
             <control type="label">
                 <top>-120</top>
-                <font>font_title</font>
+                <left>30</left>
+                <font>font_title_bold</font>
                 <label>$INFO[ListItem.Title]</label>
                 <visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
             </control>
