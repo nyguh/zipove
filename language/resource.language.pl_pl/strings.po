@@ -1919,3 +1919,8 @@ msgstr ""
 msgctxt "#31429"
 msgid "Extended List"
 msgstr "Lista rozszerzona"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31430"
+msgid "Open InfoDialog on select"
+msgstr "Otwórz informacje o filmie po kliknięciu"

@@ -75,6 +75,13 @@
                         <onclick>SetProperty(CustomDialogWindow.items,MenuStyle,home)</onclick>
                         <onclick>ActivateWindow(1150)</onclick>
                     </control>
+                    <control type="radiobutton" id="605" description="Open Info on select">
+                        <label>$LOCALIZE[31430]</label>
+                        <include>DefaultSettingButton</include>
+                        <visible>Skin.HasSetting(Horizontal_Main)</visible>
+                        <selected>Skin.HasSetting(HorizontalInfoOnSelect)</selected>
+                        <onclick>Skin.ToggleSetting(HorizontalInfoOnSelect)</onclick>
+                    </control>
                     <control type="radiobutton" id="605" description="Enable Flix Spotlight">
                         <label>$LOCALIZE[31407]</label>
                         <include>DefaultSettingButton</include>
