@@ -5,7 +5,7 @@
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onload>
     <!-- set default home layout if none is set -->
-    <onload condition="!Skin.HasSetting(Prime_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Prime_Main)</onload>
+    <onload condition="!Skin.HasSetting(Prime_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Horizontal_Main)</onload>
     <!-- for horizontal layout -->
     <onload condition="Skin.HasSetting(Horizontal_Main)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
     <onload>SetProperty(TMDbHelper.Blur.Fallback,special://skin/extras/backgrounds/blur-background.jpg,Home)</onload>
