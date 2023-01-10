@@ -2017,4 +2017,11 @@
         <onfocus>ClearProperty(spotlight_DBID,home)</onfocus>
         <onfocus>ClearProperty(spotlight_DBType,home)</onfocus>
     </include>
+    <include name="flixed_focusposition">
+        <focusposition>1</focusposition>
+    </include>
+    <include name="flixed_widgets_params">
+        <left>-215</left>
+        <width>2300</width>
+    </include>
 </includes>

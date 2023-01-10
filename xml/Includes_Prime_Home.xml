@@ -37,32 +37,19 @@
                 <animation effect="slide" start="0" end="0,560" time="400" tween="quadratic" condition="Window.IsActive(1140) + Skin.HasSetting(PlayTrailersFullScreen)">Conditional</animation>
                 <left>122</left>
                 <control type="grouplist" id="3000">
-                    <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+                    <!-- flixed -->
+                    <include condition="!String.IsEmpty(Skin.String(FlixedScrolling))">flixed_widgets_params</include>
+                    <animation effect="slide" time="200" start="0" end="-55,0" condition="String.IsEqual(Window(home).Property(currentPoster),true) + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
+                    <animation effect="slide" time="200" start="0" end="-145,0" condition="String.IsEqual(Window(home).Property(currentSquare),true) + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
+                    <animation effect="slide" time="200" start="0" end="-390,0" condition="String.IsEqual(Window(home).Property(currentLandscape),true) + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
+                    <animation effect="slide" time="200" start="0" end="-390,0" condition="String.IsEqual(Window(home).Property(currentFanart),true) + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
                     <top>595</top>
                     <height>999999</height>
-                    <usecontrolcoords>false</usecontrolcoords>
                     <include content="Animation_Widget_Slide">
                         <param name="container" value="3000"/>
                     </include>
-                    <include condition="String.IsEmpty(Skin.String(FlixedScrolling))">skinshortcuts-template-vertical</include>
-                    <visible>String.IsEmpty(Skin.String(FlixedScrolling))</visible>
-                </control>
-                <control type="grouplist" id="3000">
+                    <include>skinshortcuts-template-vertical</include>
                     <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
-                    <top>595</top>
-                    <left>-215</left>
-                    <height>999999</height>
-                    <width>2300</width>
-                    <usecontrolcoords>false</usecontrolcoords>
-                    <include content="Animation_Widget_Slide">
-                        <param name="container" value="3000"/>
-                    </include>
-                    <animation effect="slide" time="200" start="0" end="-70,0" condition="String.IsEqual(Window(home).Property(currentPoster),true)">Conditional</animation>
-                    <animation effect="slide" time="200" start="0" end="-145,0" condition="String.IsEqual(Window(home).Property(currentSquare),true)">Conditional</animation>
-                    <animation effect="slide" time="200" start="0" end="-390,0" condition="String.IsEqual(Window(home).Property(currentLandscape),true)">Conditional</animation>
-                    <animation effect="slide" time="200" start="0" end="-390,0" condition="String.IsEqual(Window(home).Property(currentFanart),true)">Conditional</animation>
-                    <include condition="!String.IsEmpty(Skin.String(FlixedScrolling))">skinshortcuts-template-vertical-flix</include>
-                    <visible>!String.IsEmpty(Skin.String(FlixedScrolling))</visible>
                 </control>
                 <control type="group">
                     <top>0</top>
@@ -80,7 +67,7 @@
                     <left>0</left>
                     <visible>ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling)) + Integer.IsGreater(Container(7502).NumItems,0)</visible>
                     <control type="group">
-                        <width>272</width>
+                        <width>270</width>
                         <height>380</height>
                         <include content="Selectbox">
                             <param name="visible_posters" value="String.IsEqual(Window(home).Property(currentPoster),true)"/>

@@ -364,26 +364,30 @@
                     <param name="include_condition" value="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,music) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)"/>
                 </include>
                 <onclick condition="Skin.HasSetting(EnableFlixSpotlight) + Skin.HasSetting(TriggerSpotlightOnSelect) + [Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main) | Skin.HasSetting(Prime_Main)] + !String.StartsWith(ListItem.FolderPath,favourites://) + !String.IsEqual(Listitem.DBTYPE,song) + !String.IsEqual(Listitem.DBTYPE,album) + !String.IsEqual(Listitem.DBTYPE,artist)">ActivateWindow(1140)</onclick>
+                <!-- ... flixed ... -->
+                <include condition="!String.IsEmpty(Skin.String(FlixedScrolling))">flixed_focusposition</include>
+
                 <!-- Posters aspect ratio -->
                 <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"/>
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="44"/>
-                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"/>
                     <include content="Selectbox">
-                        <param name="visible_posters" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
+                        <param name="visible_posters" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id]) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                         <param name="visible_squares" value="false"/>
                         <param name="visible_landscapes" value="false"/>
                     </include>
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="44"/>
-                        <param name="selected" value="[$PARAM[postercondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="String.IsEmpty(Skin.String(FlixedScrolling))"/>
+                        <param name="selected" value="[$PARAM[postercondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -408,7 +412,7 @@
                         <include content="View_WatchedOverlay">
                             <param name="bottom" value="0"/>
                             <param name="right" value="48"/>
-                            <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
+                            <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                         </include>
                     </control>
                 </itemlayout>
@@ -419,13 +423,14 @@
                         <include content="ViewSquareItemLayout"/>
                         <include content="Selectbox">
                             <param name="visible_posters" value="false"/>
-                            <param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
+                            <param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id]) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                             <param name="visible_landscapes" value="false"/>
                         </include>
                         <include content="View_WatchedOverlay">
                             <param name="bottom" value="0"/>
                             <param name="right" value="48"/>
-                            <param name="selected" value="[$PARAM[squarecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
+                            <param name="visible" value="String.IsEmpty(Skin.String(FlixedScrolling))"/>
+                            <param name="selected" value="[$PARAM[squarecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                         </include>
                     </control>
                     <control type="button">
@@ -450,7 +455,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
@@ -460,12 +465,13 @@
                     <include content="Selectbox">
                         <param name="visible_posters" value="false"/>
                         <param name="visible_squares" value="false"/>
-                        <param name="visible_landscapes" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
+                        <param name="visible_landscapes" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id]) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="selected" value="[$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="String.IsEmpty(Skin.String(FlixedScrolling))"/>
+                        <param name="selected" value="[$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -490,7 +496,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
@@ -500,12 +506,13 @@
                     <include content="Selectbox">
                         <param name="visible_posters" value="false"/>
                         <param name="visible_squares" value="false"/>
-                        <param name="visible_landscapes" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
+                        <param name="visible_landscapes" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id]) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="72"/>
-                        <param name="selected" value="[$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="String.IsEmpty(Skin.String(FlixedScrolling))"/>
+                        <param name="selected" value="[$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                     <control type="button">
                         <include>HiddenObject</include>
@@ -529,7 +536,7 @@
                     <include content="View_WatchedOverlay">
                         <param name="bottom" value="0"/>
                         <param name="right" value="48"/>
-                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay)"/>
+                        <param name="visible" value="!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[primecondition]">
@@ -577,12 +584,13 @@
                         <include content="Selectbox">
                             <param name="visible_posters" value="false"/>
                             <param name="visible_squares" value="false"/>
-                            <param name="visible_landscapes" value="$PARAM[primecondition] + Control.HasFocus($PARAM[id])"/>
+                            <param name="visible_landscapes" value="$PARAM[primecondition] + Control.HasFocus($PARAM[id]) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                         </include>
                         <include content="View_WatchedOverlay">
                             <param name="bottom" value="0"/>
                             <param name="right" value="72"/>
-                            <param name="selected" value="[$PARAM[primecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay)"/>
+                            <param name="visible" value="String.IsEmpty(Skin.String(FlixedScrolling))"/>
+                            <param name="selected" value="[$PARAM[primecondition] + Control.HasFocus($PARAM[id])] + !Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(Skin.String(FlixedScrolling))"/>
                         </include>
                     </control>
                     <control type="button">
