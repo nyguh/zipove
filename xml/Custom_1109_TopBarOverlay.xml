@@ -190,6 +190,7 @@
                         <font>font30_title</font>
                         <textcolor>B3cccccc</textcolor>
                         <label>$LOCALIZE[10700]$INFO[VideoPlayer.ChannelGroup, [COLOR FFEDEDED]• ,[/COLOR]] $INFO[VideoPlayer.Channelname,[COLOR FFEDEDED]• ,[/COLOR]]</label>
+                        <visible>VideoPlayer.Content(livetv)</visible>
                     </control>
                     <control type="label">
                         <top>28</top>
