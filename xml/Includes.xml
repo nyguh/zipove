@@ -880,7 +880,7 @@
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="$VAR[ColorsOverlay]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
             </control>
-            <visible>Skin.HasSetting(EnableColoredBackground) | Player.HasVideo</visible>
+            <visible>Player.HasVideo</visible>
         </definition>
     </include>
     <include name="DialogBackground">

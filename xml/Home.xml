@@ -14,6 +14,7 @@
     <onload condition="String.IsEmpty(Skin.String(MenuStyle))">Skin.SetString(MenuStyle,IconsText)</onload>
     <!-- set default selection box -->
     <onload condition="String.IsEmpty(Skin.String(HighlightSize))">Skin.SetString(HighlightSize,Bold)</onload>
+    <onload condition="String.IsEmpty(Skin.String(PosterHighlight))">Skin.SetString(PosterHighlight,Highlight)</onload>
     <!-- set colourful rating icons as default -->
     <onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons,colorful)</onload>
     <!-- alpha and colors values -->
