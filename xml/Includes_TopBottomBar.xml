@@ -233,7 +233,7 @@
             <textcolor>b3ededed</textcolor>
             <font>font30_title_upp</font>
             <label>$INFO[ListItem.Label]</label>
-            <visible>Control.HasFocus(50) + !Window.IsActive(videos) + !Window.IsActive(tvguide) | [Window.IsVisible(settings) | Window.IsVisible(skinsettings)]</visible>
+            <visible>Control.HasFocus(50) + !Window.IsActive(videos) + !Window.IsActive(tvguide) + !Window.IsActive(programs) | [Window.IsVisible(settings) | Window.IsVisible(skinsettings)]</visible>
         </control>
         <control type="label">
             <textcolor>b3ededed</textcolor>
