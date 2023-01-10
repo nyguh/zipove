@@ -54,6 +54,7 @@
                     <width max="500">auto</width>
                     <font>font_tiny_hintlabel</font>
                     <textcolor>white</textcolor>
+                    <shadowcolor>text_shadow</shadowcolor>
                 </control>
                 <control type="label" id="$PARAM[sub_id]">
                     <centerbottom>33%</centerbottom>
@@ -63,6 +64,7 @@
                     <scroll>true</scroll>
                     <font>font_tiny_infolabel</font>
                     <textcolor>white</textcolor>
+                    <shadowcolor>text_shadow</shadowcolor>
                 </control>
             </control>
         </definition>
