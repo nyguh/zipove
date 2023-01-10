@@ -12,12 +12,9 @@
                 <param name="height" value="900"/>
                 <param name="header_label" value=""/>
                 <param name="header_id" value="2"/>
+                <param name="left_group_panel" value="true"/>
+                <param name="right_group_panel" value="true"/>
             </include>
-            <control type="image">
-                <texture colordiffuse="main_fg_12" border="6">dialogs/dialog-half.png</texture>
-                <width>400</width>
-                <height>910</height>
-            </control>
             <control type="grouplist" id="3">
                 <description>Categories Area</description>
                 <left>0</left>
@@ -90,12 +87,6 @@
             <control type="label" id="14">
                 <description>Default Label</description>
                 <include>DefaultSettingLabel</include>
-            </control>
-            <control type="image">
-                <texture colordiffuse="main_fg_12" border="6" flipx="true">dialogs/dialog-half.png</texture>
-                <right>0</right>
-                <width>320</width>
-                <height>910</height>
             </control>
             <control type="grouplist" id="9000">
                 <left>1525</left>
