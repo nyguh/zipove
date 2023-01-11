@@ -82,7 +82,7 @@
                         <selected>Skin.HasSetting(HorizontalInfoOnSelect)</selected>
                         <onclick>Skin.ToggleSetting(HorizontalInfoOnSelect)</onclick>
                     </control>
-                    <control type="radiobutton" id="605" description="Enable Flix Spotlight">
+                    <control type="radiobutton" id="616" description="Enable Flix Spotlight">
                         <label>$LOCALIZE[31407]</label>
                         <include>DefaultSettingButton</include>
                         <visible>Skin.HasSetting(Prime_Main)</visible>
