@@ -292,12 +292,6 @@
                         <onclick>Skin.ToggleSetting(FullScreenBusy)</onclick>
                         <selected>Skin.HasSetting(FullScreenBusy)</selected>
                     </control>
-                    <control type="radiobutton" id="812" description="Dark volume slider">
-                        <label>$LOCALIZE[31352]</label>
-                        <include>DefaultSettingButton</include>
-                        <onclick>Skin.ToggleSetting(EnableDarkVolumeSlider)</onclick>
-                        <selected>Skin.HasSetting(EnableDarkVolumeSlider)</selected>
-                    </control>
                 </control>
                 <!-- Library -->
                 <control type="grouplist" id="900">
