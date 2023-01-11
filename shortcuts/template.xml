@@ -245,7 +245,6 @@
     <submenuOther include="vertical" level="1">
         <condition tag="property" attribute="name|list"/>
         <property name="id" tag="mainmenuid"/>
-        <property name="name" tag="property" attribute="name|widgetName"/>
         <property name="path" tag="property" attribute="name|list"/>
         <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
         <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
@@ -257,10 +256,12 @@
         <property name="target">videos</property>
         <property name="artwork" tag="property" attribute="name|widgetType"/>
         <property name="artwork">$VAR[ImagePoster]</property>
+        <property name="label" tag="label"/>
+        <property name="label">$INFO[ListItem.Label]</property>
         <controls>
             <include content="Object_Widget_Content" condition="!Skin.HasSetting(DisableFixedScrolling) | !String.IsEmpty(Skin.String(FlixedScrolling))">
                 <param name="controltype" value="fixedlist"/>
-                <param name="name" value="$SKINSHORTCUTS[name]"/>
+                <param name="name" value="$SKINSHORTCUTS[label]"/>
                 <param name="id" value="$PYTHON[int(id) + 7501]"/>
                 <param name="target" value="$SKINSHORTCUTS[target]"/>
                 <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
@@ -286,7 +287,7 @@
             </include>
             <include content="Object_Widget_Content" condition="Skin.HasSetting(DisableFixedScrolling)">
                 <param name="controltype" value="list"/>
-                <param name="name" value="$SKINSHORTCUTS[name]"/>
+                <param name="name" value="$SKINSHORTCUTS[label]"/>
                 <param name="id" value="$PYTHON[int(id) + 7501]"/>
                 <param name="target" value="$SKINSHORTCUTS[target]"/>
                 <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
