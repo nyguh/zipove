@@ -8,13 +8,15 @@
         </control>
         <!-- fading -->
         <control type="image">
-            <width>1920</width>
+            <left>-1000</left>
+            <width>5000</width>
             <height>320</height>
             <texture>overlays/horizontal-fade.png</texture>
         </control>
         <control type="image">
             <bottom>0</bottom>
-            <width>1920</width>
+            <left>-1000</left>
+            <width>5000</width>
             <height>480</height>
             <texture flipy="true">overlays/horizontal-fade.png</texture>
         </control>
@@ -50,23 +52,60 @@
             <height>64</height>
             <centerleft>50%</centerleft>
             <control type="image">
+                <right>0</right>
                 <height>64</height>
                 <texture border="8" colordiffuse="dialog_bg_30">common/dialog.png</texture>
+                <visible>Integer.IsGreater(Container(9000).NumItems,5)</visible>
+            </control>
+            <control type="image">
+                <right>70</right>
+                <height>64</height>
+                <texture border="8" colordiffuse="dialog_bg_30">common/dialog.png</texture>
+                <visible>Integer.IsEqual(Container(9000).NumItems,5)</visible>
+            </control>
+            <control type="image">
+                <right>160</right>
+                <height>64</height>
+                <texture border="8" colordiffuse="dialog_bg_30">common/dialog.png</texture>
+                <visible>Integer.IsEqual(Container(9000).NumItems,4)</visible>
+            </control>
+            <control type="image">
+                <right>250</right>
+                <height>64</height>
+                <texture border="8" colordiffuse="dialog_bg_30">common/dialog.png</texture>
+                <visible>Integer.IsEqual(Container(9000).NumItems,3)</visible>
+            </control>
+            <control type="image">
+                <right>340</right>
+                <height>64</height>
+                <texture border="8" colordiffuse="dialog_bg_30">common/dialog.png</texture>
+                <visible>Integer.IsEqual(Container(9000).NumItems,2)</visible>
+            </control>
+            <control type="image">
+                <right>430</right>
+                <height>64</height>
+                <texture border="8" colordiffuse="dialog_bg_30">common/dialog.png</texture>
+                <visible>Integer.IsEqual(Container(9000).NumItems,1)</visible>
             </control>
             <control type="image">
                 <width>250</width>
                 <height>64</height>
                 <texture border="8" colordiffuse="alpha_30">common/box.png</texture>
-                <animation effect="slide" start="0" end="90,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,1) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
-                <animation effect="slide" start="0,0" end="180,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,2) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
-                <animation effect="slide" start="0,0" end="270,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,3) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
-                <animation effect="slide" start="0,0" end="360,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,4) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0" end="90,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,1) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0,0" end="180,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,2) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0,0" end="270,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,3) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0,0" end="360,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).Position,4) + [Control.HasFocus(9000) | ControlGroup(3000).HasFocus]">Conditional</animation>
                 <!-- submenu -->
-                <animation effect="slide" start="0" end="90,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,1) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
-                <animation effect="slide" start="0,0" end="180,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,2) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
-                <animation effect="slide" start="0,0" end="270,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,3) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
-                <animation effect="slide" start="0,0" end="360,0" time="220" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,4) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0" end="90,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,1) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0,0" end="180,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,2) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0,0" end="270,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,3) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
+                <animation effect="slide" start="0,0" end="360,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(8000).Position,4) + [Control.HasFocus(8000) | ControlGroup(3000).HasFocus]">Conditional</animation>
             </control>
+                <animation effect="slide" start="0" end="180,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="135,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="90,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="45,0" time="80" tween="cubic" easing="inout" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="80" tween="cubic" easing="inout" condition="Integer.IsGreaterOrEqual(Container(9000).NumItems,5)">Conditional</animation>
             <control type="list" id="9000">
                 <width>680</width>
                 <height>64</height>
@@ -86,7 +125,6 @@
                 </itemlayout>
                 <focusedlayout width="250" height="64">
                     <control type="group">
-                        <animation effect="fade" time="300" start="0" end="100">Focus</animation>
                         <control type="image">
                             <width>64</width>
                             <height>64</height>
