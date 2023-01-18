@@ -218,17 +218,15 @@
                             <texture colordiffuse="ffffffff">special://skin/extras/icons/genre.png</texture>
                             <visible>!String.IsEmpty(ListItem.Genre)</visible>
                         </control>
-                        <control type="textbox">
+                        <control type="label">
                             <top>-8</top>
                             <left>48</left>
-                            <width>680</width>
+                            <width>580</width>
                             <height>88</height>
                             <aligny>center</aligny>
                             <font>font_tiny_hintlabel</font>
-                            <wrapmultiline>true</wrapmultiline>
                             <label>$INFO[ListItem.Genre]</label>
                             <visible>!String.IsEmpty(ListItem.Genre)</visible>
-                            <autoscroll delay="6000" time="4500" repeat="7000">!String.IsEmpty(ListItem.Genre) + Skin.HasSetting(autoscroll)</autoscroll>
                         </control>
                     </control>
                 </control>
@@ -266,8 +264,6 @@
                     </include>
                 </control>
             </control>
-        </control>
-        <control type="group">
             <control type="group">
                 <control type="group">
                     <top>$PARAM[top]</top>
@@ -288,20 +284,20 @@
                 </control>
                 <control type="group">
                     <visible>!Container.Content(songs)</visible>
+                    <top>380</top>
+                    <right>180</right>
+                    <left>-260</left>
+                    <height>360</height>
                     <control type="image">
-                        <top>180</top>
-                        <right>190</right>
-                        <width>680</width>
-                        <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
+                        <height>360</height>
+                        <aspectratio scalediffuse="true">keep</aspectratio>
                         <texture background="true" diffuse="diffuse/landscape-big.png">$VAR[ThumbInfo_Landscape]</texture>
                         <bordertexture border="48">common/shadow-24.png</bordertexture>
                         <bordersize>24</bordersize>
                         <visible>!String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Art(snap)) | !String.IsEmpty(ListItem.Art(landscape)) | !String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Property(fanart)) | !String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(ListItem.Art(tvshow.fanart)) | !String.IsEmpty(ListItem.Thumb)</visible>
                     </control>
                     <control type="image">
-                        <top>180</top>
-                        <right>279</right>
-                        <width>512</width>
+                        <height>360</height>
                         <aspectratio aligny="center" scalediffuse="true">keep</aspectratio>
                         <texture background="true" diffuse="diffuse/landscape-big.png">$INFO[ListItem.Icon]</texture>
                         <bordersize>24</bordersize>
