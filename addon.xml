@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="skin.cosmic" version="2.0.9" name="Cosmic" provider-name="heppen">
   <requires>
-    <import addon="xbmc.gui" version="5.15.0"/>
+    <import addon="xbmc.gui" version="5.14.0"/>
     <import addon="script.skinshortcuts"/>
     <import addon="script.skinhelper"/>
     <import addon="plugin.video.themoviedb.helper"/>
