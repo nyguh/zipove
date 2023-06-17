@@ -3,7 +3,6 @@
   <requires>
     <import addon="xbmc.gui" version="5.14.0"/>
     <import addon="script.skinshortcuts" version="1.0.20"/>
-       <!import addon="script.skinhelper" version="1.1.32"/>
     <import addon="plugin.video.themoviedb.helper" version="4.2.20"/>
   </requires>
   <extension point="xbmc.gui.skin" debugging="false">
